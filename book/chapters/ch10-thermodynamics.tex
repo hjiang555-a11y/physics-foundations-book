@@ -39,7 +39,7 @@ dU = T\,dS - P\,dV + \mu\,dN
 \end{derivationbox}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.1]
+\begin{tikzpicture}[scale=0.88]
   % PV diagram
   \draw[->] (0,0) -- (4,0) node[right] {$V$};
   \draw[->] (0,0) -- (0,3) node[left] {$P$};
@@ -125,7 +125,7 @@ f_{\text{BE}}(E) = \frac{1}{\exp[(E-\mu)/k_B T] - 1}
 分母中的 $\pm 1$ 是量子统计与经典 Maxwell-Boltzmann 统计的唯一区别——它决定了金属的导电性、半导体的能带结构、白矮星的稳定性、超流和 BEC 凝聚。
 
 \begin{center}
-\begin{tikzpicture}[scale=1.1]
+\begin{tikzpicture}[scale=0.88]
   \draw[->] (0,0) -- (5,0) node[right] {$E$};
   \draw[->] (0,0) -- (0,3.5) node[left] {$f(E)$};
   \draw[principleblue,thick] plot[domain=0:5,samples=60] (\x, {3/(exp(2*(\x-3))+1)});

@@ -25,7 +25,7 @@ i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi
 \end{derivationbox}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.1]
+\begin{tikzpicture}[scale=0.88]
   % Potential well
   \draw[->] (0,-0.5) -- (0,3.5) node[left] {$V$};
   \draw[->] (0,0) -- (5,0) node[right] {$x$};
@@ -63,7 +63,7 @@ E = h\nu = \hbar\omega
 \end{derivationbox}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=0.95]
   \draw[->] (0,0) -- (0,4) node[left] {$E$};
   \draw[thick] (-0.2,0.5) -- (3.5,0.5);
   \draw[thick] (-0.2,1.5) -- (3.5,1.5);
@@ -92,7 +92,7 @@ E = h\nu = \hbar\omega
 de Broglie (1924) 大胆推广：\textbf{所有物质都有波动性}。Davisson-Germer (1927) 电子衍射实验证实。
 
 \begin{center}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=0.95]
   \draw[->] (-2,0) -- (3.5,0) node[right] {$x$};
   \draw[principleblue,thick] plot[domain=-1.8:3.2,samples=80] (\x, {0.6*sin(3*\x r)});
   \node[principleblue] at (2.8,0.9) {$\psi \sim e^{ikx}$};
@@ -118,7 +118,7 @@ de Broglie (1924) 大胆推广：\textbf{所有物质都有波动性}。Davisson
 \end{derivationbox}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.2]
+\begin{tikzpicture}[scale=0.95]
   \begin{scope}
     \draw[->] (0,-0.2) -- (0,2) node[left] {$\rho(x)$};
     \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
@@ -144,7 +144,7 @@ de Broglie (1924) 大胆推广：\textbf{所有物质都有波动性}。Davisson
 \end{lawbox}
 
 \begin{center}
-\begin{tikzpicture}[scale=1.1]
+\begin{tikzpicture}[scale=0.88]
   % Energy levels for electrons
   \draw[->] (0,0) -- (0,4) node[left] {$E$};
   \draw[thick] (-0.2,0.5) -- (2.5,0.5); \node at (2.8,0.5) {$n=1$};
@@ -159,7 +159,9 @@ de Broglie (1924) 大胆推广：\textbf{所有物质都有波动性}。Davisson
 \end{tikzpicture}
 \end{center}
 
-\textbf{为什么原子不坍缩？} 泡利原理阻止所有电子落到最低能级——迫使电子占据越来越高的能级，产生元素周期表的壳层结构。\textbf{这是物质稳定性的微观根源。}
+\textbf{为什么原子不坍缩？} 泡利原理阻止所有电子落到最低能级——迫使电子占据越来越高的能级，产生元素周期表的壳层结构。
+
+\textbf{这是物质稳定性的微观根源。}
 
 \section{推导总图}
 

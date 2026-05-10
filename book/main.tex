@@ -3,7 +3,7 @@
 %  Fundamental Physics Laws and Their Logical Relations
 %  中英双语 · 公理-推导体系
 % ============================================================
-\documentclass[11pt,a4paper,openany]{book}
+\documentclass[10pt,a4paper,openany]{book}
 
 % ── Encoding & Fonts ──
 \usepackage{fontspec}
@@ -14,15 +14,18 @@
 \setsansfont{Noto Sans CJK SC}
 \setmonofont{Noto Sans CJK SC}
 % ── Page Layout ──
-\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage[a4paper,left=2cm,right=2cm,top=2.2cm,bottom=2.2cm]{geometry}
 \usepackage{fancyhdr}
 \usepackage{ragged2e}
+\raggedbottom
+\allowdisplaybreaks
+
 % CJK-friendly line breaking
-\pretolerance=150
-\tolerance=3000
-\emergencystretch=2em
-\hbadness=3000
-\vbadness=3000
+\pretolerance=100
+\tolerance=4000
+\emergencystretch=3em
+\hbadness=5000
+\vbadness=5000
 \sloppy
 \pagestyle{fancy}
 \fancyhf{}
@@ -49,7 +52,7 @@
   colback=lightblue, colframe=principleblue!80!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced, drop shadow=black!10,
-  before skip=12pt, after skip=12pt,
+  before skip=16pt, after skip=16pt,
   before upper={\small\RaggedRight\setlength{\parskip}{4pt}},
 }
 
@@ -57,7 +60,7 @@
   colback=lightgreen, colframe=lawgreen!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt,
+  before skip=14pt, after skip=14pt,
   before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
@@ -65,7 +68,7 @@
   colback=lightorange, colframe=deriveorange!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt,
+  before skip=14pt, after skip=14pt,
   before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
@@ -73,7 +76,7 @@
   colback=lightred, colframe=warnred!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt,
+  before skip=14pt, after skip=14pt,
   before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
@@ -139,7 +142,9 @@
 
 \section*{致读者}
 
-物理学是人类理解自然世界的最深刻成就。然而，传统的物理教育往往将定律分散在力学、电磁学、热力学等独立课程中讲授，使得它们看起来像是互不相关的知识点。
+物理学是人类理解自然世界的最深刻成就。
+
+然而，传统的物理教育往往将定律分散在力学、电磁学、热力学等独立课程中讲授，使得它们看起来像是互不相关的知识点。
 
 本书的目标是从一个不同的视角展示物理学：\textbf{所有重要物理定律都可以从仅仅六条核心原则（R1-R6）推导出来}。
 
@@ -200,7 +205,7 @@
 
 \vspace{12pt}
 
-\begin{longtable}{p{1.5cm} p{4.5cm} p{6.5cm}}
+\begin{longtable}{p{1.2cm} p{5.8cm} p{6.2cm}}
 \toprule
 \textbf{原则} & \textbf{核心内容} & \textbf{地位} \\
 \midrule
