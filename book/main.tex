@@ -3,7 +3,7 @@
 %  Fundamental Physics Laws and Their Logical Relations
 %  中英双语 · 公理-推导体系
 % ============================================================
-\documentclass[12pt,a4paper,openany]{book}
+\documentclass[11pt,a4paper,openany]{book}
 
 % ── Encoding & Fonts ──
 \usepackage{fontspec}
@@ -14,8 +14,16 @@
 \setsansfont{Noto Sans CJK SC}
 \setmonofont{Noto Sans CJK SC}
 % ── Page Layout ──
-\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[a4paper,margin=2.2cm]{geometry}
 \usepackage{fancyhdr}
+\usepackage{ragged2e}
+% CJK-friendly line breaking
+\pretolerance=150
+\tolerance=3000
+\emergencystretch=2em
+\hbadness=3000
+\vbadness=3000
+\sloppy
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\leftmark}
@@ -39,30 +47,34 @@
 
 \newtcolorbox{principlebox}[1][]{
   colback=lightblue, colframe=principleblue!80!black,
-  fonttitle=\bfseries\large, title=#1,
+  fonttitle=\bfseries, title=#1,
   breakable, enhanced, drop shadow=black!10,
-  before skip=12pt, after skip=12pt
+  before skip=12pt, after skip=12pt,
+  before upper={\small\RaggedRight\setlength{\parskip}{4pt}},
 }
 
 \newtcolorbox{lawbox}[1][]{
   colback=lightgreen, colframe=lawgreen!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt
+  before skip=10pt, after skip=10pt,
+  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
 \newtcolorbox{derivationbox}[1][]{
   colback=lightorange, colframe=deriveorange!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt
+  before skip=10pt, after skip=10pt,
+  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
 \newtcolorbox{limitbox}[1][]{
   colback=lightred, colframe=warnred!70!black,
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
-  before skip=10pt, after skip=10pt
+  before skip=10pt, after skip=10pt,
+  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
 }
 
 % ── Graphics & Diagrams ──
@@ -129,7 +141,9 @@
 
 物理学是人类理解自然世界的最深刻成就。然而，传统的物理教育往往将定律分散在力学、电磁学、热力学等独立课程中讲授，使得它们看起来像是互不相关的知识点。
 
-本书的目标是从一个不同的视角展示物理学：\textbf{所有重要物理定律都可以从仅仅六条核心原则（R1-R6）推导出来}。这六条原则是现代物理学的"公理"，其余一切——从牛顿定律到 Maxwell 方程组，从薛定谔方程到 Einstein 场方程——都是它们的逻辑推论。
+本书的目标是从一个不同的视角展示物理学：\textbf{所有重要物理定律都可以从仅仅六条核心原则（R1-R6）推导出来}。
+
+这六条原则是现代物理学的"公理"，其余一切——从牛顿定律到 Maxwell 方程组，从薛定谔方程到 Einstein 场方程——都是它们的逻辑推论。
 
 \vspace{8pt}
 {\large\bfseries 阅读指南}
@@ -186,7 +200,7 @@
 
 \vspace{12pt}
 
-\begin{longtable}{p{0.12\textwidth} p{0.35\textwidth} p{0.43\textwidth}}
+\begin{longtable}{p{1.5cm} p{4.5cm} p{6.5cm}}
 \toprule
 \textbf{原则} & \textbf{核心内容} & \textbf{地位} \\
 \midrule
@@ -201,7 +215,9 @@ R6 & 熵的统计定义。$S = k_B \ln W$。 & 连结微观量子与宏观热力
 
 \vspace{12pt}
 
-以下六章将逐一展开这六条原则，详细讨论其直觉来源、数学表达、逻辑推论，以及适用的边界与局限。Noether 定理（连续对称 $\to$ 守恒量）和自旋-统计定理（自旋决定统计行为）是 R2 和 R1+R4 的数学推论，不列为独立原则。
+以下六章将逐一展开这六条原则，详细讨论其直觉来源、数学表达、逻辑推论，以及适用边界与局限。
+
+Noether 定理和自旋-统计定理是 R2 和 R1+R4 的数学推论，不列为独立原则。
 
 \clearpage
 
