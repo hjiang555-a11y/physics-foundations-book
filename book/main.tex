@@ -14,23 +14,24 @@
 \setsansfont{Noto Sans CJK SC}
 \setmonofont{Noto Sans CJK SC}
 
+% XeTeX CJK line breaking
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
 % ── Page Layout ──
 \usepackage[a4paper,margin=2.2cm]{geometry}
 \usepackage{fancyhdr}
-\usepackage{ragged2e}
 \usepackage{setspace}
 \onehalfspacing
 \raggedbottom
 \allowdisplaybreaks
 
-% CJK-friendly line breaking — RaggedRight is MUCH better than sloppy for CJK
-\RaggedRight
-\setlength{\RaggedRightParindent}{0pt}
-\setlength{\parskip}{4pt}
+% Line breaking
 \tolerance=5000
 \emergencystretch=4em
 \hbadness=10000
 \vbadness=10000
+\parskip=4pt
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\leftmark}
@@ -57,7 +58,7 @@
   fonttitle=\bfseries, title=#1,
   breakable, enhanced, drop shadow=black!10,
   before skip=16pt, after skip=16pt,
-  before upper={\small\RaggedRight\setlength{\parskip}{4pt}},
+  before upper={\small\raggedright\setlength{\parskip}{4pt}},
 }
 
 \newtcolorbox{lawbox}[1][]{
@@ -65,7 +66,7 @@
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
   before skip=14pt, after skip=14pt,
-  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
+  before upper={\small\raggedright\setlength{\parskip}{2pt}},
 }
 
 \newtcolorbox{derivationbox}[1][]{
@@ -73,7 +74,7 @@
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
   before skip=14pt, after skip=14pt,
-  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
+  before upper={\small\raggedright\setlength{\parskip}{2pt}},
 }
 
 \newtcolorbox{limitbox}[1][]{
@@ -81,7 +82,7 @@
   fonttitle=\bfseries, title=#1,
   breakable, enhanced,
   before skip=14pt, after skip=14pt,
-  before upper={\small\RaggedRight\setlength{\parskip}{2pt}},
+  before upper={\small\raggedright\setlength{\parskip}{2pt}},
 }
 
 % ── Graphics & Diagrams ──
@@ -291,7 +292,7 @@ Noether 定理和自旋-统计定理是 R2 和 R1+R4 的数学推论，不列为
 
 \begin{center}
 \footnotesize
-\begin{longtable}{>{\RaggedRight}p{4cm}>{\RaggedRight}p{2.5cm}>{\RaggedRight}p{6.5cm}}
+\begin{longtable}{>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{6.5cm}}
 \toprule
 \textbf{定律} & \textbf{领域} & \textbf{逻辑前提} \\
 \midrule
