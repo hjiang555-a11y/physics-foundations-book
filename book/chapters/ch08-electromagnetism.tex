@@ -1,0 +1,201 @@
+\chapter{电磁学：从规范不变性到 Maxwell 方程组}
+\label{ch:electromagnetism}
+
+\section{概述}
+从 R3（局域 $U(1)$ 规范不变性）加 R2（最小作用量），可以一条线推出全部电磁学。
+
+\[
+\text{R3 ($U(1)$规范)} + \text{R2 ($\delta S=0$)} \;\longrightarrow\; \text{Maxwell 四方程} \;\longrightarrow\; \text{电磁波}
+\]
+
+核心洞察：\textbf{Maxwell 方程组不是四个独立的经验定律，而是 $U(1)$ 规范理论的两个数学恒等式加两个 Euler-Lagrange 方程。}
+
+\section{Maxwell 方程组}
+
+\subsection{图示：电磁场的统一结构}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.0cm and 0.5cm,
+  box/.style={rectangle,draw,rounded corners,fill=blue!5,text width=3.2cm,align=center,font=\small},
+  arrow/.style={->,>=Stealth,thick}
+]
+  \node[box,fill=principleblue!10] (u1) {U(1) 规范对称\\$F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$};
+  \node[box,below left=0.5cm and 0cm of u1] (homo) {齐次方程 (Bianchi)} node[below=0.1cm] {$\partial_\lambda F_{\mu\nu}+\text{cyclic}=0$};
+  \node[box,below right=0.5cm and 0cm of u1] (inhomo) {非齐次方程 (Euler-Lagrange)} node[below=0.1cm] {$\partial_\mu F^{\mu\nu}=J^\nu$};
+  \node[box,below=0.3cm of homo] (mg) {$\nabla\cdot\mathbf{B}=0$\\Gauss 磁定律};
+  \node[box,below=0.3cm of mg] (fa) {$\nabla\times\mathbf{E}=-\partial_t\mathbf{B}$\\Faraday 定律};
+  \node[box,below=0.3cm of inhomo] (ge) {$\nabla\cdot\mathbf{E}=\rho/\varepsilon_0$\\Gauss 电定律};
+  \node[box,below=0.3cm of ge] (am) {$\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\partial_t\mathbf{E}$\\Ampère-Maxwell};
+  \draw[arrow] (u1) -- (homo); \draw[arrow] (u1) -- (inhomo);
+  \draw[arrow] (homo) -- (mg); \draw[arrow] (mg) -- (fa);
+  \draw[arrow] (inhomo) -- (ge); \draw[arrow] (ge) -- (am);
+\end{tikzpicture}
+\end{center}
+
+\subsection{Gauss 电定律}
+
+\begin{lawbox}[Gauss's Law for Electricity]
+\[
+\nabla\cdot\mathbf{E} = \frac{\rho}{\varepsilon_0}
+\]
+\textbf{前提}：$\partial_\mu F^{\mu\nu}=J^\nu$ 的 $\nu=0$ 分量
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \fill[yellow!80,opacity=0.5] (-0.5,-0.5) rectangle (0.5,0.5);
+  \fill[red] (0,0) circle (2pt) node[below right] {$+q$};
+  \foreach \a in {0,45,...,315} {
+    \draw[->,principleblue] (0,0) -- ({\a}:1.5);
+  }
+  \node at (0,-1.0) {正电荷：电力线向外辐射};
+  \node at (0,-1.4) {$\oint \mathbf{E}\cdot d\mathbf{A} = Q_{\text{enc}}/\varepsilon_0$};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Gauss 磁定律}
+
+\begin{lawbox}[Gauss's Law for Magnetism]
+\[
+\nabla\cdot\mathbf{B} = 0
+\]
+\textbf{前提}：$F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$ 的 Bianchi 恒等式（几何必然，无磁单极子）
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \draw[thick,principleblue,->] (0,0) -- (0,1.5);
+  \draw (0.2,0.8) ellipse (0.4 and 1.0);
+  \draw (-0.2,0.8) ellipse (0.4 and 1.0);
+  \draw[->,gray] (0.3,0.3) arc (0:180:0.3);
+  \draw[->,gray] (-0.3,1.3) arc (180:360:0.3);
+  \node at (0,-0.6) {磁力线永远闭合——无起点、无终点};
+  \node at (0,-1.0) {$\oint\mathbf{B}\cdot d\mathbf{A} = 0$（无磁荷）};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Faraday 感应定律}
+
+\begin{lawbox}[Faraday's Law of Induction]
+\[
+\nabla\times\mathbf{E} = -\frac{\partial\mathbf{B}}{\partial t}
+\]
+\textbf{前提}：Bianchi 恒等式（与 Gauss 磁定律同源）
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.3]
+  % Coil
+  \draw[thick] (0,0) ellipse (1.5 and 0.5);
+  \draw[thick] (0,0) ellipse (1.5 and 0.3);
+  \draw[->] (-1.5,0.3) arc (180:360:1.5 and 0.3);
+  % Magnet
+  \fill[red!30] (2.5,-0.2) rectangle (3.0,0.2);
+  \node at (2.75,0) {\small N};
+  \draw[->,very thick,deriveorange] (2.3,0) -- (0.5,0) node[midway,above] {运动};
+  % B field lines
+  \draw[principleblue,->] (2.5,0.3) to[out=30,in=150] (0,0.3);
+  \draw[principleblue,->] (2.5,-0.3) to[out=-30,in=210] (0,-0.3);
+  \node at (0,-1.2) {变化的 $\mathbf{B}$ $\to$ 感应 $\mathbf{E}$ $\to$ 感应电动势};
+\end{tikzpicture}
+\end{center}
+
+\subsection{Ampère-Maxwell 定律}
+
+\begin{lawbox}[Ampère-Maxwell Law]
+\[
+\nabla\times\mathbf{B} = \mu_0\mathbf{J} + \mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}
+\]
+\textbf{前提}：$\partial_\mu F^{\mu\nu}=J^\nu$（Euler-Lagrange，需 R2）
+\end{lawbox}
+
+位移电流项 $\mu_0\varepsilon_0\partial\mathbf{E}/\partial t$ 是 Maxwell 为自洽性引入的理论修正——没有它，电荷守恒 $\nabla\cdot\mathbf{J}+\partial\rho/\partial t=0$ 与 Ampère 原定律矛盾。
+
+\section{Lorentz 力定律}
+
+\begin{lawbox}[Lorentz Force]
+\[
+\mathbf{F} = q(\mathbf{E} + \mathbf{v}\times\mathbf{B})
+\]
+\textbf{前提}：规范耦合的最小耦合原理 $p_\mu \to p_\mu - qA_\mu$
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.3]
+  \draw[->] (-1.5,0) -- (2,0) node[right] {$x$};
+  \draw[->] (0,-1) -- (0,1.5) node[above] {$y$};
+  % B field into page
+  \foreach \x in {-0.5,0,0.5,1} {
+    \foreach \y in {-0.3,0.3,0.9} {
+      \draw[gray] (\x,\y) circle (0.08);
+      \fill[gray] (\x,\y) circle (0.03);
+    }
+  }
+  \node[gray] at (0.5,1.3) {$\mathbf{B}\otimes$（入纸面）};
+  \fill[red] (0,0) circle (2pt) node[below] {$+q$};
+  \draw[->,very thick,red] (0,0) -- (1.5,0) node[midway,above] {$\mathbf{v}$};
+  \draw[->,very thick,principleblue] (0,0) -- (0,1.2) node[left] {$\mathbf{F}_B$};
+  \node at (0.7,-0.6) {$\mathbf{F}=q\mathbf{v}\times\mathbf{B}$（磁场不做功！）};
+\end{tikzpicture}
+\end{center}
+
+\section{电磁波方程}
+
+\begin{lawbox}[Electromagnetic Wave Equation]
+\[
+\nabla^2\mathbf{E} = \frac{1}{c^2}\frac{\partial^2\mathbf{E}}{\partial t^2},\quad
+\nabla^2\mathbf{B} = \frac{1}{c^2}\frac{\partial^2\mathbf{B}}{\partial t^2},\quad
+c = \frac{1}{\sqrt{\varepsilon_0\mu_0}}
+\]
+\textbf{前提}：Maxwell 方程组真空解（$\rho=0,\mathbf{J}=0$）
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  真空 Maxwell：$\nabla\times\mathbf{E}=-\partial_t\mathbf{B}$，$\nabla\times\mathbf{B}=\mu_0\varepsilon_0\partial_t\mathbf{E}$。
+  取旋度后者：$\nabla\times(\nabla\times\mathbf{B})=\mu_0\varepsilon_0\nabla\times\partial_t\mathbf{E}$。
+   用 $\nabla\times(\nabla\times\mathbf{B})=\nabla(\underbrace{\nabla\cdot\mathbf{B}}_{=0})-\nabla^2\mathbf{B}$ 和 Faraday：$\nabla\times\partial_t\mathbf{E}=-\partial_t^2\mathbf{B}$。
+  得 $\nabla^2\mathbf{B}=\mu_0\varepsilon_0\partial_t^2\mathbf{B}$。令 $c=1/\sqrt{\mu_0\varepsilon_0}$，即得波动方程。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \draw[->] (0,-1) -- (0,1) node[left] {$\mathbf{E}$};
+  \draw[->] (0,0) -- (6,0) node[right] {$z$};
+  \draw[principleblue,thick] plot[domain=0:5.5,samples=80] (\x, {0.6*sin(3*\x r)});
+  \draw[deriveorange,thick] plot[domain=0:5.5,samples=80] (\x, {0.65*cos(3*\x r)});
+  \node[principleblue] at (5.2,0.8) {$\mathbf{E}$};
+  \node[deriveorange] at (5.2,0.9) {$\mathbf{B}$};
+  \draw[->,principleblue,thick] (0,0) -- (0,0.6) node[left] {$\mathbf{E}_0$};
+  \draw[->,deriveorange,thick] (0,0) -- (0.3,0) node[below left] {$\mathbf{B}_0$};
+  \node at (3,-1) {$\mathbf{E}\perp\mathbf{B}\perp\mathbf{k}$（横波），$E=cB$};
+\end{tikzpicture}
+\end{center}
+
+\textbf{历史意义}：$c = 1/\sqrt{\varepsilon_0\mu_0}$ 从纯电磁学常数算出光速——这是 Maxwell 最伟大的成就：\textbf{光就是电磁波}。
+
+\section{推导总图}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.9cm,
+  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2cm,align=center,font=\footnotesize\bfseries},
+  law/.style={rectangle,draw,fill=lawgreen!15,rounded corners,text width=2.4cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thick,deriveorange}
+]
+  \node[kernel] (r3) {R3\\U(1) 规范};
+  \node[kernel,right=0.3cm of r3] (r2) {R2\\$\delta S=0$};
+  \node[law,below=0.5cm of r3] (ge) {Gauss 电\\$\nabla\cdot\mathbf{E}=\rho/\varepsilon_0$};
+  \node[law,below=0.3cm of ge] (gm) {Gauss 磁\\$\nabla\cdot\mathbf{B}=0$};
+  \node[law,below=0.3cm of gm] (fa) {Faraday\\$\nabla\times\mathbf{E}=-\partial_t\mathbf{B}$};
+  \node[law,below=0.3cm of fa] (am) {Ampère-Maxwell\\$\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\cdots$};
+  \node[law,below=0.3cm of am] (lf) {Lorentz 力\\$\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B})$};
+  \node[law,below=0.3cm of lf] (wave) {电磁波\\$\nabla^2\mathbf{E}=c^{-2}\partial_t^2\mathbf{E}$};
+  \draw[arrow] (r3) -- (ge); \draw[arrow] (r3) -- (gm);
+  \draw[arrow] (gm) -- (fa); \draw[arrow] (r2) -- (am);
+  \draw[arrow] (ge) -- (am); \draw[arrow] (fa) -- (am);
+  \draw[arrow] (r3) -- (lf); \draw[arrow] (am) -- (wave); \draw[arrow] (fa) -- (wave);
+\end{tikzpicture}
+\end{center}
+
+参考文献：[GRIFF] §7--9, [JACK] §5--7, [FEYN II] Ch.18--20, [GROSS]

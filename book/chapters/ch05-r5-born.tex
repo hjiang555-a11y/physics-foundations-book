@@ -1,0 +1,173 @@
+% ============================================================
+%  Chapter 5: R5 — Born's Probability Rule
+% ============================================================
+\chapter{R5 — Born 概率规则}
+\label{ch:r5}
+
+\section{总说：量子数学如何触碰实验}
+
+R4 描述了量子态如何叠加和演化——但量子态 $|\psi\rangle$ 生活在抽象的 Hilbert 空间中，而实验结果是一串数字（探测器的"咔嗒"声）。\textbf{抽象数学如何产生具体的实验数字？}
+
+答案就是 R5，Born 在 1926 年提出的概率规则：
+
+\begin{principlebox}[R5 — Born 概率规则 / Born's Probability Rule]
+  在量子测量中，系统塌缩到某一本征态并得到对应测量结果的概率，等于该本征态的概率幅模的平方。
+
+  \[
+  \boxed{P(a_i) = |\langle a_i | \psi \rangle|^2}
+  \]
+
+  归一化条件（概率完备性）：
+  \[
+  \sum_i P(a_i) = 1
+  \]
+\end{principlebox}
+
+\textbf{历史注记}：Born 是在 1926 年提出这个规则的，当时他正在研究原子碰撞的散射问题。他在脚注中写道："$|\psi|^2$ 给出概率。"这个脚注后来为他赢得了 1954 年的诺贝尔奖——当时诺贝尔奖中还没有单独颁发给量子力学解释的奖项，这是首次为概率解释颁奖。
+
+\section{直觉理解：量子力学怎么"掷骰子"}
+
+\subsection{与经典概率的根本区别}
+
+经典概率说的是"我不知道骰子是哪一面，但它确实在某一面上"。量子概率说的是"\textbf{骰子在测量前没有确定的面——它同时是所有面的叠加}，测量迫使它'选择'一面"。
+
+考虑一个简单的两态系统（如电子自旋）：
+
+\[
+|\psi\rangle = \alpha|\!\uparrow\rangle + \beta|\!\downarrow\rangle
+\]
+
+其中 $|\alpha|^2$ 是测量到自旋向上的概率，$|\beta|^2$ 是测量到自旋向下的概率，$|\alpha|^2 + |\beta|^2 = 1$。
+
+\textbf{注意}：$\alpha$ 和 $\beta$ 是\textbf{复数}。这意味着两个概率幅可以有相同的模（$|\alpha| = |\beta| = 1/\sqrt{2}$）但不同的相对相位——而相对相位产生可观测的干涉效应。
+
+\subsection{为什么是模的平方？}
+
+一个常见的误解是将 Born 规则看作一个"凭空设定"的额外假设。但其实它和 R4 有深层的数学联系：
+
+\begin{itemize}
+  \item Gleason 定理（1957）：在 $\dim \geq 3$ 的 Hilbert 空间中，任何与量子逻辑自洽的概率分配\textbf{必然}具有 Born 规则的形式 $P(a_i) = \langle\psi|\hat{P}_i|\psi\rangle$。
+  \item 这意味着 Born 规则在一定意义上是 Hilbert 空间结构的"数学必然"——不是凭空附加的。
+  \item 但 Gleason 定理不解决"为什么有测量"这个更基本的问题——那属于量子力学诠释。
+\end{itemize}
+
+\section{数学详述}
+
+\subsection{一般形式}
+
+设系统处于态 $|\psi\rangle$，可观测量 $\hat{A}$ 的本征展开为：
+
+\[
+\hat{A} = \sum_i a_i |a_i\rangle\langle a_i| \qquad (\text{假定非简并谱})
+\]
+
+其中 $|a_i\rangle$ 是本征态（$\hat{A}|a_i\rangle = a_i|a_i\rangle$），$a_i$ 是实数（因为 $\hat{A}$ 是厄米的）。
+
+测量 $\hat{A}$ 得到结果 $a_i$ 的概率：
+
+\[
+P(a_i) = |\langle a_i | \psi \rangle|^2
+\]
+
+测量后（如果得到 $a_i$），系统的态变为：
+
+\[
+|\psi\rangle \xrightarrow{\text{测量得 } a_i} |a_i\rangle
+\]
+
+这称为\textbf{态约化 (state reduction)} 或"波函数坍缩 (wave function collapse)"。
+
+\subsection{连续谱}
+
+对于连续谱的可观测量（如位置 $\hat{x}$），概率退化为概率密度：
+
+\[
+\rho(x) = |\langle x | \psi \rangle|^2 = |\psi(x)|^2
+\]
+
+\[
+P(x \in [a,b]) = \int_a^b |\psi(x)|^2 dx
+\]
+
+\subsection{期望值}
+
+\[
+\langle \hat{A} \rangle = \langle \psi | \hat{A} | \psi \rangle = \sum_i a_i |\langle a_i|\psi\rangle|^2
+\]
+
+注意 $\langle \hat{A} \rangle$ 可以在本征值 $a_i$ 之间取任意值（因为它是加权平均），但单次测量结果\textbf{必须是}某个本征值 $a_i$。
+
+\section{测量问题：R4 vs R5 的张力}
+
+Born 规则暴露了量子力学中最深层的问题——\textbf{测量问题}：
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=2cm,
+  box/.style={rectangle,draw,rounded corners,fill=blue!8,text width=5cm,align=center,font=\small}
+]
+  \node[box,fill=principleblue!15] (r4) {R4: 幺正演化\\$|\psi\rangle \to U|\psi\rangle$（平滑、确定、可逆）};
+
+  \node[box,fill=warnred!15,below=of r4] (r5) {R5: 测量\\$|\psi\rangle \to |a_i\rangle$（突变、随机、不可逆）};
+
+  \node[align=center,below=of r5] (q) {什么时候用 R4 的规则？\\什么时候用 R5 的规则？\\边界在哪里？};
+\end{tikzpicture}
+\end{center}
+
+\textbf{主要诠释}：
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{诠释} & \textbf{核心观点} & \textbf{态约化} \\
+\midrule
+哥本哈根 & 观测者是一个经典系统 & 测量时发生真实的坍缩 \\
+多世界 (Everett) & 没有坍缩，宇宙不断分叉 & 不存在 \\
+退相干 & 环境相互作用选择"指针态" & 表观的，非真实的 \\
+GRW 客观坍缩 & 自发局域化——真实的物理过程 & 真实的，自发的 \\
+QBism & 概率是观测者的主观信念 & 不存在客观的态 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{重要}：从实用角度看，所有诠释给出相同的实验预测。Born 规则作为\textbf{计算工具}是无可争议的——它正确地预测了每一个量子实验的结果。但 \textbf{Born 规则的"深层根源"}仍然是开放问题。
+
+\section{从 R5 出发的推导链}
+
+Born 规则本身是公设，但它与其他原则结合后产生重要推论：
+
+\[
+\text{R5（Born 规则）} + \text{R4（量子态结构）} \to
+\begin{cases}
+\text{不确定性原理（概率意义）} \\
+\text{量子统计力学（R6 的微观基础）} \\
+\text{退相干理论} \\
+\text{量子信息与量子计算}
+\end{cases}
+\]
+
+\section{失效边界与局限}
+
+\begin{limitbox}[E1: 测量问题的未解决]
+  Born 规则精确描述了概率，但\textbf{不解释}单次测量中"为什么得到这个结果而不是那个"。这就是量子随机性的本质——它似乎不是经典随机（"我们不知道"），而是\textbf{基础性随机}（"宇宙不知道"）。但这是否真的如此尚无定论。
+\end{limitbox}
+
+\begin{limitbox}[E2: 宇宙学中的测量问题]
+  整个宇宙是一个孤立系统——没有"外部观测者"。那么谁在测量宇宙？波函数如何坍缩？这是量子宇宙学试图回答的问题（Hartle-Hawking 无边界提议等），但尚无成熟解决方案。
+\end{limitbox}
+
+\begin{limitbox}[E3: "Wigner 的朋友"悖论]
+  如果 Alice 在封闭实验室中做量子测量，从外部观察者 Bob 看来，实验室整体处于叠加态——但 Alice 报告看到了确定的结果。谁的描述正确？这个问题至今没有实验上可区分的答案（Frauchiger-Renner 定理进一步深化了该悖论）。
+\end{limitbox}
+
+\section{小结}
+
+\begin{enumerate}
+  \item Born 规则 ($P = |\psi|^2$) 是量子力学与实验之间的\textbf{唯一桥梁}
+  \item 它是公设——不能从 R4 的演化规则中推导出来
+  \item 与 R4 的幺正演化之间存在逻辑张力——测量问题
+  \item 多重诠释共存，实验预测等价——但"深层真理解释"尚无共识
+  \item 作为实用工具，Born 规则的预测精度无与伦比
+\end{enumerate}
+
+\textbf{参考文献}：Born (1926), Dirac (1930), Gleason (1957), [FEYN III] Ch.1--3

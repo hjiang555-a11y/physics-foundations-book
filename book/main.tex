@@ -1,0 +1,372 @@
+% ============================================================
+%  物理学基本定律与逻辑关系
+%  Fundamental Physics Laws and Their Logical Relations
+%  中英双语 · 公理-推导体系
+% ============================================================
+\documentclass[12pt,a4paper,openany]{book}
+
+% ── Encoding & Fonts ──
+\usepackage{fontspec}
+\usepackage{amsmath,amssymb,physics}
+\usepackage{bm}
+
+\setmainfont{Noto Sans CJK SC}
+\setsansfont{Noto Sans CJK SC}
+\setmonofont{Noto Sans CJK SC}
+% ── Page Layout ──
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[RE,LO]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Colors & Boxes ──
+\usepackage{xcolor}
+\definecolor{principleblue}{RGB}{25,70,130}
+\definecolor{lawgreen}{RGB}{34,139,34}
+\definecolor{deriveorange}{RGB}{210,105,30}
+\definecolor{warnred}{RGB}{180,40,40}
+\definecolor{lightblue}{RGB}{230,240,255}
+\definecolor{lightgreen}{RGB}{230,255,235}
+\definecolor{lightorange}{RGB}{255,245,230}
+\definecolor{lightred}{RGB}{255,235,235}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\newtcolorbox{principlebox}[1][]{
+  colback=lightblue, colframe=principleblue!80!black,
+  fonttitle=\bfseries\large, title=#1,
+  breakable, enhanced, drop shadow=black!10,
+  before skip=12pt, after skip=12pt
+}
+
+\newtcolorbox{lawbox}[1][]{
+  colback=lightgreen, colframe=lawgreen!70!black,
+  fonttitle=\bfseries, title=#1,
+  breakable, enhanced,
+  before skip=10pt, after skip=10pt
+}
+
+\newtcolorbox{derivationbox}[1][]{
+  colback=lightorange, colframe=deriveorange!70!black,
+  fonttitle=\bfseries, title=#1,
+  breakable, enhanced,
+  before skip=10pt, after skip=10pt
+}
+
+\newtcolorbox{limitbox}[1][]{
+  colback=lightred, colframe=warnred!70!black,
+  fonttitle=\bfseries, title=#1,
+  breakable, enhanced,
+  before skip=10pt, after skip=10pt
+}
+
+% ── Graphics & Diagrams ──
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes,positioning,calc,decorations.pathmorphing,fit,backgrounds,patterns}
+
+% ── Tables ──
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+
+% ── Hyperlinks & References ──
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=principleblue,
+  citecolor=deriveorange,
+  urlcolor=principleblue
+}
+\usepackage[backend=bibtex,style=numeric-comp,sorting=none]{biblatex}
+\addbibresource{refs.bib}
+
+% ── Captions ──
+\usepackage[font=small,labelfont=bf]{caption}
+
+% ── Code Listings ──
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small,breaklines=true}
+
+% ── Index ──
+\usepackage{imakeidx}
+\makeindex[intoc]
+
+% ══════════════════════════════════════════════════════
+%  Title Page
+% ══════════════════════════════════════════════════════
+
+\title{物理学基本定律与逻辑关系}
+\author{AI 辅助编纂系统}
+\date{Version 0.1 -- \today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+% ── Copyright & License ──
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \textcopyright\ 2026 AI-Assisted Compilation. \\
+  This work is licensed under CC BY-SA 4.0. \\
+  To view a copy of this license, visit \url{https://creativecommons.org/licenses/by-sa/4.0/}
+\end{center}
+\vspace*{\fill}
+\clearpage
+
+% ── Preface ──
+\chapter*{序言 / Preface}
+\addcontentsline{toc}{chapter}{序言 / Preface}
+
+\section*{致读者}
+
+物理学是人类理解自然世界的最深刻成就。然而，传统的物理教育往往将定律分散在力学、电磁学、热力学等独立课程中讲授，使得它们看起来像是互不相关的知识点。
+
+本书的目标是从一个不同的视角展示物理学：\textbf{所有重要物理定律都可以从仅仅六条核心原则（R1-R6）推导出来}。这六条原则是现代物理学的"公理"，其余一切——从牛顿定律到 Maxwell 方程组，从薛定谔方程到 Einstein 场方程——都是它们的逻辑推论。
+
+\vspace{8pt}
+{\large\bfseries 阅读指南}
+
+\begin{enumerate}
+  \item \textbf{总说在前}：每章开头给出该原则/定律的直觉理解与核心图像。
+  \item \textbf{细节在后}：随后展开数学推导与严格论证。
+  \item \textbf{推导链}：每一条有效定律都标注了其逻辑前提——读者可以追溯到最基础的 R1-R6。
+  \item \textbf{局限透明}：每条原则的适用范围与已知失效边界都明确列出。
+\end{enumerate}
+
+本书适合具备大学物理基础的读者，但也试图在每个主题上提供直观的可视化理解路径。
+
+\vspace{16pt}
+\noindent\textit{Physics is humanity's deepest achievement in understanding the natural world. This book shows that all major physical laws derive from just six core principles.}
+
+\clearpage
+
+% ── Table of Contents ──
+\tableofcontents
+
+% ══════════════════════════════════════════════════════
+%  PART I: FUNDAMENTAL PRINCIPLES
+% ══════════════════════════════════════════════════════
+\mainmatter
+
+\part{基本公理：六条核心原则}
+\label{part:principles}
+
+\chapter*{概述：R1-R6 体系}
+\addcontentsline{toc}{chapter}{概述：R1-R6 体系}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.8cm,
+  rbox/.style={rectangle,draw,rounded corners,fill=blue!8,text width=2.8cm,align=center,font=\small\bfseries,minimum height=1.2cm},
+  arrow/.style={->,>=Stealth,thick,deriveorange!70}
+]
+  \node[rbox] (r1) {R1\\时空结构};
+  \node[rbox,right=of r1] (r2) {R2\\最小作用量};
+  \node[rbox,right=of r2] (r3) {R3\\规范不变性};
+  \node[rbox,below=of r1] (r4) {R4\\量子公设};
+  \node[rbox,below=of r2] (r5) {R5\\Born 规则};
+  \node[rbox,below=of r3] (r6) {R6\\熵统计定义};
+
+  \draw[arrow] (r1) -- (r2);
+  \draw[arrow] (r2) -- (r3);
+  \draw[arrow] (r1) -- (r4);
+  \draw[arrow] (r4) -- (r5);
+  \draw[arrow] (r4) -- (r6);
+  \draw[arrow] (r5) -- (r6);
+\end{tikzpicture}
+\end{center}
+
+\vspace{12pt}
+
+\begin{longtable}{p{0.12\textwidth} p{0.35\textwidth} p{0.43\textwidth}}
+\toprule
+\textbf{原则} & \textbf{核心内容} & \textbf{地位} \\
+\midrule
+R1 & 四维洛伦兹因果时空结构。时空是四维的，具有光锥因果结构。 & 狭义+广义相对论的基础。 \\
+R2 & 最小作用量原理。真实物理过程使作用量取极值。 & 所有动力学方程的统一来源。 \\
+R3 & 局域规范不变性。物理定律在局域规范变换下不变。 & 决定基本相互作用力。 \\
+R4 & 量子力学公设。叠加原理、幺正演化、正则对易、算符-观测对应。 & 量子力学的逻辑基础。 \\
+R5 & Born 概率规则。测量概率等于概率幅模的平方。 & 连结量子描述与实验。 \\
+R6 & 熵的统计定义。$S = k_B \ln W$。 & 连结微观量子与宏观热力学。 \\
+\bottomrule
+\end{longtable}
+
+\vspace{12pt}
+
+以下六章将逐一展开这六条原则，详细讨论其直觉来源、数学表达、逻辑推论，以及适用的边界与局限。Noether 定理（连续对称 $\to$ 守恒量）和自旋-统计定理（自旋决定统计行为）是 R2 和 R1+R4 的数学推论，不列为独立原则。
+
+\clearpage
+
+% ═══════════════════════════════════════════════
+%  Individual chapter files
+% ═══════════════════════════════════════════════
+
+\include{chapters/ch01-r1-spacetime}
+\include{chapters/ch02-r2-action}
+\include{chapters/ch03-r3-gauge}
+\include{chapters/ch04-r4-quantum}
+\include{chapters/ch05-r5-born}
+\include{chapters/ch06-r6-entropy}
+
+% ═══════════════════════════════════════════════
+%  PART II: DERIVED LAWS
+% ═══════════════════════════════════════════════
+
+\part{有效定律：从公理到具体定律的推导}
+\label{part:derived}
+
+\include{chapters/ch07-mechanics}
+\include{chapters/ch08-electromagnetism}
+\include{chapters/ch09-quantum}
+\include{chapters/ch10-thermodynamics}
+\include{chapters/ch11-relativity}
+\include{chapters/ch12-conservation}
+
+% ═══════════════════════════════════════════════
+%  APPENDICES
+% ═══════════════════════════════════════════════
+
+\appendix
+\part{附录 / Appendices}
+
+\chapter{物理常数表 / Physical Constants}
+\label{app:constants}
+
+\begin{longtable}{llll}
+\toprule
+\textbf{常数} & \textbf{符号} & \textbf{数值} & \textbf{不确定度} \\
+\midrule
+真空光速 & $c$ & 299792458 m/s & exact \\
+普朗克常数 & $h$ & $6.62607015\times 10^{-34}$ J·s & exact \\
+约化普朗克常数 & $\hbar$ & $1.054571817\times 10^{-34}$ J·s & exact \\
+基本电荷 & $e$ & $1.602176634\times 10^{-19}$ C & exact \\
+玻尔兹曼常数 & $k_B$ & $1.380649\times 10^{-23}$ J/K & exact \\
+阿伏伽德罗常数 & $N_A$ & $6.02214076\times 10^{23}$ mol$^{-1}$ & exact \\
+引力常数 & $G$ & $6.67430\times 10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ & $2.2\times 10^{-5}$ \\
+精细结构常数 & $\alpha$ & $7.2973525643\times 10^{-3}$ & $1.5\times 10^{-10}$ \\
+真空介电常数 & $\varepsilon_0$ & $8.8541878128\times 10^{-12}$ F/m & exact \\
+真空磁导率 & $\mu_0$ & $4\pi\times 10^{-7}$ N/A$^2$ & exact \\
+\bottomrule
+\caption{基本物理常数 (CODATA 2022 / SI 2019)}
+\end{longtable}
+
+\chapter{推导关系总图 / Complete Derivation Map}
+\label{app:derivations}
+
+\begin{center}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[
+  node distance=1.3cm and 0.8cm,
+  kernel/.style={rectangle,draw,fill=blue!15,rounded corners,text width=2.2cm,align=center,font=\footnotesize\bfseries,minimum height=0.9cm},
+  law/.style={rectangle,draw,fill=green!12,rounded corners,text width=2cm,align=center,font=\footnotesize,minimum height=0.8cm},
+  cons/.style={rectangle,draw,fill=orange!12,rounded corners,text width=2cm,align=center,font=\footnotesize,minimum height=0.8cm},
+  arrow/.style={->,>=Stealth,thick,deriveorange!70,font=\tiny}
+]
+  % R1-R6 kernel
+  \node[kernel] (r1) {R1\\时空结构};
+  \node[kernel,right=of r1] (r2) {R2\\最小作用量};
+  \node[kernel,right=of r2] (r3) {R3\\规范不变性};
+  \node[kernel,right=of r3] (r4) {R4\\量子公设};
+  \node[kernel,right=of r4] (r5) {R5\\Born规则};
+  \node[kernel,right=of r5] (r6) {R6\\熵定义};
+
+  % Mechanics
+  \node[law,below=0.8cm of r2] (el) {Euler-Lagrange};
+  \node[law,below=0.6cm of el] (n2) {Newton 第二};
+  \node[law,left=0.6cm of n2] (n1) {Newton 第一};
+  \node[law,right=0.6cm of n2] (n3) {Newton 第三};
+  \node[law,below=0.6cm of n2] (gr) {万有引力};
+  \node[law,below=0.5cm of gr] (kep) {Kepler 第三};
+
+  % EM
+  \node[law,below=0.8cm of r3] (ge) {Gauss 电};
+  \node[law,below=0.5cm of ge] (gm) {Gauss 磁};
+  \node[law,below=0.5cm of gm] (fa) {Faraday};
+  \node[law,below=0.5cm of fa] (am) {Ampère-Maxwell};
+  \node[law,below=0.5cm of am] (lo) {Lorentz 力};
+  \node[law,below=0.5cm of lo] (wave) {电磁波方程};
+
+  % QM
+  \node[law,below=0.8cm of r4] (se) {薛定谔方程};
+  \node[law,below=0.5cm of se] (eh) {$E=h\nu$};
+  \node[law,below=0.5cm of eh] (db) {de Broglie};
+  \node[law,below=0.5cm of db] (up) {不确定性原理};
+  \node[law,below=0.5cm of up] (pauli) {泡利不相容};
+
+  % Thermo
+  \node[law,below=0.8cm of r6] (z0) {第零定律};
+  \node[law,below=0.5cm of z0] (f1) {第一定律};
+  \node[law,below=0.5cm of f1] (t3) {第三定律};
+  \node[law,below=0.5cm of t3] (ig) {理想气体};
+  \node[law,below=0.5cm of ig] (fd) {Fermi-Dirac};
+  \node[law,below=0.5cm of fd] (be) {Bose-Einstein};
+
+  % Relativity
+  \node[law,below=0.8cm of r1] (lt) {Lorentz变换};
+  \node[law,below=0.5cm of lt] (mc) {$E=mc^2$};
+  \node[law,below=0.5cm of mc] (efe) {Einstein场方程};
+
+  % Conservation
+  \node[cons,below=0.8cm of efe] (noe) {Noether 定理};
+  \node[cons,right=of noe] (ene) {能量守恒};
+  \node[cons,right=of ene] (mom) {动量守恒};
+  \node[cons,right=of mom] (ang) {角动量守恒};
+  \node[cons,right=of ang] (chg) {电荷守恒};
+
+  % Arrows
+  \draw[arrow] (r2) -- (el);
+  \draw[arrow] (el) -- (n1);
+  \draw[arrow] (el) -- (n2);
+  \draw[arrow] (n2) -- (n3);
+  \draw[arrow] (r1) -- (gr);
+  \draw[arrow] (gr) -- (kep);
+
+  \draw[arrow] (r3) -- (ge);
+  \draw[arrow] (ge) -- (gm);
+  \draw[arrow] (gm) -- (fa);
+  \draw[arrow] (fa) -- (am);
+  \draw[arrow] (r3) -- (lo);
+  \draw[arrow] (ge) -- (wave);
+  \draw[arrow] (am) -- (wave);
+
+  \draw[arrow] (r4) -- (se);
+  \draw[arrow] (se) -- (eh);
+  \draw[arrow] (eh) -- (db);
+  \draw[arrow] (r4) -- (up);
+  \draw[arrow] (r4) -- (pauli);
+
+  \draw[arrow] (r6) -- (z0);
+  \draw[arrow] (r6) -- (f1);
+  \draw[arrow] (r6) -- (t3);
+  \draw[arrow] (f1) -- (ig);
+  \draw[arrow] (r6) -- (fd);
+  \draw[arrow] (r6) -- (be);
+
+  \draw[arrow] (r1) -- (lt);
+  \draw[arrow] (lt) -- (mc);
+  \draw[arrow] (r1) -- (efe);
+  \draw[arrow] (r2) -- (efe);
+
+  \draw[arrow] (r2) -- (noe);
+  \draw[arrow] (noe) -- (ene);
+  \draw[arrow] (noe) -- (mom);
+  \draw[arrow] (noe) -- (ang);
+  \draw[arrow] (noe) -- (chg);
+\end{tikzpicture}
+}
+\end{center}
+
+% ── Bibliography ──
+\backmatter
+\printbibliography[heading=bibintoc,title={参考文献 / References}]
+\printindex
+
+\end{document}

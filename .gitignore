@@ -1,0 +1,4 @@
+*.aux *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk
+book/build/
+*.bbl *.blg *.run.xml *.bcf
+.DS_Store

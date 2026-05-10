@@ -1,0 +1,165 @@
+\chapter{热力学与统计力学：从熵定义到热力学定律}
+\label{ch:thermo}
+
+\section{概述}
+R6 用 $S = k_B \ln W$ 定义了熵，通过计数微观状态数将量子力学（R4）与宏观热力学连接起来。热力学的四大定律都是 R6 在不同条件下的推论。
+
+\section{第零定律：温度概念}
+\begin{lawbox}[Zeroth Law]
+  若 $T_A = T_B$ 且 $T_B = T_C$，则 $T_A = T_C$。
+  \textbf{前提}：热平衡的传递性——温度的定义基础
+\end{lawbox}
+第零定律使得温度计成为可能。从统计力学角度看，热平衡意味着两个系统通过能量交换使总微观态数最大化。
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  \fill[red!30] (0,0.5) rectangle (1.5,2) node[midway] {$A$};
+  \fill[blue!20] (3,0.5) rectangle (4.5,2) node[midway] {$B$};
+  \fill[green!20] (6,0.5) rectangle (7.5,2) node[midway] {$C$};
+  \draw[<->,thick] (1.5,1.25) -- (3,1.25) node[midway,above] {$T_A=T_B$};
+  \draw[<->,thick] (4.5,1.25) -- (6,1.25) node[midway,above] {$T_B=T_C$};
+  \node at (3.75,-0.3) {$\implies T_A = T_C$};
+\end{tikzpicture}
+\end{center}
+
+\section{第一定律：能量守恒的热力学形式}
+
+\begin{lawbox}[First Law of Thermodynamics]
+\[
+dU = T\,dS - P\,dV + \mu\,dN
+\]
+\textbf{前提}：R2（Noether $\to$ 能量守恒）+ R6（$S = k\ln W$）
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  能量守恒（Noether）：$dU = dQ - dW$。
+  可逆过程：$dQ_{\text{rev}} = T\,dS$（由 $1/T \equiv \partial S/\partial E$ 定义）。
+  流体做功：$dW = P\,dV$。
+  代入：$dU = T\,dS - P\,dV$。含粒子交换：$+ \mu\,dN$。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % PV diagram
+  \draw[->] (0,0) -- (4,0) node[right] {$V$};
+  \draw[->] (0,0) -- (0,3) node[left] {$P$};
+  \draw[principleblue,very thick] plot[domain=0.5:3.5] (\x, {2.5/\x});
+  \node[principleblue] at (1.8,2.5) {等温线 $PV = nRT$};
+  \fill[principleblue!20] plot[domain=1.5:2.5] (\x, {2.5/\x}) -- plot[domain=2.5:1.5] (\x,0) -- cycle;
+  \node at (2,0.7) {$W = \int P\,dV$};
+  \node at (2,0.3) {面积 = 功};
+\end{tikzpicture}
+\end{center}
+
+\section{第二定律的统计本质}
+
+第二定律 $\Delta S \geq 0$ 不是力学必然，而是 \textbf{$S = k\ln W$ + 低熵初始条件的统计推论}。
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Two boxes - expansion
+  \begin{scope}
+    \fill[blue!15] (0,0) rectangle (1.5,1.5);
+    \fill[white] (1.5,0) rectangle (3,1.5);
+    \draw[thick] (0,0) rectangle (3,1.5);
+    \draw[thick] (1.5,0) -- (1.5,1.5);
+    \foreach \i in {1,...,8} { \fill[red] (0.2+0.3*rand,0.2+1.1*rand) circle (0.06); }
+    \node at (0.75,1.8) {初始：$V$};
+  \end{scope}
+  \draw[->,very thick] (3.5,0.75) -- (4.5,0.75);
+  \begin{scope}[shift={(5,0)}]
+    \fill[blue!8] (0,0) rectangle (3,1.5);
+    \draw[thick] (0,0) rectangle (3,1.5);
+    \draw[thick,gray,dashed] (1.5,0) -- (1.5,1.5);
+    \foreach \i in {1,...,8} { \fill[red] (0.3+2.4*rand,0.3+0.9*rand) circle (0.06); }
+    \node at (1.5,1.8) {最终：$2V$，$W$ 增大};
+  \end{scope}
+  \node at (4,-0.4) {$W_{\text{全空间}} = 2^N \times W_{\text{半空间}}$（$N$ 为分子数）};
+\end{tikzpicture}
+\end{center}
+
+\textbf{自发缩回的概率}：对于一摩尔气体（$N \sim 6\times10^{23}$），所有分子同时回到一半空间的概率 $\sim 2^{-6\times10^{23}}$——这在宇宙年龄尺度上是绝对不可能的事件。
+
+\section{第三定律：绝对零度不可达}
+
+\begin{lawbox}[Third Law]
+  $T \to 0$ 时，$S \to 0$（非简并基态）。
+  \textbf{前提}：R6 + R4（量子基态结构）
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  R6：$S = k_B \ln W$。$T\to 0$ 时系统占据量子基态。
+  R4：若基态非简并，则 $W=1 \implies S=0$。
+  若基态有 $g$ 重简并，$S(T=0) = k_B \ln g > 0$（残余熵，如冰 Ih）。
+  经典物理会给出 $S \to -\infty$——量子力学（分立能谱）救了热力学。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \draw[->] (0,0) -- (4.5,0) node[right] {$T$};
+  \draw[->] (0,0) -- (0,3) node[left] {$S$};
+  \draw[principleblue,thick] plot[domain=0.01:4,samples=60] (\x, {2.5*(1-exp(-1.2*\x))});
+  \draw[deriveorange,dashed] plot[domain=0.01:4,samples=40] (\x, {0.5+2.0*(1-exp(-1.2*\x))});
+  \node[principleblue] at (3.5,2.3) {非简并基态};
+  \node[deriveorange] at (3.5,1.0) {残余熵 $>0$};
+  \node at (2,-0.5) {$T\to 0 \implies S\to 0$（第三定律）};
+\end{tikzpicture}
+\end{center}
+
+\section{量子统计分布}
+
+\begin{lawbox}[Fermi-Dirac Distribution]
+\[
+f_{\text{FD}}(E) = \frac{1}{\exp[(E-\mu)/k_B T] + 1}
+\]
+\textbf{前提}：R6 + R4（泡利 $\to$ 每态最多 1 个费米子）
+\end{lawbox}
+
+\begin{lawbox}[Bose-Einstein Distribution]
+\[
+f_{\text{BE}}(E) = \frac{1}{\exp[(E-\mu)/k_B T] - 1}
+\]
+\textbf{前提}：R6 + R4（叠加 $\to$ 玻色子无占用限制）
+\end{lawbox}
+
+分母中的 $\pm 1$ 是量子统计与经典 Maxwell-Boltzmann 统计的唯一区别——它决定了金属的导电性、半导体的能带结构、白矮星的稳定性、超流和 BEC 凝聚。
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  \draw[->] (0,0) -- (5,0) node[right] {$E$};
+  \draw[->] (0,0) -- (0,3.5) node[left] {$f(E)$};
+  \draw[principleblue,thick] plot[domain=0:5,samples=60] (\x, {3/(exp(2*(\x-3))+1)});
+  \node[principleblue] at (0.8,3.2) {FD: $+1$};
+  \draw[deriveorange,thick] plot[domain=3.3:5,samples=50] (\x, {2/(exp(1.5*(\x-3))-1)});
+  \node[deriveorange] at (4.5,1.0) {BE: $-1$};
+  \draw[dashed,gray] (3,0) -- (3,3.5) node[above] {$\mu$};
+  \node at (1.5,3.3) {$T>0$：$\mu$ 处 $f_{\text{FD}}=1/2$};
+\end{tikzpicture}
+\end{center}
+
+\section{推导总图}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.9cm,
+  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2cm,align=center,font=\footnotesize\bfseries},
+  law/.style={rectangle,draw,fill=lawgreen!15,rounded corners,text width=2.6cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thick,deriveorange}
+]
+  \node[kernel] (r6) {R6\\$S=k\ln W$};
+  \node[kernel,right=0.3cm of r6] (r4) {R4\\量子态};
+  \node[law,below=0.5cm of r6] (z0) {第零定律\\温度传递性};
+  \node[law,below=0.3cm of z0] (f1) {第一定律\\$dU=TdS-PdV$};
+  \node[law,below=0.3cm of f1] (t3) {第三定律\\$S(T\!\to\!0)\!=\!0$};
+  \node[law,below=0.3cm of t3] (ig) {理想气体\\$PV=nRT$};
+  \node[law,right=0.3cm of f1] (fd) {Fermi-Dirac\\$f=1/(e^{\beta(E-\mu)}\!+\!1)$};
+  \node[law,below=0.3cm of fd] (be) {Bose-Einstein\\$f=1/(e^{\beta(E-\mu)}\!-\!1)$};
+  \draw[arrow] (r6) -- (z0); \draw[arrow] (r6) -- (f1);
+  \draw[arrow] (r6) -- (t3); \draw[arrow] (r4) -- (t3);
+  \draw[arrow] (f1) -- (ig); \draw[arrow] (r6) -- (fd);
+  \draw[arrow] (r4) -- (fd); \draw[arrow] (r6) -- (be);
+  \draw[arrow] (r4) -- (be);
+\end{tikzpicture}
+\end{center}
+
+参考文献：Pathria \& Beale, Fermi \textit{Thermodynamics}, [WIKI-BOLTZ]

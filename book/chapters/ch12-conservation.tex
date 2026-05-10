@@ -1,0 +1,199 @@
+\chapter{守恒律：Noether 定理的全面展开}
+\label{ch:conservation}
+
+\section{概述}
+R2 最优雅的推论是 Noether 定理（1918）：作用量的每个连续对称性对应一个守恒量。这不是巧合——它是变分法的数学必然。
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.2cm,
+  sym/.style={rectangle,draw,fill=principleblue!10,rounded corners,text width=2.8cm,align=center,font=\small},
+  cons/.style={rectangle,draw,fill=deriveorange!15,rounded corners,text width=2.3cm,align=center,font=\small\bfseries},
+  arrow/.style={->,>=Stealth,very thick,deriveorange}
+]
+  \node[sym] (tt) {时间平移不变\\$L$ 不显含 $t$};
+  \node[sym,right=of tt] (st) {空间平移不变\\$L$ 不显含 $\mathbf{r}$};
+  \node[sym,right=of st] (ro) {旋转不变\\$L$ 在旋转下不变};
+  \node[sym,right=of ro] (gauge) {$U(1)$ 规范对称\\$\psi\!\to\!e^{i\alpha}\psi$};
+  \node[cons,below=of tt] (ene) {能量守恒\\$E$=常数};
+  \node[cons,below=of st] (mom) {动量守恒\\$\mathbf{p}$=常数};
+  \node[cons,below=of ro] (ang) {角动量守恒\\$\mathbf{L}$=常数};
+  \node[cons,below=of gauge] (chg) {电荷守恒\\$Q$=常数};
+  \draw[arrow] (tt) -- (ene);
+  \draw[arrow] (st) -- (mom);
+  \draw[arrow] (ro) -- (ang);
+  \draw[arrow] (gauge) -- (chg);
+\end{tikzpicture}
+\end{center}
+
+\section{能量守恒}
+
+\begin{lawbox}[Energy Conservation]
+\[
+\frac{dE}{dt} = 0 \quad (\text{孤立系统}), \qquad \partial_\mu T^{\mu\nu} = 0 \quad (\text{局域形式})
+\]
+\textbf{前提}：Noether 定理 + 时间平移对称
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  若拉格朗日量 $L$ 不显含时间（$\partial L/\partial t = 0$），则时间平移是作用量的对称性。
+  Noether 荷为哈密顿量：
+  \[
+  H = \sum_i p_i \dot{q}_i - L
+  \]
+  由 Euler-Lagrange 方程，$dH/dt = 0$。定义 $E \equiv H$ 即得能量守恒。
+
+  \textbf{直觉}：今天和明天物理定律相同——因此能量不随时间改变。
+\end{derivationbox}
+
+\section{动量守恒}
+
+\begin{lawbox}[Momentum Conservation]
+\[
+\frac{d\mathbf{P}}{dt} = 0 \quad (\text{孤立系统}), \qquad \partial_\mu T^{\mu i} = 0
+\]
+\textbf{前提}：Noether 定理 + 空间平移对称
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  若 $L$ 在 $\mathbf{r} \to \mathbf{r} + \boldsymbol{\epsilon}$ 下不变，Noether 荷为总动量：
+  \[
+  \mathbf{P} = \sum_i m_i \mathbf{v}_i
+  \]
+  空间均匀 $\implies$ 动量守恒。这也给出了牛顿第三定律。
+
+  \textbf{直觉}：北京和纽约物理定律相同——因此动量不随位置改变。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  \fill[blue!30] (-1.5,0) circle (0.4) node {$m_1$};
+  \fill[blue!30] (1.5,0) circle (0.4) node {$m_2$};
+  \draw[->,very thick,red] (-1.1,0) -- (-0.4,0) node[midway,above] {$v_1$};
+  \draw[->,very thick,red] (1.1,0) -- (0.4,0) node[midway,above] {$v_2$};
+  \node at (0,-0.3) {碰撞前};
+  \node at (0,-0.7) {$p_1 + p_2 = p_1' + p_2'$};
+  \draw[->,very thick,red] (-1.1,0.8) -- (0.3,0.3) node[midway,above] {$v_1'$};
+  \draw[->,very thick,red] (1.1,0.8) -- (-0.3,0.3) node[midway,above] {$v_2'$};
+  \node at (0,1.2) {碰撞后};
+\end{tikzpicture}
+\end{center}
+
+\section{角动量守恒}
+
+\begin{lawbox}[Angular Momentum Conservation]
+\[
+\frac{d\mathbf{L}}{dt} = 0 \quad (\text{有心力场})
+\]
+\textbf{前提}：Noether 定理 + 旋转对称
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  若 $L$ 在旋转下不变，Noether 荷为总角动量：
+  \[
+  \mathbf{L} = \sum_i \mathbf{r}_i \times \mathbf{p}_i
+  \]
+  有心力（$\mathbf{F} \parallel \mathbf{r}$）下 $\boldsymbol{\tau} = \mathbf{r}\times\mathbf{F} = 0 \implies d\mathbf{L}/dt = 0$。
+
+  \textbf{直觉}：朝北和朝东物理定律相同——因此角动量守恒。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \fill[yellow!40] (0,0) circle (0.5) node[black] {\small 恒星};
+  \draw[principleblue,thick] (0,0) ellipse (2.5 and 1.0);
+  \fill[blue!20] (2.5,0) circle (0.15);
+  \draw[dashed] (0,0) -- (2.5,0) node[midway,above] {$\mathbf{r}$};
+  \draw[->,very thick,red] (2.5,0) -- (2.5,0.8) node[right] {$\mathbf{v}$};
+  \node at (0,-1.5) {$\mathbf{L} = \mathbf{r}\times\mathbf{p} =$ 常数（Kepler 第二定律）};
+  \draw[gray!30] (0,0) -- (-1.8,-0.6);
+  \draw[gray!30] (-1.8,-0.6) -- (-2.5,0);
+  \node[gray] at (-1.8,-1.0) {相等时间扫过相等面积};
+\end{tikzpicture}
+\end{center}
+
+\section{电荷守恒}
+
+\begin{lawbox}[Charge Conservation]
+\[
+\frac{dQ}{dt} = 0, \qquad \partial_\mu J^\mu = 0
+\]
+\textbf{前提}：Noether 定理 + $U(1)$ 规范对称（R3）
+\end{lawbox}
+
+\begin{derivationbox}[推导]
+  Dirac 拉格朗日量 $\mathcal{L} = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi$ 在全局 $U(1)$ 下不变。
+  Noether 流：
+  \[
+  J^\mu = e\,\bar{\psi}\gamma^\mu\psi
+  \]
+  满足 $\partial_\mu J^\mu = 0$。空间积分：
+  \[
+  Q = \int J^0 d^3x, \qquad \frac{dQ}{dt} = -\oint \mathbf{J}\cdot d\mathbf{A} = 0
+  \]
+  \textbf{直觉}：你可以创造电子-正电子对（净电荷零），但总电荷永远不变。
+\end{derivationbox}
+
+\section{守恒律与连续性方程}
+
+\begin{lawbox}[连续性方程 / Continuity Equation]
+\[
+\frac{\partial\rho}{\partial t} + \nabla\cdot\mathbf{J} = 0
+\]
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  \draw[thick] (0,0) rectangle (3,2);
+  \node at (1.5,1) {\large 体积 $V$};
+  \foreach \i in {1,...,6} { \fill[red] (0.3+0.4*rand,0.3+1.4*rand) circle (0.06); }
+  \draw[->,very thick,deriveorange] (3.5,1) -- (4.5,1);
+  \node at (4,1.3) {$\mathbf{J}$};
+  \node at (1.5,-0.6) {$\frac{d}{dt}Q_{\text{内}} = -\oint\mathbf{J}\cdot d\mathbf{A}$};
+  \node at (1.5,-1.0) {净流出 = 内部减少};
+\end{tikzpicture}
+\end{center}
+
+\textbf{所有守恒律都有这种局域形式}——守恒不是"全局神秘同步"，而是"每一点的流入 = 流出 + 积累"的局域连续性。
+
+\section{推导总图：对称性 $\to$ 守恒量的完整映射}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.0cm,
+  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2.2cm,align=center,font=\footnotesize\bfseries},
+  sym/.style={rectangle,draw,fill=principleblue!5,rounded corners,text width=2.5cm,align=center,font=\footnotesize},
+  cons/.style={rectangle,draw,fill=deriveorange!15,rounded corners,text width=2.3cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thick,deriveorange}
+]
+  \node[kernel] (r2) {R2\\$\delta S = 0$};
+  \node[sym,below left=0.8cm and -0.5cm of r2] (tt) {$\partial L/\partial t = 0$\\时间平移};
+  \node[sym,below=0.8cm of r2] (st) {$L(\mathbf{r}+\epsilon)=L(\mathbf{r})$\\空间平移};
+  \node[sym,below right=0.8cm and -0.5cm of r2] (ro) {$L$ 旋转不变\\转动对称};
+  \node[cons,below=of tt] (ene) {能量 $E$ 守恒};
+  \node[cons,below=of st] (mom) {动量 $\mathbf{p}$ 守恒};
+  \node[cons,below=of ro] (ang) {角动量 $\mathbf{L}$ 守恒};
+  \node[sym,right=1.5cm of ro] (u1) {$U(1)$ 规范\\$\psi\to e^{i\alpha}\psi$};
+  \node[cons,below=of u1] (chg) {电荷 $Q$ 守恒};
+  \draw[arrow] (r2) -- (tt); \draw[arrow] (r2) -- (st);
+  \draw[arrow] (r2) -- (ro); \draw[arrow] (tt) -- (ene);
+  \draw[arrow] (st) -- (mom); \draw[arrow] (ro) -- (ang);
+  \draw[arrow] (r2) -- (u1); \draw[arrow] (u1) -- (chg);
+\end{tikzpicture}
+\end{center}
+
+\section{小结}
+
+Noether 定理是物理学中最深刻的联系之一：\textbf{守恒不是偶然的巧合——它是宇宙几何对称性的直接表现}。
+
+\begin{enumerate}
+  \item 时间均匀 $\to$ 能量守恒
+  \item 空间均匀 $\to$ 动量守恒
+  \item 空间各向同性 $\to$ 角动量守恒
+  \item 规范对称 $\to$ 电荷守恒
+  \item 所有守恒律都有局域连续性方程 $\partial_\mu J^\mu = 0$
+\end{enumerate}
+
+如果明天物理定律突然改变了（时间平移对称破缺），能量就不再守恒。这是 R2 最优雅的遗产。
+
+参考文献：[NOETHER], [GOLD] Ch.12, [JACK] §5.2

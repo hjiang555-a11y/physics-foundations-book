@@ -1,0 +1,186 @@
+\chapter{量子力学：从量子公设到薛定谔方程}
+\label{ch:quantum}
+
+\section{概述}
+R4（四大量子公设）加 R5（Born 规则）定义了量子力学的全部计算规则。本章从这些公设逐一推出现代量子力学的核心方程式。
+
+\section{薛定谔方程}
+
+\begin{lawbox}[Schrödinger Equation]
+\[
+i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi
+\]
+\textbf{前提}：R4(4b) 幺正演化 + R4(4c) 正则对易 + R4(4d) 算符对应
+\end{lawbox}
+
+\begin{derivationbox}[推导：态向量 → 坐标表象]
+  R4(4b)：$i\hbar\frac{d}{dt}|\psi\rangle = \hat{H}|\psi\rangle$。
+  R4(4c)：$[\hat{x},\hat{p}]=i\hbar \implies \hat{p} = -i\hbar\nabla$（坐标表象）。
+  R4(4d)：$\hat{H} = \frac{\hat{p}^2}{2m} + V(\hat{x})$。
+  投影到坐标基底 $|\mathbf{r}\rangle$：
+  \[
+  i\hbar\frac{\partial}{\partial t}\langle\mathbf{r}|\psi\rangle = \left[-\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})\right]\langle\mathbf{r}|\psi\rangle
+  \]
+  即 $i\hbar\partial_t\psi = \hat{H}\psi$。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Potential well
+  \draw[->] (0,-0.5) -- (0,3.5) node[left] {$V$};
+  \draw[->] (0,0) -- (5,0) node[right] {$x$};
+  \draw[thick] (0.5,0) -- (1.5,0);
+  \draw[thick] (1.5,0) -- (1.5,2.5);
+  \draw[thick] (1.5,2.5) -- (3.5,2.5);
+  \draw[thick] (3.5,2.5) -- (3.5,0);
+  \draw[thick] (3.5,0) -- (4.5,0);
+  % Wavefunctions
+  \draw[principleblue,thick] plot[domain=1.5:3.5,samples=60] (\x, {1.1+0.8*sin(pi*(\x-2.5)/1.0 r)});
+  \draw[deriveorange,thick] plot[domain=1.5:3.5,samples=60] (\x, {2.5+0.3*sin(2*pi*(\x-2.5)/1.0 r)});
+  \node[principleblue] at (4.1,1.2) {$E_1$};
+  \node[deriveorange] at (4.1,2.6) {$E_2$};
+  \node at (2.5,-0.8) {无穷深势阱：$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2}$};
+\end{tikzpicture}
+\end{center}
+
+\section{$E = h\nu$（普朗克-爱因斯坦关系）}
+
+\begin{lawbox}[Planck-Einstein Relation]
+\[
+E = h\nu = \hbar\omega
+\]
+\textbf{前提}：R4(4c) → 谐振子量子化
+\end{lawbox}
+
+\begin{derivationbox}[谐振子量子化]
+  经典谐振子 $H = \frac{p^2}{2m} + \frac12 m\omega^2 x^2$。
+  算符化：定义产生/湮灭算符 $a^\dagger, a$（满足 $[a,a^\dagger]=1$）：
+  \[
+  \hat{H} = \hbar\omega\!\left(a^\dagger a + \frac12\right)
+  \]
+  本征值：$E_n = \hbar\omega(n+1/2) = h\nu(n+1/2)$。
+  相邻能级差 $h\nu$。光子就是 $\nu$ 频率的电磁场量子——$E=h\nu$。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \draw[->] (0,0) -- (0,4) node[left] {$E$};
+  \draw[thick] (-0.2,0.5) -- (3.5,0.5);
+  \draw[thick] (-0.2,1.5) -- (3.5,1.5);
+  \draw[thick] (-0.2,2.5) -- (3.5,2.5);
+  \draw[thick] (-0.2,3.5) -- (3.5,3.5);
+  \node[left] at (-0.2,0.5) {$\frac12\hbar\omega$};
+  \node[left] at (-0.2,1.5) {$\frac32\hbar\omega$};
+  \node[left] at (-0.2,2.5) {$\frac52\hbar\omega$};
+  \node[left] at (-0.2,3.5) {$\frac72\hbar\omega$};
+  \draw[<->,deriveorange,thick] (1.5,0.5) -- (1.5,1.5) node[midway,right] {$\hbar\omega = h\nu$};
+  \draw[<->,deriveorange,thick] (2.0,1.5) -- (2.0,2.5);
+  \node at (1.5,-0.5) {等间距能级——$\Delta E = h\nu$};
+\end{tikzpicture}
+\end{center}
+
+\section{de Broglie 关系}
+
+\begin{lawbox}[de Broglie Wavelength]
+\[
+\lambda = \frac{h}{p}
+\]
+\textbf{前提}：$E=h\nu$ + 光子动量 $p=E/c$
+\end{lawbox}
+
+光子：$E = h\nu = hc/\lambda$，$p = E/c \implies \lambda = h/p$。
+de Broglie (1924) 大胆推广：\textbf{所有物质都有波动性}。Davisson-Germer (1927) 电子衍射实验证实。
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \draw[->] (-2,0) -- (3.5,0) node[right] {$x$};
+  \draw[principleblue,thick] plot[domain=-1.8:3.2,samples=80] (\x, {0.6*sin(3*\x r)});
+  \node[principleblue] at (2.8,0.9) {$\psi \sim e^{ikx}$};
+  \node at (0.7,-0.5) {$\lambda = 2\pi/k = h/p$};
+  \fill[red] (-1.5,0) circle (2pt) node[below] {$e^-$};
+  \draw[->,very thick,red] (-1.5,0) -- (-1.1,0) node[midway,above] {$p$};
+\end{tikzpicture}
+\end{center}
+
+\section{不确定性原理}
+
+\begin{lawbox}[Heisenberg Uncertainty Principle]
+\[
+\sigma_x \sigma_p \geq \frac{\hbar}{2}, \qquad \Delta E\,\Delta t \geq \frac{\hbar}{2}
+\]
+\textbf{前提}：$[x,p]=i\hbar$（R4(4c)）+ 一般不等式
+\end{lawbox}
+
+\begin{derivationbox}[Kennard 不等式]
+  对任意 $A,B$：$\sigma_A\sigma_B \geq \frac12|\langle[A,B]\rangle|$。
+  取 $A=x, B=p$，代入 $[x,p]=i\hbar$ 得 $\sigma_x\sigma_p \geq \hbar/2$。
+  最小值在高斯波包：$\psi(x) \propto e^{-x^2/4\sigma_x^2}$。
+\end{derivationbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  \begin{scope}
+    \draw[->] (0,-0.2) -- (0,2) node[left] {$\rho(x)$};
+    \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
+    \draw[principleblue,thick] plot[domain=-2:2,samples=80] (\x, {1.6*exp(-3*\x*\x)});
+    \node[principleblue] at (0,1.8) {$\sigma_x$ 小};
+    \node at (0,-0.5) {位置确定 $\implies$ 动量不确定};
+  \end{scope}
+  \begin{scope}[shift={(6,0)}]
+    \draw[->] (0,-0.2) -- (0,2) node[left] {$\rho(p)$};
+    \draw[->] (-2.5,0) -- (2.5,0) node[right] {$p$};
+    \draw[deriveorange,thick] plot[domain=-2:2,samples=80] (\x, {0.4*exp(-0.3*\x*\x)});
+    \node[deriveorange] at (0,1.8) {$\sigma_p$ 大};
+    \node at (0,-0.5) {$\sigma_x\sigma_p \geq \hbar/2$};
+  \end{scope}
+\end{tikzpicture}
+\end{center}
+
+\section{泡利不相容原理}
+
+\begin{lawbox}[Pauli Exclusion Principle]
+  两个全同费米子不能占据完全相同的量子态。
+  \textbf{前提}：自旋-统计定理（R1 + R4）
+\end{lawbox}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.1]
+  % Energy levels for electrons
+  \draw[->] (0,0) -- (0,4) node[left] {$E$};
+  \draw[thick] (-0.2,0.5) -- (2.5,0.5); \node at (2.8,0.5) {$n=1$};
+  \draw[thick] (-0.2,1.6) -- (2.5,1.6); \node at (2.8,1.6) {$n=2$};
+  \draw[thick] (-0.2,2.7) -- (2.5,2.7); \node at (2.8,2.7) {$n=3$};
+  % Electrons
+  \draw[->,blue,thick] (0.3,0.5) -- (0.3,0.9) node[right] {$\uparrow$};
+  \draw[->,blue,thick] (0.8,0.5) -- (0.8,0.1) node[right] {$\downarrow$};
+  \draw[->,blue,thick] (0.3,1.6) -- (0.3,2.0) node[right] {$\uparrow$};
+  \draw[->,blue,thick] (0.8,1.6) -- (0.8,1.2) node[right] {$\downarrow$};
+  \node at (0.55,-0.5) {每能级最多 2 个电子（$\uparrow$ + $\downarrow$）};
+\end{tikzpicture}
+\end{center}
+
+\textbf{为什么原子不坍缩？} 泡利原理阻止所有电子落到最低能级——迫使电子占据越来越高的能级，产生元素周期表的壳层结构。\textbf{这是物质稳定性的微观根源。}
+
+\section{推导总图}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.8cm,
+  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2cm,align=center,font=\footnotesize\bfseries},
+  law/.style={rectangle,draw,fill=lawgreen!15,rounded corners,text width=2.5cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thick,deriveorange}
+]
+  \node[kernel] (r4) {R4\\量子公设};
+  \node[kernel,right=0.3cm of r4] (r5) {R5\\Born 规则};
+  \node[law,below=0.5cm of r4] (se) {薛定谔方程\\$i\hbar\partial_t\psi=\hat{H}\psi$};
+  \node[law,below=0.3cm of se] (eh) {$E=h\nu$\\谐振子量子化};
+  \node[law,below=0.3cm of eh] (db) {$\lambda=h/p$\\de Broglie 关系};
+  \node[law,below=0.3cm of db] (up) {$\sigma_x\sigma_p\geq\hbar/2$\\不确定性原理};
+  \node[law,right=0.3cm of se] (pauli) {泡利不相容\\自旋-统计(需R1)};
+  \draw[arrow] (r4) -- (se); \draw[arrow] (se) -- (eh);
+  \draw[arrow] (eh) -- (db); \draw[arrow] (r4) -- (up);
+  \draw[arrow] (r4) -- (pauli); \draw[arrow] (r5) -- (up);
+\end{tikzpicture}
+\end{center}
+
+参考文献：[FEYN III], [HEISENBERG], Griffiths QM, Dirac (1930)
