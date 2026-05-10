@@ -16,17 +16,17 @@
 
 \begin{center}
 \begin{tikzpicture}[
-  node distance=1.0cm and 0.5cm,
-  box/.style={rectangle,draw,rounded corners,fill=blue!5,text width=3.2cm,align=center,font=\small},
+  node distance=1.2cm and 0.5cm,
+  box/.style={rectangle,draw,rounded corners,fill=blue!5,text width=3.8cm,align=center,font=\small},
   arrow/.style={->,>=Stealth,thick}
 ]
   \node[box,fill=principleblue!10] (u1) {U(1) 规范对称\\$F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu$};
-  \node[box,below left=0.5cm and 0cm of u1] (homo) {齐次方程 (Bianchi)} node[below=0.1cm] {$\partial_\lambda F_{\mu\nu}+\text{cyclic}=0$};
-  \node[box,below right=0.5cm and 0cm of u1] (inhomo) {非齐次方程 (Euler-Lagrange)} node[below=0.1cm] {$\partial_\mu F^{\mu\nu}=J^\nu$};
-  \node[box,below=0.3cm of homo] (mg) {$\nabla\cdot\mathbf{B}=0$\\Gauss 磁定律};
-  \node[box,below=0.3cm of mg] (fa) {$\nabla\times\mathbf{E}=-\partial_t\mathbf{B}$\\Faraday 定律};
-  \node[box,below=0.3cm of inhomo] (ge) {$\nabla\cdot\mathbf{E}=\rho/\varepsilon_0$\\Gauss 电定律};
-  \node[box,below=0.3cm of ge] (am) {$\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\partial_t\mathbf{E}$\\Ampère-Maxwell};
+  \node[box,below left=0.8cm and 0cm of u1] (homo) {齐次方程 (Bianchi 恒等式)\\[2pt] $\partial_\lambda F_{\mu\nu}+\text{cyclic}=0$};
+  \node[box,below right=0.8cm and 0cm of u1] (inhomo) {非齐次方程 (Euler-Lagrange)\\[2pt] $\partial_\mu F^{\mu\nu}=J^\nu$};
+  \node[box,below=0.8cm of homo] (mg) {$\nabla\cdot\mathbf{B}=0$\\Gauss 磁定律};
+  \node[box,below=0.8cm of mg] (fa) {$\nabla\times\mathbf{E}=-\partial_t\mathbf{B}$\\Faraday 定律};
+  \node[box,below=0.8cm of inhomo] (ge) {$\nabla\cdot\mathbf{E}=\rho/\varepsilon_0$\\Gauss 电定律};
+  \node[box,below=0.8cm of ge] (am) {$\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\partial_t\mathbf{E}$\\Ampère-Maxwell};
   \draw[arrow] (u1) -- (homo); \draw[arrow] (u1) -- (inhomo);
   \draw[arrow] (homo) -- (mg); \draw[arrow] (mg) -- (fa);
   \draw[arrow] (inhomo) -- (ge); \draw[arrow] (ge) -- (am);
