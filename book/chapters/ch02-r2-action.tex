@@ -4,342 +4,157 @@
 \chapter{R2 — 最小作用量原理}
 \label{ch:r2}
 
-\section{总说：大自然的经济学}
+\section{总说：自然的"选择法则"}
 
-如果物理学有一个最深刻的原理，那一定是\textbf{最小作用量原理 (Principle of Stationary Action)}。它说：物理系统在两种状态之间采取的真实路径，是使一个称为"作用量 (action)"的量取极值的那条路径。
+R2 或许是所有物理原理中最深刻的一条。它说：物理系统在给定的初态和末态之间，\textbf{真实发生的运动就是那个使"作用量"取平稳值的运动}。
 
-\begin{principlebox}[R2 — 最小作用量原理 / Principle of Stationary Action]
-  物理系统（粒子或场）的真实演化路径或场配置，是使"作用量"取极值（最小值或平稳值）的那个配置。拉格朗日量 $L$（或拉格朗日密度 $\mathcal{L}$）编码了系统的全部动力学内容。
+这条原理的神奇之处在于：它不是一个关于"力"的定律，而是一个关于"选择"的定律——它从所有\emph{可能}的路径中选出唯一的\emph{真实}路径，由此自然得出\textbf{决定性动力学}（给定初始条件后演化唯一确定）。
 
+系统的全部动力学内容编码于\textbf{拉格朗日量} $L$（粒子力学）或\textbf{拉格朗日密度} $\mathcal{L}$（场论）。经典力学、电磁学、广义相对论和量子力学的全部动力学方程，都可以从合适选择的 $L$ 或 $\mathcal{L}$，通过同一个数学机制——变分法——导出。
+
+\begin{principlebox}[R2 — 最小作用量原理]
+  物理系统在两个给定构型之间的真实演化路径，是使作用量泛函取平稳值（极值或鞍点）的路径。
   \[
-  \delta S = 0, \qquad S = \int_{t_1}^{t_2} L(q, \dot{q}, t)\, dt
+  \delta S = 0
   \]
-
-  在相对论量子场论中推广为：
-  \[
-  S = \int \mathcal{L}(\phi, \partial_\mu \phi) \, d^4 x
-  \]
+  作用量 $S$ 是拉格朗日量 $L$ 的时间积分（粒子）或拉格朗日密度 $\mathcal{L}$ 的时空积分（场）。
 \end{principlebox}
 
-这个原理具有非凡的\textbf{普适性}：
-\begin{itemize}
-  \item 在经典力学中，变分 $S$ 给出 Euler-Lagrange 方程，进而产生所有运动方程
-  \item 在电磁学中，选择适当的 $L$ 就给出 Maxwell 方程组
-  \item 在广义相对论中，Einstein-Hilbert 作用量 $\to$ Einstein 场方程
-  \item 在量子力学中，Feynman 的路径积分表述将最小作用量推广为"所有路径都贡献，但作用量最小的路径贡献最大"
-  \item 在量子场论中，标准模型的全部相互作用都由规范不变的作用量决定
-\end{itemize}
+% ── 变量定义表 ──
+\section{变量定义}
 
-\textbf{地位}：R2 是所有动力学方程的统一来源。Noether 定理（每个连续对称性对应一个守恒量）是 R2 的数学推论，不是独立的原则。
-
-\section{直觉理解：大自然是"懒"的}
-
-\subsection{光走最短路：Fermat 原理}
-
-早在 1657 年，Pierre de Fermat 就注意到一个奇特事实：光在两点之间总是走\textbf{时间最短}的路径，而不是空间最短的路径。这就是 Fermat 原理 (Fermat's Principle)：
-
-\[
-\delta \int_{A}^{B} n(\mathbf{r})\, ds = 0
-\]
-
-其中 $n(\mathbf{r})$ 是折射率。光在水和空气界面的折射（Snell 定律）是这条原理的自然结果。
-
-\begin{center}
-\begin{tikzpicture}[scale=1.15]
-  % Air-water interface
-  \draw[thick] (-2,0) -- (2,0);
-  \node at (2.3,0.3) {\small 空气 $n=1$};
-  \node at (2.3,-0.3) {\small 水 $n=1.33$};
-
-  % Direct path (NOT taken)
-  \draw[gray,dashed] (-1.2,1.2) -- (0.0,0.0) -- (1.2,-1.0);
-  \node[gray] at (0.2,0.7) {\small 直线};
-
-  % Actual refracted path
-  \draw[principleblue,thick] (-1.2,1.2) -- (-0.3,0.0) -- (1.2,-1.0);
-
-  % Angles
-  \draw[->] (0,0) -- (0,0.8);
-  \draw (0,0) -- (-0.8,1.0);
-  \node at (-0.7,0.5) {\small $\theta_1$};
-
-  \draw[->] (0,0) -- (0,-0.8);
-  \draw (0,0) -- (0.8,-1.0);
-  \node at (0.5,-0.5) {\small $\theta_2$};
-
-  % Snell's law
-  \node[fill=white,font=\small] at (0,0) {$n$};
-
-  % Points A, B
-  \fill[red] (-1.2,1.2) circle (2pt) node[left] {$A$};
-  \fill[red] (1.2,-1.0) circle (2pt) node[right] {$B$};
-\end{tikzpicture}
-\end{center}
-
-\textbf{直觉}：光"知道"水下的速度更慢（$v = c/n$），所以它偏折了角度，使得水下段的路径更短，从而整体用时最小。它不"计算"，几何自动做到了。
-
-\subsection{最速降线：Brachistochrone 问题}
-
-1696 年，Johann Bernoulli 提出了著名的最速降线问题：一条连接 $A$ 和 $B$（$B$ 低于 $A$，不在正下方）的曲线，让小球在重力作用下从 $A$ 滑到 $B$ 用时最短。
-
-直观猜测是直线——但错了。正确答案是\textbf{摆线 (cycloid)}。
-
-\begin{center}
-\begin{tikzpicture}[scale=0.95]
-  % Points
-  \fill[red] (-1.5,1.5) circle (2pt) node[above] {$A$};
-  \fill[red] (1.5,0) circle (2pt) node[below] {$B$};
-
-  % Straight line (wrong)
-  \draw[gray,dashed] (-1.5,1.5) -- (1.5,0);
-  \node[gray] at (0.1,0.5) {\tiny 直线 (较慢)};
-
-  % Cycloid (correct)
-  \draw[principleblue,thick] (-1.5,1.5)
-    plot[domain=-1.5:1.5,samples=50] (\x, {1.5 - 1.2*(\x+1.5)^0.3 - 0.3*(\x+1.5)^2});
-  \node[principleblue] at (0.2,1.1) {\tiny 摆线 (最快)};
-
-  % Explanation
-  \node[align=left,font=\footnotesize] at (0,-0.5) {摆线先"垂直下落"获取速度，\\再用水平滑行利用速度。};
-\end{tikzpicture}
-\end{center}
-
-\textbf{要点}：大自然"选择"的路径不是直觉最简单的，而是使某个\textbf{积分量}（这里是时间）取极值的路径。这正是 R2 的精髓。
-
-\subsection{肥皂膜：最小面积原理}
-
-另一个直观例子：将金属环浸入肥皂水后取出，形成的薄膜总是\textbf{表面积最小}的曲面。这不是肥皂"知道"什么，而是表面张力使能量最小化——而能量正比于面积。这里的最小面积原理就是 R2 的一个实例。
-
-\section{数学详述：变分法}
-
-\subsection{变分法基础}
-
-R2 的数学工具是变分法 (Calculus of Variations)。核心思想：我们不是在寻找一个数（如微积分中的极值问题），而是在寻找一个\textbf{函数}使某个积分取极值。
-
-\begin{derivationbox}[Euler-Lagrange 方程的推导]
-  考虑作用量泛函：
-  \[
-  S[q] = \int_{t_1}^{t_2} L(q(t), \dot{q}(t), t) \, dt
-  \]
-
-  考虑微小的路径变分 $q(t) \to q(t) + \delta q(t)$，其中 $\delta q(t_1) = \delta q(t_2) = 0$（固定端点）：
-
-  \begin{align*}
-    \delta S &= S[q+\delta q] - S[q] \\
-    &= \int_{t_1}^{t_2} \left[ L(q+\delta q, \dot{q}+\delta\dot{q}, t) - L(q, \dot{q}, t) \right] dt \\
-    &= \int_{t_1}^{t_2} \left[ \frac{\partial L}{\partial q} \delta q + \frac{\partial L}{\partial \dot{q}} \delta\dot{q} \right] dt + \mathcal{O}(\delta q^2)
-  \end{align*}
-
-  对第二项分部积分：
-  \[
-  \int_{t_1}^{t_2} \frac{\partial L}{\partial \dot{q}} \delta\dot{q} \, dt
-  = \left[ \frac{\partial L}{\partial \dot{q}} \delta q \right]_{t_1}^{t_2}
-  - \int_{t_1}^{t_2} \frac{d}{dt}\!\left( \frac{\partial L}{\partial \dot{q}} \right) \delta q \, dt
-  \]
-
-  边界项因 $\delta q(t_1)=\delta q(t_2)=0$ 消失。要求 $\delta S = 0$ 对任意 $\delta q(t)$ 成立：
-  \[
-  \int_{t_1}^{t_2} \left[ \frac{\partial L}{\partial q} - \frac{d}{dt}\!\left( \frac{\partial L}{\partial \dot{q}} \right) \right] \delta q \, dt = 0
-  \]
-
-  由于 $\delta q(t)$ 在开区间 $(t_1, t_2)$ 内任意，被积函数必须为零：
-  \[
-  \boxed{\frac{d}{dt}\!\left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} = 0}
-  \]
-
-  这就是\textbf{Euler-Lagrange 方程 (Euler-Lagrange equation)}。对于多自由度系统，每个广义坐标 $q_i$ 都有一条这样的方程。
-\end{derivationbox}
-
-\subsection{为什不是"最小"而是"平稳"？}
-
-历史上称"最小作用量原理"，但技术上更准确的术语是\textbf{平稳作用量原理 (Stationary Action Principle)}。作用量不总是最小——在某些极端情况下它可以是极大值或鞍点。
-
-然而，对于足够短的时间段和多数经典力学的实际问题，作用量确实取局部最小值。量子力学的路径积分提供了更深的理解：考虑复数概率幅 $e^{iS/\hbar}$，不同路径的贡献在 $S$ 平稳的路径附近相长干涉（同相位叠加），其他地方相消——这从量子层面解释了为什么经典世界看起来"选择"平稳作用量的路径。
-
-\subsection{从拉格朗日量到运动方程：实例}
-
-\begin{lawbox}[例 1：自由粒子]
-  取 $L = \frac{1}{2}m\dot{x}^2$（无势能的自由粒子）：
-  \[
-  \frac{\partial L}{\partial \dot{x}} = m\dot{x}, \quad \frac{\partial L}{\partial x} = 0
-  \]
-  \[
-  \frac{d}{dt}(m\dot{x}) = 0 \implies \dot{x} = \text{常数}
-  \]
-  这就是\textbf{牛顿第一定律}：无外力时物体做匀速直线运动。
-\end{lawbox}
-
-\begin{lawbox}[例 2：势场中的粒子]
-  取 $L = \frac{1}{2}m\dot{\mathbf{r}}^2 - V(\mathbf{r})$（$T - V$）：
-  \[
-  \frac{\partial L}{\partial \dot{\mathbf{r}}} = m\dot{\mathbf{r}} = \mathbf{p}, \quad
-  \frac{\partial L}{\partial \mathbf{r}} = -\nabla V
-  \]
-  \[
-  \frac{d}{dt}(m\dot{\mathbf{r}}) + \nabla V = 0 \implies m\ddot{\mathbf{r}} = -\nabla V
-  \]
-  定义力 $\mathbf{F} = -\nabla V$，即得 $\mathbf{F} = m\mathbf{a}$ ——\textbf{牛顿第二定律}。
-\end{lawbox}
-
-\begin{lawbox}[例 3：谐振子]
-  取 $L = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2$：
-  \[
-  m\ddot{x} + kx = 0 \implies x(t) = A\cos(\omega t) + B\sin(\omega t), \quad \omega = \sqrt{k/m}
-  \]
-\end{lawbox}
-
-\textbf{关键洞察}：以上三条——牛顿第一、第二定律和谐振子——都来自同一个 Euler-Lagrange 方程，只是给定了不同的 $L$。\textbf{拉格朗日量编码了系统的全部动力学信息}。
-
-\subsection{哈密顿表述}
-
-从拉格朗日表述可以自然过渡到哈密顿表述。定义广义动量：
-\[
-p_i = \frac{\partial L}{\partial \dot{q}_i}
-\]
-
-定义哈密顿量 $H$ 为能量的 Legendre 变换：
-\[
-H(q, p, t) = \sum_i p_i \dot{q}_i - L(q, \dot{q}, t)
-\]
-
-得到 Hamilton 正则方程：
-\[
-\dot{q}_i = \frac{\partial H}{\partial p_i}, \qquad
-\dot{p}_i = -\frac{\partial H}{\partial q_i}
-\]
-
-哈密顿表述是向量子力学过渡的关键桥梁——将 $p_i$ 和 $q_i$ 替换为算符 $[\hat{q}, \hat{p}] = i\hbar$，就得到量子力学（R4）。
-
-\section{Noether 定理：对称性 $\to$ 守恒量（R2 的数学推论）}
-
-R2 最深刻的一个推论是 \textbf{Noether 定理 (Noether's Theorem, 1918)}：
-
-\begin{principlebox}[Noether 定理 / Noether's Theorem]
-  作用量的每一个连续对称性（保持 $S$ 不变的连续变换）都对应一个守恒量。
-
-  \textit{Every continuous symmetry of the action corresponds to a conserved quantity.}
-\end{principlebox}
-
-这是物理学中最优雅的定理之一。以下是直接的对应：
-
-\begin{center}
-\begin{tabular}{lll}
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{2cm}p{2cm}p{2.2cm}p{1.8cm}p{3cm}p{4cm}}
 \toprule
-\textbf{对称性} & \textbf{守恒量} & \textbf{物理解释} \\
+\textbf{变量} & \textbf{符号} & \textbf{类型} & \textbf{量纲} & \textbf{定义域} & \textbf{物理含义} \\
 \midrule
-时间平移不变 & 能量 $E$ & 昨天和今天物理定律一样 \\
-空间平移不变 & 动量 $\mathbf{p}$ & 北京和纽约物理定律一样 \\
-空间旋转不变 & 角动量 $\mathbf{L}$ & 朝北和朝东的物理定律一样 \\
-$U(1)$ 规范对称 & 电荷 $Q$ & 电子相位的任意性 \\
+作用量 & $S$ & $\mathbb{R}$ & M$\cdot$L$^2\cdot$T$^{-1}$ & $S \in \mathbb{R}$ & 动力学泛函；Lorentz 不变量 \\
+拉格朗日量 & $L$ & $\mathbb{R}$ & M$\cdot$L$^2\cdot$T$^{-2}$ & $L(q,\dot{q},t)$ & $T-V$；编码全部动力学 \\
+拉格朗日密度 & $\mathcal{L}$ & $\mathbb{R}$ & M$\cdot$L$^{-1}\cdot$T$^{-2}$ & $\mathcal{L}(\phi,\partial_\mu\phi)$ & 场论的标量密度 \\
+广义坐标 & $q_i$ & 依赖系统 & 依赖系统 & $i=1,\dots,N$ & 系统位形的独立变量 \\
+广义速度 & $\dot{q}_i$ & 依赖系统 & 依赖系统 & $\dot{q}_i = dq_i/dt$ & $q_i$ 对时间的导数 \\
+场变量 & $\phi(x)$ & 标量/向量/旋量 & 依赖场类型 & 依赖场类型 & 场论的基本动力学变量 \\
+积分限 & $t_1, t_2$ & $\mathbb{R}$ & T & $t_1 < t_2$ & 作用量积分起止（固定端点） \\
+变分 & $\delta$ & 算符 & — & 作用于泛函 & $\delta q(t_1)=\delta q(t_2)=0$ \\
 \bottomrule
 \end{tabular}
-\end{center}
+\caption{R2 变量定义}
+\end{table}
 
-\begin{derivationbox}[Noether 定理的简要推导]
-  设作用量 $S = \int L(q, \dot{q}, t)\, dt$ 在变换 $q \to q + \epsilon Q(q, \dot{q})$ 和 $t \to t + \epsilon T$ 下不变（$\epsilon$ 为小参数），即 $\delta S = 0$。
+% ── 数学表达式 ──
+\section{数学表达式}
 
-  可以证明存在一个守恒量（Noether 荷）：
-  \[
-  \mathcal{Q} = \frac{\partial L}{\partial \dot{q}} Q - \left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) T
-  \]
-  满足 $d\mathcal{Q}/dt = 0$（在满足 Euler-Lagrange 方程的解上）。
+\subsection{粒子力学}
+\[
+S[q_i] \equiv \int_{t_1}^{t_2} L\big(q_i(t), \dot{q}_i(t), t\big)\, dt
+\]
 
-  \textbf{实例验证}：若 $L$ 不显含时间（纯时间平移对称，$T=1, Q=0$）：
-  \[
-  \mathcal{Q} = -\left( \frac{\partial L}{\partial \dot{q}} \dot{q} - L \right) = -(p\dot{q} - L) = -H
-  \]
-  所以 $H =$ 常数 $\to$ 能量守恒。
-\end{derivationbox}
+\subsection{场论}
+\[
+S[\phi] \equiv \int \mathcal{L}\big(\phi(x), \partial_\mu\phi(x), x^\mu\big)\, d^4x
+\]
 
-\textbf{Noether 定理不是独立的原则}——它是 R2 的数学推论。时间平移对称性不是"Noether 定理的输入"，而是"Lagrangian 不显含时间"这一事实。Noether 定理只是保证：如果 Lagrangian 不显含时间，则存在一个守恒量（能量）。
+\subsection{平稳作用量条件}
+\[
+\delta S = 0
+\]
+对路径的无穷小变分 $\delta q_i$，固定端点：$\delta q_i(t_1) = \delta q_i(t_2) = 0$。
 
-\section{作用量原理的现代统一角色}
+% ── 成立条件与失效边界 ──
+\section{成立条件与失效边界}
 
-R2 在现代理论物理中扮演着统一的角色。下表展示了我们如何通过选择不同的 $L$ 或 $\mathcal{L}$ 得到不同的物理理论：
-
-\begin{center}
-\begin{tabular}{lll}
-\toprule
-\textbf{理论} & \textbf{拉格朗日量/密度} & \textbf{得到的方程} \\
-\midrule
-经典力学 & $L = \frac{1}{2}m\dot{\mathbf{r}}^2 - V(\mathbf{r})$ & $\mathbf{F} = m\mathbf{a}$ \\
-电磁学 & $\mathcal{L} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} + J^\mu A_\mu$ & Maxwell 方程组 \\
-广义相对论 & $\mathcal{L}_{\text{EH}} = \frac{c^4}{16\pi G}R\sqrt{-g}$ & Einstein 场方程 \\
-量子电动力学 & $\mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4}F^2$ & Dirac + Maxwell \\
-标准模型 & $SU(3)\times SU(2)\times U(1)$ 规范理论 & 所有基本粒子相互作用 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-所有这些都是通过 $\delta S = 0$（对相应的 $L$ 做变分）得到的。
-
-\section{从 R2 出发的推导链}
-
-R2 的"产出"极其丰富：
-
-\begin{center}
-\begin{tikzpicture}[
-  node distance=1.2cm,
-  box/.style={rectangle,draw,rounded corners,fill=blue!8,text width=3.5cm,align=center,font=\small},
-  arrow/.style={->,>=Stealth,thick}
-]
-  \node[box,fill=principleblue!15] (r2) {R2: $\delta S = 0$\\最小作用量原理};
-
-  \node[box,below left=0.8cm and -1.5cm of r2] (el) {Euler-Lagrange 方程\\$d/dt(\partial L/\partial\dot{q}) = \partial L/\partial q$};
-  \node[box,below right=0.8cm and -1.5cm of r2] (noe) {Noether 定理\\对称性 $\to$ 守恒量};
-
-  \node[box,below=of el] (n) {Newton 三定律\\$F=dp/dt$, 等};
-  \node[box,below=of noe] (cons) {守恒定律\\能量/动量/角动量/电荷};
-
-  \node[box,below=of n] (em) {Maxwell 方程组\\(需 R3)};
-  \node[box,below=of cons] (ef) {Einstein 场方程\\(需 R1)};
-
-  \node[box,below=of em] (sm) {标准模型\\(需 R3+R4)};
-
-  \draw[arrow] (r2) -- (el);
-  \draw[arrow] (r2) -- (noe);
-  \draw[arrow] (el) -- (n);
-  \draw[arrow] (noe) -- (cons);
-  \draw[arrow] (el) -- (em);
-  \draw[arrow] (el) -- (ef);
-  \draw[arrow] (el) -- (sm);
-\end{tikzpicture}
-\end{center}
-
-\section{失效边界与局限}
-
-\begin{limitbox}[E1: 量子引力的作用量]
-  在普朗克尺度（或更基本的量子引力理论中），传统的局域拉格朗日量 $L = \int \mathcal{L} \, d^4x$ 可能不再适用。例如全息原理暗示物理自由度可能编码在低维曲面上，而非四维体积内。作用量本身可能需要推广为更一般的拓扑或信息论量。
-\end{limitbox}
-
-\begin{limitbox}[E2: 非拉格朗日系统]
-  并非所有物理系统都有拉格朗日表述。例如：
+\begin{limitbox}[R2 的成立条件]
+  \textbf{成立条件}：
   \begin{itemize}
-    \item 有摩擦力的系统（非保守力）不能直接用 $L = T - V$ 描述
-    \item 某些量子场论在强耦合区缺乏拉格朗日表述（需要 AdS/CFT 对偶等工具）
-    \item 某些凝聚态系统中的拓扑序不能用局域拉格朗日量捕捉
+    \item 有效场论范围：同 R1，在 Planck 尺度以上成立
+    \item 固定端点变分：$\delta q(t_1) = \delta q(t_2) = 0$
+    \item 拉格朗日量存在性：系统可被标量函数 $L$ 或 $\mathcal{L}$ 完备描述
+    \item 可微性：$L$ 对 $q,\dot{q},t$ 充分光滑（$L \in C^2$）
+  \end{itemize}
+
+  \textbf{失效边界}：
+  \begin{itemize}
+    \item 非势场力（摩擦）：标准 $L = T - V$ 不适用；需 Rayleigh 耗散函数
+    \item 非完整约束：不可积速度约束，需 d'Alembert 原理
+    \item Planck 尺度量子引力：连续作用量假设可能失效
   \end{itemize}
 \end{limitbox}
 
-\begin{limitbox}[E3: 初值与边界条件]
-  R2 告诉你\textbf{如何}从一个状态到另一个状态——但它不告诉你初始条件或边界条件。宇宙为什么从极低熵开始（大爆炸）不由 R2 决定——这是一个 contingent 事实（属于本宇宙的特殊"参数设定"）。
-\end{limitbox}
+% ── 必要性 ──
+\section{必要性 (Necessity)}
 
-\begin{limitbox}[E4: 量子层面的挑战]
-  在路径积分表述中，作用量 $S$ 仍然起核心作用（通过 $e^{iS/\hbar}$），但"单一路径取极值"的说法被"所有路径量子叠加"替代。经典极限 $\hbar \to 0$ 可以用驻相近似恢复，但在量子引力区域，路径积分的定义本身就成问题。
-\end{limitbox}
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{5cm}p{7cm}}
+\toprule
+\textbf{移除/弱化} & \textbf{后果} \\
+\midrule
+无 $\delta S = 0$ & 无法导出 Euler-Lagrange 方程 $\to$ 无法导出任何动力学方程 \\
+无 Lagrangian 函数 & Noether 定理失效 $\to$ 无守恒律（能量/动量/角动量/电荷） \\
+无 Lagrangian 密度 & 无法导出 Maxwell、Yang-Mills、Einstein、Dirac 方程 \\
+$\delta S = 0 \to$ 近似 & 动力学方程不再严格成立 \\
+\bottomrule
+\end{tabular}
+\caption{R2 必要性}
+\end{table}
 
-\section{小结}
+\textbf{为什么必须是平稳值（非最小值）}：类时测地线在某些 Lorentz 流形中作用量取鞍点。"平稳"涵盖全部情况。
 
-R2 是最小作用量原理——整个物理学中统一性最强的原理。它说：\textbf{给出一个系统的拉格朗日量（编码其全部动力学），真实演化使作用量 $S = \int L\, dt$ 取极值。}
+\textbf{为什么必须是作用量（非其他泛函）}：仅作用量具有 Lorentz 不变性且量纲与 $\hbar$ 一致，使得量子路径积分 $\int \mathcal{D}\phi\, e^{iS/\hbar}$ 在 $\hbar \to 0$ 时退化为 $\delta S = 0$。这是经典与量子力学的唯一桥梁。
 
-\begin{enumerate}
-  \item 变分法将 $\delta S = 0$ 转化为 Euler-Lagrange 方程。
-  \item Euler-Lagrange 方程 + 具体 $L$ = 运动方程。
-  \item Noether 定理（R2 的数学推论）将连续对称性映射为守恒量。
-  \item 通过选择不同的 $L$，R2 统一了从牛顿力学到标准模型的全部动力学。
-\end{enumerate}
+% ── 充分性 ──
+\section{充分性 (Sufficiency)}
 
-R2 是 R1（舞台）+ R3（力）+ R4（量子）的"粘合剂"——它提供了一个通用框架，将拉格朗日量（其中编码了 R1 的时空结构和 R3 的规范对称性）转化为可计算的动力学方程。
+\textbf{R2 + R1} 提供：
+\begin{itemize}
+  \item $\delta S = 0 \to$ Euler-Lagrange 方程（变分法恒等式）
+  \item + 具体 $L \to$ 全部动力学方程
+  \item + 连续对称性 $\to$ Noether 定理 $\to$ 全部守恒律
+  \item + 量子化 $\to$ Feynman 路径积分 $\to$ 量子场论
+\end{itemize}
 
-\textbf{参考文献}：[GOLD] Ch.2, Ch.12, [LAND] \S2, [NOETHER], [FEYN II] Ch.19, [SCHILLER]
+% ── 直接推论 ──
+\section{直接推论}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{p{4cm}p{8cm}}
+\toprule
+\textbf{推论} & \textbf{说明} \\
+\midrule
+Euler-Lagrange 方程 & $\frac{d}{dt}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0$ \\
+Noether 定理 & 每个连续对称性 $\leftrightarrow$ 一个守恒量 \\
+路径积分 & $\int \mathcal{D}\phi\, e^{iS/\hbar}$，$\hbar \to 0$ 恢复经典极限 \\
+\bottomrule
+\end{tabular}
+\caption{R2 的直接推论}
+\end{table}
+
+\section{直觉理解：Fermat 的遗产}
+
+R2 的前身是 Fermat 原理（1662）：\textit{光在两点之间传播，走的是时间最短的路径。}
+
+Maupertuis（1744）将这一思想推广到粒子运动。两个世纪后，Feynman 在量子电动力学中进一步推广了 R2：在量子层面，\emph{所有}可能的路径都同时被探索，每条路径贡献相位 $e^{iS/\hbar}$。经典路径（$\delta S = 0$）只是所有路径相长干涉的结果。
+
+\subsection{一个具体例子：为什么球沿直线滚？}
+
+自由粒子拉格朗日量：$L = \frac{1}{2}m\mathbf{v}^2$，$S = \int_{t_1}^{t_2} \frac{1}{2}m\mathbf{v}^2\,dt$。
+
+在所有连接 $A$ 和 $B$ 的路径中，哪一条使 $S$ 最小？
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  \draw[->] (0,0) -- (6,0) node[right] {$x$};
+  \draw[->] (0,0) -- (0,4) node[above] {$y$};
+  \fill (0.5,0.5) circle (2pt) node[left] {$A$};
+  \fill (5.0,3.5) circle (2pt) node[right] {$B$};
+  \draw[red,thick] (0.5,0.5) -- (5.0,3.5) node[midway,below right,red] {直线（最小 $S$）};
+  \draw[blue!60,dashed] (0.5,0.5) .. controls (1.5,3.5) and (4,0) .. (5.0,3.5) node[pos=0.3,above,blue!60] {弯曲路径};
+  \draw[blue!60,dotted] (0.5,0.5) .. controls (3,0) and (2,4) .. (5.0,3.5);
+\end{tikzpicture}
+\end{center}
+
+弯曲路径更长 $\to$ 粒子必须走得更快 $\to$ 动能更大 $\to$ $S$ 更大。$S$ 最小的路径 = 最短路径 = 直线。Euler-Lagrange 将它形式化为 $d(m\mathbf{v})/dt = 0 \to \mathbf{v} = $ 常数——Newton 第一定律。

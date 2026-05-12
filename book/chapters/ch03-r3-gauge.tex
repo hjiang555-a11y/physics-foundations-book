@@ -4,287 +4,154 @@
 \chapter{R3 — 局域规范不变性}
 \label{ch:r3}
 
-\section{总说：相互作用从何而来？}
+\section{总说：对称性决定力}
 
-R1 定义了时空舞台，R2 给出了动力学方程的统一生成器。但还有一个关键问题：\textbf{自然界的三种基本力（电磁、弱、强）是从哪里来的？}
+R3 是对现代物理学影响最深远的原理之一。它说：\textbf{物理定律在局域的、位置依赖的对称性变换下保持形式不变}。为维持这种不变性，必须引入补偿场——规范场——而这些规范场就是基本相互作用的传递者。
 
-答案是 R3：\textbf{局域规范不变性 (Local Gauge Invariance)}。
+这意味着：\textbf{力的存在不是随意附加的，而是对称性的必然要求}。电磁力、弱力、强力，都源自同一条原理——只是规范群不同。
 
-这个原理的优雅令人震撼：要求物理定律在"位置依赖的相位重定义"下保持不变，就\textbf{必然}引入一种新的场——规范场 (gauge field)——而这种规范场恰好表现为一种基本相互作用力。
-
-\begin{principlebox}[R3 — 局域规范不变性 / Local Gauge Invariance]
-  物理定律在任意局域（即位置依赖的）规范变换下保持形式不变。为维持这种不变性，必须引入规范场，从而自然产生基本的相互作用力（电磁力、弱力、强力）。
-
-  自然界的具体规范群（$SU(3)_c \times SU(2)_L \times U(1)_Y$）是实验确定的 contingent 事实，但规范相互作用的\textbf{存在形式}由本原则完全决定。
+\begin{principlebox}[R3 — 局域规范不变性]
+  物质场的拉格朗日量在任意局域（位置依赖的）规范变换下保持不变。
+  为维持这种不变性，必须引入规范场 $A_\mu^a$。
+  规范场与物质场的耦合自然产生基本相互作用力。
+  规范群的结构完全决定了相互作用的形式。
 \end{principlebox}
 
-\textbf{一句话总结}：你要求相位在空间的每一点都可以任意旋转而不改变物理——大自然就给你提供了一种力来"连接"不同位置的相位。
+\textbf{注意}：R3 不指定规范群的具体选择（$U(1)$, $SU(2)$, $SU(3)$ 等）——那是 contingent 事实。
+R3 只规定：\textbf{若}存在规范对称性，则必然伴随着规范场和规范相互作用。
 
-这种力就是\textbf{电磁力}（$U(1)$）、\textbf{弱力}（$SU(2)$）和\textbf{强力}（$SU(3)$）。
+% ── 变量定义表 ──
+\section{变量定义}
 
-\section{直觉理解：相位的任意性}
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{2.2cm}p{1.8cm}p{1.8cm}p{1.5cm}p{3cm}p{4cm}}
+\toprule
+\textbf{变量} & \textbf{符号} & \textbf{类型} & \textbf{量纲} & \textbf{定义域} & \textbf{物理含义} \\
+\midrule
+物质场 & $\psi(x)$ & 依赖表示 & 依赖场类型 & $x \in \mathcal{M}$ & 承载规范荷的物质场 \\
+规范参数 & $\alpha^a(x)$ & $\mathbb{R}$ & [1] & 任意光滑函数 & 局域规范变换的角度 \\
+规范势 & $A_\mu^a(x)$ & $\mathbb{R}$ & 依赖群 & $\mu \in \{0,1,2,3\}$ & 补偿场；传递力的玻色子 \\
+场强张量 & $F_{\mu\nu}^a$ & 反对称 & 依赖群 & $F_{\mu\nu}^a = -F_{\nu\mu}^a$ & 规范场的物理自由度 \\
+协变导数 & $D_\mu$ & 算符 & 依赖对象 & $\mu \in \{0,1,2,3\}$ & 规范协变的导数 \\
+规范耦合常数 & $g$ & $\mathbb{R}^+$ & [1] & $g > 0$ & 物质场-规范场耦合强度 \\
+生成元 & $T^a$ & 矩阵 & [1] & $a = 1,\dots,\dim(G)$ & Lie 代数的基础表示 \\
+结构常数 & $f^{abc}$ & $\mathbb{R}$ & [1] & $[T^a,T^b] = if^{abc}T^c$ & 非 Abel 特性度量 \\
+\bottomrule
+\end{tabular}
+\caption{R3 变量定义}
+\end{table}
 
-\subsection{全局相位 vs 局域相位}
+% ── 数学表达式 ──
+\section{数学表达式}
 
-量子力学告诉我们，一个粒子的波函数 $\psi(x)$ 在全局相位变换下：
-
+\subsection{局域规范变换（U(1) 为例）}
 \[
-\psi(x) \to e^{i\alpha} \psi(x) \qquad (\alpha \text{ 为常数})
+\psi(x) \to e^{i\alpha(x)}\psi(x)
 \]
 
-所有物理可观测量——$|\psi|^2$（概率）、期望值 $\langle \psi | \hat{O} | \psi \rangle$——在此变换下不变。这是\textbf{全局对称性：}宇宙中所有点的相位同时旋转相同的 $\alpha$。
-
-但在相对论（R1）中，不同时空点只能通过光锥因果相连。如果我们在北京把电子相位旋转 $\alpha$，纽约的电子必须同时知道——但这需要超光速。相对论不允许这样的"全局同步"。
-
-R1 和 R3 在一起迫使我们问：如果每个时空点 $x$ 可以\textbf{独立地}选择自己的相位 $\alpha(x)$——即\textbf{局域规范变换(local gauge transformation)}：
-
+\subsection{协变导数（最小耦合）}
 \[
-\psi(x) \to e^{i\alpha(x)} \psi(x)
+D_\mu \equiv \partial_\mu - i g A_\mu(x)
+\]
+要求 $D_\mu\psi \to e^{i\alpha} D_\mu\psi$，由此确定规范场变换律：
+\[
+A_\mu(x) \to A_\mu(x) + \frac{1}{g}\,\partial_\mu\alpha(x)
 \]
 
-——物理定律还能保持不变吗？
-
-\textbf{答案}：可以，但代价是必须引入一个新的场 $A_\mu(x)$，这就是规范场，也就是我们称为"光子"的东西。
-
-\subsection{类比：在地球上建立"全局北方向"}
-
-想象你和一个朋友想在世界各地测量角度。如果你俩各用自己的"本地北方"（局域相位），你们的测量就无法比较。你需要一个"联络"——比如 GPS 系统——来把各地的角度联系起来。
-
-规范场 $A_\mu(x)$ 就是这个"联络"。它告诉每一点的波函数如何与相邻点的波函数比较相位。物理上，这个"相位联络"就是电磁势。
-
-\section{数学详述：从 U(1) 到非阿贝尔 Yang-Mills}
-
-\subsection{第一步：局域化 $U(1)$ —— 协变导数}
-
-自由 Dirac 费米子（如电子）的拉格朗日密度：
-
+\subsection{场强张量}
 \[
-\mathcal{L}_0 = \bar{\psi}(i\gamma^\mu \partial_\mu - m)\psi
+F_{\mu\nu} \equiv \partial_\mu A_\nu - \partial_\nu A_\mu
+\]
+非 Abel 推广：$F_{\mu\nu}^a \equiv \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g f^{abc} A_\mu^b A_\nu^c$。
+
+\subsection{规范不变拉格朗日量}
+纯规范场（SI 单位，U(1) EM 为例）：
+\[
+\mathcal{L}_{\text{gauge}} = -\frac{1}{4\mu_0} F_{\mu\nu} F^{\mu\nu}
+\]
+系数 $1/\mu_0$ 由实验确定——规范对称性本身不固定耦合强度。
+
+耦合到 Dirac 物质场（自然单位 $\hbar=c=1$）：
+\[
+\mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu}
 \]
 
-在\textbf{全局} $U(1)$ 变换 $\psi \to e^{i\alpha}\psi$ 下不变。但推广到\textbf{局域}变换 $\psi(x) \to e^{i\alpha(x)}\psi(x)$ 时会出问题：
+% ── 规范场动力学的确定 ──
+\section{规范场动力学的确定}
 
-\[
-\partial_\mu \psi(x) \to \partial_\mu (e^{i\alpha(x)}\psi(x)) = e^{i\alpha(x)}[\partial_\mu \psi + i(\partial_\mu \alpha)\psi]
-\]
+R3 本身只强制规范场 $A_\mu^a$ 的\textbf{存在性}和\textbf{最小耦合}（$p \to p - gA$）。
+动能项 $\mathcal{L}_{\text{gauge}}$ 需要额外原则确定：
 
-导数项多出了 $i(\partial_\mu \alpha)\psi$ 项——相位随位置变化产生了多余的贡献。拉格朗日量不再是不变的。
-
-\textbf{解决方案：}引入\textbf{协变导数 (Covariant Derivative)}：
-
-\[
-\boxed{D_\mu \equiv \partial_\mu - ieA_\mu(x)}
-\]
-
-其中 $A_\mu(x)$ 是\textbf{规范场}（电磁势），$e$ 是耦合常数（电荷）。要求 $D_\mu \psi$ 与 $\psi$ 同步变换：
-
-\[
-(D_\mu \psi) \to e^{i\alpha(x)}(D_\mu \psi)
-\]
-
-这意味着 $A_\mu$ 必须按以下规则变换：
-
-\[
-A_\mu(x) \to A_\mu(x) + \frac{1}{e}\partial_\mu \alpha(x)
-\]
-
-\textbf{这就是电磁规范变换。}$\partial_\mu \alpha(x)$ 是 $\alpha(x)$ 的四维梯度——纯粹来自"不同位置的相位不同"。
-
-\subsection{第二步：场强张量与动力学}
-
-定义\textbf{场强张量 (Field Strength Tensor)}：
-
-\[
-F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu
-\]
-
-$F_{\mu\nu}$ 在规范变换下是\textbf{不变的}（$\partial_\mu \partial_\nu \alpha - \partial_\nu \partial_\mu \alpha = 0$），因此它是一个规范不变的物理量。它的六个独立分量就是电场和磁场：
-
-\[
-F^{0i} = -E^i/c, \qquad F^{ij} = -\epsilon^{ijk}B^k
-\]
-
-构建规范不变的完整作用量：
-
-\[
-\mathcal{L}_{\text{Maxwell}} = -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
-\]
-
-对 $A_\mu$ 作变分（通过 R2）即得到 Maxwell 方程组：
-
-\[
-\partial_\mu F^{\mu\nu} = 0 \quad (\text{无源情形})
-\]
-
-加上与物质场的耦合项 $e\bar{\psi}\gamma^\mu\psi A_\mu$，就得到完整的\textbf{量子电动力学 (QED)}。
-
-\begin{center}
-\begin{tikzpicture}[
-  node distance=1.5cm,
-  box/.style={rectangle,draw,rounded corners,fill=blue!8,text width=4cm,align=center,font=\small},
-  arrow/.style={->,>=Stealth,thick}
-]
-  \node[box] (sym) {要求局域 $U(1)$ 相位对称性\\$\psi(x) \to e^{i\alpha(x)}\psi(x)$};
-  \node[box,below=of sym] (gauge) {必须引入规范场 $A_\mu$\\$D_\mu = \partial_\mu - ieA_\mu$};
-  \node[box,below=of gauge] (field) {场强 $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$\\四个 Maxwell 方程的统一来源};
-  \node[box,below=of field] (force) {电磁力：光子 $\gamma$\\无质量，自旋 1，长程力};
-
-  \draw[arrow] (sym) -- (gauge);
-  \draw[arrow] (gauge) -- (field);
-  \draw[arrow] (field) -- (force);
-\end{tikzpicture}
-\end{center}
-
-\subsection{第三步：非阿贝尔规范理论 (Yang-Mills, 1954)}
-
-$U(1)$ 是阿贝尔群——变换顺序无关紧要：$e^{i\alpha_1}e^{i\alpha_2} = e^{i\alpha_2}e^{i\alpha_1}$。
-
-1954 年，杨振宁和 Mills 将规范不变性推广到\textbf{非阿贝尔群}（变换不可交换）。这是理论物理史上最深刻的推广之一。
-
-对于一般的规范群 $G$（生成元 $T^a$ 满足 $[T^a, T^b] = i f^{abc} T^c$）：
-
-协变导数推广为：
-\[
-D_\mu = \partial_\mu - ig\sum_a T^a A^a_\mu
-\]
-
-场强张量多了一个\textbf{非线性项}：
-\[
-F_{\mu\nu}^a = \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^c_\nu
-\]
-
-最后一项 $g f^{abc} A^b_\mu A^c_\nu$ 是\textbf{非阿贝尔理论的特征}。这意味着：
 \begin{itemize}
-  \item 规范玻色子自己携带"规范荷"
-  \item 规范场\textbf{自相互作用}——三玻色子顶点和四玻色子顶点
-  \item 理论是\textbf{非线性}的——比 $U(1)$ 的 Maxwell 理论复杂得多
+  \item Lorentz 不变性 (R1) + 至多二阶导数 $\to$ 唯一形式 $\propto F_{\mu\nu}^a F^{a\mu\nu}$
+  \item 比例系数（如 $1/4\mu_0$）由实验确定
+  \item 高阶导数项在低能极限下被压低
 \end{itemize}
 
-\begin{center}
-\begin{tikzpicture}[scale=0.88]
-  % U(1) photon - no self-interaction
-  \draw[thick,principleblue] (0,0.6) -- (1.5,0.6);
-  \node at (0.75,0.2) {\small 光子 $\gamma$：无自耦合};
+% ── 成立条件与失效边界 ──
+\section{成立条件与失效边界}
 
-  % SU(N) gluons - triple and quartic vertices
-  \begin{scope}[shift={(4,0.6)}]
-    \draw[thick,deriveorange] (0,0) -- (1.2,0.6);
-    \draw[thick,deriveorange] (0,0) -- (1.2,0);
-    \draw[thick,deriveorange] (0,0) -- (1.2,-0.6);
-    \fill[red] (0,0) circle (2.5pt);
-    \fill[red] (1.2,0.6) circle (2.5pt);
-    \fill[red] (1.2,0) circle (2.5pt);
-    \fill[red] (1.2,-0.6) circle (2.5pt);
-    \node at (0.6,-1.1) {\small $g$：三胶子顶点};
-  \end{scope}
-\end{tikzpicture}
-\end{center}
+\begin{limitbox}[R3 的成立条件与失效边界]
+  \textbf{成立条件}：
+  \begin{itemize}
+    \item 可微规范变换：$\alpha(x)$ 充分光滑
+    \item 规范群已指定（contingent 事实——$U(1)$, $SU(2)$, $SU(3)$ 等由实验确定）
+  \end{itemize}
 
-\subsection{标准模型的规范群}
+  \textbf{失效边界}：
+  \begin{itemize}
+    \item 反常 (Anomaly)：经典规范对称性在量子层面可被破坏
+    \item 强耦合区：微扰展开失效，需非微扰方法
+    \item Planck 尺度：规范对称性可能 emergent 而非 fundamental
+  \end{itemize}
+  \textit{注：Higgs 机制不破坏规范对称性——真空期望值破缺的是全局对称性部分，规范对称性本身保持完好。}
+\end{limitbox}
 
-自然界的完整规范结构是：
+% ── 必要性 ──
+\section{必要性 (Necessity)}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{5cm}p{7cm}}
+\toprule
+\textbf{移除/弱化} & \textbf{后果} \\
+\midrule
+$\alpha(x)$ 局域 $\to$ $\alpha$ 全局常数 & 无规范场 $\to$ 无光子/电磁力；QFT 不可重整 \\
+规范不变性 $\to$ 显式破缺 & 非物理自由度不消除；概率不守恒 \\
+规范群为 Abel 群（无非 Abel） & 无规范场自耦合 $\to$ 无渐近自由 $\to$ 无 QCD 禁闭 \\
+\bottomrule
+\end{tabular}
+\caption{R3 必要性}
+\end{table}
+
+% ── 充分性 ──
+\section{充分性 (Sufficiency)}
+
+\textbf{R3 + R1 + R2} 提供：
+\begin{itemize}
+  \item $U(1)$ 规范群 + 最小作用量 $\to$ Maxwell 方程组
+  \item 非 Abel 规范群 $\to$ Yang-Mills 理论
+  \item 规范相互作用的普适形式（最小耦合）
+  \item 自发对称破缺 + R3 $\to$ Higgs 机制 $\to$ 弱力玻色子质量
+\end{itemize}
+
+\section{直觉理解：为什么需要规范场？}
+
+考虑一个自由电子的波函数 $\psi(x)$。如果我们要求物理可观测量在局域相位变换 $\psi \to e^{i\alpha(x)}\psi$ 下不变，导数的普通定义就不够了：
 
 \[
-SU(3)_c \times SU(2)_L \times U(1)_Y
+\partial_\mu(e^{i\alpha}\psi) = e^{i\alpha}(\partial_\mu\psi + i\partial_\mu\alpha \cdot \psi) \neq e^{i\alpha}\partial_\mu\psi
 \]
 
-\begin{center}
-\begin{tabular}{lllll}
-\toprule
-\textbf{规范群} & \textbf{维数} & \textbf{力} & \textbf{媒介粒子} & \textbf{范围} \\
-\midrule
-$U(1)_Y$ & 1 & 超荷 & $B_\mu$ & — \\
-$SU(2)_L$ & 3 & 弱同位旋 & $W^a_\mu$ (3个) & — \\
-电弱破缺后 & — & 电磁力 & $\gamma$ & 长程 \\
-电弱破缺后 & — & 弱力 & $W^{\pm}, Z^0$ & $\sim 10^{-18}$ m \\
-$SU(3)_c$ & 8 & 色力（强力） & 8 胶子 & $\sim 10^{-15}$ m \\
-\bottomrule
-\end{tabular}
-\end{center}
+多出来的项 $i\partial_\mu\alpha$ 打破了不变性。我们需要一个"修正"的导数 $D_\mu$，使得变换后这多余项被消去。解决办法是引入一个场 $A_\mu$——\textbf{规范场}——让它沿着 $\psi$ 同时变换，恰好抵消多余项：
 
-\textbf{电弱统一}（Glashow-Weinberg-Salam）：$SU(2)_L \times U(1)_Y$ 通过 Higgs 机制自发破缺为 $U(1)_{\text{EM}}$。破缺前有 4 个零质量规范玻色子（$W^a_\mu, B_\mu$），破缺后重组为：零质量的光子 $\gamma$ 和有质量的 $W^{\pm}, Z^0$。
+\[
+D_\mu\psi = (\partial_\mu - ieA_\mu)\psi, \quad A_\mu \to A_\mu + \frac{1}{e}\partial_\mu\alpha
+\]
 
-\section{规范力与引力的几何平行}
+\textbf{这就是电磁力的起源}。要求局域相位不变性 $\Rightarrow$ 必须存在光子场 $A_\mu$ $\Rightarrow$ 光子与电子耦合 $\Rightarrow$ 电磁力。
 
-一个深刻的观察：\textbf{规范力}和\textbf{引力}（R1 的弯曲时空）在几何结构上惊人地平行：
-
-\begin{center}
-\begin{tabular}{lll}
-\toprule
-\textbf{概念} & \textbf{引力} & \textbf{规范力} \\
-\midrule
-联络 & Christoffel 符号 $\Gamma^\lambda_{\mu\nu}$ & 规范势 $A_\mu$ \\
-曲率 & Riemann 张量 $R^\lambda_{\mu\nu\rho}$ & 场强 $F_{\mu\nu}$ \\
-平行输运 & 测地线方程 & 协变导数 $D_\mu \psi = 0$ \\
-力 & 时空弯曲的效应 & 内部空间"弯曲"的效应 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-两者都是"联络的曲率表现为力"。区别在于：引力作用在外部时空坐标上，规范力作用在内部量子数（相位、同位旋、色）上。
-
-\section{从 R3 出发的推导链}
-
-\begin{center}
-\begin{tikzpicture}[
-  node distance=1.3cm,
-  box/.style={rectangle,draw,rounded corners,fill=blue!8,text width=3.5cm,align=center,font=\small},
-  arrow/.style={->,>=Stealth,thick}
-]
-  \node[box,fill=principleblue!15] (r3) {R3: 局域规范不变性};
-
-  \node[box,below left=0.8cm and -1.5cm of r3] (u1) {$U(1)$ 规范对称\\$\to$ 电磁力};
-  \node[box,below right=0.8cm and -1.5cm of r3] (ym) {$SU(2) \!\times\! SU(3)$\\Yang-Mills 理论};
-
-  \node[box,below=of u1] (em) {Maxwell 方程组\\媒介: 光子 $\gamma$};
-  \node[box,below=of ym] (wz) {弱力: $W^{\pm}, Z^0$\\强力: 8 种胶子};
-
-  \node[box,below=of em] (qed) {QED\\(量子电动力学)};
-  \node[box,below=of wz] (sm) {标准模型\\$SU(3)_c\!\times\!SU(2)_L\!\times\!U(1)_Y$};
-
-  \draw[arrow] (r3) -- (u1);
-  \draw[arrow] (r3) -- (ym);
-  \draw[arrow] (u1) -- (em);
-  \draw[arrow] (ym) -- (wz);
-  \draw[arrow] (em) -- (qed);
-  \draw[arrow] (wz) -- (sm);
-\end{tikzpicture}
-\end{center}
-
-\section{失效边界与局限}
-
-\begin{limitbox}[E1: 规范群的"为什么"]
-  R3 解释了：\textbf{如果}给定规范群（如 $U(1)$），物理定律将采取什么形式。但 R3 \textbf{不解释}为什么本宇宙选择了 $SU(3)_c \times SU(2)_L \times U(1)_Y$ 这个特定的规范群结构。为什么不是大统一群 $SU(5)$ 或 $SO(10)$？规范群的选择是实验确定的 contingent 事实。更深层的理论（如弦论的 Calabi-Yau 紧化）可能提供解释，但尚无实验证实。
-\end{limitbox}
-
-\begin{limitbox}[E2: Higgs 机制与质量产生]
-  $W^{\pm}$ 和 $Z^0$ 玻色子有质量，但无破缺的规范场必须是零质量的（质量项 $m^2 A_\mu A^\mu$ 违反规范不变性）。Higgs 机制通过自发对称性破缺解决了这个悖论——但 Higgs 势的具体形貌（$\mu^2, \lambda$）是\textbf{参数输入}，不由 R3 决定。
-\end{limitbox}
-
-\begin{limitbox}[E3: 强 CP 问题]
-  QCD 允许一个破坏 CP 对称性的项：
-  \[
-  \mathcal{L}_\theta = \theta \frac{g_s^2}{32\pi^2} G_{\mu\nu}^a \tilde{G}^{a\mu\nu}
-  \]
-  理论上 $\theta$ 可以是任何值（0 到 $2\pi$），但实验中子电偶极矩的测量限制 $\theta < 10^{-10}$——出奇地小。为什么？这需要引入 Peccei-Quinn 对称性和轴子（axion），超出 R3 本身。
-\end{limitbox}
-
-\begin{limitbox}[E4: 引力与规范理论的统一困境]
-  引力也可表述为局域 Lorentz 对称性的规范理论。但是：将引力量子化为传统规范场论会产生不可重整化的发散。这说明在量子层面，R3（规范场论范式）和 R1（时空几何）的"统一"面临深刻困难——量子引力是当代物理学最大的开放问题。
-\end{limitbox}
-
-\section{小结}
-
-R3 是物理学中"产出"最丰的原理之一：\textbf{三种基本相互作用力不是"额外设定的"，而是局域规范不变性的逻辑必然}。
-
-\begin{enumerate}
-  \item 要求局域 $U(1)$ 相位对称性 $\to$ 电磁力（光子）
-  \item 要求局域 $SU(2)$ 对称性 $\to$ 弱力（$W^{\pm}, Z^0$）
-  \item 要求局域 $SU(3)$ 对称性 $\to$ 强力（8 胶子）
-  \item 不可交换的非阿贝尔群 $\to$ 力的自相互作用
-  \item 与 R2 结合：规范不变的作用量 $\to$ 变分 $\to$ 完整动力学
-\end{enumerate}
-
-如果说 R1 定义了"舞台"的结构，R2 定义了"演员"的运动规则，那么 R3 定义了\textbf{"演员之间如何握手"}。
-
-\textbf{参考文献}：[GROSS], [WEINBERG], [SCHILLER], [JACK] §12.2, [FEYN II] Ch.15
+这条原理后来被推广到了更复杂的对称性：$SU(2)$ 产生了弱力（$W^\pm, Z^0$），$SU(3)$ 产生了强力（胶子）。
