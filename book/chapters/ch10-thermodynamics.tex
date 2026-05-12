@@ -1,125 +1,138 @@
-\chapter{热力学与统计力学：从熵定义到热力学定律}
-\label{ch:thermo}
+% ============================================================
+%  Chapter 10: Thermodynamics
+% ============================================================
+\chapter{热力学：从统计到宏观}
+\label{ch:thermodynamics}
 
 \section{概述}
 
-R6 用 $S = k_B\ln W$ 定义了熵，将微观量子态（R4）与宏观热力学量（温度、压力、热量）连接起来。热力学的四大定律和量子统计分布都是 R6 在不同条件下的推论。
+R6（$S = k_B \ln W$）+ 等概率先验假设构成了统计力学的全部基础。本章从 R6 出发推导热力学第零/一/三定律、理想气体状态方程、Fermi-Dirac 和 Bose-Einstein 量子统计分布。
 
-关键洞察：热力学第二定律 $\Delta S \geq 0$ 不是独立的物理原则——它是 $S=k\ln W$ 加上宇宙低熵初始条件（"过去假设"）的\textbf{统计推论}。
+% ════════════════════════════════════════════════════════
+\section{热力学第零定律}
+% ════════════════════════════════════════════════════════
 
-\section{第零定律——温度的传递性}
-
-\begin{lawbox}[Zeroth Law of Thermodynamics]
-  若系统 $A$ 与 $B$ 热平衡（$T_A=T_B$），且 $B$ 与 $C$ 热平衡（$T_B=T_C$），则 $A$ 与 $C$ 热平衡（$T_A=T_C$）。
-
-  \textbf{前提}：热平衡状态的传递性——温度概念存在的逻辑前提
-\end{lawbox}
-
-\textbf{为什么叫"第零"定律？} 这条定律在逻辑上先于已经命名的第一和第二定律，但在历史上是最后才被明确提出来的（Fowler, 1931）。它确立了温度是一个良定义的物理量——如果热平衡不是传递的，"温度"这个概念就没有意义，温度计也无法工作。
-
-\section{第一定律——能量守恒的热力学形式}
-
-\begin{lawbox}[First Law of Thermodynamics]
-\[
-dU = T\,dS - P\,dV + \mu\,dN
-\]
-\textbf{前提}：R2（Noether 定理 → 能量守恒）+ R6（$S = k\ln W$ → 温度和熵的定义）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $U$ — 内能（J）。系统所有微观自由度的总能量（动能 + 势能）
-  \item $T$ — 热力学温度（K）。由 $1/T \equiv \partial S/\partial U$ 定义
-  \item $S$ — 熵（J/K）。$S = k_B\ln W$，衡量系统微观状态数
-  \item $P$ — 压力（Pa = N/m$^2$）。$P \equiv T(\partial S/\partial V)_{U,N}$
-  \item $V$ — 体积（m$^3$）
-  \item $\mu$ — 化学势（J）。增加一个粒子所需的自由能代价
-  \item $N$ — 粒子数
-\end{itemize}
+\begin{lawbox}[热力学第零定律]
+  $T_A = T_B,\; T_B = T_C \implies T_A = T_C$（温度传递性）
+  \quad\textbf{前提}：R6（$S = k_B\ln W$, $\Delta S \ge 0$）
 \end{lawbox}
 
 \begin{derivationbox}[推导]
-  \textbf{第 1 步：能量守恒。}
-  Noether 定理（R2 的推论）：孤立系统的总能量守恒。热力学形式：$\Delta U = Q - W$（内能变化 = 吸收的热量 - 对外做的功）。
+  \textbf{Step 1} — 两系统热接触达到平衡时熵最大化：
+  $dS_{\text{total}} = dS_A + dS_B = (1/T_A)dE_A + (1/T_B)dE_B = 0$
+  \hfill\textit{(R6: $dS = dE/T$)}
 
-  \textbf{第 2 步：用熵表达可逆热交换。}
-  由 R6 中温度的定义 $1/T = \partial S/\partial U$，对于可逆过程：$dQ_{\text{rev}} = T\,dS$。
+  \textbf{Step 2} — 能量守恒 $dE_A + dE_B = 0$：
+  $(1/T_A - 1/T_B)dE_A = 0 \implies T_A = T_B$
+  \hfill\texttt{[N]} 孤立系统（$dE_{\text{total}}=0$）
 
-  \textbf{第 3 步：用力学量表达功。}
-  简单流体（如气体）对外做的功：$dW = P\,dV$（压力 $\times$ 体积变化）。
-
-  \textbf{第 4 步：加入粒子交换。}
-  若系统可与环境交换粒子，每个粒子携带化学势 $\mu$ 的自由能：$+\mu\,dN$。
-
-  整理得：$dU = T\,dS - P\,dV + \mu\,dN$。$U$ 是状态函数（$dU$ 是恰当微分），与过程路径无关。
+  \textbf{Step 3} — 传递性：$T_A = T_B$ 且 $T_B = T_C \implies T_A = T_C$（等式传递性）
 \end{derivationbox}
 
-\section{第三定律——绝对零度不可达}
+% ════════════════════════════════════════════════════════
+\section{热力学第一定律}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Third Law of Thermodynamics]
-  $T \to 0$ 时，完美晶体的熵趋于零：$S \to 0$。
-
-  \textbf{前提}：R6（$S = k\ln W$）+ R4（量子基态的非简并性）
+\begin{lawbox}[热力学第一定律]
+  $dU = T\,dS - P\,dV + \mu\,dN$
+  \quad\textbf{前提}：能量守恒（Noether）, R6
 \end{lawbox}
 
+\noindent\textbf{变量}：内能 $U$ [M$\cdot$L$^2\cdot$T$^{-2}$]（状态函数），压强 $P$ [M$\cdot$L$^{-1}\cdot$T$^{-2}$],
+热 $Q$ [M$\cdot$L$^2\cdot$T$^{-2}$]（过程量）, 功 $W$ [M$\cdot$L$^2\cdot$T$^{-2}$]（过程量）。
+
 \begin{derivationbox}[推导]
-  R6：$S = k_B\ln W$。温度趋近绝对零度时，系统必须处于量子基态（R4：能量是量子化的，存在最低能级）。
+  \textbf{Step 1} — 能量守恒：$dU = \delta Q - \delta W$
+  \hfill\textit{（$dU$ 全微分；$\delta Q,\delta W$ 非全微分）}
 
-  如果基态是\textbf{非简并}的（只有一个最低能态），则 $W=1$，$S = k_B\ln 1 = 0$。
+  \textbf{Step 2} — 可逆过程 $\delta Q_{\text{rev}} = T\,dS$
+  \hfill\texttt{[N]} 可逆过程（R6: $dS = \delta Q_{\text{rev}}/T$）
 
-  如果基态有 $g$ 重简并（如冰 Ih 中的残余熵），则 $S(T\to 0) = k_B\ln g > 0$。
+  \textbf{Step 3} — 简单流体 $\delta W = P\,dV$
 
-  \textbf{关键}：如果没有量子力学（如果能量是连续的），$T\to 0$ 时 $W$ 不会趋近 1，$S$ 也不会趋近 0。第三定律是量子力学在热力学中的体现。
+  \textbf{Step 4} — 推广到可变粒子数：$dU = T\,dS - P\,dV + \mu\,dN$
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
+\section{热力学第三定律}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[热力学第三定律]
+  $S \to 0$ as $T \to 0$（完美晶体，非简并基态）
+  \quad\textbf{前提}：R6, 量子离散能谱（$\leftarrow$ Schr\"{o}dinger 方程）
+\end{lawbox}
+
+\noindent\textbf{变量}：基态简并度 $g_0$ [1]（能量最低能级的独立量子态数目）。
+
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — $S = k_B \ln W$ (R6)
+
+  \textbf{Step 2} — $T \to 0$：系统进入量子基态。
+  离散能谱由 Schr\"{o}dinger 方程给出（$\leftarrow$ R4b+R4c）
+  \hfill\texttt{[N]} 量子力学（离散能谱）——经典系统 $S \to -\infty$（Gibbs 悖论）
+
+  \textbf{Step 3} — 若基态非简并（$g_0=1$）：$W=1 \implies S = k_B\ln 1 = 0$
+  若基态 $g_0$ 重简并：$S \to k_B\ln g_0 > 0$（剩余熵，如水冰 Ih）
+\end{derivationbox}
+
+% ════════════════════════════════════════════════════════
 \section{理想气体状态方程}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Ideal Gas Law]
-\[
-PV = nRT = Nk_B T
-\]
-\textbf{前提}：R6（$S = k\ln W$）+ 稀薄气体极限（无相互作用）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $P$ — 压力（Pa）
-  \item $V$ — 体积（m$^3$）
-  \item $n$ — 物质的量（mol）
-  \item $N$ — 分子数
-  \item $R = N_A k_B = 8.314$ J/(mol·K) — 气体常数
-  \item $k_B = 1.381\times 10^{-23}$ J/K — 玻尔兹曼常数。SI 定义常数（exact）
-  \item $T$ — 温度（K）
-\end{itemize}
+\begin{lawbox}[理想气体状态方程]
+  $PV = nRT$（$R = N_A k_B = 8.314$ J$\cdot$mol$^{-1}\cdot$K$^{-1}$）
+  \quad\textbf{前提}：R6, 热力学第一定律
 \end{lawbox}
 
-\textbf{物理意义}：$PV = Nk_B T$ 可以理解为"压力 × 体积 = 分子数 × 每个分子的平均热运动能量"。$k_B T$（约 $4.1\times 10^{-21}$ J 在室温）是每个分子平动自由度的典型热运动能量。
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — 自由粒子在体积 $V$ 中：$W \propto V^N$
+  \hfill\textit{（经典稀薄气体，无相互作用）}
 
-\section{量子统计分布}
+  \textbf{Step 2} — $S = k_B\ln W = Nk_B\ln V + C(E,N)$
 
-\begin{lawbox}[Fermi-Dirac 分布]
-\[
-f_{\text{FD}}(E) = \frac{1}{\exp[(E-\mu)/k_B T] + 1}
-\]
-\textbf{前提}：R6（熵最大化）+ 泡利不相容（费米子每态最多一个）
+  \textbf{Step 3} — 从热力学基本方程求压强：
+  $P = T(\partial S/\partial V)_{E,N} = T\cdot(Nk_B/V)$
+
+  \textbf{Step 4} — $PV = Nk_B T = nRT\qquad$\texttt{[N]} R1（$D=3 \implies V \propto L^3$）
+\end{derivationbox}
+
+% ════════════════════════════════════════════════════════
+\section{Fermi-Dirac 分布（推论）}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[Fermi-Dirac 分布 — corollary]
+  $f(E) = \dfrac{1}{\exp\!\big(\frac{E-\mu}{k_B T}\big) + 1}$
+  \quad\textbf{前提}：Pauli 不相容 ($n_i \in \{0,1\}$), R6
 \end{lawbox}
 
-\begin{lawbox}[Bose-Einstein 分布]
-\[
-f_{\text{BE}}(E) = \frac{1}{\exp[(E-\mu)/k_B T] - 1}
-\]
-\textbf{前提}：R6（熵最大化）+ 玻色子无占用限制
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — Fermi 子约束：$n_i \in \{0,1\}$（Pauli 不相容原理）
+
+  \textbf{Step 2} — 最大化熵 $S = -k_B\sum_i[n_i\ln n_i + (1-n_i)\ln(1-n_i)]$\\
+  约束 $\sum n_i = N$，$\sum n_i E_i = E$
+
+  \textbf{Step 3} — Lagrange 乘子法：$\partial/\partial n_i[\cdots] = 0$
+  $\implies \ln\frac{1-n_i}{n_i} = \alpha + \beta E_i$
+
+  \textbf{Step 4} — $\alpha = -\beta\mu$，$\beta = 1/(k_B T)$：
+  $n_i = \dfrac{1}{\exp((E_i-\mu)/k_B T) + 1}$
+\end{derivationbox}
+
+% ════════════════════════════════════════════════════════
+\section{Bose-Einstein 分布（推论）}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[Bose-Einstein 分布 — corollary]
+  $f(E) = \dfrac{1}{\exp\!\big(\frac{E-\mu}{k_B T}\big) - 1}$
+  \quad\textbf{前提}：叠加原理 ($n_i \in \{0,1,2,\dots\}$), R6
 \end{lawbox}
 
-\textbf{变量}：
-\begin{itemize}
-  \item $f(E)$ — 能量为 $E$ 的单粒子态的平均占据数（无量纲，0 ≤ $f$ ≤ 1 对 FD，$f$ ≥ 0 对 BE）
-  \item $\mu$ — 化学势（J）。在 FD 分布中对应费米能级 $E_F$
-  \item $k_B T$ — 热能标度。分母中的 $\pm 1$ 是量子统计与经典 Maxwell-Boltzmann 统计的唯一区别
-\end{itemize}
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — Bose 子约束：$n_i \in \{0,1,2,\dots\}$（无上限——R4a 叠加原理）
 
-\textbf{FD 与 BE 的物理区别}：
-\begin{itemize}
-  \item 费米子（$+1$）：$T \to 0$ 时，所有 $E < \mu$ 的态被完全填满（$f=1$），$E > \mu$ 的态完全空（$f=0$）。电子气形成\textbf{费米海}，这是金属导电和简并压的根源——白矮星依靠电子简并压抵抗引力坍缩。
-  \item 玻色子（$-1$）：$T \to 0$ 时，大量粒子可以凝聚到最低能态（$\mu$ 趋近基态能量时 $f$ 发散），形成\textbf{Bose-Einstein 凝聚（BEC）}。这解释了超流 He-4 和原子 BEC 的实现。
-\end{itemize}
+  \textbf{Step 2} — 最大化熵 $S = k_B\sum_i[(1+n_i)\ln(1+n_i) - n_i\ln n_i]$
 
-参考文献：Pathria \& Beale, Fermi \textit{Thermodynamics}, [WIKI-BOLTZ]
+  \textbf{Step 3} — Lagrange 乘子法 $\implies n_i = \dfrac{1}{\exp((E_i-\mu)/k_B T) - 1}$
+
+  分母中的 $-1$（vs FD 的 $+1$）$\implies$ 当 $\mu \to 0$ 时 $f$ 发散 $\implies$ Bose-Einstein 凝聚
+\end{derivationbox}

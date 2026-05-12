@@ -1,221 +1,137 @@
-\chapter{守恒律：Noether 定理的全面展开}
+% ============================================================
+%  Chapter 12: Conservation Laws — Noether's Legacy
+% ============================================================
+\chapter{守恒律：Noether 的遗产}
 \label{ch:conservation}
 
 \section{概述}
 
-R2（最小作用量原理）最优雅的推论是 Noether 定理。Emmy Noether 在 1918 年证明：\textbf{作用量的每一个连续对称性都对应一个守恒量。}
+Noether 定理（1918）是 R2 的最重要推论之一。它建立了一个深刻的\textbf{双向等价}关系：作用量的每个连续对称性对应一个守恒量，每个守恒量反过来揭示一个对称性。本章从 Noether 定理出发，推导能量、动量、角动量和电荷的守恒律。
 
-"对称性"在日常生活中指"某种变换下不变"。例如，一个完美圆球绕轴旋转，它看起来完全相同——这就是旋转对称。在物理学中，对称性指的是：如果你对整个实验做某种变换（比如移动到一个新位置、旋转一个角度、或者推迟一段时间），物理定律的形式保持不变。
-
-本章展示：
-\begin{itemize}
-  \item 时间平移不变 $\to$ 能量守恒。这意味着昨天和今天物理定律一样——因此总能量不变
-  \item 空间平移不变 $\to$ 动量守恒。北京和纽约的物理定律一样——因此总动量不变
-  \item 旋转不变 $\to$ 角动量守恒。朝北和朝东的物理定律一样——因此角动量不变
-  \item $U(1)$ 规范不变 $\to$ 电荷守恒。电子的全局相位任意旋转——因此电荷不变
-\end{itemize}
-
-这不是巧合。守恒律是宇宙几何对称性的直接表现。如果明天物理定律突然改变（时间平移对称破缺），能量就不再守恒。
-
-\section{Noether 定理的核心思想}
-
-\begin{lawbox}[Noether 定理]
-  如果作用量 $S = \int L\,dt$ 在某个连续变换下不变，则存在一个对应的守恒量 $Q$，满足 $dQ/dt = 0$。
-
-  \textbf{前提}：R2（$\delta S = 0$）+ 连续对称性
-
-  \textbf{通俗理解}：想象你在一个完全均匀的空间中——每个点都一样。你把实验设备从 A 点搬到 B 点，实验结果完全相同。Noether 定理说，这种"每个点都一样"的均匀性必然导致某个量守恒。具体是什么量守恒，取决于"什么变换下不变"——时间是动量，旋转是角动量。
-\end{lawbox}
-
+% ════════════════════════════════════════════════════════
 \section{能量守恒}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Energy Conservation]
-\[
-\frac{dE}{dt} = 0 \quad\text{（孤立系统内总能量不随时间变化）}
-\]
-更精确的局域形式（每一点的能量流动）：$\partial_\mu T^{\mu\nu} = 0$。
-
-\textbf{前提}：Noether 定理 + 时间平移对称（拉格朗日量 $L$ 不显含时间）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $E$ — 总能量（J，焦耳）。包括动能（运动能量）、势能（位置能量）、热能（分子随机运动的能量）、化学能等所有形式的能量之和
-  \item $T^{\mu\nu}$ — 应力-能量张量。$T^{00}$ 是能量密度（每立方米有多少焦耳），$T^{0i}$ 是能量流动的速率
-  \item $dE/dt = 0$ — "变化率为零"意味着这个量是常数。不管系统内部发生什么变化，总能量始终不变
-\end{itemize}
+\begin{lawbox}[能量守恒]
+  $dE/dt = 0$（孤立系统）；局部：$\partial_\mu T^{\mu\nu} = 0$
+  \quad\textbf{前提}：Noether 定理（时间平移对称性）
 \end{lawbox}
 
-\begin{derivationbox}[推导：时间平移不变 → 能量守恒]
-  \textbf{第 1 步：什么是"时间平移不变"？}
-  "拉格朗日量 $L$ 不显含时间"的数学表达是 $\partial L/\partial t = 0$。物理上，这意味着物理定律在昨天、今天和明天是完全相同的。做同一个实验，无论什么时候做，结果都一样。
+\begin{derivationbox}[推导：时间平移对称性到能量守恒]
+  \textbf{Step 1} — 时间平移：$t \to t' = t + \varepsilon$，$q_i(t) \to q_i'(t) = q_i(t-\varepsilon) \approx q_i - \varepsilon\dot{q}_i$
+  $\implies$ 生成元 $Q_i = -\dot{q}_i$
+  \hfill\texttt{[N]} R1 的时间坐标支持平移
 
-  \textbf{第 2 步：Noether 定理给出守恒量。}
-  对于时间平移对称性，Noether 定理给出的守恒量是\textbf{哈密顿量} $H$：
-  \[
-  H = \sum_i p_i \dot{q}_i - L
-  \]
-  其中 $p_i = \partial L/\partial \dot{q}_i$ 是广义动量，$\dot{q}_i$ 是广义速度，$L$ 是拉格朗日量。
+  \textbf{Step 2} — 若 $\partial L/\partial t = 0$（不显含时），则变换为对称性：
+  $L' - L = \varepsilon\,dL/dt \implies F = -L$
 
-  \textbf{第 3 步：验证哈密顿量确实守恒。}
-  对 $H$ 求时间导数，利用 Euler-Lagrange 方程（来自 R2）可以证明 $dH/dt = -\partial L/\partial t$。由于我们已经假设 $\partial L/\partial t = 0$（时间平移不变），所以：
-  \[
-  \frac{dH}{dt} = 0
-  \]
+  \textbf{Step 3} — Noether 荷：
+  $Q = \sum_i\frac{\partial L}{\partial\dot{q}_i}(-\dot{q}_i) - (-L) = -\sum_i p_i\dot{q}_i + L = -H$
 
-  \textbf{第 4 步：将 $H$ 识别为总能量。}
-  在标准力学系统中（$L = T - V$，动能减势能），$H = T + V$——正是总机械能。对于更一般的系统，我们直接将 $H$ 定义为系统的总能量 $E$。因此时间平移不变性 $\to$ 能量守恒。
+  \textbf{Step 4} — $d(-H)/dt = 0 \implies dH/dt = 0$。定义能量 $E \equiv H = \sum_i p_i\dot{q}_i - L$
+  \hfill\texttt{[N]} $\partial L/\partial t = 0$——若 $L$ 显含时，$dH/dt = -\partial L/\partial t \neq 0$
 
-  \textbf{具体例子}：一个无摩擦的摆。拉格朗日量 $L = \frac12 m\dot{\theta}^2 - mg\ell(1-\cos\theta)$ 不显含时间。因此摆的总能量 $E = \frac12 m\dot{\theta}^2 + mg\ell(1-\cos\theta)$ 守恒——动能和势能不断互相转换，但总和始终不变。
+  \textbf{Step 5} — $dE/dt = 0$。\quad\texttt{[S]} $\partial L/\partial t = 0$ + Noether $\Rightarrow$ 能量守恒。
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
 \section{动量守恒}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Momentum Conservation]
-\[
-\frac{d\mathbf{P}}{dt} = 0 \quad\text{（孤立系统的总动量不变）}
-\]
-局域形式：$\partial_\mu T^{\mu i} = 0$。
-
-\textbf{前提}：Noether 定理 + 空间平移对称（物理定律在空间各处相同）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $\mathbf{P} = \sum_i m_i \mathbf{v}_i$ — 总动量（kg·m/s）。系统中所有粒子的质量乘速度的矢量和。动量是一个矢量——它有大小和方向
-  \item $d\mathbf{P}/dt = 0$ — 总动量不随时间变化。系统内部可以有复杂的动量交换，但总动量始终保持不变
-\end{itemize}
+\begin{lawbox}[动量守恒]
+  $d\mathbf{P}/dt = 0$（孤立系统）
+  \quad\textbf{前提}：Noether 定理（空间平移对称性）
 \end{lawbox}
 
-\begin{derivationbox}[推导：空间平移不变 → 动量守恒]
-  \textbf{第 1 步：什么是"空间平移不变"？}
-  如果你把整个实验设备从北京搬到纽约，实验结果不会改变。这意味着物理定律不依赖于你身在何处——空间是均匀的。在拉格朗日表述中，这意味着 $L$ 在空间平移 $\mathbf{r} \to \mathbf{r} + \boldsymbol{\epsilon}$ 下不变。
+\noindent\textbf{变量}：总动量 $\mathbf{P} = \sum_i m_i\mathbf{v}_i$ [M$\cdot$L$\cdot$T$^{-1}$]。
 
-  \textbf{第 2 步：Noether 定理给出守恒量。}
-  对于空间平移对称性，Noether 定理给出的守恒量是总动量：
-  \[
-  \mathbf{P} = \sum_i \frac{\partial L}{\partial \dot{\mathbf{r}}_i} = \sum_i m_i \dot{\mathbf{r}}_i = \sum_i m_i \mathbf{v}_i
-  \]
+\begin{derivationbox}[推导：空间平移对称性到动量守恒]
+  \textbf{Step 1} — 空间平移：$\mathbf{r} \to \mathbf{r} + \varepsilon\hat{\mathbf{n}}$（$\hat{\mathbf{n}}$ 为任意方向）
+  $\implies$ 生成元 $Q_i = \hat{\mathbf{n}}$
 
-  \textbf{第 3 步：动量守恒 → 牛顿第三定律。}
-  动量守恒是牛顿第三定律的根本原因。对于两个相互作用的粒子：
-  \[
-  \frac{d}{dt}(\mathbf{p}_1 + \mathbf{p}_2) = 0 \;\implies\; \frac{d\mathbf{p}_1}{dt} + \frac{d\mathbf{p}_2}{dt} = 0
-  \]
-  由牛顿第二定律 $\mathbf{F} = d\mathbf{p}/dt$：
-  \[
-  \mathbf{F}_{12} + \mathbf{F}_{21} = 0 \;\implies\; \mathbf{F}_{12} = -\mathbf{F}_{21}
-  \]
-  这就是牛顿第三定律——作用力等于反作用力。它不过是动量守恒在两体系统中的表现形式。
+  \textbf{Step 2} — 若 $V$ 仅依赖粒子间相对距离 $|\mathbf{r}_i - \mathbf{r}_j|$，则 $L$ 平移不变
+  \hfill\texttt{[N]} 无外力场破坏空间均匀性
 
-  \textbf{具体例子}：一个静止的溜冰者推另一个静止的溜冰者。两人都向后滑，但总动量始终为零（$0 = m_1v_1 + m_2v_2$，所以 $v_2 = -(m_1/m_2)v_1$——质量大的滑得慢，质量小的滑得快）。
+  \textbf{Step 3} — Noether 荷：
+  $Q = \sum_i \frac{\partial L}{\partial\dot{\mathbf{r}}_i}\cdot\hat{\mathbf{n}} = (\sum_i m_i\mathbf{v}_i)\cdot\hat{\mathbf{n}}$
+
+  \textbf{Step 4} — 对所有方向成立 $\implies \mathbf{P}$ 矢量守恒
+  \hfill\texttt{[N]} 孤立系统（无外力）
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
 \section{角动量守恒}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Angular Momentum Conservation]
-\[
-\frac{d\mathbf{L}}{dt} = 0 \quad\text{（在有心力场中，总角动量不变）}
-\]
-\textbf{前提}：Noether 定理 + 旋转对称（物理定律在所有方向上相同）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $\mathbf{L} = \sum_i \mathbf{r}_i \times \mathbf{p}_i$ — 总角动量（kg·m$^2$/s）。角动量衡量系统的"旋转量"。$\times$ 是叉积（cross product）：$\mathbf{L}$ 的方向由右手定则确定，大小 $|\mathbf{L}| = rp\sin\theta$ 其中 $\theta$ 是 $\mathbf{r}$ 与 $\mathbf{p}$ 的夹角
-  \item $\mathbf{r}_i$ — 第 $i$ 个粒子相对参考点的位置矢量
-  \item $\mathbf{p}_i = m_i\mathbf{v}_i$ — 第 $i$ 个粒子的动量
-\end{itemize}
+\begin{lawbox}[角动量守恒]
+  $d\mathbf{L}/dt = 0$（孤立系统，有心力）
+  \quad\textbf{前提}：Noether 定理（旋转对称性）
 \end{lawbox}
 
-\begin{derivationbox}[推导：旋转不变 → 角动量守恒]
-  \textbf{第 1 步：什么是"旋转不变"？}
-  你朝北做一个实验，然后转向朝东再做一次——结果相同。空间在所有方向上是等价的（各向同性）。在拉格朗日表述中，这意味着 $L$ 在空间旋转下不变。
+\noindent\textbf{变量}：总角动量 $\mathbf{L} = \sum_i \mathbf{r}_i \times \mathbf{p}_i$ [M$\cdot$L$^2\cdot$T$^{-1}$]，
+旋转角 $\delta\theta$ [1]，旋转轴 $\hat{\mathbf{n}}$。
 
-  \textbf{第 2 步：Noether 定理给出守恒量。}
-  对于旋转对称性，Noether 定理给出的守恒量是总角动量 $\mathbf{L} = \sum_i \mathbf{r}_i \times \mathbf{p}_i$。
+\begin{derivationbox}[推导：旋转对称性到角动量守恒]
+  \textbf{Step 1} — 绕 $\hat{\mathbf{n}}$ 的无穷小旋转：$\mathbf{r} \to \mathbf{r} + \varepsilon(\hat{\mathbf{n}}\times\mathbf{r})$
+  $\implies$ 生成元 $Q_i = \hat{\mathbf{n}} \times \mathbf{r}_i$
+  \hfill\texttt{[N]} R1: $D=3 \implies$ SO(3) 旋转群
 
-  \textbf{第 3 步：有心力场的特殊情况。}
-  在有心力场中（力的方向总是指向或背离一个固定中心，如太阳引力），力矩为零：
-  \[
-  \boldsymbol{\tau} = \frac{d\mathbf{L}}{dt} = \mathbf{r}\times\mathbf{F}
-  \]
-  如果 $\mathbf{F} \parallel \mathbf{r}$（力与位置矢量平行），则 $\mathbf{r}\times\mathbf{F} = 0$，因此 $d\mathbf{L}/dt = 0$。
+  \textbf{Step 2} — 有心力势 $V(r)$ 仅依赖 $|\mathbf{r}| \implies L$ 旋转对称
+  \hfill\texttt{[N]} 势能仅依赖距离（有心力）
 
-  \textbf{具体例子}：花样滑冰旋转。滑冰者收拢手臂时，质量到旋转轴的距离 $r$ 减小。由于角动量 $L = mrv$ 守恒，$r$ 减小必然意味着 $v$ 增大——滑冰者旋转得更快。这就是角动量守恒的日常体现。同样的原理解释了为什么行星在近日点比远日点运动得快（Kepler 第二定律——相等时间扫过相等面积）。
+  \textbf{Step 3} — Noether 荷：
+  $Q = \sum_i m_i\mathbf{v}_i\cdot(\hat{\mathbf{n}}\times\mathbf{r}_i) = \hat{\mathbf{n}}\cdot\sum_i(\mathbf{r}_i\times m_i\mathbf{v}_i) = \hat{\mathbf{n}}\cdot\mathbf{L}$
+  \hfill\textit{(标量三重积循环置换)}
+
+  \textbf{Step 4} — 对任意 $\hat{\mathbf{n}}$ 成立 $\implies \mathbf{L}$ 矢量守恒
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
 \section{电荷守恒}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Charge Conservation]
-\[
-\frac{dQ}{dt} = 0 \quad\text{（孤立系统的总电荷不变）}
-\]
-局域形式（连续性方程）：$\partial_\mu J^\mu = 0$，展开为 $\partial\rho/\partial t + \nabla\cdot\mathbf{J} = 0$。
-
-\textbf{前提}：Noether 定理 + $U(1)$ 全局规范对称（R3）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $Q$ — 总电荷（C，库仑）。孤立系统的总电荷永远不变
-  \item $\rho$ — 电荷密度（C/m$^3$）。每立方米中的电荷量
-  \item $\mathbf{J}$ — 电流密度（A/m$^2$）。每平方米截面积流过的电流
-  \item $\partial\rho/\partial t + \nabla\cdot\mathbf{J} = 0$ — 连续性方程。"某点电荷密度的减少 = 电荷从该点流出的速率"。这不是一个额外的物理定律——它是 $U(1)$ 规范对称性的必然结果
-\end{itemize}
+\begin{lawbox}[电荷守恒]
+  $\partial_\mu J^\mu = 0$；全局 $dQ/dt = 0$
+  \quad\textbf{前提}：Noether 定理 + $U(1)$ 规范对称性 (R3)
 \end{lawbox}
 
-\begin{derivationbox}[{推导：$U(1)$ 规范对称 → 电荷守恒}]
-  \textbf{第 1 步：什么是 $U(1)$ 规范对称？}
-  在量子力学中，物理可观测量只依赖于波函数的模方 $|\psi|^2$。因此，将波函数乘以一个复数相位因子 $e^{i\alpha}$（$\alpha$ 是常数）不会改变任何可观测物理量：$\psi \to e^{i\alpha}\psi$，$|\psi|^2$ 不变。这就是 $U(1)$ 全局对称性——"全局"意味着 $\alpha$ 在时空所有点都相同。
+\noindent\textbf{变量}：守恒流 $J^\mu$（$J^0 = c\rho_q$ [L$^{-3}\cdot$T$\cdot$I]，$J^i = \mathbf{J}$ [L$^{-2}\cdot$I]），
+总电荷 $Q = \int\rho_q\,d^3x$ [T$\cdot$I]，复标量场 $\psi$ [ℂ]。
 
-  \textbf{第 2 步：Noether 定理给出守恒流。}
-  对于 Dirac 费米子场 $\psi$，其拉格朗日密度 $\mathcal{L} = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi$ 在全局 $U(1)$ 变换下不变。Noether 定理给出守恒流：
-  \[
-  J^\mu = e\,\bar{\psi}\gamma^\mu\psi
-  \]
-  其中 $e$ 是基本电荷（$1.602 \times 10^{-19}$ C），$\bar{\psi} = \psi^\dagger\gamma^0$，$\gamma^\mu$ 是 Dirac 矩阵。守恒条件为 $\partial_\mu J^\mu = 0$。
+\begin{derivationbox}[推导：$U(1)$ 全局对称性 $\to$ 电荷守恒]
+  \textbf{Step 1} — 全局 $U(1)$ 变换（$\alpha =$ 常数）：$\psi \to e^{i\alpha}\psi$，$\psi^* \to e^{-i\alpha}\psi^*$
+  \hfill\texttt{[N]} $\psi$ 场有 $U(1)$ 对称性（带电）
 
-  \textbf{第 3 步：从守恒流到电荷守恒。}
-  对守恒流进行空间积分。$J^0 = \rho$（电荷密度）。由 $\partial_\mu J^\mu = 0$：
-  \[
-  \frac{\partial\rho}{\partial t} + \nabla\cdot\mathbf{J} = 0
-  \]
-  在一个体积 $V$ 上积分，用 Gauss 定理将散度项转换为面积分：
-  \[
-  \frac{d}{dt}\int_V \rho\,d^3x = -\oint_{\partial V}\mathbf{J}\cdot d\mathbf{A}
-  \]
-  即"体积内电荷的变化率 = -流出体积的净电流"。对于孤立系统（表面无电流进出），$dQ/dt = 0$。
+  \textbf{Step 2} — 复标量场 Lagrangian：$\mathcal{L} = \partial_\mu\psi^*\partial^\mu\psi - m^2\psi^*\psi$（$U(1)$ 不变）
 
-  \textbf{具体例子}：你可以创造电子-正电子对（$e^- + e^+$），它们各自的电荷是 $-e$ 和 $+e$，总电荷为 $0$。电子和正电子的电荷精确相消——总电荷始终为零。电荷永远守恒，因为电磁相互作用的 $U(1)$ 规范结构保证了它。
+  \textbf{Step 3} — Noether 流（场论形式）：
+  $J^\mu = \frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi)}(i\psi) + \frac{\partial\mathcal{L}}{\partial(\partial_\mu\psi^*)}(-i\psi^*) = i(\psi^*\partial^\mu\psi - \psi\partial^\mu\psi^*)$
+
+  \textbf{Step 4} — $\partial_\mu J^\mu = 0$（Noether 定理直接结论）
+
+  \textbf{Step 5} — 全局电荷守恒：
+  $dQ/dt = \frac{d}{dt}\int J^0 d^3x = -\int\nabla\cdot\mathbf{J}\,d^3x = -\oint_{S_\infty}\mathbf{J}\cdot d\mathbf{A} = 0$
+  \hfill\texttt{[N]} 孤立系统（无穷远处 $\mathbf{J}=0$）
 \end{derivationbox}
 
-\section{连续性方程——所有守恒律的局域形式}
+% ════════════════════════════════════════════════════════
+\section{守恒律总览}
+% ════════════════════════════════════════════════════════
 
-上文中反复出现的 $\partial_\mu J^\mu = 0$ 形式是所有守恒律的统一语言。它的物理意义是：\textbf{守恒不是远距离的"神秘同步"，而是每一点的"流入必须等于流出加上积累"}。如果某个体积内的电荷减少了，一定是因为电荷流出了那个体积——不可能凭空消失。
+\begin{table}[h]
+\centering
+\begin{tabular}{p{3cm}p{3cm}p{3cm}p{3cm}}
+\toprule
+\textbf{守恒量} & \textbf{对称性} & \textbf{Noether 荷} & \textbf{前提} \\
+\midrule
+能量 $E$ & 时间平移 & $H = \sum p_i\dot{q}_i - L$ & $\partial L/\partial t = 0$ \\
+动量 $\mathbf{P}$ & 空间平移 & $\sum m_i\mathbf{v}_i$ & 无外力 \\
+角动量 $\mathbf{L}$ & 旋转 & $\sum\mathbf{r}_i\times\mathbf{p}_i$ & 有心力 \\
+电荷 $Q$ & $U(1)$ 规范 & $i(\psi^*\partial^0\psi - \psi\partial^0\psi^*)$ & $U(1)$ 对称性 \\
+\bottomrule
+\end{tabular}
+\caption{守恒律与对称性的双向对应（逆 Noether 定理：每个守恒量 $\leftrightarrow$ 一个对称性）}
+\end{table}
 
-\section{推导关系总图}
-
-\begin{center}
-\begin{tikzpicture}[
-  node distance=1.0cm,
-  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2.2cm,align=center,font=\footnotesize\bfseries},
-  sym/.style={rectangle,draw,fill=principleblue!5,rounded corners,text width=2.5cm,align=center,font=\footnotesize},
-  cons/.style={rectangle,draw,fill=deriveorange!15,rounded corners,text width=2.3cm,align=center,font=\footnotesize},
-  arrow/.style={->,>=Stealth,thick,deriveorange}
-]
-  \node[kernel] (r2) {R2\\$\delta S = 0$};
-  \node[sym,below left=0.8cm and -0.5cm of r2] (tt) {时间平移对称\\$L$ 不依赖于 $t$};
-  \node[sym,below=0.8cm of r2] (st) {空间平移对称\\$L$ 不依赖于 $\mathbf{r}$};
-  \node[sym,below right=0.8cm and -0.5cm of r2] (ro) {旋转对称\\$L$ 在旋转下不变};
-  \node[cons,below=of tt] (ene) {能量 $E$ 守恒};
-  \node[cons,below=of st] (mom) {动量 $\mathbf{p}$ 守恒};
-  \node[cons,below=of ro] (ang) {角动量 $\mathbf{L}$ 守恒};
-  \node[sym,right=1.5cm of ro] (u1) {$U(1)$ 规范对称\\$\psi\to e^{i\alpha}\psi$};
-  \node[cons,below=of u1] (chg) {电荷 $Q$ 守恒};
-  \draw[arrow] (r2) -- (tt); \draw[arrow] (r2) -- (st);
-  \draw[arrow] (r2) -- (ro); \draw[arrow] (tt) -- (ene);
-  \draw[arrow] (st) -- (mom); \draw[arrow] (ro) -- (ang);
-  \draw[arrow] (r2) -- (u1); \draw[arrow] (u1) -- (chg);
-\end{tikzpicture}
-\end{center}
-
-Noether 定理是物理学中最深刻的联系之一：守恒律不是偶然的经验事实，而是宇宙几何对称性的直接表现。如果明天物理定律突然改变（时间平移对称破缺），能量就不再守恒。今天我们能放心地使用能量守恒来设计发动机、分析电路、理解恒星——是因为我们相信，或者说实验反复验证了，宇宙的底层对称性。
-
-参考文献：[NOETHER] (1918), [GOLD] Ch.\ 12, [JACK] §5.2
+\textbf{补充规则}：连续性方程 $\partial_\mu J^\mu = 0$ 是每个守恒律的局部微分形式（\texttt{rule.conservation\_continuity}），
+它保证了守恒量的\textbf{局域守恒}——总量变化只能通过边界流实现，不能"凭空出现或消失"。

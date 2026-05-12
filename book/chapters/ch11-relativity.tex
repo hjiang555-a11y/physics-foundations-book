@@ -1,204 +1,117 @@
-\chapter{相对论：从时空结构到 $E=mc^2$ 和 Einstein 场方程}
+% ============================================================
+%  Chapter 11: Relativity
+% ============================================================
+\chapter{相对论：从光速不变到引力}
 \label{ch:relativity}
 
 \section{概述}
 
-R1定义了四维洛伦兹因果时空，蕴涵了狭义与广义相对论的全部几何结构。结合 R2（最小作用量原理），就产出了 Lorentz 变换、质量-能量等价 $E=mc^2$ 和 Einstein 场方程。
+R1（因果时空结构）的直接推论涵盖狭义相对论的运动学（Lorentz 变换、质能等价）和广义相对论（Einstein 场方程）。本章从 R1 的子组件出发，严格推导这些结果。
 
-本章展示这些定律如何从 R1 和 R2 系统推出，每条定律都配有完整的变量定义、推导步骤和物理诠释。
-
+% ════════════════════════════════════════════════════════
 \section{Lorentz 变换}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Lorentz Transformation]
-\[
-t' = \gamma\!\left(t - \frac{vx}{c^2}\right),\quad
-x' = \gamma(x - vt),\quad
-y' = y,\quad
-z' = z,\quad
-\gamma \equiv \frac{1}{\sqrt{1-v^2/c^2}}
-\]
-\textbf{前提}：R1（光速不变 + 时空间隔不变性）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $(t,x,y,z)$ — 事件在惯性系 $S$（"静止"系）中的时空坐标
-  \item $(t',x',y',z')$ — 同一事件在惯性系 $S'$ 中的坐标，$S'$ 相对 $S$ 以速度 $v$ 沿 $x$ 方向匀速运动
-  \item $c = 2.99792458 \times 10^8$ m/s — 真空光速，SI 定义常数（exact），任何无质量粒子的必然速度
-  \item $\gamma$ — 洛伦兹因子。当 $v \ll c$ 时 $\gamma \approx 1$，Lorentz 变换退化回 Galileo 变换（$t'=t$, $x'=x-vt$）。$v \to c$ 时 $\gamma \to \infty$：有质量物体不能达到光速
-  \item $v$ — $S'$ 系相对 $S$ 系的运动速度（m/s），$-c < v < c$
-\end{itemize}
+\begin{lawbox}[Lorentz 变换]
+  $t' = \gamma(t - vx/c^2)$,\quad $x' = \gamma(x - vt)$,\quad $\gamma = 1/\sqrt{1 - v^2/c^2}$
+  \quad\textbf{前提}：c 不变 (R1), Lorentz 不变性 (R1)
 \end{lawbox}
 
-\begin{derivationbox}[推导：从光速不变到 Lorentz 变换]
-  \textbf{第 1 步：时空间隔不变性。}
-  R1 告诉我们，在任何惯性系中，真空中光的传播速度都是 $c$。这意味着时空间隔 $s^2 \equiv c^2t^2 - x^2 - y^2 - z^2$ 在 Lorentz 变换下不变：
-  \[
-  c^2 t'^2 - x'^2 - y'^2 - z'^2 = c^2 t^2 - x^2 - y^2 - z^2
-  \]
+\noindent\textbf{变量}：$\gamma \ge 1$ [1]（Lorentz 因子），$v$ [L$\cdot$T$^{-1}$]（相对速度，$|v| < c$）。
 
-  \textbf{第 2 步：设一般线性变换。}
-  我们寻找从 $(t,x,y,z)$ 到 $(t',x',y',z')$ 的最一般线性变换。由于 $S'$ 沿 $x$ 方向运动，$y,z$ 方向不应受到影响：$y'=y$, $z'=z$。设：
-  \[
-  x' = Ax + Bt,\qquad t' = Cx + Dt
-  \]
-  其中 $A,B,C,D$ 是待定常数（可能依赖于 $v$）。
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — 基本假设：$c' = c$（R1: kernel.light\_speed\_invariance）
 
-  \textbf{第 3 步：利用不变性条件确定系数。}
-  将变换代入间隔不变性并展开：
-  \[
-  c^2(Cx+Dt)^2 - (Ax+Bt)^2 = c^2t^2 - x^2
-  \]
-  整理得：
-  \[
-  (c^2 C^2 - A^2)x^2 + (c^2 D^2 - B^2)t^2 + 2(c^2 CD - AB)xt = -x^2 + c^2 t^2
-  \]
-  比较 $x^2, t^2, xt$ 各项系数：
+  \textbf{Step 2} — 间隔不变性：$c^2\Delta t'^2 - \Delta x'^2 = c^2\Delta t^2 - \Delta x^2$
+  \hfill\textit{(R1: kernel.lorentz\_invariance)}
+
+  \textbf{Step 3} — 线性变换：$x' = Ax + Bt$，$t' = Cx + Dt$
+  \hfill\texttt{[N]} 时空均匀 $\to$ 线性（无 $x^2$ 项）
+
+  \textbf{Step 4} — 标准构型（S' 以速度 $v$ 相对 S 沿 $x$ 轴运动）
+
+  \textbf{Step 5} — 代入间隔不变性，对照 $t^2$, $x^2$, $xt$ 系数：
   \begin{align*}
-    c^2 C^2 - A^2 &= -1 \\
-    c^2 D^2 - B^2 &= c^2 \\
-    c^2 CD - AB &= 0
+    t^2&: c^2D^2 - A^2v^2 = c^2\\
+    x^2&: c^2C^2 - A^2 = -1\\
+    xt&: 2c^2CD + 2A^2v = 0
   \end{align*}
+  $\implies D = \gamma$，$A = \gamma$，$C = -\gamma v/c^2$，$B = -\gamma v$
 
-  \textbf{第 4 步：利用物理条件。}
-  $S'$ 系的原点（$x'=0$）在 $S$ 系中以速度 $v$ 运动：$x = vt$ 代入 $x'=0=Ax+Bt \implies Avt+Bt=0 \implies B = -Av$。两系原点在 $t=t'=0$ 重合。最终解得：
-  \[
-  A = \gamma = \frac{1}{\sqrt{1-v^2/c^2}},\quad
-  B = -\gamma v,\quad
-  C = -\frac{\gamma v}{c^2},\quad
-  D = \gamma
-  \]
-
-  \textbf{物理意义}：Lorentz 变换的关键特征是时间坐标与空间坐标的"混合"——$t'$ 依赖于 $x$，$x'$ 依赖于 $t$。这导致"同时"是相对的：在 $S$ 系中同时发生但空间分离的事件，在 $S'$ 系中一般不同时。这是因果结构通过光锥边界（R1）限定相互作用范围的几何体现。
+  \textbf{Step 6} — $x' = \gamma(x-vt)$，$t' = \gamma(t-vx/c^2)$，$\gamma = 1/\sqrt{1-v^2/c^2}$
 \end{derivationbox}
 
-\section{质量-能量等价 $E = mc^2$}
+\texttt{reversible: true}，\texttt{[N]} $|v| < c$（$v=c$ 时 $\gamma$ 发散，$v>c$ 时 $\gamma$ 虚数——不物理）。
 
-\begin{lawbox}[Mass-Energy Equivalence]
-\[
-E^2 = p^2 c^2 + m^2 c^4
-\]
-在静止系（$\mathbf{p}=0$）中退化为 $E = mc^2$。
+% ════════════════════════════════════════════════════════
+\section{质能等价}
+% ════════════════════════════════════════════════════════
 
-\textbf{前提}：R1（四维动量的 Lorentz 不变性）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $E$ — 总能量（J）。包括静止能量 $mc^2$ 和动能。即使在"静止"时，粒子也携带巨额能量——质量本身就是能量的一种形式
-  \item $\mathbf{p}$ — 三维动量（kg·m/s）。$p = |\mathbf{p}|$ 是其大小
-  \item $m$ — 静止质量（kg）。粒子的内禀属性，在 Lorentz 变换下不变（现代约定：$m$ 总指静止质量，不随速度增加）
-  \item $c$ — 光速
-  \item $mc^2$ — 静止能量。$1$ kg 物质 $\approx 9 \times 10^{16}$ J $\approx$ 21 百万吨 TNT
-\end{itemize}
+\begin{lawbox}[质能等价]
+  $E^2 = p^2c^2 + m^2c^4$；静止系：$E = mc^2$
+  \quad\textbf{前提}：Lorentz 不变性 (R1)
 \end{lawbox}
 
-\begin{derivationbox}[推导：四维动量的不变量]
-  \textbf{第 1 步：定义四维动量。}
-  四维坐标 $x^\mu = (ct, \mathbf{r})$ 在 Lorentz 变换下的模方 $c^2t^2 - r^2$ 是不变量。类比地，定义四维动量 $p^\mu = (E/c, \mathbf{p})$——它在 Lorentz 变换下与 $x^\mu$ 以相同方式变换，确保物理定律的协变性。
+\noindent\textbf{变量}：四维动量 $p^\mu = (E/c, \mathbf{p})$ [M$\cdot$L$\cdot$T$^{-1}$],
+静止质量 $m$ [M]（Lorentz 标量——与参考系无关的不变质量），
+固有时 $\tau$ [T]（$d\tau^2 = ds^2/c^2$）。
 
-  \textbf{第 2 步：确定不变量。}
-  $p^\mu$ 的 Lorentz 模方为：
-  \[
-  p_\mu p^\mu = \frac{E^2}{c^2} - \mathbf{p}^2
-  \]
-  这是一个 Lorentz 标量——在所有惯性系中取值相同。
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — 四维动量：$p^\mu \equiv m\,dx^\mu/d\tau = (\gamma mc, \gamma m\mathbf{v}) = (E/c, \mathbf{p})$
+  \hfill\textit{（$m$ 是 Lorentz 标量——粒子的内禀质量不随参考系改变）}
 
-  \textbf{第 3 步：在静止系中确定数值。}
-  在粒子自身的静止系中（$\mathbf{p}=0$），粒子只有静止能量。定义静止质量 $m$ 使得 $E_{\text{rest}} \equiv mc^2$。则在静止系中：
-  \[
-  p_\mu p^\mu = \frac{(mc^2)^2}{c^2} - 0 = m^2 c^2
-  \]
-  由于这是不变量，它在所有惯性系中都等于 $m^2 c^2$。
+  \textbf{Step 2} — 时间分量：$E = \gamma mc^2$
 
-  \textbf{第 4 步：得到完整的能量-动量关系。}
-  \[
-  \frac{E^2}{c^2} - \mathbf{p}^2 = m^2 c^2 \;\implies\; E^2 = \mathbf{p}^2 c^2 + m^2 c^4
-  \]
+  \textbf{Step 3} — Lorentz 不变量 (R1)：$p_\mu p^\mu = (E/c)^2 - \mathbf{p}^2 = m^2c^2$
 
-  \textbf{物理意义}：$E=mc^2$ 是最著名的物理公式之一，但常被误解。它不是说"质量可以转化为能量"——质量和能量是同一事物的不同面。在粒子物理实验中，电子-正电子对撞可以"消失"并产生两个光子：$e^+ + e^- \to \gamma + \gamma$。电子的静止质量转化为了光子的能量。$\Delta E = \Delta m\,c^2$ 是放之四海而皆准的——太阳每秒将 $4.3 \times 10^9$ kg 质量转化为辐射能量。
+  \textbf{Step 4} — $E^2 = \mathbf{p}^2c^2 + m^2c^4$。静止系（$\mathbf{p}=0$）：$E_{\text{rest}} = mc^2$
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
 \section{Einstein 场方程}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Einstein Field Equations]
-\[
-G_{\mu\nu} + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}\,T_{\mu\nu}
-\]
-其中 $G_{\mu\nu} \equiv R_{\mu\nu} - \frac12 R g_{\mu\nu}$。
-
-\textbf{前提}：R1（等效原理 + 广义协变性）+ R2（Einstein-Hilbert 作用量的变分）
-
-\textbf{变量}：
-\begin{itemize}
-  \item $g_{\mu\nu}$ — 度规张量（metric tensor）。$4\times 4$ 对称矩阵，10 个独立分量，完整描述了时空的几何结构。平直时空对应 $\eta_{\mu\nu} = \operatorname{diag}(1,-1,-1,-1)$
-  \item $G_{\mu\nu}$ — Einstein 张量。由度规及其一阶、二阶导数构成，编码了时空的曲率。满足 $\nabla^\mu G_{\mu\nu} = 0$（自动保证能量-动量守恒）
-  \item $R_{\mu\nu}$ — Ricci 张量。时空曲率的缩并（$R_{\mu\nu} \equiv R^\lambda_{\mu\lambda\nu}$）。描述物质沿测地线运动的会聚/发散趋势
-  \item $R \equiv g^{\mu\nu}R_{\mu\nu}$ — Ricci 标量。时空曲率的最简标量度量
-  \item $T_{\mu\nu}$ — 应力-能量张量。编码了物质和辐射的能量密度、动量流密度和应力。$T_{00}$ 分量是能量密度，$T_{0i}$ 是动量密度，$T_{ij}$ 是应力张量
-  \item $G = 6.67430 \times 10^{-11}$ m$^3$kg$^{-1}$s$^{-2}$ — 万有引力常数
-  \item $\Lambda$ — 宇宙学常数（m$^{-2}$）。观测值 $\Lambda \approx 1.1\times 10^{-52}$ m$^{-2}$，对应于真空能量密度 $\rho_\Lambda = \Lambda c^4/(8\pi G) \approx 6\times 10^{-27}$ kg/m$^3$，驱动宇宙加速膨胀（暗能量）
-  \item $8\pi G/c^4 \approx 2.1\times 10^{-43}$ N$^{-1}$ — 引力耦合常数，极其微小。需要行星级别的质量才能产生可察觉的时空弯曲
-\end{itemize}
+\begin{lawbox}[Einstein 场方程]
+  $G_{\mu\nu} + \Lambda g_{\mu\nu} = \dfrac{8\pi G}{c^4}\,T_{\mu\nu}$
+  \quad\textbf{前提}：等效原理, 广义协变性 (R1), 最小作用量 (R2)
 \end{lawbox}
 
-\begin{derivationbox}[推导：Einstein-Hilbert 作用量的变分]
-  \textbf{第 1 步：构造引力作用量。}
-  最自然描述时空弯曲的几何标量是 Ricci 标量 $R$。Einstein 和 Hilbert（独立地）提出作用量：
-  \[
-  S_{\text{EH}} = \frac{c^4}{16\pi G}\int R\,\sqrt{-g}\,d^4x
-  \]
-  其中 $\sqrt{-g} = \sqrt{-\det(g_{\mu\nu})}$ 确保积分元在任意坐标变换下不变（广义协变性，R1）。$c^4/(16\pi G)$ 是归一化常数，确保弱场极限下恢复牛顿引力。
+\noindent\textbf{变量}：
+Einstein 张量 $G_{\mu\nu} = R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}$ [L$^{-2}$]，
+Ricci 张量 $R_{\mu\nu}$ [L$^{-2}$]，
+应力-能量张量 $T_{\mu\nu}$ [M$\cdot$L$^{-1}\cdot$T$^{-2}$]，
+度规行列式 $g = \det(g_{\mu\nu}) < 0$ [1]。
 
-  \textbf{第 2 步：加上物质作用量并变分。}
-  总作用量 $S = S_{\text{EH}} + S_{\text{matter}}$。对 $g^{\mu\nu}$ 做变分（R2：$\delta S = 0$）：
-  \[
-  \delta S_{\text{EH}} = \frac{c^4}{16\pi G}\int \left(R_{\mu\nu} - \frac12 R g_{\mu\nu}\right)\delta g^{\mu\nu}\sqrt{-g}\,d^4x
-  \]
-  （推导需要分部积分和放弃表面项，涉及 Palatini 恒等式 $\delta R_{\mu\nu} = \nabla_\lambda\delta\Gamma^\lambda_{\mu\nu} - \nabla_\nu\delta\Gamma^\lambda_{\mu\lambda}$。）
+\begin{derivationbox}[推导：Einstein-Hilbert 作用量]
+  \textbf{Step 1} — Einstein-Hilbert 作用量：
+  $S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
 
-  \textbf{第 3 步：定义应力-能量张量。}
-  物质作用量的变分定义为：
-  \[
-  \delta S_{\text{matter}} = \frac12 \int T_{\mu\nu}\,\delta g^{\mu\nu}\sqrt{-g}\,d^4x
-  \]
-  $T_{\mu\nu}$ 因此是物质对度规变化的"响应函数"。
+  \textbf{注}：Lovelock 定理 (1971) 证明在 4D 中，EH 作用是唯一产生二阶运动方程的纯度规作用量。
 
-  \textbf{第 4 步：得到场方程。}
-  由 $\delta S = 0$ 和 $\delta g^{\mu\nu}$ 的任意性：
-  \[
-  R_{\mu\nu} - \frac12 R g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}
-  \]
+  \textbf{Step 2} — 对 $g^{\mu\nu}$ 变分（R2：$\delta S = 0$）
 
-  \textbf{第 5 步：宇宙学常数。}
-  Bianchi 恒等式 $\nabla^\mu G_{\mu\nu} = 0$ 保证了能量-动量守恒 $\nabla^\mu T_{\mu\nu} = 0$。$\Lambda g_{\mu\nu}$ 项（$\nabla^\mu(\Lambda g_{\mu\nu}) = 0$）是场方程的最一般常数推广，在作用量中对应 $\int 2\Lambda\sqrt{-g}\,d^4x$ 项。
+  \textbf{Step 3} — 引力部分变分：$\delta(\int R\sqrt{-g}\,d^4x) = \int (R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu})\delta g^{\mu\nu}\sqrt{-g}\,d^4x$
+  \hfill\textit{(Palatini 恒等式 + $\delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}g_{\mu\nu}\delta g^{\mu\nu}$)}
 
-  \textbf{物理意义}：Wheeler 的简洁表述——"物质告诉时空如何弯曲（$T_{\mu\nu}$），时空告诉物质如何运动（$g_{\mu\nu}$）"。方程的十个分量是耦合的非线性偏微分方程——极其难以求解。Schwarzschild（1916）找到了第一个精确解（球对称真空），Kerr（1963）找到了旋转黑洞解。2015 年 LIGO 首次直接探测到引力波，验证了场方程的动力学预言。
+  \textbf{Step 4} — 定义 $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}$。$\nabla_\mu G^{\mu\nu} \equiv 0$ (Bianchi)
+
+  \textbf{Step 5} — 物质部分：$T_{\mu\nu} \equiv -\frac{2}{\sqrt{-g}}\frac{\delta S_{\text{matter}}}{\delta g^{\mu\nu}}$
+
+  \textbf{Step 6} — 场方程：$G_{\mu\nu} = \kappa T_{\mu\nu}$。Newton 极限（弱场低速）固定 $\kappa = 8\pi G/c^4$
 \end{derivationbox}
 
-\subsection{弱场极限：恢复牛顿引力}
+\textbf{必要条件}：R1（等效原理 [N]——$m_i=m_g$ 使度规成为动力学场；广义协变性 [N]——作用量必须是标量），R2（$\delta S=0$ [N]），4 维时空 [N]（$G_{\mu\nu}$ 是唯一满足 $\nabla_\mu G^{\mu\nu}=0$ 的二阶张量）。
 
-在 $v \ll c$ 且引力场很弱（$|\phi| \ll c^2$）的极限下，Einstein 场方程退化为 Poisson 方程 $\nabla^2\phi = 4\pi G\rho$，进而给出牛顿万有引力定律 $\mathbf{F} = -GmM\hat{\mathbf{r}}/r^2$。详见第七章的推导。
+\textbf{充分条件}：R1+R2+4D $\Rightarrow$ Einstein 场方程（Lovelock 定理保证唯一性）。\texttt{reversible: true}
 
-这意味着广义相对论不是推翻了牛顿引力，而是\textbf{吸收了它}——牛顿引力是广义相对论在低速弱场下的精确极限。一个理论"超越"前一个理论的方式是被包含为特例，而非被否定。
+% ════════════════════════════════════════════════════════
+\section{Newton 万有引力（弱场极限）}
+% ════════════════════════════════════════════════════════
 
-\section{推导关系总结}
+Newton 万有引力定律已在第 7 章作为 Einstein 场方程的弱场极限导出（第 189 页）。这里仅强调其推导链：
 
 \begin{center}
-\begin{tikzpicture}[
-  node distance=0.8cm,
-  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2.2cm,align=center,font=\footnotesize\bfseries},
-  law/.style={rectangle,draw,fill=lawgreen!15,rounded corners,text width=2.8cm,align=center,font=\footnotesize},
-  arrow/.style={->,>=Stealth,thick,deriveorange}
-]
-  \node[kernel] (r1) {R1 时空结构\\光速不变+等效原理+协变性};
-  \node[kernel,right=0.3cm of r1] (r2) {R2 最小作用量\\$\delta S = 0$};
-  \node[law,below=0.5cm of r1] (lt) {Lorentz 变换\\$t'=\gamma(t-vx/c^2)$};
-  \node[law,below=0.3cm of lt] (mc) {$E=mc^2$\\$E^2=p^2c^2+m^2c^4$};
-  \node[law,below=0.5cm of r2] (ef) {Einstein 场方程\\$G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}$};
-  \node[law,below=0.3cm of ef] (new) {牛顿引力(弱场极限)\\$F=GmM/r^2$};
-  \draw[arrow] (r1) -- (lt); \draw[arrow] (lt) -- (mc);
-  \draw[arrow] (r1) -- (ef); \draw[arrow] (r2) -- (ef);
-  \draw[arrow] (ef) -- (new);
-\end{tikzpicture}
+  \textbf{R1（等效原理 + 广义协变性）+ R2 $\to$ Einstein 场方程 $\xrightarrow{\text{弱场} + \text{低速}}$ Newton 万有引力}
 \end{center}
 
-参考文献：Einstein (1905, 1915), [WILL], [SCHILLER], Weinberg \textit{Gravitation and Cosmology}
+\texttt{reversible: false}——Newton 理论是 GR 的低能有效理论，丢失了时空弯曲的全部信息。
