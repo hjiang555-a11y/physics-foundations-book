@@ -1,186 +1,94 @@
-\chapter{量子力学：从量子公设到薛定谔方程}
+% ============================================================
+%  Chapter 9: Quantum Mechanics
+% ============================================================
+\chapter{量子力学：从公设到预言}
 \label{ch:quantum}
 
 \section{概述}
 
-R4（四大量子公设）定义了量子力学的全部计算规则。本章展示如何从这些公设逐一推出：薛定谔方程、$E=h\nu$（普朗克-爱因斯坦关系）、de Broglie 波粒二象性、不确定性原理和泡利不相容原理。
+R4（量子公设）和 R5（Born 规则）的结合产生了量子力学的全部预言能力。本章从 R4b+R4c 出发推导 Schr\"{o}dinger 方程，从 R4c 出发推导 Planck-Einstein 关系和不确定性原理。
 
-量子力学与经典力学的核心断裂点在 R4(4c)：$[\hat{x},\hat{p}] = i\hbar$。\textbf{位置和动量不再是可以同时精确确定的数，而是不可交换的算符}——从这个对易关系出发，整个量子力学的"怪异"都可以系统推出。
+% ════════════════════════════════════════════════════════
+\section{Schr\"{o}dinger 方程}
+% ════════════════════════════════════════════════════════
 
-\section{薛定谔方程}
-
-\begin{lawbox}[Schrödinger Equation]
-\[
-i\hbar\frac{\partial\psi(\mathbf{r},t)}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi(\mathbf{r},t) + V(\mathbf{r})\psi(\mathbf{r},t)
-\]
-\textbf{前提}：R4(4b) 幺正演化 + R4(4c) 正则对易 + R4(4d) 算符对应
-
-\textbf{变量}：
-\begin{itemize}
-  \item $\psi(\mathbf{r},t)$ — 波函数（wave function）。复数值函数，其模方 $|\psi|^2$ 由 Born 规则（R5）给出概率密度
-  \item $\hbar = h/2\pi = 1.055\times 10^{-34}$ J·s — 约化普朗克常数。量子力学的特征作用量尺度
-  \item $i = \sqrt{-1}$ — 虚数单位。波函数必须是复数——这是量子力学与经典波动理论的根本区别
-  \item $\nabla^2 = \partial^2/\partial x^2 + \partial^2/\partial y^2 + \partial^2/\partial z^2$ — 拉普拉斯算符，来自 $\hat{p}^2 = -\hbar^2\nabla^2$
-  \item $m$ — 粒子质量（kg）
-  \item $V(\mathbf{r})$ — 势能函数（J），编码了粒子所处的力场
-\end{itemize}
+\begin{lawbox}[Schr\"{o}dinger 方程]
+  $i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V(\mathbf{r})\psi$
+  \quad\textbf{前提}：R4b（幺正演化）, R4c（正则对易）, R1
 \end{lawbox}
 
-\begin{derivationbox}[推导：从态向量到坐标表象]
-  \textbf{第 1 步：幺正演化（R4(4b)）。}
-  孤立量子系统的态向量按 $i\hbar\frac{d}{dt}|\psi\rangle = \hat{H}|\psi\rangle$ 演化，其中 $\hat{H}$ 是哈密顿算符（能量算符）。
-
-  \textbf{第 2 步：算符对应（R4(4d)）。}
-  经典哈密顿量 $H = \mathbf{p}^2/(2m) + V(\mathbf{r})$ 中的物理量替换为算符：$\mathbf{r} \to \hat{\mathbf{r}}$（乘法算符），$\mathbf{p} \to \hat{\mathbf{p}}$（动量算符）。
-  因此：$\hat{H} = \frac{\hat{\mathbf{p}}^2}{2m} + V(\hat{\mathbf{r}})$。
-
-  \textbf{第 3 步：正则对易（R4(4c)）确定动量算符的形式。}
-  $[\hat{x},\hat{p}_x] = i\hbar$ 在坐标表象中的自然实现是 $\hat{p}_x = -i\hbar\frac{\partial}{\partial x}$（可以验证 $[x, -i\hbar\partial_x] = i\hbar$）。推广到三维：$\hat{\mathbf{p}} = -i\hbar\nabla$。
-
-  \textbf{第 4 步：投影到坐标基底。}
-  用 $\langle\mathbf{r}|$ 左乘演化方程，定义波函数 $\psi(\mathbf{r},t) \equiv \langle\mathbf{r}|\psi(t)\rangle$：
-  \[
-  i\hbar\frac{\partial}{\partial t}\langle\mathbf{r}|\psi\rangle
-  = \left[-\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})\right]\langle\mathbf{r}|\psi\rangle
-  \]
-  即得坐标表象下的薛定谔方程。
-
-  \textbf{物理意义}：薛定谔方程是量子力学的"$F=ma$"——给定初始波函数和势能，它决定了波函数在任意未来时刻的形貌。与经典力学的区别：经典力学告诉你粒子\textbf{在哪里}，量子力学告诉你粒子\textbf{在每一点的概率}。
-\end{derivationbox}
-
-\section{$E = h\nu$——普朗克-爱因斯坦关系}
-
-\begin{lawbox}[Planck-Einstein Relation]
-\[
-E = h\nu = \hbar\omega
-\]
-\textbf{前提}：R4(4c) → 谐振子量子化 → 能级等间距
-
-\textbf{变量}：
-\begin{itemize}
-  \item $h = 6.626\times 10^{-34}$ J·s — 普朗克常数。SI 定义常数（exact）
-  \item $\nu$ — 频率（Hz, s$^{-1}$）。电磁辐射的每秒振荡次数
-  \item $\omega = 2\pi\nu$ — 角频率（rad/s）
-  \item $\hbar\omega$ — 相邻量子能级之间的能量间隔
-\end{itemize}
-\end{lawbox}
-
-\begin{derivationbox}[推导：谐振子量子化]
-  经典一维谐振子：$H = p^2/(2m) + \frac12 m\omega^2 x^2$。量子化：将 $x, p$ 替换为算符，$[x,p]=i\hbar$。
-
-  定义\textbf{产生算符} $a^\dagger$ 和\textbf{湮灭算符} $a$：
-  \[
-  a = \sqrt{\frac{m\omega}{2\hbar}}\,x + i\sqrt{\frac{1}{2m\hbar\omega}}\,p,\qquad
-  a^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\,x - i\sqrt{\frac{1}{2m\hbar\omega}}\,p
-  \]
-  由 $[x,p]=i\hbar$ 可证 $[a,a^\dagger] = 1$。哈密顿算符重写为：
-  \[
-  \hat{H} = \hbar\omega\!\left(a^\dagger a + \frac12\right)
-  \]
-  本征值：$E_n = \hbar\omega(n + \frac12) = h\nu(n+\frac12)$，$n=0,1,2,\dots$。
-
-  \textbf{能级是等间距的}：$E_{n+1} - E_n = \hbar\omega = h\nu$。光子就是频率为 $\nu$ 的电磁场量子——它携带能量 $h\nu$。这就是普朗克 1900 年解释黑体辐射和 Einstein 1905 年解释光电效应所使用的核心关系。
-\end{derivationbox}
-
-\section{$\lambda = h/p$——de Broglie 波粒二象性}
-
-\begin{lawbox}[de Broglie 关系]
-\[
-\lambda = \frac{h}{p}
-\]
-\textbf{前提}：$E=h\nu$ + 光子动量 $p=E/c$ → 推广至所有物质
-
-\textbf{变量}：
-\begin{itemize}
-  \item $\lambda$ — 物质波波长（m）。即使是宏观物体也有波长，但因其动量极大而波长极短（不可观测）
-  \item $p = |\mathbf{p}|$ — 粒子动量的大小（kg·m/s）
-  \item $h$ — 普朗克常数
-\end{itemize}
-\end{lawbox}
+\noindent\textbf{变量}：波函数 $\psi(\mathbf{r},t) = \langle\mathbf{r}|\psi(t)\rangle$ [L$^{-3/2}$], 动量算符 $\hat{\mathbf{p}} = -i\hbar\nabla$ [M$\cdot$L$\cdot$T$^{-1}$],
+位置算符 $\hat{\mathbf{x}}$ [L], 哈密顿算符 $\hat{H} = \hat{\mathbf{p}}^2/(2m) + V(\hat{\mathbf{r}})$ [M$\cdot$L$^2\cdot$T$^{-2}$]。
 
 \begin{derivationbox}[推导]
-  光子没有质量，但有动量和能量。由 $E=h\nu$ 和电磁波的 $p=E/c$，以及 $c=\lambda\nu$：
-  \[
-  p = \frac{E}{c} = \frac{h\nu}{c} = \frac{h}{\lambda}
-  \]
-  因此对光子：$\lambda = h/p$。
+  \textbf{Step 1} — R4b 抽象演化方程：$i\hbar\frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle$
+  \hfill\texttt{[N]} 孤立系统，非测量
 
-  de Broglie 在 1924 年的博士论文中大胆假设：这个关系\textbf{对所有物质粒子都成立}，不只是光子。也就是说，电子、质子、乃至棒球都有波长。
+  \textbf{Step 2} — 投影到位置表象：$\psi(\mathbf{r},t) \equiv \langle\mathbf{r}|\psi(t)\rangle$
 
-  实验验证：Davisson 和 Germer（1927）用电子束照射镍晶体，观测到了衍射图案——这是只有波才会产生的现象。电子波长与 de Broglie 公式的预测完全一致。
+  \textbf{Step 3} — R4c 确定动量算符：$\langle\mathbf{r}|\hat{\mathbf{p}}|\psi\rangle = -i\hbar\nabla\psi$
+  \hfill\texttt{[N]} $[\hat{x}_i,\hat{p}_j]=i\hbar\delta_{ij}$ 唯一确定（Stone-von Neumann）
 
-  \textbf{日常例子}：一个 100 g 的棒球以 30 m/s 飞行，$\lambda = h/(mv) \approx 2.2\times 10^{-34}$ m——远小于原子核的尺寸，因此我们永远不会"看到"棒球的波动性。
+  \textbf{Step 4} — 经典 $H$ 算符化：$\hat{H} = \hat{\mathbf{p}}^2/(2m) + V(\hat{\mathbf{r}})$
+  \hfill\texttt{[N]} R4d（算符-可观测量对应）
+
+  \textbf{Step 5} — 代入得：$i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi + V\psi$
 \end{derivationbox}
 
+% ════════════════════════════════════════════════════════
+\section{Planck-Einstein 关系}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[Planck-Einstein 关系]
+  $E = h\nu$（光子能量量子）
+  \quad\textbf{前提}：R4c（正则对易）\quad\textbf{推导号}：\texttt{deriv.energy\_frequency}
+\end{lawbox}
+
+\begin{derivationbox}[推导：量子谐振子到 Planck-Einstein 关系]
+  \textbf{Step 1} — 量子谐振子：$\hat{H} = \hat{p}^2/(2m) + \frac{1}{2}m\omega^2\hat{x}^2$
+
+  \textbf{Step 2} — 升降算符：$a = \sqrt{\frac{m\omega}{2\hbar}}\hat{x} + i\sqrt{\frac{1}{2m\hbar\omega}}\hat{p}$
+  \hfill\texttt{[N]} $[\hat{x},\hat{p}] = i\hbar$
+
+  \textbf{Step 3} — $[a, a^\dagger] = 1$，$\hat{H} = \hbar\omega(a^\dagger a + \frac{1}{2})$
+
+  \textbf{Step 4} — 能谱 $E_n = \hbar\omega(n + \frac{1}{2})$，$\Delta E = \hbar\omega = h\nu$。单量子激发：$E_\gamma = h\nu$
+\end{derivationbox}
+
+% ════════════════════════════════════════════════════════
+\section{de Broglie 波长}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[de Broglie 波长]
+  $\lambda = h/p$（物质波）
+  \quad\textbf{前提}：$E = h\nu$（光子类比 + 实验验证）
+\end{lawbox}
+
+\noindent\textbf{变量}：波长 $\lambda$ [L], 动量 $p$ [M$\cdot$L$\cdot$T$^{-1}$]。
+
+\textbf{推导}：光子 $E = h\nu$, $p = E/c = h\nu/c = h/\lambda \implies \lambda = h/p$。
+de Broglie (1924) 假设此关系对所有物质粒子成立——Davisson-Germer (1927) 电子衍射实验证实。
+
+% ════════════════════════════════════════════════════════
 \section{不确定性原理}
+% ════════════════════════════════════════════════════════
 
-\begin{lawbox}[Heisenberg Uncertainty Principle]
-\[
-\sigma_x\sigma_p \geq \frac{\hbar}{2},\qquad \Delta E\,\Delta t \geq \frac{\hbar}{2}
-\]
-\textbf{前提}：$[x,p]=i\hbar$（R4(4c)）+ Robertson 不等式
-
-\textbf{变量}：
-\begin{itemize}
-  \item $\sigma_x$ — 位置的标准差（m）。衡量位置不确定度
-  \item $\sigma_p$ — 动量的标准差（kg·m/s）。衡量动量不确定度
-  \item $\Delta E$ — 能量不确定度（J）
-  \item $\Delta t$ — 时间间隔（s）。不是算符，而是系统演化所需的时间尺度
-\end{itemize}
+\begin{lawbox}[不确定性原理]
+  $\sigma_x \cdot \sigma_p \ge \hbar/2$；$\Delta E \cdot \Delta t \ge \hbar/2$
+  \quad\textbf{前提}：R4c, R5, R4d, R1
 \end{lawbox}
 
-\begin{derivationbox}[推导：Kennard 不等式]
-  \textbf{第 1 步：一般不确定性关系。}
-  对任意两个厄米算符 $A,B$，定义 $\bar{A} = A - \langle A\rangle$（类似定义 $\bar{B}$）。由 Cauchy-Schwarz 不等式：
-  \[
-  \sigma_A^2\sigma_B^2 = \langle\bar{A}^2\rangle\langle\bar{B}^2\rangle \geq |\langle\bar{A}\bar{B}\rangle|^2
-  \]
+\noindent\textbf{变量}：标准差 $\sigma_A^2 \equiv \langle(\hat{A}-\langle\hat{A}\rangle)^2\rangle$，期望值 $\langle\hat{A}\rangle = \langle\psi|\hat{A}|\psi\rangle$ (R5)。
 
-  \textbf{第 2 步：利用对易关系。}
-  $\bar{A}\bar{B} = \frac12[\bar{A},\bar{B}] + \frac12\{\bar{A},\bar{B}\}$（分解为对易子 + 反对易子）。对易子部分给出纯虚数，反对易子部分为实数。因此：
-  \[
-  |\langle\bar{A}\bar{B}\rangle|^2 = \frac14|\langle[\bar{A},\bar{B}]\rangle|^2 + \frac14|\langle\{\bar{A},\bar{B}\}\rangle|^2 \geq \frac14|\langle[A,B]\rangle|^2
-  \]
-  故 $\sigma_A\sigma_B \geq \frac12|\langle[A,B]\rangle|$。
+\begin{derivationbox}[推导]
+  \textbf{Step 1} — Robertson-Schr\"{o}dinger 不等式：
+  $\sigma_A^2\cdot\sigma_B^2 \ge |\frac{1}{2}\langle[\hat{A},\hat{B}]\rangle|^2$
+  \hfill\texttt{[N]} $\hat{A},\hat{B}$ 厄米 (R4d)；期望值由 R5 定义
 
-  \textbf{第 3 步：代入 $[x,p]=i\hbar$。}
-  $\sigma_x\sigma_p \geq \frac12|\langle i\hbar\rangle| = \hbar/2$。
+  \textbf{Step 2} — 代入 $[\hat{x},\hat{p}] = i\hbar$ (R4c)：$\sigma_x\cdot\sigma_p \ge |\frac{1}{2}\langle i\hbar\rangle| = \hbar/2$
 
-  \textbf{物理意义}：不确定性不是测量仪器的精度问题——它是量子态本身的\textbf{结构限制}。不存在一个既具有确定位置又具有确定动量的量子态。高斯拉夫波包达到最小不确定度 $\sigma_x\sigma_p = \hbar/2$。
+  \textbf{Step 3} — 能量-时间（Mandelstam-Tamm）：
+  $\Delta t \equiv \sigma_A/|d\langle A\rangle/dt|$，$d\langle A\rangle/dt = (i/\hbar)\langle[\hat{H},A]\rangle \implies \Delta E\cdot\Delta t \ge \hbar/2$
 \end{derivationbox}
 
-\section{泡利不相容原理}
-
-\begin{lawbox}[Pauli Exclusion Principle]
-  两个全同费米子（自旋为半整数的粒子）不能占据完全相同的量子态。等价表述：多费米子波函数在交换任意两个粒子时必须反号（完全反对称）。
-
-  \textbf{前提}：自旋-统计定理（R1+R4 在相对论量子场论中的推论）
-
-  \textbf{后果}：元素周期表的壳层结构、原子的稳定性、白矮星和巨星坍缩的物理机制
-\end{lawbox}
-
-\textbf{为什么原子不坍缩？} 在经典物理中，电子绕核运动会辐射电磁波、损失能量、螺旋坠入原子核——原子应该在 $10^{-11}$ 秒内坍缩。但泡利不相容原理阻止了这一切：电子是费米子，每个能级最多只能容纳 2 个（自旋向上和向下）。当低能级被填满后，额外的电子被迫占据更高能级，形成了稳定的电子壳层结构。\textbf{物质之所以是固体、有体积、不可穿透，根本原因是泡利不相容原理。}
-
-\section{推导关系总结}
-
-\begin{center}
-\begin{tikzpicture}[
-  node distance=0.7cm,
-  kernel/.style={rectangle,draw,fill=principleblue!15,rounded corners,text width=2cm,align=center,font=\footnotesize\bfseries},
-  law/.style={rectangle,draw,fill=lawgreen!15,rounded corners,text width=2.8cm,align=center,font=\footnotesize},
-  arrow/.style={->,>=Stealth,thick,deriveorange}
-]
-  \node[kernel] (r4) {R4\\量子公设};
-  \node[kernel,right=0.3cm of r4] (r5) {R5\\Born 规则};
-  \node[law,below=0.5cm of r4] (se) {薛定谔方程\\$i\hbar\partial_t\psi=\hat{H}\psi$};
-  \node[law,below=0.3cm of se] (eh) {$E=h\nu$};
-  \node[law,below=0.3cm of eh] (db) {$\lambda=h/p$};
-  \node[law,below=0.3cm of db] (up) {$\sigma_x\sigma_p\!\geq\!\hbar/2$};
-  \node[law,right=0.3cm of se] (pauli) {泡利不相容};
-  \draw[arrow] (r4) -- (se); \draw[arrow] (se) -- (eh);
-  \draw[arrow] (eh) -- (db); \draw[arrow] (r4) -- (up);
-  \draw[arrow] (r4) -- (pauli); \draw[arrow] (r5) -- (up);
-\end{tikzpicture}
-\end{center}
-
-参考文献：[FEYN III], [HEISENBERG], Griffiths \textit{Quantum Mechanics}, Dirac (1930)
+\texttt{reversible: false}——不确定性可来自其他原因（经典波包 Fourier 变换限制）。等号成立条件：Gaussian 波包（最小不确定态 = 相干态）。
