@@ -158,7 +158,7 @@
 \contentsline {section}{\numberline {14.3}CKM 矩阵：味的混合与 CP 破坏的必然性}{56}{section.14.3}%
 \contentsline {subsection}{\numberline {14.3.1}物理直觉}{56}{subsection.14.3.1}%
 \contentsline {subsection}{\numberline {14.3.2}严格推导}{57}{subsection.14.3.2}%
-\contentsline {section}{\numberline {14.4}标准模型的三条推论：整体图景}{57}{section.14.4}%
+\contentsline {section}{\numberline {14.4}标准模型的三条推论：整体图景}{58}{section.14.4}%
 \contentsline {chapter}{\numberline {15}全局证明：体系的自洽性、完整性与充分必要性}{59}{chapter.15}%
 \contentsline {section}{\numberline {15.1}论证语言单位：我们用什么工具证明}{59}{section.15.1}%
 \contentsline {section}{\numberline {15.2}完整性证明：所有定律均可推导}{60}{section.15.2}%
@@ -177,7 +177,7 @@
 \contentsline {subsection}{\numberline {15.4.4}最小化}{62}{subsection.15.4.4}%
 \contentsline {section}{\numberline {15.5}交叉印证网：四条独立的验证线路}{62}{section.15.5}%
 \contentsline {section}{\numberline {15.6}体系总图}{63}{section.15.6}%
-\contentsline {section}{\numberline {15.7}结论：一个自洽且完整的物理公理体系}{63}{section.15.7}%
+\contentsline {section}{\numberline {15.7}结论：一个自洽且完整的物理公理体系}{64}{section.15.7}%
 \contentsline {part}{III\hspace {1em}附录}{65}{part.3}%
 \contentsline {chapter}{\numberline {A}物理常数表}{66}{appendix.A}%
 \contentsline {chapter}{\numberline {B}四十三条推导依赖表}{67}{appendix.B}%

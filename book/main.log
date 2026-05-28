@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.1)  28 MAY 2026 23:02
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.1)  28 MAY 2026 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1573,11 +1573,6 @@ Overfull \hbox (28.08266pt too wide) in paragraph at lines 125--137
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (96.2376pt too wide) in paragraph at lines 185--186
- [] 
- []
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1637,32 +1632,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 224--224
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 226--226
 []|\TU/FandolSong(0)/m/n/10 R1| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 225--225
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 227--227
 []|\TU/FandolSong(0)/m/n/10 R2| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 226--226
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 228--228
 []|\TU/FandolSong(0)/m/n/10 R3| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 227--227
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 229--229
 []|\TU/FandolSong(0)/m/n/10 R4| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 228--228
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 230--230
 []|\TU/FandolSong(0)/m/n/10 R5| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 229--229
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 231--231
 []|\TU/FandolSong(0)/m/n/10 R6| 
  []
 
@@ -1679,7 +1674,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--248
+Underfull \hbox (badness 10000) in paragraph at lines 250--250
 []|\TU/FandolSong(0)/m/n/9 Boltzmann 常
  []
 
@@ -1694,7 +1689,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (1.78236pt too wide) in paragraph at lines 248--248
+Overfull \hbox (1.78236pt too wide) in paragraph at lines 250--250
 []|\TU/FandolSong(0)/m/n/9 M·L²·T⁻²·Θ⁻¹| 
  []
 
@@ -1721,12 +1716,12 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (5.03136pt too wide) in paragraph at lines 250--250
+Overfull \hbox (5.03136pt too wide) in paragraph at lines 252--252
 []|\TU/FandolSong(0)/m/n/9 M⁻¹·L⁻³·T⁴·I²| 
  []
 
 
-Overfull \hbox (6.4545pt too wide) in paragraph at lines 250--250
+Overfull \hbox (6.4545pt too wide) in paragraph at lines 252--252
 \TU/FandolSong(0)/m/n/9 (←R3+R2+R1)| 
  []
 
@@ -1739,7 +1734,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (6.4545pt too wide) in paragraph at lines 251--251
+Overfull \hbox (6.4545pt too wide) in paragraph at lines 253--253
 \TU/FandolSong(0)/m/n/9 (←R3+R2+R1)| 
  []
 
@@ -2420,7 +2415,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [47])
-Underfull \hbox (badness 10000) in paragraph at lines 136--312
+Underfull \hbox (badness 10000) in paragraph at lines 136--314
 []\TU/FandolSong(0)/b/it/10.95 补 充 规 则\TU/FandolSong(0)/m/it/10.95 ： 连 续 性 方 程 
 $\OML/cmm/m/it/10.95 @[]J[] \OT1/cmr/m/n/10.95 = 0$ \TU/FandolSong(0)/m/it/10.9
 5 是 每 个 守 恒 律 的 局 部 微 分 形 式
@@ -2479,11 +2474,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (462.44168pt too wide) in paragraph at lines 180--181
- [] 
- []
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -2537,10 +2527,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [56]
-Overfull \hbox (74.7167pt too wide) in paragraph at lines 198--199
- [] 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2685,7 +2671,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [63]
-Underfull \hbox (badness 3375) in paragraph at lines 242--246
+Underfull \hbox (badness 3375) in paragraph at lines 244--248
 \TU/FandolSong(0)/m/it/10.95 详 细 证 明 数 据 见 [][]$[][][][][] [] [] [] [][][][][][
 ] [] [][][] [] [][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][]
 [][][][][]$[][] 的 \TU/FandolFang(0)/m/n/10.95 layer1/
@@ -2724,7 +2710,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 []|\TU/FandolSong(0)/m/n/9 Boltzmann 常
  []
 
@@ -2739,7 +2725,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (1.78236pt too wide) in paragraph at lines 335--335
+Overfull \hbox (1.78236pt too wide) in paragraph at lines 337--337
 []|\TU/FandolSong(0)/m/n/9 M·L²·T⁻²·Θ⁻¹| 
  []
 
@@ -2762,7 +2748,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 339--339
 []|$\OT1/cmr/m/n/9 6\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 67430 \OMS/cmsy/m/n/9 ^^B \
 OT1/cmr/m/n/9 10[]$
  []
@@ -2790,7 +2776,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (5.03136pt too wide) in paragraph at lines 339--339
+Overfull \hbox (5.03136pt too wide) in paragraph at lines 341--341
 []|\TU/FandolSong(0)/m/n/9 M⁻¹·L⁻³·T⁴·I²| 
  []
 
@@ -2818,122 +2804,122 @@ apping=tex-text;!
 Appendix B.
 
 LaTeX Font Warning: Font shape `TU/FandolFang(0)/b/n' undefined
-(Font)              using `TU/FandolFang(0)/m/n' instead on input line 357.
+(Font)              using `TU/FandolFang(0)/m/n' instead on input line 359.
 
 
-Overfull \hbox (3.91013pt too wide) in paragraph at lines 359--359
+Overfull \hbox (3.91013pt too wide) in paragraph at lines 361--361
 []|\TU/FandolFang(0)/m/n/9 law.euler_lagrange| 
  []
 
 
-Overfull \hbox (13.61212pt too wide) in paragraph at lines 360--360
+Overfull \hbox (13.61212pt too wide) in paragraph at lines 362--362
 []|\TU/FandolFang(0)/m/n/9 law.noether_theorem| 
  []
 
 
-Overfull \hbox (27.14812pt too wide) in paragraph at lines 361--361
+Overfull \hbox (27.14812pt too wide) in paragraph at lines 363--363
 []|\TU/FandolFang(0)/m/n/9 law.energy_conservation| 
  []
 
 
-Overfull \hbox (46.03012pt too wide) in paragraph at lines 362--362
+Overfull \hbox (46.03012pt too wide) in paragraph at lines 364--364
 []|\TU/FandolFang(0)/m/n/9 law.momentum_conservation| 
  []
 
 
-Overfull \hbox (82.50713pt too wide) in paragraph at lines 363--363
+Overfull \hbox (82.50713pt too wide) in paragraph at lines 365--365
 []|\TU/FandolFang(0)/m/n/9 law.angular_momentum_conservation| 
  []
 
 
-Overfull \hbox (26.75212pt too wide) in paragraph at lines 364--364
+Overfull \hbox (26.75212pt too wide) in paragraph at lines 366--366
 []|\TU/FandolFang(0)/m/n/9 law.charge_conservation| 
  []
 
 
-Overfull \hbox (6.65512pt too wide) in paragraph at lines 366--366
+Overfull \hbox (6.65512pt too wide) in paragraph at lines 368--368
 []|\TU/FandolFang(0)/m/n/9 law.newton_second| 
  []
 
 
-Overfull \hbox (1.02112pt too wide) in paragraph at lines 369--369
+Overfull \hbox (1.02112pt too wide) in paragraph at lines 371--371
 []|\TU/FandolFang(0)/m/n/9 law.gauss_electric| 
  []
 
 
-Overfull \hbox (8.45512pt too wide) in paragraph at lines 370--370
+Overfull \hbox (8.45512pt too wide) in paragraph at lines 372--372
 []|\TU/FandolFang(0)/m/n/9 law.gauss_magnetic| 
  []
 
 
-Overfull \hbox (18.49013pt too wide) in paragraph at lines 371--371
+Overfull \hbox (18.49013pt too wide) in paragraph at lines 373--373
 []|\TU/FandolFang(0)/m/n/9 law.faraday_induction| 
  []
 
 
-Overfull \hbox (12.78412pt too wide) in paragraph at lines 372--372
+Overfull \hbox (12.78412pt too wide) in paragraph at lines 374--374
 []|\TU/FandolFang(0)/m/n/9 law.ampere_maxwell| 
  []
 
 
-Overfull \hbox (24.00713pt too wide) in paragraph at lines 374--374
+Overfull \hbox (24.00713pt too wide) in paragraph at lines 376--376
 []|\TU/FandolFang(0)/m/n/9 law.em_wave_equation| 
  []
 
 
-Overfull \hbox (34.99612pt too wide) in paragraph at lines 376--376
+Overfull \hbox (34.99612pt too wide) in paragraph at lines 378--378
 []|\TU/FandolFang(0)/m/n/9 law.schroedinger_equation| 
  []
 
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (15.70012pt too wide) in paragraph at lines 377--377
+Overfull \hbox (15.70012pt too wide) in paragraph at lines 379--379
 []|\TU/FandolFang(0)/m/n/9 law.energy_frequency| 
  []
 
 
-Overfull \hbox (38.97412pt too wide) in paragraph at lines 378--378
+Overfull \hbox (38.97412pt too wide) in paragraph at lines 380--380
 []|\TU/FandolFang(0)/m/n/9 law.de_broglie_wavelength| 
  []
 
 
-Overfull \hbox (31.59412pt too wide) in paragraph at lines 379--379
+Overfull \hbox (31.59412pt too wide) in paragraph at lines 381--381
 []|\TU/FandolFang(0)/m/n/9 law.uncertainty_principle| 
  []
 
 
-Overfull \hbox (7.49213pt too wide) in paragraph at lines 380--380
+Overfull \hbox (7.49213pt too wide) in paragraph at lines 382--382
 []|\TU/FandolFang(0)/m/n/9 law.pauli_exclusion| 
  []
 
 
-Overfull \hbox (17.36513pt too wide) in paragraph at lines 382--382
+Overfull \hbox (17.36513pt too wide) in paragraph at lines 384--384
 []|\TU/FandolFang(0)/m/n/9 law.lorentz_transform| 
  []
 
 
-Overfull \hbox (23.79112pt too wide) in paragraph at lines 385--385
+Overfull \hbox (23.79112pt too wide) in paragraph at lines 387--387
 []|\TU/FandolFang(0)/m/n/9 law.newton_gravitation| 
  []
 
 
-Overfull \hbox (26.63512pt too wide) in paragraph at lines 388--388
+Overfull \hbox (26.63512pt too wide) in paragraph at lines 390--390
 []|\TU/FandolFang(0)/m/n/9 law.second_law_thermo| 
  []
 
 
-Overfull \hbox (16.37512pt too wide) in paragraph at lines 389--389
+Overfull \hbox (16.37512pt too wide) in paragraph at lines 391--391
 []|\TU/FandolFang(0)/m/n/9 law.first_law_thermo| 
  []
 
 
-Overfull \hbox (20.17313pt too wide) in paragraph at lines 390--390
+Overfull \hbox (20.17313pt too wide) in paragraph at lines 392--392
 []|\TU/FandolFang(0)/m/n/9 law.third_law_thermo| 
  []
 
 
-Overfull \hbox (2.47537pt too wide) in alignment at lines 355--398
+Overfull \hbox (2.47537pt too wide) in alignment at lines 357--400
  [] [] [] [] 
  []
 
@@ -2955,7 +2941,7 @@ apping=tex-text;!
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 445.
+LaTeX Warning: Empty bibliography on input line 447.
 
 runsystem(makeindex main.idx)...executed safely (allowed).
 
@@ -2982,12 +2968,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41578 strings out of 467992
- 891054 string characters out of 5431321
+ 41577 strings out of 467992
+ 891038 string characters out of 5431321
  1851699 words of memory out of 5000000
- 69720 multiletter control sequences out of 15000+600000
+ 69719 multiletter control sequences out of 15000+600000
  647703 words of font info for 156 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,14n,121p,1875b,1056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,14n,121p,1875b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (79 pages).
