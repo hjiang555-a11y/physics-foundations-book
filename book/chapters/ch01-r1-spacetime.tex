@@ -1,38 +1,87 @@
 % ============================================================
-%  Chapter 1: R1 — Four-Dimensional Lorentzian Causal Spacetime
+%  Chapter 1: R1 — 因果时空结构
+%  Updated: Round 12, three independent sub-principles
 % ============================================================
 \chapter{R1 — 因果时空结构}
 \label{ch:r1}
 
 \section{总说：宇宙的舞台}
 
-物理学研究的是"什么在什么上面发生"。R1 定义的是"什么上面"——\textbf{舞台本身}。
+物理学研究的是"什么在什么上面发生"。在问"什么规律"之前，我们必须先回答一个更根本的问题：\textbf{发生的舞台是什么样子}？R1 回答的就是这个问题。
 
-R1 的核心物理内容由两条\textbf{等价}的表述给出：
-\begin{enumerate}
-  \item \textbf{最大传播速度}：真空中任何信号、能量或因果影响的传播速度不超过 $c$。$c$ 在所有惯性系中取相同数值——它是普适常数，不是特定参考系的属性。
-  \item \textbf{Lorentz 因果结构}（与 (1) 等价）：时空间隔 $ds^2 = g_{\mu\nu}dx^\mu dx^\nu$ 的符号将事件对分为三类。因为 $ds^2 = c^2dt^2 - |d\mathbf{r}|^2$，类空 $\iff |d\mathbf{r}|/dt > c$——所以"无超光速信号"与"类空事件无因果联系"是同一事实的两种表述。
-\end{enumerate}
+\subsection{核心图像：光速的绝对性}
 
-此外：物理定律在所有坐标系中取相同形式（广义协变性）；度规本身可为动力学量——\textbf{引力即时空弯曲}（$\leftarrow$ 等效原理 + 广义协变性）。
+想象你站在站台上，一列火车以 100 km/h 的速度驶过。如果有人在火车上向前方扔一个球（球相对火车的速度是 10 km/h），你看到球的速度是 $100 + 10 = 110$ km/h。我们的日常直觉告诉我们：\textbf{速度是可以加成的}。
+
+但在 1905 年，爱因斯坦提出了一个颠覆性的主张：\textbf{光速不可以加成}。无论你在运动的火车上测量，还是在静止的站台上测量，真空中的光速永远是同一个数值——约 $3 \times 10^8$ m/s。
+
+这听起来违反直觉，但它的后果极其深刻。如果光速是一切参考系中的绝对上限，那么：
+
+\begin{itemize}
+  \item 没有任何信号、能量或因果影响能跑得比光快。
+  \item 两个事件的"同时性"不再是绝对的——在运动的火车上认为是同时发生的两件事，站台上的人可能认为是先后发生的。
+  \item 时间和空间不再是各自独立的"背景"，它们被"光锥"统一成一个四维结构——\textbf{时空}。
+\end{itemize}
+
+\subsection{为什么这条原则必不可少}
+
+试想一个没有光速上限的宇宙。在这样一个宇宙里：
+\begin{itemize}
+  \item 信息可以瞬间传播到任意远处。这意味着你可以收到来自未来的信号——因果关系崩溃。
+  \item 粒子可以以任意速度运动，无法形成稳定的原子结构。
+  \item 电磁波不会存在（因为 c 是电磁波速度，而 c 不是一个特殊值）。
+\end{itemize}
+
+\noindent 正是因为光速有限且绝对，我们的宇宙才有了清晰的因果结构——过去、现在和未来的严格划分。这是全部现代物理（从狭义相对论到量子场论）的逻辑起点。
+
+\subsection{引力为什么是时空弯曲}
+
+R1 还包含一条独立的深刻洞见：\textbf{惯性质量和引力质量严格相等}（等效原理）。
+
+在地球上，你感受到的重力（引力质量）和物体的"抗拒加速的本性"（惯性质量）由同一个 $m$ 描述。从伽利略的比萨斜塔实验到 Eötvös 的高精度扭摆测量（精度达 $10^{-15}$ 量级），这个等式从未被打破。
+
+等效原理的后果是：在局部范围内，你无法区分"静止在地球表面"和"在远离引力场的太空中以 $g=9.8$ m/s² 加速"。既然引力等价于加速参考系，而加速参考系等价于弯曲坐标系，那么——\textbf{引力就是时空几何}。这正是广义相对论的核心思想。
+
+\section{严格陈述}
+
+\subsection{R1 包含三个逻辑上独立的子原则}
 
 \begin{principlebox}[R1 — 因果时空结构]
-  时空是四维 Lorentz 流形 $(\mathcal{M}, g_{\mu\nu})$，3 个空间维度和 1 个时间维度。
+  \textbf{(1a)  最大传播速度}（核心公设）：
+  真空中任何信号、能量或因果影响的传播速度不超过 $c$。$c$ 在所有惯性系中取相同数值——它是普适常数，不是特定参考系的属性。
 
-  \textbf{等价表述}：
-  \begin{itemize}
-    \item (1a) 最大传播速度：真空中任何信号传播速度 $\leq c$；$c$ 在所有惯性系中不变。
-    \item (1b) Lorentz 因果结构：$ds^2 = g_{\mu\nu}dx^\mu dx^\nu$，其符号决定因果分类。
-  \end{itemize}
+  \textbf{(1b)  Lorentz 因果结构}（与 1a 等价）：
+  时空间隔 $ds^2 = g_{\mu\nu}dx^\mu dx^\nu$ 的符号将事件对分为三类——类时（$ds^2 > 0$，可因果连接）、类光（$ds^2 = 0$，仅光速信号）、类空（$ds^2 < 0$，无因果联系）。
+  因为 $ds^2 = c^2dt^2 - |d\mathbf{r}|^2$，类空 $\iff |d\mathbf{r}|/dt > c$——所以"无超光速信号"(1a) 与"类空事件无因果联系"(1b) 是\textbf{同一事实的两种表述}。
 
-  \textbf{等价性证明}：$ds^2 = c^2dt^2 - |d\mathbf{r}|^2$。类空 $\iff ds^2 < 0 \iff |d\mathbf{r}|/dt > c \iff$ 超光速 $\iff$ 无因果联系。
+  \textbf{(1c)  等效原理}（独立公设，与 1a/1b \textbf{逻辑独立}）：
+  惯性质量严格等于引力质量（$m_i = m_g$）。局域上，引力场与加速参考系不可区分。此原理与光速不变无逻辑蕴含关系——$m_i=m_g$ 是引力可被几何化的必要桥梁。等效原理 + 广义协变性 $\Rightarrow$ 引力即时空弯曲 $\Rightarrow$ 广义相对论。
 
-  广义协变性 + 等效原理 $\to$ 度规为动力学场 $\to$ 引力 = 时空弯曲。
+  \textbf{广义协变性}：物理定律在所有坐标系中取相同形式。
+  这是 R1 内嵌的结构原则：一旦等效原理将引力升格为时空几何的问题，广义协变性就是自然的数学要求。
 \end{principlebox}
 
-% ── 变量定义表 ──
+\subsection{逻辑关系}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=2cm and 3.5cm,
+  box/.style={rectangle,draw,rounded corners,fill=lb,text width=3.5cm,align=center,font=\small,minimum height=1.2cm},
+  arrow/.style={->,>=Stealth,thick,pblue!70}
+]
+  \node[box] (ab) {(1a $\iff$ 1b)\\最大速度 $\iff$ 因果结构};
+  \node[box,right=of ab] (c) {(1c) 等效原理\\$m_i=m_g$ （独立公设）};
+  \node[box,below=1.5cm of ab] (sr) {狭义相对论\\Lorentz 变换, $E=mc^2$};
+  \node[box,below=1.5cm of c] (gr) {广义相对论\\Einstein 场方程\\引力 = 时空弯曲};
+  \draw[arrow] (ab) -- (sr);
+  \draw[arrow] (c) -- (gr);
+  \node[font=\footnotesize,below=0.3cm of gr] {+ R2 (最小作用量) + 广义协变性};
+\end{tikzpicture}
+\end{center}
+
 \section{变量定义}
-\label{sec:r1-vars}
+
+R1 引入的所有基本变量如下。这些变量构成了全部后续章节的时空语言基础。
 
 \begin{table}[h]
 \centering
@@ -42,39 +91,53 @@ R1 的核心物理内容由两条\textbf{等价}的表述给出：
 \textbf{变量} & \textbf{符号} & \textbf{类型} & \textbf{量纲} & \textbf{定义域} & \textbf{物理含义} \\
 \midrule
 时间坐标 & $t$ & $\mathbb{R}$ & T & $t \in \mathbb{R}$ & 类时坐标，参数化因果序列 \\
-空间坐标 & $x^i$ & $\mathbb{R}^3$ & L & $i \in \{1,2,3\}$ & 类空坐标 \\
+空间坐标 & $x^i$ & $\mathbb{R}^3$ & L & $x^i \in \mathbb{R}$, $i \in \{1,2,3\}$ & 类空坐标 \\
 时空坐标 & $x^\mu$ & $\mathbb{R}^4$ & — & $x^0 \equiv ct$ & 4 维流形上的坐标系 \\
-度规张量 & $g_{\mu\nu}$ & $\mathbb{R}^{4\times4}$ 对称 & [1] & $\det(g) < 0$，符号差 $(+,-,-,-)$ & 定义线元与因果结构 \\
-线元 & $ds^2$ & $\mathbb{R}$ & L$^2$ & $ds^2 \in \mathbb{R}$ & Lorentz 不变量 \\
-真空光速 & $c$ & 常数 & L$\cdot$T$^{-1}$ & $c = 2.998\times10^8$ m/s (exact) & 因果传播速度上限 \\
+度规张量 & $g_{\mu\nu}$ & $\mathbb{R}^{4\times4}$ 对称 & [1] & $\det(g) < 0$；符号差 $(+,-,-,-)$ & 定义线元与因果结构 \\
+线元 & $ds^2$ & $\mathbb{R}$ & L$^2$ & $ds^2 \in \mathbb{R}$ & Lorentz 不变量；符号决定因果分类 \\
+真空光速 & $c$ & 常数 & L·T$^{-1}$ & $c = 2.99792458 \times 10^8$ m/s (exact) & 因果传播速度上限 \\
 固有时间 & $\tau$ & $\mathbb{R}_{\ge 0}$ & T & $d\tau^2 \equiv ds^2/c^2 \ge 0$ & 类时世界线的弧长参数 \\
-空间维数 & $D$ & $\mathbb{N}^+$ & [1] & $D = 3$（contingent） & 宏观延展空间维度数 \\
-惯性参考系 & — & 概念 & — & $g_{\mu\nu} = \eta_{\mu\nu}$，$\Gamma^\lambda_{\mu\nu}=0$ & 无加速、无引力的局域参考系 \\
+空间维数 & $D$ & $\mathbb{N}^+$ & [1] & $D = 3$（本宇宙 contingent 事实） & 宏观延展空间维度数；D=3 保证平方反比律和稳定轨道 \\
+惯性参考系 & — & 概念 & — & $g_{\mu\nu}=\eta_{\mu\nu},\ \Gamma^\lambda_{\mu\nu}=0$ & 无加速度、无引力的局域参考系 \\
 \bottomrule
 \end{tabular}
 \caption{R1 变量定义}
 \end{table}
 
-% ── 数学表达式 ──
 \section{数学表达式}
 
-\subsection{局域惯性系（Minkowski 度规 — 平直时空极限）}
-\[
-ds^2 = c^2 dt^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2
-\]
+\subsection{平直时空：Minkowski 度规}
 
-\subsection{一般坐标系（弯曲时空）}
-\[
+在无引力的局域惯性系中，时空取最简单的形式——Minkowski 度规：
+
+\begin{equation}
+ds^2 = c^2 dt^2 - (dx^1)^2 - (dx^2)^2 - (dx^3)^2
+\end{equation}
+
+\noindent 这是狭义相对论的全部几何基础。符号差 $(+,-,-,-)$ 意味着时间方向贡献正的线元，三个空间方向贡献负的线元。这种符号差（一个正号，三个负号）称为 Lorentz 符号差，它是因果结构存在的前提。
+
+\subsection{弯曲时空：一般坐标}
+
+在存在引力的情况下，度规不再是常数——它成为位置的函数 $g_{\mu\nu}(x)$：
+
+\begin{equation}
 ds^2 = g_{\mu\nu}(x)\, dx^\mu dx^\nu
-\]
-$g_{\mu\nu}$ 为二阶对称协变张量，10 个独立分量（$D=4 \Rightarrow D(D+1)/2 = 10$）。
+\end{equation}
+
+\noindent $g_{\mu\nu}$ 是一个 $4\times4$ 的对称张量，由于对称性（$g_{\mu\nu}=g_{\nu\mu}$），它有 $D(D+1)/2 = 10$ 个独立分量。在三维空间中引力场的自由度对应两个偏振态（因此引力波有两个偏振方向）。
 
 \subsection{因果分类}
-定义间隔 $\Delta s^2 \equiv g_{\mu\nu}\Delta x^\mu\Delta x^\nu$。按 $\Delta s^2$ 的符号分类：
+
+对任意两个事件 $A$ 和 $B$，定义时空间隔：
+\begin{equation}
+\Delta s^2 \equiv g_{\mu\nu} \Delta x^\mu \Delta x^\nu
+\end{equation}
+
+\noindent 按 $\Delta s^2$ 的符号，事件对分为三类：
 
 \begin{table}[h]
 \centering
-\begin{tabular}{p{3cm}p{2.5cm}p{4.5cm}p{4cm}}
+\begin{tabular}{p{2.5cm}p{2.5cm}p{4.5cm}p{4cm}}
 \toprule
 \textbf{条件} & \textbf{分类} & \textbf{物理含义} & \textbf{速度表述} \\
 \midrule
@@ -83,146 +146,121 @@ $\Delta s^2 = 0$ & 类光 (lightlike) & 仅以光速信号可连接 & $|d\mathbf
 $\Delta s^2 < 0$ & 类空 (spacelike) & 无因果联系；任何惯性系中均不同地 & $|d\mathbf{r}|/dt > c$ \\
 \bottomrule
 \end{tabular}
-\caption{因果分类——"最大速度"与"光锥结构"等价}
+\caption{因果分类}
 \end{table}
 
 \subsection{局域性约束}
-物理量 $\phi(x)$ 在点 $x$ 的值仅依赖于其在过去光锥 $J^-(x)$ 内的初始数据。
 
-% ── 成立条件 ──
+因果结构还有一个重要推论：物理量 $\phi(x)$ 在时空点 $x$ 的值仅依赖于其在过去光锥 $J^-(x)$ 内的初始数据。这意味着物理影响不能从光锥之外传播进入——信息只能沿着类时或类光路径传播。
+
+这一约束是量子场论中\textbf{微观因果性}的基础，也是自旋-统计定理的核心前提之一（见第9章 Pauli 不相容原理的推导）。
+
+\subsection{等效原理的定量表述}
+
+弱等效原理的定量表述是：
+
+\begin{equation}
+\frac{m_i}{m_g} = 1 \quad \text{（在实验精度 $10^{-15}$ 范围内精确成立）}
+\end{equation}
+
+\noindent 这一等式意味着：\textbf{任何物体的引力加速度与其成分无关}——在真空中，羽毛和铅球以相同的加速度下落。
+
+Einstein 将其提升为物理原理：\textbf{在局域范围内，一个均匀引力场中的物理定律与在无引力场中均匀加速的参考系中的物理定律完全相同}。这是连接引力和时空几何的关键洞察。
+
 \section{成立条件 (Scope)}
 
 \begin{itemize}
-  \item \textbf{有效场论范围}：R1 在能量远低于 Planck 尺度（$E \ll E_P \approx 1.22 \times 10^{19}$ GeV）、距离远大于 Planck 长度（$l \gg l_P$）的范围内精确成立。这是目前所有已确认物理实验的适用域。
-  \item \textbf{狭义相对论}：$g_{\mu\nu} \rightarrow \eta_{\mu\nu}$（平直极限，忽略引力）。
-  \item \textbf{广义相对论}：$g_{\mu\nu}$ 为动力学场，由 Einstein 场方程（$\leftarrow$ R1 + R2）决定。
+  \item \textbf{有效场论范围}：R1 在能量远低于 Planck 尺度（$E \ll E_P \approx 1.22 \times 10^{19}$ GeV）、距离远大于 Planck 长度（$l \gg l_P \approx 1.616 \times 10^{-35}$ m）的范围内精确成立。这是目前所有已确认物理实验的适用域。
+  \item \textbf{狭义相对论}：$g_{\mu\nu} \rightarrow \eta_{\mu\nu}$（平直极限，忽略引力）。在此极限下 R1 约化为狭义相对论的全部运动学。
+  \item \textbf{广义相对论}：$g_{\mu\nu}$ 升格为动力学场，由 Einstein 场方程（$\leftarrow$ R1 等效原理 + R2 最小作用量）决定其演化。
+  \item \textbf{局域性}：等效原理仅在"局域"（时空的一个小邻域）内严格成立。在大的时空尺度上，潮汐力使引力场和匀加速参考系可以区分。
 \end{itemize}
 
-% ── 失效边界 ──
 \section{失效边界 (Boundary)}
 
-\begin{limitbox}[R1 的失效边界]
+\begin{limitbox}[R1 的已知失效边界]
   \begin{itemize}
-    \item \textbf{Planck 尺度} $l_P = \sqrt{\hbar G/c^3} \approx 1.616 \times 10^{-35}$ m：时空本身的量子涨落不可忽略。连续流形假设可能破缺。
-    \item \textbf{Planck 时间} $t_P = l_P/c \approx 5.391 \times 10^{-44}$ s：经典因果结构可能不再适用。
-    \item \textbf{初始奇点}（大爆炸 $t \rightarrow 0$）：度规退化，广义相对论失效。
+    \item \textbf{Planck 尺度}（$l_P = \sqrt{\hbar G/c^3} \approx 1.616 \times 10^{-35}$ m）：时空本身的量子涨落不可忽略。连续流形假设可能破缺。量子引力候选方案（弦论、圈量子引力、因果动力学三角化）在此区间可能与 R1 的结构不同。
+    \item \textbf{Planck 时间}（$t_P = l_P/c \approx 5.391 \times 10^{-44}$ s）：此时间尺度以下，经典因果结构可能不再适用。
+    \item \textbf{初始奇点}（大爆炸 $t \rightarrow 0$）：度规退化，曲率发散，广义相对论失效。
+    \item \textbf{等效原理的可能破缺}：某些量子引力模型（如弦论中的 dilaton 场）预言等效原理在极高精度下可能存在微小偏离。当前实验精度 $10^{-15}$，未来卫星实验（如 MICROSCOPE 2）可能将精度推至 $10^{-18}$。
   \end{itemize}
-  \smallskip
-  \textit{注：$c$ 见 R1.2，$\hbar$ 见 R4.2，$G$ 为 Newton 引力常数（由 Einstein 场方程的 Newton 极限确定）。}
 \end{limitbox}
 
-% ── 必要性 ──
-\section{必要性 (Necessity)}
+\section{必要性}
 
-若移除或弱化 R1 的任一部分：
+\subsection{若移除 R1 的任一部分}
 
 \begin{table}[h]
 \centering
 \small
-\begin{tabular}{p{4cm}p{7cm}}
+\begin{tabular}{p{4cm}p{10cm}}
 \toprule
 \textbf{移除/弱化} & \textbf{后果} \\
 \midrule
-$D=3 \to D \neq 3$ & 无稳定 Kepler 轨道；无 Huygens 原理（D 偶数时）；平方反比律改变 \\
-Lorentz 符号差 $\to$ Euclidean & 无因果序；无波传播；量子场论无法定义 \\
-光速上限 $c \to$ 无上限 & 因果悖论（封闭类时曲线）；无稳定物质结构 \\
-广义协变性 $\to$ 特殊坐标系 & 非惯性系物理定律形式改变；无法描述引力为时空几何 \\
+3+1 维 $\to$ 其他维数 &
+无稳定 Kepler 轨道 ($D\neq 3$)；无 Huygens 原理 ($D$ 为偶数时波传播有拖尾)；
+引力和静电力的平方反比律改变（Gauss 定律的通量 $\propto r^{D-1}$） \\
+Lorentz 符号差 $\to$ Euclidean 符号差 &
+无因果序——所有方向等价，无"过去"和"未来"的区别；
+无波传播——波动方程变为椭圆型；量子场论无法定义谱条件 \\
+光速上限 $c \to$ 无上限 &
+因果悖论——封闭类时曲线可能出现（时间旅行）；
+无稳定物质结构——光速上限是原子稳定存在的必要前提（否则电子会以任意速度辐射能量） \\
+广义协变性 $\to$ 特殊坐标系 &
+非惯性系中物理定律的形式将依赖坐标系选择；
+无法将引力描述为时空几何——因为"几何"的概念要求坐标无关性 \\
+等效原理 $m_i=m_g \to$ 破缺 &
+引力无法几何化——Einstein 场方程无法导出；
+无法解释 Eötvös 实验的零结果（$m_i/m_g$ 在 $10^{-15}$ 精度内严格为 1） \\
 \bottomrule
 \end{tabular}
-\caption{R1 必要性——移除后的物理后果}
+\caption{R1 必要性分析}
 \end{table}
 
-% ── 充分性 ──
-\section{充分性 (Sufficiency)}
+\section{充分性}
 
-\textbf{R1 单独提供}：
+R1 的三个子原则各自提供不同的物理域：
+
+\subsection{(1a+1b) 因果-相对论结构单独提供}
+
 \begin{itemize}
-  \item 平直时空极限 $\to$ 狭义相对论全部运动学（Lorentz 变换、时间膨胀、长度收缩、同时性相对性）
+  \item 平直时空极限 $\to$ 狭义相对论全部运动学：Lorentz 变换、时间膨胀、长度收缩、同时性相对性
+  \item $+$ R4（量子公设） $\to$ 相对论量子场论的因果结构：微观因果性 $\to$ 自旋-统计定理
+  \item 局域性约束 $\to$ 微因果性 $\to$ 在场论中限制可能的相互作用形式
 \end{itemize}
 
-\textbf{R1 + R2}（最小作用量）$\to$ 弯曲时空动力学（Einstein 场方程）$\to$ 引力理论
+\subsection{(1c) 等效原理 + 广义协变性提供}
 
-\textbf{R1 + R4}（量子公设）$\to$ 相对论量子场论的因果结构（微观因果性 $\to$ 自旋-统计定理）
+\begin{itemize}
+  \item $+$ R2（最小作用量） $\to$ 弯曲时空动力学（Einstein 场方程） $\to$ 全部引力理论
+  \item 度规 $g_{\mu\nu}$ 从固定的运动学背景升格为动力学场——这是通往广义相对论的独立入口
+  \item 注意：等效原理 \textbf{不} 由 1a/1b 蕴含，它是独立公设
+\end{itemize}
 
-% ── 子组件映射 ──
-\section{子组件与 frameworks.yaml 映射}
+\section{子组件映射}
 
-\begin{table}[h]
-\centering
-\begin{tabular}{p{5cm}p{7cm}}
-\toprule
-\textbf{子组件} & \textbf{frameworks.yaml ID} \\
-\midrule
-3+1 时空维度 & \texttt{kernel.spacetime\_dimensionality} \\
-光速不变 & \texttt{kernel.light\_speed\_invariance} \\
-Lorentz 不变性 + 因果结构 & \texttt{kernel.lorentz\_invariance} \\
-等效原理（$m_i=m_g$） & \texttt{kernel.equivalence\_principle} \\
-广义协变性 & \texttt{kernel.general\_covariance} \\
-\bottomrule
-\end{tabular}
-\caption{R1 子组件与 frameworks.yaml 的对应关系}
-\end{table}
-
-\section{直觉理解：光锥——因果结构的可视化}
-
-\subsection{二维类比：从水波到光锥}
-
-想象你站在平静的湖面上，把一块石头扔进水中央。涟漪以圆形向外扩散，速度固定。当你俯视湖面时，你能画出涟漪到达各处的时刻——形成一个向外扩展的圆锥。
-
-时空中的光以完全类似的方式传播。在三维空间中传播形成了"四维圆锥"。我们只能可视化三维（取消一个空间维度），得到熟悉的\textbf{光锥}：
+R1 在 `frameworks.yaml` 中对应以下 kernel 节点：
 
 \begin{center}
-\begin{tikzpicture}[scale=1.15]
-  % Light cone
-  \fill[blue!15] (-1.2,-1.2) -- (0,0) -- (1.2,-1.2);
-  \fill[blue!5] (-1.2,1.2) -- (0,0) -- (1.2,1.2);
-
-  % Axes
-  \draw[->] (0,-1.5) -- (0,1.5) node[above] {$t$ (时间)};
-  \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$ (空间)};
-
-  % Event
-  \fill[red] (0,0) circle (2pt) node[below right] {\small 事件 $O$};
-
-  % Labels
-  \node at (0.0,1.0) [rotate=0] {\small 未来光锥};
-  \node at (0.0,-1.0) [rotate=0] {\small 过去光锥};
-  \node at (1.3,0.7) {\small 类时};
-  \node at (0.7,0.3) {\small 类光};
-  \node at (1.3,-0.7) {\small 类空 (不可达)};
-\end{tikzpicture}
+\small
+\begin{tabular}{p{3cm}p{5cm}p{4cm}}
+\toprule
+\textbf{子组件} & \textbf{frameworks.yaml ID} & \textbf{逻辑分组} \\
+\midrule
+3+1 时空维度 & \texttt{kernel.spacetime\_dimensionality} & contingent 事实 \\
+光速不变 & \texttt{kernel.light\_speed\_invariance} & 1a $\iff$ 1b \\
+Lorentz 不变性 + 因果结构 & \texttt{kernel.lorentz\_invariance} & 1a $\iff$ 1b \\
+等效原理 ($m_i=m_g$) & \texttt{kernel.equivalence\_principle} & 1c（独立公设） \\
+广义协变性 & \texttt{kernel.general\_covariance} & 1c \\
+\bottomrule
+\end{tabular}
 \end{center}
 
-\subsection{光锥的物理意义}
+\section{本章小结}
 
-\begin{itemize}
-  \item \textbf{过去光锥}：能够\emph{影响}事件 $O$ 的所有事件的集合。任何从外部影响 $O$ 的信号都必须来自过去光锥内部或表面上。
-  \item \textbf{未来光锥}：能够\emph{被}事件 $O$ \emph{影响}的所有事件的集合。事件 $O$ 发出的信号只能到达未来光锥内部或表面上。
-  \item \textbf{类空区域（Elsewhere）}：与 $O$ 绝对分离的区域。此区域内的事件与 $O$ 之间没有任何可能的因果联系——任何观测者都无法将 $O$ 与此区域内的任何事件列为先后关系。
-\end{itemize}
+R1 定义了物理世界的"舞台"——四维 Lorentz 流形，以及这个舞台上的因果规则。它的三个子组件支撑着两个不同的物理理论分支：(1a+1b) 支撑狭义相对论和量子场论的因果结构；(1c) 独立地支撑广义相对论——引力作为时空几何的理论。
 
-\subsection{为什么光速是上限？}
+R1 为后续所有推导提供了"时间坐标"、"空间坐标"、"惯性参考系"、"因果关系"等基本概念。没有 R1，后面的 R2-R6 将失去它们的定义域和操作空间。
 
-这不是因为"光有特殊性质"，而是因为时空的几何结构。Lorentz 度规决定了间隔 $ds^2$ 的符号：
-
-\[
-ds^2 = c^2 dt^2 - |d\mathbf{r}|^2
-\]
-
-\begin{itemize}
-  \item 若 $v > c$：$|d\mathbf{r}| > c\,dt \implies ds^2 < 0$——事件变为类空分离，失去了因果联系。这意味着信号的传播速度若超过 $c$，在另一个惯性系看来该信号将从"果"传向"因"——这是因果悖论。
-  \item 若 $v = c$：$ds^2 = 0$——这是\emph{仅可能}的无质量粒子（光子、引力波）的世界线。
-  \item 若 $v < c$：$ds^2 > 0$——有质量粒子只能在类时世界线上运动。
-\end{itemize}
-
-\section{从平直时空到弯曲时空}
-
-R1 的真正魅力在于其一般性。Minkowski 度规只描述了平直（无引力）时空。在更一般的弯曲时空中：
-
-\[
-ds^2 = g_{\mu\nu}(x)\,dx^\mu dx^\nu
-\]
-
-$g_{\mu\nu}$ 是一个位置的函数，有 10 个独立分量（对称性 $g_{\mu\nu}=g_{\nu\mu}$ 将可能的 16 个分量减至 10 个）。
-
-这就是广义相对论的起点：\textbf{引力不是"力"，而是时空的弯曲}。物质告诉时空如何弯曲（通过 Einstein 场方程——从 R2 推出），弯曲的时空告诉物质如何运动（通过测地线方程）。
+在第 11 章和第 12 章中，我们将看到 R1 如何直接导出 Lorentz 变换和质能等价（这两条仅需 R1 本身），以及如何与 R2 结合导出 Einstein 场方程。

@@ -92,3 +92,54 @@ de Broglie (1924) 假设此关系对所有物质粒子成立——Davisson-Germe
 \end{derivationbox}
 
 \texttt{reversible: false}——不确定性可来自其他原因（经典波包 Fourier 变换限制）。等号成立条件：Gaussian 波包（最小不确定态 = 相干态）。
+
+% ════════════════════════════════════════════════════════
+\section{Pauli 不相容原理：自旋-统计定理}
+% ════════════════════════════════════════════════════════
+
+\begin{lawbox}[Pauli 不相容原理]
+  全同费米子波函数完全反对称：$\psi(r_1,s_1;r_2,s_2)=-\psi(r_2,s_2;r_1,s_1)$。无两个全同费米子占据同一量子态。
+  \quad\textbf{前提}：R1 (Lorentz + 微观因果性), R4a (叠加), R4b (幺正)
+\end{lawbox}
+
+\noindent\textbf{变量}：费米子场算符 $\psi_\ell(x)$（半整数自旋 $j$），Lorentz 表示 $(A,B)$，产生/湮灭算符 $a(p,\sigma), b^\dagger(p,\sigma)$，系数函数 $u_\ell(p,\sigma), v_\ell(p,\sigma)$。
+
+\begin{derivationbox}[13步推导大纲 \hfill 区分项目内 (in\_project) 与外定理 (external\_theorem)]
+
+\noindent\textbf{Step 1} [external] — Lorentz 群的有限维不可约表示：物理自旋 $j$ 从 $(A,B)$ 表示中取值。
+\hfill\texttt{[N]} R1 (Lorentz 不变性)
+
+\noindent\textbf{Step 2} [in\_project] — 单粒子 Hilbert 空间：$|p,\sigma\rangle$ 为完备基（R4a 叠加原理）。
+
+\noindent\textbf{Step 3} [external] — 簇分解原理 $\Rightarrow$ 场必须由 $a(p,\sigma)$（湮灭）+ $b^\dagger(p,\sigma)$（产生）构建。此为反粒子必然存在的根源。
+
+\noindent\textbf{Step 4} [external] — 自由场展开：$\psi_\ell(x) \propto \int d^3p\,[\kappa u_\ell a e^{-ipx} + \lambda v_\ell b^\dagger e^{+ipx}]$
+
+\noindent\textbf{Step 5} [external] — 系数函数 $u_\ell, v_\ell$ 由 $(j,0)\oplus(0,j)$ Lorentz 表示矩阵完全确定。
+
+\noindent\textbf{Step 6} [in\_project] — 算符代数（R4a+R4b）：$[a,a^\dagger]_\pm = \delta^3$，符号由自旋-统计决定。
+
+\noindent\textbf{Step 7} [in\_project] — \textbf{微因果性}（R1）：对类空间隔 $(x-y)^2<0$，$[\psi_\ell(x),\psi_m(y)]_\pm=0$。
+
+\noindent\textbf{Step 8} [external] — 计算类空(反)对易子：代入场展开得积分 $\propto \int[uu^*e^{-ip(x-y)}\mp vv^*e^{+ip(x-y)}]dp/2p^0$。
+
+\noindent\textbf{Step 9} [external] — CPT 定理：$v_\ell \propto u^*_\ell$，系数矩阵结构匹配。此步依赖 Lorentz 不变性。
+
+\noindent\textbf{Step 10} [external] — \textbf{符号选择}：整数自旋 $\Rightarrow$ $u_\ell u^*_m$ 在 $p\to-p$ 下为偶 $\Rightarrow$ 取对易子 $\Rightarrow$ Bose 统计；半整数自旋 $\Rightarrow$ 为奇 $\Rightarrow$ 取反对易子 $\Rightarrow$ Fermi 统计。
+
+\noindent\textbf{Step 11} [in\_project] — 费米子侧结论：$\{\psi_\ell(x),\psi_m(y)\}=0$ 当 $(x-y)^2<0$。$\leftrightarrow$ 交叉印证：SM 费米子内容（第 \ref{ch:sm-eft} 章）、Fermi-Dirac 分布。
+
+\noindent\textbf{Step 12} [in\_project] — \textbf{波函数反对称性}：产生算符反对易 $\Rightarrow$ 多费米子态 $|r_1,s_1;r_2,s_2\rangle$ 的波函数在交换下变号。
+
+\noindent\textbf{Step 13} [in\_project] — \textbf{Pauli 不相容原理}：$\psi(\ldots;r,s;\ldots;r,s;\ldots)=-\psi\Rightarrow\psi\equiv0$。无两个全同费米子可占据同一量子态。
+
+\end{derivationbox}
+
+\fbox{[S]} Lorentz 不变性 + 量子公设 + 微观因果性 $\Rightarrow$ 自旋-统计定理（费米子侧）。
+\fbox{[S]} 整数自旋 $\Rightarrow$ Bose 统计（对称波函数，Bose-Einstein 凝聚可能）。
+
+\texttt{reversible: false}——Pauli 不相容 $\not\Rightarrow$ 自旋-统计定理的完整结构（需逆向 CPT 论证）。$\leftrightarrow$ 交叉印证第 \ref{ch:sm-eft} 章（SM 费米子）和第 \ref{ch:thermo} 章（Fermi-Dirac 分布 $\to$ Nernst 基态简并）。
+
+\begin{notebox}[注：外部定理 vs. 项目内可证步骤]
+  上述 13 步推导中，Steps 1,3,4,5,8,9,10 标记为 \textbf{external\_theorem}——它们依赖 Wightman 公理体系或 Weinberg 式 LSZ 构造的已证定理。Steps 2,6,7,11,12,13 标记为 \textbf{in\_project}——它们可在 R1-R6 框架内直接陈述和论证。完整严格证明需 axiomatic QFT，超出本书范围。
+\end{notebox}

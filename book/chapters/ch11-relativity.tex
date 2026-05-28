@@ -82,27 +82,43 @@ Ricci 张量 $R_{\mu\nu}$ [L$^{-2}$]，
 应力-能量张量 $T_{\mu\nu}$ [M$\cdot$L$^{-1}\cdot$T$^{-2}$]，
 度规行列式 $g = \det(g_{\mu\nu}) < 0$ [1]。
 
-\begin{derivationbox}[推导：Einstein-Hilbert 作用量]
-  \textbf{Step 1} — Einstein-Hilbert 作用量：
-  $S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
+\begin{derivationbox}[推导：Lovelock 唯一性 + Einstein-Hilbert 变分]
 
-  \textbf{注}：Lovelock 定理 (1971) 证明在 4D 中，EH 作用是唯一产生二阶运动方程的纯度规作用量。
+\noindent\textbf{Step 1} — \textbf{Lovelock 定理 (1971)}：$D$ 维时空中，由度规及其导数构成、产生至多二阶运动方程的最一般 Lagrange 密度是 \textbf{Lovelock Lagrangian}：
+\begin{equation}
+\mathcal{L}_{\text{grav}} = \sum_{k=0}^{\lfloor D/2\rfloor} c_k \mathcal{L}_k
+\end{equation}
+其中 $\mathcal{L}_k$ 为 $k$ 阶 Euler 密度：$\mathcal{L}_0=1$ ($\Lambda$)，$\mathcal{L}_1=R$ (Einstein-Hilbert)，$\mathcal{L}_2 = R^2-4R_{\mu\nu}R^{\mu\nu}+R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}$ (Gauss-Bonnet)。
 
-  \textbf{Step 2} — 对 $g^{\mu\nu}$ 变分（R2：$\delta S = 0$）
+\noindent\textbf{Step 2} — \textbf{维度截断}：$D=4$ 时 $\lfloor D/2\rfloor=2$。但 $\mathcal{L}_2$（Gauss-Bonnet）在 4D 中为\textbf{拓扑不变量}（Chern-Gauss-Bonnet 定理），其变分恒为零，不贡献运动方程。更高阶项 $\mathcal{L}_{k\geq3}$ 在 4D 中恒为零（微分形式阶数超过流形维数）。
 
-  \textbf{Step 3} — 引力部分变分：$\delta(\int R\sqrt{-g}\,d^4x) = \int (R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu})\delta g^{\mu\nu}\sqrt{-g}\,d^4x$
-  \hfill\textit{(Palatini 恒等式 + $\delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}g_{\mu\nu}\delta g^{\mu\nu}$)}
+\noindent\textbf{Step 3} — \textbf{为什么 $R^2$ 项不合法}：$R^2$、$R_{\mu\nu}R^{\mu\nu}$ 等不是 Euler 密度——它们的变分产生 $\Box R$ 等四阶导数 $\Rightarrow$ \textbf{Ostrogradsky 鬼场}（理论不稳定，量子化后不幺正）。\fbox{[N]} 二阶场方程约束排除了这些项。
 
-  \textbf{Step 4} — 定义 $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}$。$\nabla_\mu G^{\mu\nu} \equiv 0$ (Bianchi)
+\noindent\textbf{Step 4} — \textbf{4D 中唯一的合法纯度规引力 Lagrangian}：
+\begin{equation}
+\mathcal{L}_{\text{grav}} = c_0 + c_1 R = -2\Lambda + \frac{R}{2\kappa}
+\end{equation}
+此即 Einstein-Hilbert 作用量——在 4D 中，它\textbf{不是众多选择之一，而是唯一的选择}。
+$\leftrightarrow$ 交叉印证：自旋-统计定理同样依赖 $D=4$——量子统计和经典引力从两侧独立推出维度的特殊地位。
 
-  \textbf{Step 5} — 物质部分：$T_{\mu\nu} \equiv -\frac{2}{\sqrt{-g}}\frac{\delta S_{\text{matter}}}{\delta g^{\mu\nu}}$
+\noindent\textbf{Step 5} — Einstein-Hilbert 作用量：
+$S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
 
-  \textbf{Step 6} — 场方程：$G_{\mu\nu} = \kappa T_{\mu\nu}$。Newton 极限（弱场低速）固定 $\kappa = 8\pi G/c^4$
+\noindent\textbf{Step 6} — 对 $g^{\mu\nu}$ 变分（R2：$\delta S = 0$）
+
+\noindent\textbf{Step 7} — 引力部分变分：$\delta(\int R\sqrt{-g}\,d^4x) = \int (R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu})\delta g^{\mu\nu}\sqrt{-g}\,d^4x$
+\hfill\textit{(Palatini 恒等式 + $\delta\sqrt{-g} = -\frac{1}{2}\sqrt{-g}g_{\mu\nu}\delta g^{\mu\nu}$)}
+
+\noindent\textbf{Step 8} — 定义 $G_{\mu\nu} \equiv R_{\mu\nu} - \frac{1}{2}Rg_{\mu\nu}$。$\nabla_\mu G^{\mu\nu} \equiv 0$ (Bianchi)
+
+\noindent\textbf{Step 9} — 物质部分：$T_{\mu\nu} \equiv -\frac{2}{\sqrt{-g}}\frac{\delta S_{\text{matter}}}{\delta g^{\mu\nu}}$
+
+\noindent\textbf{Step 10} — 场方程：$G_{\mu\nu} = \kappa T_{\mu\nu}$。Newton 极限（弱场低速）固定 $\kappa = 8\pi G/c^4$
 \end{derivationbox}
 
-\textbf{必要条件}：R1（等效原理 [N]——$m_i=m_g$ 使度规成为动力学场；广义协变性 [N]——作用量必须是标量），R2（$\delta S=0$ [N]），4 维时空 [N]（$G_{\mu\nu}$ 是唯一满足 $\nabla_\mu G^{\mu\nu}=0$ 的二阶张量）。
+\textbf{必要条件}：R1（等效原理 [N] + 广义协变性 [N]），R2（$\delta S=0$ [N]），4 维时空 [N]（Lovelock 定理的核心——仅 $D=4$ 时唯一候选为 $\Lambda+R$），二阶场方程约束 [N]（排除 $R^2$ 等高阶鬼场项）。
 
-\textbf{充分条件}：R1+R2+4D $\Rightarrow$ Einstein 场方程（Lovelock 定理保证唯一性）。\texttt{reversible: true}
+\textbf{充分条件}：R1+R2+4D+二阶方程约束 $\Rightarrow$ Einstein 场方程（Lovelock 定理保证唯一性）。\texttt{reversible: true}
 
 % ════════════════════════════════════════════════════════
 \section{Newton 万有引力（弱场极限）}

@@ -1,0 +1,183 @@
+\chapter{维度结构推论：D=3+1 的七条后果}
+\label{ch:contingent}
+
+\section*{为什么时空维数是偶然事实}
+
+R1 声明"我们的时空是 3+1 维"。但为什么不是 2+1？为什么不是 4+1？理论物理学家可以构造任意维数的自洽引力理论和量子场论——但我们的宇宙恰好选择了 D=3（空间）+ 1（时间）。
+
+这个选择产生了深远的结构后果。以下七条推论展示了：\textbf{若 D≠3+1，我们熟悉的物理世界——原子、行星轨道、清晰的声音——统统不会存在}。这不是一个可有可无的参数，而是构成我们这个宇宙"为什么是这个样子"的核心约束。
+
+\begin{notebox}[关键概念：Contingent 事实]
+  在本书的公理体系中，D=3+1 被归类为 \textbf{contingent}（偶然）事实——它不由 R1-R6 推导出来，而是我们这个宇宙的"初始条件"之一。然而，一旦给定 D=3+1，大量结构后果就可以从 kernel 前提中严格推导出来。本章展示这七条后果。
+\end{notebox}
+
+\section{平方反比律：为什么力是 $1/r^2$}
+
+\subsection{物理直觉}
+
+把一个小灯泡放在一个黑盒子的中心。你站在盒子的内壁上——距离灯泡越远，单位面积上接收到的光就越少。因为光均匀地向四面八方传播，在半径 $r$ 处它分散在半径为 $r$ 的球面上。球面积 $\propto r^2$，所以光强 $\propto 1/r^2$。
+
+同样的逻辑适用于任何从点源发出、在空间中守恒地传播的量——无论是引力（"引力线"从质量出发）、静电（"电力线"从电荷出发），还是声强。
+
+\subsection{严格推导}
+
+\begin{derivationbox}[推导：平方反比律 \hfill $\leftarrow$ kernel.spacetime\_dimensionality]
+
+\noindent\textbf{前提}：$D$ 维空间（R1 中 $D=3$）
+
+\noindent\textbf{步骤 1：Gauss 定律在 $D$ 维空间的通量形式}
+\begin{equation}
+\oint_{S^{D-1}} \mathbf{F} \cdot d\mathbf{A} \propto r^{D-1} F(r)
+\end{equation}
+$(D-1)$-维球面面积 $S^{D-1} \propto r^{D-1}$。通量 $=$ 场强 $\times$ 面积。
+
+\noindent\textbf{步骤 2：通量与源强成比例}{（Gauss 定律的物理内容）}
+\begin{equation}
+\oint \mathbf{F} \cdot d\mathbf{A} = \text{常数} \cdot Q
+\end{equation}
+其中 $Q$ 为源强（质量 $M$ 或电荷 $q$）。\fbox{[N]} Gauss 定律必须有效（依赖于力的守恒性）。
+
+\noindent\textbf{步骤 3：联立求解 $F(r)$}
+\begin{equation}
+F(r) \cdot r^{D-1} \propto \text{常数} \quad\Rightarrow\quad F(r) \propto \frac{1}{r^{D-1}}
+\end{equation}
+
+\noindent\textbf{步骤 4：代入 $D=3$}
+\begin{equation}
+D=3 \;\Rightarrow\; F(r) \propto \frac{1}{r^2}
+\end{equation}
+
+\textbf{结果}：平方反比律。适用于引力和静电学。\fbox{[S]} $D=3$ + Gauss 定律 + 球对称 $\Rightarrow$ $F\propto 1/r^2$。
+
+\end{derivationbox}
+
+\begin{limitbox}[反事实：若 $D\neq3$]
+  \begin{itemize}
+    \item $D=2$：$F \propto 1/r$——太弱。行星轨道不稳定（离心势 $\propto 1/r^2$ 在小 $r$ 时压倒引力势 $\propto -\ln r$ 或 $-1/r$）。
+    \item $D=4$：$F \propto 1/r^3$——太强。无稳定轨道（见 \S\ref{sec:kepler}）。
+    \item $D=1$：$F$ 为常数——无距离衰减，力无限远。
+  \end{itemize}
+\end{limitbox}
+
+\section{SO(3) 旋转群：为什么角动量有三个分量}
+\label{sec:so3}
+
+在 $D$ 维空间中，旋转群是 SO($D$)。SO($D$) 的 Lie 代数维数（独立的旋转生成元数目）为：
+\begin{equation}
+\dim(\text{SO}(D)) = \frac{D(D-1)}{2}
+\end{equation}
+对 $D=3$：$\dim(\text{SO}(3)) = 3$——恰好三个角动量分量 $L_x, L_y, L_z$。
+
+三个生成元的对易关系定义了 so(3) Lie 代数：
+\begin{equation}
+[L_i, L_j] = i\hbar\,\varepsilon_{ijk} L_k
+\end{equation}
+其中 $\varepsilon_{ijk}$ 是三维全反对称 Levi-Civita 符号——它仅在 $D=3$ 时有与生成元个数相同的指标。
+
+\begin{notebox}[为何这很重要]
+  \begin{itemize}
+    \item 角动量量子化：$L_z = m_\ell \hbar$，$m_\ell \in \{-\ell,\ldots,+\ell\}$——共 $2\ell+1$ 个本征态。
+    \item 原子中电子的轨道角动量量子化是元素周期表和化学键的基础。
+    \item 若 $D\neq3$，角动量的量子结构完全不同——原子无球对称轨道，周期表不存在。
+  \end{itemize}
+\end{notebox}
+
+\section{稳定 Kepler 轨道：为什么行星不坠入太阳}
+\label{sec:kepler}
+
+考虑质量为 $m$ 的粒子在中心引力场中运动。$D$ 维的有效势能为：
+\begin{equation}
+V_{\text{eff}}(r) = -\frac{k}{r^{D-2}} + \frac{L^2}{2mr^2}
+\end{equation}
+第一项：引力势（来自 $D$ 维 Gauss 定律的 $1/r^{D-2}$ 律）。第二项：离心势（来自角动量守恒，与 $D$ 无关）。
+
+稳定圆轨道的存在条件：$dV_{\text{eff}}/dr = 0$（极值）且 $d^2V_{\text{eff}}/dr^2 > 0$（局部极小）。
+
+求导后，二阶导数在极值点处为：
+\begin{equation}
+\left.\frac{d^2V_{\text{eff}}}{dr^2}\right|_{r^*} = \frac{L^2(3-D)}{mr^{*4}}
+\end{equation}
+仅当 $D\leq 3$ 时的二阶导数才非负。Bertrand 定理进一步证明：仅 $D=3$ 且势 $\propto 1/r$ 时，所有束缚轨道都是闭合的椭圆。
+
+\begin{limitbox}[反事实：若 $D>3$]
+  \begin{itemize}
+    \item 无稳定 Kepler 轨道 $\to$ 无行星系统、无原子（电子轨道不稳定）。
+    \item 离心势在小 $r$ 时不能支配引力势，粒子或螺旋坠入中心，或飞向无穷。
+    \item 结论：$D=3$ 是存在稳定物质结构（从太阳系到原子）的\textbf{必要条件}。
+  \end{itemize}
+\end{limitbox}
+
+\fbox{[N]} $D=3$ 空间维数。\fbox{[N]} 保守力。\fbox{[S]} $D=3$ + 保守有心力 $\Rightarrow$ 稳定椭圆轨道。
+
+\section{Huygens 原理：为什么声音清晰、没有回响拖尾}
+
+波动方程 $\Box \phi \equiv (\nabla^2 - c^{-2}\partial^2/\partial t^2)\phi = 0$ 的 Green 函数在奇数和偶数空间维数中有根本不同的行为：
+
+\begin{equation}
+G(\mathbf{r},t) \propto
+\begin{cases}
+\theta(ct - |\mathbf{r}|)                  & D=1 \quad\text{(阶跃——信号到达后永不消退)}\\
+\theta(ct - r)/\sqrt{c^2t^2 - r^2}       & D=2 \quad\text{(拖尾——主信号后有无限长余波)}\\
+\delta(ct - r)/r                           & D=3 \quad\text{($\delta$ 函数——尖锐波前，无拖尾)}
+\end{cases}
+\end{equation}
+
+\fbox{[N]} $D=3$（奇数维）。\fbox{[S]} $D=3$ 奇数 + 自由空间 $\Rightarrow$ Huygens 原理成立。
+
+\begin{notebox}[生活经验与物理学]
+  在 $D=3$ 的房间里，你说一句话，听众听到的是一个清晰的声音——主波前过后立刻安静。这背后是 Huygens 原理：次波仅在波前包络上干涉相长。在 $D=2$ 的"平国"里，任何声音都会拖着无限长的余响——交流将是不可能的。
+\end{notebox}
+
+\section{Minkowski 度规符号差}
+
+$D=3$ 空间维 + 1 时间维 $\Rightarrow$ 度规符号差 $(1,3)$：
+\begin{equation}
+ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2
+\end{equation}
+符号差决定了因果结构——区分过去、现在与未来。\fbox{[N]} Lorentz 不变性 + $D=3+1$。\fbox{[S]} 两者组合 $\Rightarrow$ Minkowski 度规。
+
+\section{引力波极化}
+
+线性化广义相对论中，度规扰动 $h_{\mu\nu}$ 在横向无迹（TT）规范下：
+\begin{equation}
+N_{\text{polarizations}} = \frac{D(D-3)}{2}
+\end{equation}
+对 $D=4$：$N = 2$——恰好 $h_+$ 和 $h_\times$ 两种极化模式。这对应无质量自旋-2 引力子的两个螺旋度态（$\pm2$）。
+
+\section{体积量纲与理想气体方程}
+
+$D=3$ 时体积 $V$ 的量纲为 $[L^3]$。这保证了理想气体状态方程 $PV = nRT$ 的量纲一致性：
+\begin{equation}
+[P \cdot V] = [M L^{-1} T^{-2}] \cdot [L^3] = [M L^2 T^{-2}] = [n \cdot R \cdot T]
+\end{equation}
+\fbox{[N]} $D=3$ + 量纲一致性。\fbox{[S]} 量纲运算自洽。
+
+\section{七条推论的整体意义}
+
+七条推论共同回答了一个问题：\textbf{"为什么我们的物理世界是这个样子？"}。
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.8cm and 3.5cm,
+  dbox/.style={rectangle,draw,rounded corners,fill=lgreen!15,text width=3.5cm,align=center,font=\footnotesize}
+]
+  \node[dbox,fill=pblue!15] (d3) {D=3+1 时空维数\\(kernel.spacetime\\\_dimensionality)};
+  \node[dbox,below left=of d3] (f) {平方反比律\\$F\propto 1/r^2$};
+  \node[dbox,below=of d3] (so3) {SO(3) 旋转群\\$[L_i,L_j]=i\hbar\varepsilon_{ijk}L_k$};
+  \node[dbox,below right=of d3] (orb) {稳定 Kepler 轨道\\$V_{\text{eff}}$ 有极小值};
+  \node[dbox,left=of f] (huy) {Huygens 原理\\尖锐波前 $\delta(ct-r)$};
+  \node[dbox,right=of orb] (gw) {引力波极化\\$h_+, h_\times$};
+  \node[dbox,below=of so3] (vol) {体积 $[L^3]$\\$PV=nRT$ 量纲自洽};
+  \node[dbox,below left=of vol] (sig) {Minkowski 符号差\\$(+,-,-,-)$};
+
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (f);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (so3);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (orb);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (huy);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (gw);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (vol);
+  \draw[->,>=Stealth,thick,pblue] (d3) -- (sig);
+\end{tikzpicture}
+\end{center}
+
+\textbf{核心结论}：$D=3+1$ 不是物理学家随意设定的参数——它是构成我们这个宇宙的稳定物质结构（原子、行星、清晰信号传播）的\textbf{必要条件}。若 $D \neq 3+1$，你将不会存在，这本书也不会存在。这不是人存原理的循环论证——这是从物理定律到结构后果的严格推导。

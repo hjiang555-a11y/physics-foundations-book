@@ -1,0 +1,201 @@
+\chapter{标准模型有效场论：从规范群到物理预言}
+\label{ch:sm-eft}
+
+\section*{为什么标准模型不是 R1-R6 的必然推论}
+
+R1-R6 规定了物理定律的\textbf{形式}——规范对称性决定相互作用的种类，最小作用量决定动力学方程。但它们不规定具体的\textbf{参数}——是 $U(1)$ 还是 $SU(3)$？三代费米子还是四代？Higgs 是二重态还是三重态？
+
+这些选择由我们这个宇宙的 contingent 事实决定（见附录 \ref{app:laws} 的 SM 部分）。然而，一旦给定了这些 contingent 输入——$SU(3)_C\times SU(2)_L\times U(1)_Y$ 规范群、三代手征费米子内容、Higgs 二重态——大量物理预言就可以从 R1-R6 严格推导出来。
+
+本章展示三条最重要的推论：渐近自由、Higgs 机制、CKM 矩阵。
+
+\section{渐近自由：为什么夸克在高能时自由、低能时禁闭}
+
+\subsection{物理直觉}
+
+想象两个带电粒子。它们之间的电场线在真空中从正电荷出发到负电荷。量子涨落——虚的电子-正电子对——会在真空中极化，部分屏蔽电荷。越靠近原电荷（高能、短距离），看到的"裸电荷"越大——这是 QED 的物理图像。
+
+QCD 完全不同。胶子不仅传递强力——胶子自己也携带色荷。这个\textbf{自相互作用}导致了一个奇异的效果：真空中的虚胶子对\textit{反屏蔽}色荷。越靠近夸克（高能），看到的色荷越小。在高能极限，夸克和胶子几乎自由——\textbf{渐近自由}。
+
+\subsection{严格推导：从 SU(3) Yang-Mills 到 $\beta$-函数}
+
+\begin{derivationbox}[推导：渐近自由 \hfill $\leftarrow$ contingent.sm\_gauge\_group + kernel.gauge\_interactions]
+
+\noindent\textbf{前提}：$SU(3)_C$ Yang-Mills 理论（QCD），$N_c=3$ 种颜色，$n_f=6$ 种夸克味
+
+\noindent\textbf{步骤 1：重整化群方程}
+耦合常数的跑动由 $\beta$-函数描述：
+\begin{equation}
+\beta(g) \equiv \frac{\partial g}{\partial \ln\mu}
+\end{equation}
+其中 $g$ 为 $SU(3)_C$ 规范耦合，$\mu$ 为能量标度。
+
+\noindent\textbf{步骤 2：单圈 $\beta$-函数}{（Gross \& Wilczek; Politzer, 1973）}
+非 Abel 规范理论在单圈水平的 $\beta$-函数为：
+\begin{equation}
+\beta(g) = -\frac{g^3}{16\pi^2} \cdot \beta_0 + \mathcal{O}(g^5),\qquad
+\beta_0 = \frac{11N_c}{3} - \frac{2n_f}{3}
+\end{equation}
+
+关键：胶子自能图（gluon loops）贡献 $+11N_c/3$（\textbf{反屏蔽}），夸克圈（quark loops）贡献 $-2n_f/3$（屏蔽，与 QED 同）。
+
+\noindent\textbf{步骤 3：$\beta_0$ 的符号}
+对 QCD：$N_c=3$，$n_f=6$：
+\begin{equation}
+\beta_0 = \frac{11\cdot 3}{3} - \frac{2\cdot 6}{3} = 11 - 4 = 7 > 0
+\end{equation}
+$\beta_0 > 0 \Rightarrow \beta(g) < 0$（对 $g>0$）$\Rightarrow$ 耦合随能标增长而\textbf{减小}。\fbox{[N]} $n_f \leq 16$（否则 $\beta_0$ 变号，渐近自由丧失）。
+
+\noindent\textbf{步骤 4：求解 RG 方程 —— 对数跑动}
+定义 $\alpha_s(\mu) \equiv g^2/(4\pi)$。单圈 RG 方程为：
+\begin{equation}
+\frac{d\alpha_s}{d\ln\mu} = -\frac{\beta_0}{2\pi}\,\alpha_s^2
+\end{equation}
+积分得：
+\begin{equation}
+\alpha_s(\mu) = \frac{2\pi}{\beta_0\ln(\mu/\Lambda_{\text{QCD}})}
+\end{equation}
+其中 $\Lambda_{\text{QCD}} \approx 200$ MeV 是 QCD 的自然标度——$\alpha_s$ 在此发散，标志着微扰论的失效和禁闭的起效。
+
+\noindent\textbf{步骤 5：渐近自由的物理后果}
+\begin{itemize}
+  \item $\mu \to \infty \Rightarrow \alpha_s(\mu) \to 0$：夸克和胶子在高能（短距离）时几乎自由
+  \item $\mu \to \Lambda_{\text{QCD}} \Rightarrow \alpha_s(\mu) \to \infty$：低能时长程力强到将夸克禁闭在强子内
+\end{itemize}
+
+\fbox{[S]} $SU(3)_C$ + $n_f \leq 16 \Rightarrow \beta_0 > 0 \Rightarrow$ 渐近自由。
+
+\end{derivationbox}
+
+\begin{notebox}[$\leftrightarrow$ 交叉印证：与 Lovelock 唯一性的平行]
+  渐近自由与 Einstein 场方程的 Lovelock 唯一性（第 \ref{ch:relativity} 章）遵循相同的论证模式：
+  \textbf{对称性 + 维数约束 $\Rightarrow$ 唯一可取的物理理论}。
+  QCD 的渐近自由来自 $SU(3)_C$ 的 non-Abelian 结构 + $D=4$ 的可重整性要求；
+  Einstein 引力的唯一性来自广义协变性 + $D=4$ 的 Lovelock 定理。
+  这是"对称性决定动力学"原则在规范理论和引力理论中的双重印证。
+\end{notebox}
+
+\section{Higgs 机制：质量的起源}
+
+\subsection{物理直觉}
+
+在 $SU(2)_L\times U(1)_Y$ 规范理论中，所有规范玻色子本应是无质量的——正如光子。但实验告诉我们，$W^\pm$ 质量约为 80.4 GeV，$Z$ 约为 91.2 GeV——它们是有质量的！
+
+质量从何而来？答案是\textbf{自发对称破缺}（Spontaneous Symmetry Breaking, SSB）。想象一个完全对称的墨西哥草帽势能：在中心（$\phi = 0$）处是不稳定的对称态；球滚到帽檐的任意一点（$\phi = v/\sqrt{2}$），对称性从 $SU(2)_L\times U(1)_Y$ "自发破缺"到 $U(1)_{\text{EM}}$。
+
+被"吃掉"的三个 Goldstone 玻色子变成了 $W^\pm$ 和 $Z$ 的纵向极化模式——这就是质量。
+
+\subsection{严格推导}
+
+\begin{derivationbox}[推导：Higgs 机制 \hfill $\leftarrow$ contingent.sm\_gauge\_group + contingent.sm\_higgs\_sector + kernel.gauge\_interactions]
+
+\noindent\textbf{前提}：$SU(2)_L\times U(1)_Y$ 规范群 + Higgs 二重态 $\phi = (\phi^+,\phi^0)^T$
+
+\noindent\textbf{步骤 1：Higgs 势与自发破缺}
+\begin{equation}
+V(\phi) = \mu^2|\phi|^2 + \lambda|\phi|^4,\quad \lambda>0
+\end{equation}
+\fbox{[N]} $\mu^2 < 0$：否则极小值在 $|\phi|=0$（无破缺）。当 $\mu^2 < 0$ 时，$V(\phi)$ 在 $|\phi|^2 = -\mu^2/(2\lambda) \equiv v^2/2$ 处取极小。
+
+\noindent\textbf{步骤 2：真空期望值与幺正规范}
+在幺正规范中：$\phi(x) = (0,\,(v+h(x))/\sqrt{2})^T$，$\langle 0|\phi|0\rangle = (0,\,v/\sqrt{2})^T$。$v \approx 246$ GeV。$h(x)$ 为物理 Higgs 玻色子（$m_h \approx 125$ GeV）。
+
+\noindent\textbf{步骤 3：协变导数作用于 Higgs 真空}
+\begin{equation}
+D_\mu\phi = \left[\partial_\mu - i g_2 \tau^a W^a_\mu - i g_1\frac{Y}{2}B_\mu\right]\phi
+\end{equation}
+代入 $\phi = (0,v/\sqrt{2})^T$（忽略 $h$ 项，聚焦质量生成）。
+
+\noindent\textbf{步骤 4：动能项产生质量}
+\begin{equation}
+|D_\mu\phi|^2\Big|_{\phi=(0,v/\sqrt{2})} = \frac{g_2^2 v^2}{8}\big[(W^1_\mu)^2 + (W^2_\mu)^2\big] + \frac{v^2}{8}(g_2 W^3_\mu - g_1 B_\mu)^2
+\end{equation}
+
+\noindent\textbf{步骤 5：物理质量本征态}
+定义：
+\begin{align}
+W^\pm_\mu &= \frac{W^1_\mu \mp iW^2_\mu}{\sqrt{2}}, &
+M_W &= \frac{g_2 v}{2} \approx 80.4\ \text{GeV} \\
+Z_\mu &= \frac{g_2 W^3_\mu - g_1 B_\mu}{\sqrt{g_2^2+g_1^2}}, &
+M_Z &= \frac{\sqrt{g_2^2+g_1^2}\,v}{2} = \frac{M_W}{\cos\theta_W} \approx 91.2\ \text{GeV} \\
+A_\mu &= \frac{g_2 B_\mu + g_1 W^3_\mu}{\sqrt{g_2^2+g_1^2}}, &
+M_A &= 0
+\end{align}
+其中 $\tan\theta_W \equiv g_1/g_2$（Weinberg 角，$\sin^2\theta_W \approx 0.231$）。
+
+\fbox{[S]} SM 规范群 + Higgs 二重态 + $\mu^2<0 \Rightarrow W/Z$ 有质量 + 光子无质量。
+
+\end{derivationbox}
+
+\section{CKM 矩阵：味的混合与 CP 破坏的必然性}
+
+\subsection{物理直觉}
+
+夸克有六种"味"：上（u）、下（d）、粲（c）、奇（s）、顶（t）、底（b）——分为三代。弱相互作用通过 $W^\pm$ 玻色子将一个夸克"翻转"为另一个，但翻转不是在"质量本征态"之间直接发生的——中间夹着一个旋转矩阵：\textbf{CKM 矩阵}。
+
+因为 Higgs 场给夸克质量的 Yukawa 耦合矩阵 $Y^{u}$ 和 $Y^{d}$ 是\textbf{独立}的任意 $3\times 3$ 复矩阵，对角化它们时自然留下了一个不可消除的"错位"——这就是 CKM 矩阵。它的非对角元解释了 $s\to u$（奇异数改变）、$b\to c$（底数改变）等味改变衰变；它的复相位解释了 CP 破坏——物质与反物质行为的微妙不对称。
+
+\subsection{严格推导}
+
+\begin{derivationbox}[推导：CKM 矩阵 \hfill $\leftarrow$ contingent.sm\_fermion\_content + contingent.sm\_higgs\_sector]
+
+\noindent\textbf{步骤 1：三代夸克的 Yukawa 耦合}
+\begin{equation}
+\mathcal{L}_{\text{Yuk}} = -Y^{u}_{ij}\,\bar{Q}^i_L\cdot\tilde{\phi}\cdot u^j_R - Y^{d}_{ij}\,\bar{Q}^i_L\cdot\phi\cdot d^j_R + \text{h.c.}
+\end{equation}
+$i,j=1,2,3$ 为代数。$Y^u$ 和 $Y^d$ 是\textbf{独立的}任意 $3\times3$ 复矩阵——没有理论原理要求它们对易或共享对角化基。
+
+\noindent\textbf{步骤 2：SSB 后 $\to$ 质量矩阵}
+Higgs 取得 VEV 后：$M^u_{ij} = Y^u_{ij}\,v/\sqrt{2}$，$M^d_{ij} = Y^d_{ij}\,v/\sqrt{2}$。
+
+\noindent\textbf{步骤 3：对角化质量矩阵}
+通过双幺正变换：
+\begin{equation}
+U^u_L M^u U^{u\dagger}_R = \operatorname{diag}(m_u,m_c,m_t),\quad
+U^d_L M^d U^{d\dagger}_R = \operatorname{diag}(m_d,m_s,m_b)
+\end{equation}
+
+\noindent\textbf{步骤 4：带电弱流中的 CKM 矩阵}
+$W^\pm$ 玻色子与弱本征态耦合。变换到质量本征态后：
+\begin{equation}
+J^{\mu+}_{\text{CC}} = \bar{u}_L \gamma^\mu (U^u_L U^{d\dagger}_L) d_L = \bar{u}_L \gamma^\mu V_{\text{CKM}}\, d_L
+\end{equation}
+其中 \fbox{$V_{\text{CKM}} \equiv U^u_L U^{d\dagger}_L$}
+
+\noindent\textbf{步骤 5：幺正性与 CP 破坏}
+$V_{\text{CKM}}$ 为 $3\times3$ 幺正矩阵。参数计数：$n_g^2=9$ 个实参数，减去 $(2n_g-1)=5$ 个可吸收的夸克场相位 $\Rightarrow$ 4 个物理参数 = 3 个混合角 + 1 个 CP 破坏相位。
+
+对 $n_g=3$：CP 破坏是\textbf{必然的}。\fbox{[N]} 若 $n_g=2$（只有两代），CKM 为 $2\times2$ 实正交矩阵——仅 1 个 Cabibbo 角，无 CP 破坏。Kobayashi \& Maskawa (1973) 在第三代夸克被发现（bottom 1977, top 1995）\textbf{之前}就预言了第三代的存在——这是理论必要性 $\to$ 实验预言的典范。
+
+\fbox{[S]} 3 代费米子 + 独立 $Y^u, Y^d$ + Higgs 机制 $\Rightarrow$ $V_{\text{CKM}} \neq I$（必然含 CP 破坏相位）。
+
+\end{derivationbox}
+
+\section{标准模型的三条推论：整体图景}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=2cm and 4cm,
+  cbox/.style={rectangle,draw,rounded corners,fill=lo,text width=4.5cm,align=center,font=\footnotesize},
+  dbox/.style={rectangle,draw,rounded corners,fill=lg,text width=4cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thick,dorange}
+]
+  \node[cbox] (gauge) {SM 规范群\\$SU(3)_C\times SU(2)_L\times U(1)_Y$};
+  \node[cbox,right=of gauge] (ferm) {SM 费米子内容\\3 代手征夸克 + 轻子};
+  \node[cbox,below=of gauge] (higgs) {Higgs 二重态\\$\mu^2<0$, $v=246$ GeV};
+
+  \node[dbox,below left=2cm of higgs] (qcd) {渐近自由\\$\alpha_s(\mu)\to 0$};
+  \node[dbox,below=of higgs] (ew) {Higgs 机制\\$m_W\neq 0$, $m_Z\neq 0$, $m_\gamma=0$};
+  \node[dbox,below right=2cm of higgs] (ckm) {CKM 矩阵\\味混合 + CP 破坏};
+
+  \draw[arrow] (gauge) -- (qcd);
+  \draw[arrow] (gauge) -- (ew);
+  \draw[arrow] (gauge) -- (ckm);
+  \draw[arrow] (ferm) -- (qcd);
+  \draw[arrow] (ferm) -- (ckm);
+  \draw[arrow] (higgs) -- (ew);
+  \draw[arrow] (higgs) -- (ckm);
+\end{tikzpicture}
+\end{center}
+
+三条推论共同展示了：给定我们这个宇宙的偶然"初始条件"——规范群的选择、费米子的代数、Higgs 的表示——加上 R1-R6 的普适框架，标准模型的全部核心预言都可以严格推导出来。
