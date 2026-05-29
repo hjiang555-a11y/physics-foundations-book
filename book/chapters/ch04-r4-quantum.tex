@@ -8,7 +8,43 @@
 
 R4 是整个物理学中最具革命性的原理。它说：\textbf{物理世界的基本描述语言不是确定性的轨道，而是 Hilbert 空间中的态向量}。
 
-量子力学包含四条相互关联的公设。它们共同定义了从经典物理到量子物理的过渡——这不是一个渐进变化，而是一个\textbf{结构性分界}。
+这意味着：一个粒子不再由"某个时刻的位置和速度"来描述——它由\textbf{整个空间中分布的复数波函数}来描述。这个态向量编码了系统的\textbf{全部信息}——但它不是直接可观测量。可观测量是算符的本征值，态向量只是预言"测量到某个值"的\textbf{概率分布}（R5 的职责）。
+
+\subsection{核心图像 1：叠加——一个粒子可以同时在两个地方}
+
+想象你掷一枚硬币。在经典物理中，硬币要么正面要么反面。但在量子力学中，在被观测之前，硬币处于"正面和反面的叠加"：
+\[
+|\psi\rangle = \frac{1}{\sqrt{2}}\big(|\text{正面}\rangle + |\text{反面}\rangle\big)
+\]
+
+这不是说"我们不知道它是正还是反"——而是说它\textbf{本质上}就既正又反。只有当你"测量"它时，它才坍缩到一个确定的结果。
+
+这个图像最著名的实验体现是\textbf{双缝干涉}：单个电子同时通过两条缝，自己和自己干涉，在屏幕上形成明暗条纹。如果把一条缝遮住——干涉条纹消失。这说明在到达屏幕之前，电子\textbf{确实}处于"通过左缝"和"通过右缝"的叠加态。
+
+\subsection{核心图像 2：对易关系——位置和动量不能同时确定}
+
+想象你想测量一个电子的位置。在经典物理中，你可以无限精确地同时知道它的位置和速度。但在量子力学中，位置算符 $\hat{x}$ 和动量算符 $\hat{p}$ 是\textbf{不对易}的：
+\begin{equation}
+[\hat{x}, \hat{p}] \equiv \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar
+\end{equation}
+
+这意味着"\textbf{先测位置再测动量}"和"先测动量再测位置"的结果不同。这两个操作\textbf{不可交换}——就像先穿袜子再穿鞋和先穿鞋再穿袜子结果不同。
+
+更具体地说：如果位置确定到 $\Delta x$，动量至少会不准确 $\Delta p \ge \hbar/(2\Delta x)$。这就是\textbf{Heisenberg 不确定性原理}——它不是测量仪器的精度限制，而是自然界本身的\textbf{结构性约束}。
+
+\subsection{对易关系的物理图像}
+
+为什么 $[\hat{x}, \hat{p}] = i\hbar$？一个简洁的直觉来自 de Broglie 关系 $p = \hbar k$：动量是波数。一个位置高度局域的波包需要\textbf{很多不同波数（动量）的波叠加}才能实现——位置越精确，需要的动量种类就越多，动量就越不确定。反之，一个动量非常确定的平面波（单一 $k$）在空间中\textbf{无限延展}——位置完全不确定。这对"互补变量"的关系深植于波的数学本身。
+
+\subsection{幺正演化：量子世界的"时钟"}
+
+R4b 说未测量的系统按照 $|\psi(t)\rangle = e^{-i\hat{H}t/\hbar}|\psi(0)\rangle$ 演化。这个演化算符是\textbf{幺正}的——它保持态向量的长度（$\||\psi\rangle\| = 1$），从而保持总概率守恒。这就像旋转一个单位向量——向量的方向改变了，但长度始终为 1。
+
+注意一个关键区别：这个演化是\textbf{完全确定性的}。给定初始态 $|\psi(0)\rangle$ 和 Hamiltonian $\hat{H}$，系统在任意未来时刻的态是完全确定的。量子力学的"随机性"仅出现在\textbf{测量}环节（R5 的领域），而非演化环节。这一"evolution is deterministic, measurement is probabilistic"的二分正是量子力学解释问题的核心。
+
+\subsection{为什么是最小统计诠释}
+
+本书采用\textbf{最小统计诠释}（R4 + R5）：R4 提供态空间和演化规则，R5 提供测量概率。这个框架对"测量到底发生了什么"保持不可知——它不回答"坍缩是否是真实的物理过程"或"是否存在平行宇宙"这些问题。为什么选择最小诠释？因为这个框架已经能够\textbf{预言所有可观测结果}——而对不可观测的机制保持沉默是最经济的科学态度。
 
 \begin{principlebox}[R4 — 量子力学公设]
   \textbf{(4a) 叠加原理}：合法量子态的线性组合仍为合法量子态。
@@ -79,6 +115,97 @@ U(t, t_0) = \exp\!\left(-\frac{i}{\hbar} \hat{H} (t - t_0)\right)
 \hat{O}|o_i\rangle = o_i|o_i\rangle, \quad o_i \in \mathbb{R}
 \]
 本征态 $\{|o_i\rangle\}$ 构成完备正交归一基。
+
+% ── 严谨推导 ──
+\section{严谨推导}
+
+\subsection{推导 1：从幺正演化到 Schrödinger 方程}
+
+\textbf{前提}：\fbox{[N]} R4b — 幺正演化 $|\psi(t)\rangle = U(t,t_0)|\psi(t_0)\rangle$，$U^\dagger U = I$。\fbox{[N]} R4d — Hamiltonian $\hat{H}$ 是能量算符（厄米算符），是时间平移的生成元。
+
+\textbf{步骤 1 — 演化算符的群性质}：\fbox{[S]} 时间演化构成一个单参数群：$U(t_2, t_1)U(t_1, t_0) = U(t_2, t_0)$，$U(t, t) = I$。对于无穷小时间步长 $dt$：
+\begin{equation}
+U(t+dt, t) = I - \frac{i}{\hbar}\hat{H}\,dt + \mathcal{O}(dt^2)
+\end{equation}
+\fbox{[N]} 这里出现了 $\hbar$——它的量纲是 [能量 $\times$ 时间]，必须出现以使指数无量纲。\fbox{[S]} 系数 $-i$ 的选择保证了 $U$ 的幺正性（到一阶）：
+\begin{equation}
+U^\dagger U = (I + \frac{i}{\hbar}\hat{H}^\dagger dt)(I - \frac{i}{\hbar}\hat{H} dt) = I + \frac{i}{\hbar}(\hat{H}^\dagger - \hat{H})dt + \mathcal{O}(dt^2) = I
+\end{equation}
+因为 $\hat{H}^\dagger = \hat{H}$（厄米性），虚数单位 $i$ 对幺正性是\textbf{必要条件}。
+
+\textbf{步骤 2 — 有限时间演化}：\fbox{[S]} 将无穷小演化累积 $N$ 次，取极限 $N \to \infty$, $dt = (t-t_0)/N$：
+\begin{equation}
+U(t, t_0) = \lim_{N\to\infty} \left(I - \frac{i}{\hbar}\hat{H}\frac{t-t_0}{N}\right)^{\!N} = e^{-i\hat{H}(t-t_0)/\hbar}
+\end{equation}
+这是指数函数的极限定义 $e^x = \lim_{n\to\infty}(1 + x/n)^n$ 的算符推广。\fbox{[N]} 这个推导隐含了 $\hat{H}$ 不显含时间（保守系统）。若 $\hat{H} = \hat{H}(t)$，需用时间排序指数 $U = \mathcal{T}\exp[-i\int \hat{H}(t')dt'/\hbar]$。
+
+\textbf{步骤 3 — 微分形式}：\fbox{[S]} 对演化方程求导：
+\begin{equation}
+\frac{d}{dt}|\psi(t)\rangle = \frac{d}{dt}\big(e^{-i\hat{H}t/\hbar}|\psi(0)\rangle\big)
+= -\frac{i}{\hbar}\hat{H}\, e^{-i\hat{H}t/\hbar}|\psi(0)\rangle
+= -\frac{i}{\hbar}\hat{H}|\psi(t)\rangle
+\end{equation}
+故：
+\begin{equation}
+\boxed{i\hbar\frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle}
+\end{equation}
+\fbox{[S]} 这是抽象的 Schrödinger 方程——在 Hilbert 空间中成立，不预设任何表象。\fbox{[N]} 取坐标表象 $\hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{x})$，作用在波函数 $\psi(\mathbf{x},t) \equiv \langle\mathbf{x}|\psi(t)\rangle$ 上即恢复位置表象 Schrödinger 方程：
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\psi(\mathbf{x},t) = \left[-\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{x})\right]\psi(\mathbf{x},t)
+\end{equation}
+
+\subsection{推导 2：从正则对易关系到不确定性原理}
+
+\textbf{前提}：\fbox{[N]} R4c — $[\hat{x}, \hat{p}] = i\hbar$。\fbox{[N]} R5 — Born 规则给出期望值 $\langle\hat{O}\rangle = \langle\psi|\hat{O}|\psi\rangle$。
+
+\textbf{步骤 1 — 方差定义}：\fbox{[S]} 对任意厄米算符 $\hat{A}$，定义方差（不确定度平方）：
+\begin{equation}
+(\Delta A)^2 \equiv \langle (\hat{A} - \langle\hat{A}\rangle)^2 \rangle
+= \langle\hat{A}^2\rangle - \langle\hat{A}\rangle^2
+\end{equation}
+$\Delta A \ge 0$ 且 $\Delta A = 0$ 当且仅当 $|\psi\rangle$ 是 $\hat{A}$ 的本征态。
+
+\textbf{步骤 2 — Cauchy-Schwarz 不等式}：\fbox{[S]} 定义两个算符 $\hat{A}' \equiv \hat{A} - \langle\hat{A}\rangle$ 和 $\hat{B}' \equiv \hat{B} - \langle\hat{B}\rangle$（零期望值的"中心化"算符）。由内积的 Cauchy-Schwarz 不等式：
+\begin{equation}
+|\langle\psi|\hat{A}'\hat{B}'|\psi\rangle|^2 \le \langle\psi|\hat{A}'^2|\psi\rangle\,\langle\psi|\hat{B}'^2|\psi\rangle
+= (\Delta A)^2 (\Delta B)^2
+\end{equation}
+
+\textbf{步骤 3 — 分解为对易子和反对易子}：\fbox{[S]} 将 $\hat{A}'\hat{B}'$ 分解：
+\begin{equation}
+\hat{A}'\hat{B}' = \frac{1}{2}\{\hat{A}',\hat{B}'\} + \frac{1}{2}[\hat{A}',\hat{B}']
+\end{equation}
+其中反对易子 $\{\cdot,\cdot\}$ 项给出实期望值，对易子项给出纯虚期望值（因为 $[\hat{A}',\hat{B}']^\dagger = -[\hat{A}',\hat{B}']$，期望值为纯虚数）。故：
+\begin{equation}
+|\langle\hat{A}'\hat{B}'\rangle|^2 = \frac{1}{4}|\langle\{\hat{A}',\hat{B}'\}\rangle|^2 + \frac{1}{4}|\langle[\hat{A}',\hat{B}']\rangle|^2
+\ge \frac{1}{4}|\langle[\hat{A},\hat{B}]\rangle|^2
+\end{equation}
+\fbox{[N]} 最后一步丢弃了非负的反对易子项——这保证了我们得到的是一个下界（而非等式）。
+
+\textbf{步骤 4 — Robertson 不确定性关系}：\fbox{[S]} 结合 Cauchy-Schwarz：
+\begin{equation}
+\boxed{\Delta A \cdot \Delta B \ge \frac{1}{2}|\langle[\hat{A},\hat{B}]\rangle|}
+\end{equation}
+
+\textbf{步骤 5 — 位置-动量特例}：\fbox{[S]} 取 $\hat{A} = \hat{x}$, $\hat{B} = \hat{p}$，$[\hat{x},\hat{p}] = i\hbar$：
+\begin{equation}
+\boxed{\Delta x \cdot \Delta p \ge \frac{\hbar}{2}}
+\end{equation}
+\fbox{[N]}\fbox{[S]} 这就是\textbf{Heisenberg 不确定性原理}。注意：
+\begin{itemize}
+\item 下界 $\hbar/2$ 是\textbf{严格的}——Gauss 波包达到等式 $\Delta x\Delta p = \hbar/2$
+\item 这个下界来自 Cauchy-Schwarz 不等式取等号的条件：$\hat{B}'|\psi\rangle \propto \hat{A}'|\psi\rangle$，这正是 Gauss 波包所满足的条件
+\item 若 $\hbar = 0$（经典极限），$\Delta x$ 和 $\Delta p$ 可同时为零——恢复经典确定论
+\end{itemize}
+
+\subsection{推导 3：能量-时间不确定性}
+
+\textbf{步骤}：\fbox{[S]} 取 $\hat{A} = \hat{H}$，利用 Ehrenfest 定理 $d\langle\hat{B}\rangle/dt = (i/\hbar)\langle[\hat{H},\hat{B}]\rangle$：
+\begin{equation}
+\Delta E \cdot \Delta t_B \ge \frac{\hbar}{2}, \quad
+\Delta t_B \equiv \frac{\Delta B}{|d\langle\hat{B}\rangle/dt|}
+\end{equation}
+\fbox{[N]} 注意：$t$ 在量子力学中是参数而非算符，因此"能量-时间不确定性"的意义与"位置-动量不确定性"不同。$\Delta t_B$ 是可观测量 $\hat{B}$ 的期望值改变一个标准差所需的\textbf{特征时间}。它解释了不稳定粒子（如共振态）的寿命 $\tau$ 与能量宽度 $\Gamma$ 的关系 $\tau\Gamma \sim \hbar$。
 
 % ── 成立条件与失效边界 ──
 \section{成立条件与失效边界}

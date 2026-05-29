@@ -10,6 +10,30 @@ R3 是对现代物理学影响最深远的原理之一。它说：\textbf{物理
 
 这意味着：\textbf{力的存在不是随意附加的，而是对称性的必然要求}。电磁力、弱力、强力，都源自同一条原理——只是规范群不同。
 
+\subsection{核心图像：从全局相位到局域相位}
+
+量子力学告诉我们，一个粒子的波函数 $\psi(x)$ 的\textbf{全局相位}是不可观测的——$\psi$ 和 $e^{i\theta}\psi$（$\theta$ 为常数）描述完全相同的物理状态。这是量子力学的一个基本事实，但它的深刻性常常被低估。
+
+现在，爱因斯坦的局域性原理（R1）告诉我们：物理定律应该是\textbf{局域}的——时空中的每个点有自己独立的物理描述。那么一个自然的问题是：
+
+\begin{quote}
+\textit{如果全局相位不变性是量子力学的内在对称性，那么局域相位不变性（$\theta \to \theta(x)$，相位随位置任意变化）是否也应该被尊重？}
+\end{quote}
+
+这个问题就是 R3 的起点。答案是"应该"——但代价是必须引入一个新场来"补偿"不同时空点之间的相位差异。这个补偿场就是\textbf{规范势} $A_\mu(x)$——对于 $U(1)$ 规范群，它就是\textbf{电磁势}（包含标势和矢势）。
+
+\subsection{一个机械类比}
+
+想象一个玩具火车在圆形轨道上行驶。轨道的"绝对角度位置"是不可观测的——你可以把整条轨道旋转任意角度，火车的运动不受影响。这是\textbf{全局对称性}。
+
+现在想象轨道被分成许多段，每段可以独立旋转。如果相邻两段旋转了不同的角度，轨道就会在连接处断裂。要让火车顺利通过，你需要在每个连接处引入一个"补偿件"——一个特殊的连接器，它随当地区段的旋转而同步调整。这个"补偿件"就是\textbf{规范场}。
+
+规范场的作用正是如此：它"连接"不同时空点上的相位自由度，使得局域相位变换下物理定律保持完整。而规范场本身的质量、自旋（对 $U(1)$，质量为零，自旋为 1——光子）完全由对称性的结构决定。
+
+\subsection{"规范"这个奇怪的名字}
+
+"规范"（gauge）一词源自 Weyl 1918 年的原始构想。他试图将电磁学与时空的"尺度变换"（re-scaling）联系起来——就像铁轨的"轨距"（gauge）一样可以调整。虽然 Weyl 的原始版本被 Einstein 指出与物理观测矛盾（原子的大小不能任意改变），但思想的核心——"补偿场"——在量子力学诞生后被重新诠释为相位变换，最终成为 20 世纪物理学最成功的理论框架。
+
 \begin{principlebox}[R3 — 局域规范不变性]
   物质场的拉格朗日量在任意局域（位置依赖的）规范变换下保持不变。
   为维持这种不变性，必须引入规范场 $A_\mu^a$。
@@ -77,6 +101,91 @@ F_{\mu\nu} \equiv \partial_\mu A_\nu - \partial_\nu A_\mu
 \[
 \mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu}
 \]
+
+% ── 严谨推导 ──
+\section{严谨推导}
+
+在本节中，我们从局域 $U(1)$ 规范不变性出发，严格推导协变导数的结构和 Maxwell 方程组。每条步骤标注 [N]/[S]。
+
+\subsection{推导 1：从全局对称性到局域对称性}
+
+\textbf{前提}：\fbox{[N]} Dirac 场 $\psi(x)$ 的自由拉格朗日量：
+\begin{equation}
+\mathcal{L}_0 = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi
+\end{equation}
+该系统具有全局 $U(1)$ 对称性：$\psi \to e^{i\alpha}\psi$（$\alpha$ 为常数）使 $\mathcal{L}_0$ 不变。
+
+\textbf{步骤 1 — 推广到局域变换}：\fbox{[N]} R3 要求物理定律在局域 $U(1)$ 变换下不变。考察 $\psi(x) \to e^{i\alpha(x)}\psi(x)$（$\alpha(x)$ 是位置的任意函数）：
+\begin{align}
+\mathcal{L}_0 &\to \bar{\psi}e^{-i\alpha}(i\gamma^\mu\partial_\mu - m) e^{i\alpha}\psi \notag \\
+&= \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi
+\; \underbrace{-\;\bar{\psi}\gamma^\mu\psi\,\partial_\mu\alpha}_{\text{破坏不变性的项}}
+\end{align}
+\fbox{[S]} 多出来的 $-\bar{\psi}\gamma^\mu\psi\,\partial_\mu\alpha$ 项破坏了局域不变性。全局对称（$\partial_\mu\alpha = 0$）时该项消失——\textbf{这就是为什么全局不变性是"免费"的但局域不变性不是}。
+
+\textbf{步骤 2 — 引入规范场}：\fbox{[N]}\fbox{[S]} 要恢复不变性，必须将普通导数 $\partial_\mu$ 替换为协变导数 $D_\mu$：
+\begin{equation}
+\boxed{D_\mu \equiv \partial_\mu - i e A_\mu(x)}
+\end{equation}
+要求 $D_\mu\psi$ 与 $\psi$ 同方式变换：$D_\mu\psi \to e^{i\alpha(x)}D_\mu\psi$。计算：
+\begin{align}
+D_\mu\psi &\to (\partial_\mu - ieA'_\mu)(e^{i\alpha}\psi) \notag \\
+&= e^{i\alpha}\big[\partial_\mu\psi + i(\partial_\mu\alpha)\psi - ieA'_\mu\psi\big]
+\end{align}
+\fbox{[S]} 要求此式等于 $e^{i\alpha}D_\mu\psi = e^{i\alpha}(\partial_\mu\psi - ieA_\mu\psi)$，则：
+\begin{equation}
+i(\partial_\mu\alpha)\psi - ieA'_\mu\psi = -ieA_\mu\psi
+\quad\Rightarrow\quad
+\boxed{A'_\mu = A_\mu + \frac{1}{e}\,\partial_\mu\alpha}
+\end{equation}
+\fbox{[N]}\fbox{[S]} 这是\textbf{规范场变换律}。规范场必须以这种特定方式变换，才能"吸收"相位随位置变化带来的额外项。\textbf{规范场的存在是局域对称性的逻辑必然}。
+
+\textbf{步骤 3 — 规范不变的拉格朗日量}：\fbox{[S]} 将 $\partial_\mu \to D_\mu$ 代入：
+\begin{equation}
+\mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi
+= \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi + e\bar{\psi}\gamma^\mu\psi A_\mu
+\end{equation}
+第二项 $e\bar{\psi}\gamma^\mu\psi A_\mu$ 是\textbf{电子-光子耦合项}——它描述了电子与光子如何相互作用。耦合强度 $e$（电子电荷）是自由参数。\fbox{[S]} 局域规范不变性 \textbf{自动生成}了物质场与规范场的耦合形式。
+
+\subsection{推导 2：从规范不变性到 Maxwell 方程组}
+
+\textbf{前提}：\fbox{[N]} 有了规范场 $A_\mu$，还需要确定其自身的动力学——即规范场的"动能项" $\mathcal{L}_{\text{gauge}}$。
+
+\textbf{步骤 1 — 规范场动能项的唯一性}：\fbox{[N]} $\mathcal{L}_{\text{gauge}}$ 必须满足：
+\begin{enumerate}
+\item 规范不变性（R3）——必须在 $A_\mu \to A_\mu + \frac{1}{e}\partial_\mu\alpha$ 下不变
+\item Lorentz 不变性（R1）——必须是 Lorentz 标量
+\item 至多二阶导数（R2 的场论形式要求）——避免 Ostrogradsky 鬼场
+\end{enumerate}
+
+\textbf{步骤 2 — 场强张量的构造}：\fbox{[S]} 定义反对称张量：
+\begin{equation}
+\boxed{F_{\mu\nu} \equiv \partial_\mu A_\nu - \partial_\nu A_\mu}
+\end{equation}
+\fbox{[S]} 检查规范不变性：$F_{\mu\nu} \to \partial_\mu(A_\nu + \frac{1}{e}\partial_\nu\alpha) - \partial_\nu(A_\mu + \frac{1}{e}\partial_\mu\alpha) = F_{\mu\nu} + \frac{1}{e}(\partial_\mu\partial_\nu\alpha - \partial_\nu\partial_\mu\alpha) = F_{\mu\nu}$。\textbf{$F_{\mu\nu}$ 是规范不变量}——这是因为混合偏导可交换 $\partial_\mu\partial_\nu\alpha = \partial_\nu\partial_\mu\alpha$。\fbox{[N]} 这一步使用了 $\alpha(x) \in C^2$（二次连续可微）——规范参数的充分光滑性是必要条件。
+
+\textbf{步骤 3 — 唯一规范不变量}：\fbox{[S]} 满足上述三个条件的唯一 Lorentz 标量是：
+\begin{equation}
+\boxed{\mathcal{L}_{\text{gauge}} = -\frac{1}{4\mu_0} F_{\mu\nu}F^{\mu\nu}}
+\end{equation}
+其中 $\mu_0 = 4\pi \times 10^{-7}$ N/A\textsuperscript{2}（SI 定义常数）。补充说明：
+\begin{itemize}
+\item $F_{\mu\nu}F^{\mu\nu}$ 包含 $(\partial A)^2$ 和 $A\partial^2 A$ 两种类型项，但都是二阶导数
+\item 系数 $-1/(4\mu_0)$ 的符号保证了正定的能量（Hamiltonian $\ge 0$）
+\item 在 Lorentz-Heaviside 自然单位中常写为 $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$
+\end{itemize}
+
+\textbf{步骤 4 — 非 Abel 推广}：\fbox{[S]} 对于非 Abel 规范群（$SU(N)$），由于生成元不对易 $[T^a, T^b] = if^{abc}T^c$，场强张量包含额外项：
+\begin{equation}
+F_{\mu\nu}^a = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a + g f^{abc} A_\mu^b A_\nu^c
+\end{equation}
+\fbox{[N]} 结构常数项的出现是因为非 Abel 群中规范场的变换律本身包含了规范场的二次项。这一项直接导致规范场的自耦合——胶子携带色荷、$W^\pm$ 携带弱荷——这是非 Abel 理论与 Abel 理论的根本区别。
+
+\textbf{步骤 5 — 运动方程 → Maxwell}：\fbox{[S]} 将完整拉格朗日量 $\mathcal{L} = \bar{\psi}(i\gamma^\mu D_\mu - m)\psi - \frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu}$ 代入场论 Euler-Lagrange 方程，对 $A_\nu$ 变分：
+\begin{equation}
+\partial_\mu F^{\mu\nu} = \mu_0 J^\nu, \quad J^\nu \equiv e\bar{\psi}\gamma^\nu\psi
+\end{equation}
+这是 Maxwell 方程组的\textbf{协变形式}。展开后得到全部四个 Maxwell 方程（见第 8 章机电学推导）。
 
 % ── 规范场动力学的确定 ──
 \section{规范场动力学的确定}
