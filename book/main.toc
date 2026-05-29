@@ -4,181 +4,226 @@
 \contentsline {chapter}{\numberline {1}R1 — 因果时空结构}{3}{chapter.1}%
 \contentsline {section}{\numberline {1.1}总说：宇宙的舞台}{3}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}核心图像：光速的绝对性}{3}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}为什么这条原则必不可少}{3}{subsection.1.1.2}%
+\contentsline {subsubsection}{光锥：宇宙的因果边界}{3}{section*.8}%
+\contentsline {subsubsection}{时间不再是绝对的}{4}{section*.9}%
+\contentsline {subsubsection}{广义相对论的一个图像}{4}{section*.10}%
+\contentsline {subsection}{\numberline {1.1.2}为什么这条原则必不可少}{4}{subsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.1.3}引力为什么是时空弯曲}{4}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}严格陈述}{4}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}R1 包含三个逻辑上独立的子原则}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}逻辑关系}{4}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.2}严格陈述}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}R1 包含三个逻辑上独立的子原则}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}逻辑关系}{5}{subsection.1.2.2}%
 \contentsline {section}{\numberline {1.3}变量定义}{5}{section.1.3}%
 \contentsline {section}{\numberline {1.4}数学表达式}{5}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}平直时空：Minkowski 度规}{5}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}弯曲时空：一般坐标}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}弯曲时空：一般坐标}{6}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}因果分类}{6}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}局域性约束}{6}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}等效原理的定量表述}{6}{subsection.1.4.5}%
-\contentsline {section}{\numberline {1.5}成立条件 (Scope)}{6}{section.1.5}%
-\contentsline {section}{\numberline {1.6}失效边界 (Boundary)}{7}{section.1.6}%
-\contentsline {section}{\numberline {1.7}必要性}{7}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}若移除 R1 的任一部分}{7}{subsection.1.7.1}%
-\contentsline {section}{\numberline {1.8}充分性}{7}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}(1a+1b) 因果-相对论结构单独提供}{8}{subsection.1.8.1}%
-\contentsline {subsection}{\numberline {1.8.2}(1c) 等效原理 + 广义协变性提供}{8}{subsection.1.8.2}%
-\contentsline {section}{\numberline {1.9}子组件映射}{8}{section.1.9}%
-\contentsline {section}{\numberline {1.10}本章小结}{8}{section.1.10}%
-\contentsline {chapter}{\numberline {2}R2 — 最小作用量原理}{9}{chapter.2}%
-\contentsline {section}{\numberline {2.1}总说：自然的"选择法则"}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}变量定义}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}数学表达式}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}粒子力学}{9}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}场论}{9}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}平稳作用量条件}{10}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}成立条件与失效边界}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}必要性 (Necessity)}{10}{section.2.5}%
-\contentsline {section}{\numberline {2.6}充分性 (Sufficiency)}{11}{section.2.6}%
-\contentsline {section}{\numberline {2.7}直接推论}{11}{section.2.7}%
-\contentsline {section}{\numberline {2.8}直觉理解：Fermat 的遗产}{11}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}一个具体例子：为什么球沿直线滚？}{11}{subsection.2.8.1}%
-\contentsline {chapter}{\numberline {3}R3 — 局域规范不变性}{13}{chapter.3}%
-\contentsline {section}{\numberline {3.1}总说：对称性决定力}{13}{section.3.1}%
-\contentsline {section}{\numberline {3.2}变量定义}{13}{section.3.2}%
-\contentsline {section}{\numberline {3.3}数学表达式}{14}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}局域规范变换（U(1) 为例）}{14}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}协变导数（最小耦合）}{14}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}场强张量}{14}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}规范不变拉格朗日量}{14}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}规范场动力学的确定}{14}{section.3.4}%
-\contentsline {section}{\numberline {3.5}成立条件与失效边界}{15}{section.3.5}%
-\contentsline {section}{\numberline {3.6}必要性 (Necessity)}{15}{section.3.6}%
-\contentsline {section}{\numberline {3.7}充分性 (Sufficiency)}{15}{section.3.7}%
-\contentsline {section}{\numberline {3.8}直觉理解：为什么需要规范场？}{15}{section.3.8}%
-\contentsline {chapter}{\numberline {4}R4 — 量子力学公设}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}总说：世界的真正语言}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}变量定义}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}数学表达式}{17}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}(4a) 叠加原理}{17}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}(4b) 幺正演化}{17}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}(4c) 正则对易关系}{18}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}(4d) 算符-可观测量对应}{18}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}成立条件与失效边界}{18}{section.4.4}%
-\contentsline {section}{\numberline {4.5}必要性 (Necessity)}{19}{section.4.5}%
-\contentsline {section}{\numberline {4.6}充分性 (Sufficiency)}{19}{section.4.6}%
-\contentsline {chapter}{\numberline {5}R5 — Born 概率规则}{20}{chapter.5}%
-\contentsline {section}{\numberline {5.1}总说：从可能性到概率}{20}{section.5.1}%
-\contentsline {section}{\numberline {5.2}变量定义}{20}{section.5.2}%
-\contentsline {section}{\numberline {5.3}数学表达式}{21}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}离散谱（非简并）}{21}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}离散谱（$g_i$ 重简并）}{21}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}连续谱（例如位置 $x$）}{21}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}归一化条件}{21}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}期望值}{21}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}必要性 (Necessity)}{21}{section.5.4}%
-\contentsline {section}{\numberline {5.5}充分性 (Sufficiency)}{22}{section.5.5}%
-\contentsline {section}{\numberline {5.6}直觉理解：双缝实验}{22}{section.5.6}%
-\contentsline {chapter}{\numberline {6}R6 — 熵的统计定义}{23}{chapter.6}%
-\contentsline {section}{\numberline {6.1}总说：从微观到宏观的桥梁}{23}{section.6.1}%
-\contentsline {section}{\numberline {6.2}变量定义}{23}{section.6.2}%
-\contentsline {section}{\numberline {6.3}数学表达式}{23}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Boltzmann 熵公式}{23}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}温度定义（由 $S = k_B \ln W$ 导出）}{23}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}热力学第二定律（统计形式）}{24}{subsection.6.3.3}%
-\contentsline {subsection}{\numberline {6.3.4}Boltzmann 分布（正则系综）}{24}{subsection.6.3.4}%
-\contentsline {section}{\numberline {6.4}成立条件与失效边界}{24}{section.6.4}%
-\contentsline {section}{\numberline {6.5}必要性 (Necessity)}{25}{section.6.5}%
-\contentsline {section}{\numberline {6.6}充分性 (Sufficiency)}{25}{section.6.6}%
-\contentsline {part}{II\hspace {1em}有效定律：四十三条推导}{26}{part.2}%
-\contentsline {chapter}{第二部分：推导导览}{27}{chapter*.22}%
-\contentsline {chapter}{\numberline {7}力学：从最小作用量到万有引力}{28}{chapter.7}%
-\contentsline {section}{\numberline {7.1}概述}{28}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Euler-Lagrange 方程}{28}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}变量定义}{28}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}推导}{29}{subsection.7.2.2}%
-\contentsline {section}{\numberline {7.3}Noether 定理}{29}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}变量定义}{29}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}推导}{30}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Newton 运动定律}{30}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}第一定律（惯性定律）}{30}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}第二定律（运动方程）}{30}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}第三定律（作用-反作用）}{31}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}万有引力定律}{31}{subsection.7.4.4}%
-\contentsline {section}{\numberline {7.5}Kepler 第三定律（推论）}{31}{section.7.5}%
-\contentsline {chapter}{\numberline {8}电磁学：从规范不变性到 Maxwell 方程组}{33}{chapter.8}%
-\contentsline {section}{\numberline {8.1}概述}{33}{section.8.1}%
-\contentsline {section}{\numberline {8.2}变量定义}{33}{section.8.2}%
-\contentsline {section}{\numberline {8.3}推导：从 $U(1)$ 规范对称性到 Maxwell 方程}{34}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}度量符号的重要警告}{34}{subsection.8.3.1}%
-\contentsline {section}{\numberline {8.4}Lorentz 力定律}{34}{section.8.4}%
-\contentsline {section}{\numberline {8.5}电磁波方程}{35}{section.8.5}%
-\contentsline {chapter}{\numberline {9}量子力学：从公设到预言}{36}{chapter.9}%
-\contentsline {section}{\numberline {9.1}概述}{36}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Schr\"{o}dinger 方程}{36}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Planck-Einstein 关系}{36}{section.9.3}%
-\contentsline {section}{\numberline {9.4}de Broglie 波长}{37}{section.9.4}%
-\contentsline {section}{\numberline {9.5}不确定性原理}{37}{section.9.5}%
-\contentsline {section}{\numberline {9.6}Pauli 不相容原理：自旋-统计定理}{38}{section.9.6}%
-\contentsline {chapter}{\numberline {10}热力学：从统计到宏观}{39}{chapter.10}%
-\contentsline {section}{\numberline {10.1}概述}{39}{section.10.1}%
-\contentsline {section}{\numberline {10.2}热力学第零定律}{39}{section.10.2}%
-\contentsline {section}{\numberline {10.3}热力学第一定律}{39}{section.10.3}%
-\contentsline {section}{\numberline {10.4}热力学第三定律}{40}{section.10.4}%
-\contentsline {section}{\numberline {10.5}理想气体状态方程}{40}{section.10.5}%
-\contentsline {section}{\numberline {10.6}Fermi-Dirac 分布（推论）}{40}{section.10.6}%
-\contentsline {section}{\numberline {10.7}Bose-Einstein 分布（推论）}{41}{section.10.7}%
-\contentsline {section}{\numberline {10.8}Nernst 不可达性原理：第三定律的强形式}{41}{section.10.8}%
-\contentsline {chapter}{\numberline {11}相对论：从光速不变到引力}{43}{chapter.11}%
-\contentsline {section}{\numberline {11.1}概述}{43}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Lorentz 变换}{43}{section.11.2}%
-\contentsline {section}{\numberline {11.3}质能等价}{44}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Einstein 场方程}{44}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Newton 万有引力（弱场极限）}{45}{section.11.5}%
-\contentsline {chapter}{\numberline {12}守恒律：Noether 的遗产}{46}{chapter.12}%
-\contentsline {section}{\numberline {12.1}概述}{46}{section.12.1}%
-\contentsline {section}{\numberline {12.2}能量守恒}{46}{section.12.2}%
-\contentsline {section}{\numberline {12.3}动量守恒}{46}{section.12.3}%
-\contentsline {section}{\numberline {12.4}角动量守恒}{47}{section.12.4}%
-\contentsline {section}{\numberline {12.5}电荷守恒}{47}{section.12.5}%
-\contentsline {section}{\numberline {12.6}守恒律总览}{48}{section.12.6}%
-\contentsline {chapter}{\numberline {13}维度结构推论：D=3+1 的七条后果}{49}{chapter.13}%
-\contentsline {section}{\numberline {13.1}平方反比律：为什么力是 $1/r^2$}{49}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}物理直觉}{49}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}严格推导}{50}{subsection.13.1.2}%
-\contentsline {section}{\numberline {13.2}SO(3) 旋转群：为什么角动量有三个分量}{50}{section.13.2}%
-\contentsline {section}{\numberline {13.3}稳定 Kepler 轨道：为什么行星不坠入太阳}{51}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Huygens 原理：为什么声音清晰、没有回响拖尾}{51}{section.13.4}%
-\contentsline {section}{\numberline {13.5}Minkowski 度规符号差}{52}{section.13.5}%
-\contentsline {section}{\numberline {13.6}引力波极化}{52}{section.13.6}%
-\contentsline {section}{\numberline {13.7}体积量纲与理想气体方程}{52}{section.13.7}%
-\contentsline {section}{\numberline {13.8}七条推论的整体意义}{52}{section.13.8}%
-\contentsline {chapter}{\numberline {14}标准模型有效场论：从规范群到物理预言}{54}{chapter.14}%
-\contentsline {section}{\numberline {14.1}渐近自由：为什么夸克在高能时自由、低能时禁闭}{54}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}物理直觉}{54}{subsection.14.1.1}%
-\contentsline {subsection}{\numberline {14.1.2}严格推导：从 SU(3) Yang-Mills 到 $\beta $-函数}{54}{subsection.14.1.2}%
-\contentsline {section}{\numberline {14.2}Higgs 机制：质量的起源}{55}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}物理直觉}{55}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}严格推导}{56}{subsection.14.2.2}%
-\contentsline {section}{\numberline {14.3}CKM 矩阵：味的混合与 CP 破坏的必然性}{56}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}物理直觉}{56}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}严格推导}{57}{subsection.14.3.2}%
-\contentsline {section}{\numberline {14.4}标准模型的三条推论：整体图景}{58}{section.14.4}%
-\contentsline {chapter}{\numberline {15}全局证明：体系的自洽性、完整性与充分必要性}{59}{chapter.15}%
-\contentsline {section}{\numberline {15.1}论证语言单位：我们用什么工具证明}{59}{section.15.1}%
-\contentsline {section}{\numberline {15.2}完整性证明：所有定律均可推导}{60}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}定理陈述}{60}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}证明方法}{60}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}结果}{60}{subsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.2.4}推导深度分布}{60}{subsection.15.2.4}%
-\contentsline {section}{\numberline {15.3}必要性证明：每条原则都是不可移除的}{61}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}定理陈述}{61}{subsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.3.2}必要性矩阵}{61}{subsection.15.3.2}%
-\contentsline {subsection}{\numberline {15.3.3}必要性反事实分析}{61}{subsection.15.3.3}%
-\contentsline {section}{\numberline {15.4}自洽性证明：体系内部无矛盾}{62}{section.15.4}%
-\contentsline {subsection}{\numberline {15.4.1}定理陈述}{62}{subsection.15.4.1}%
-\contentsline {subsection}{\numberline {15.4.2}无环性}{62}{subsection.15.4.2}%
-\contentsline {subsection}{\numberline {15.4.3}无矛盾性}{62}{subsection.15.4.3}%
-\contentsline {subsection}{\numberline {15.4.4}最小化}{62}{subsection.15.4.4}%
-\contentsline {section}{\numberline {15.5}交叉印证网：四条独立的验证线路}{62}{section.15.5}%
-\contentsline {section}{\numberline {15.6}体系总图}{63}{section.15.6}%
-\contentsline {section}{\numberline {15.7}结论：一个自洽且完整的物理公理体系}{64}{section.15.7}%
-\contentsline {part}{III\hspace {1em}附录}{65}{part.3}%
-\contentsline {chapter}{\numberline {A}物理常数表}{66}{appendix.A}%
-\contentsline {chapter}{\numberline {B}四十三条推导依赖表}{67}{appendix.B}%
-\contentsline {chapter}{\numberline {C}推导依赖关系总图}{69}{appendix.C}%
+\contentsline {subsection}{\numberline {1.4.4}局域性约束}{7}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}等效原理的定量表述}{7}{subsection.1.4.5}%
+\contentsline {section}{\numberline {1.5}严谨推导}{7}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}推导 1：从光速不变性到 Lorentz 变换}{7}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}推导 2：时间膨胀与长度收缩}{8}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}推导 3：因果分类的几何来源}{9}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}推导 4：等效原理的局域性}{9}{subsection.1.5.4}%
+\contentsline {section}{\numberline {1.6}成立条件 (Scope)}{10}{section.1.6}%
+\contentsline {section}{\numberline {1.7}失效边界 (Boundary)}{10}{section.1.7}%
+\contentsline {section}{\numberline {1.8}必要性}{10}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}若移除 R1 的任一部分}{10}{subsection.1.8.1}%
+\contentsline {section}{\numberline {1.9}充分性}{10}{section.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}(1a+1b) 因果-相对论结构单独提供}{10}{subsection.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}(1c) 等效原理 + 广义协变性提供}{11}{subsection.1.9.2}%
+\contentsline {section}{\numberline {1.10}子组件映射}{11}{section.1.10}%
+\contentsline {section}{\numberline {1.11}本章小结}{11}{section.1.11}%
+\contentsline {chapter}{\numberline {2}R2 — 最小作用量原理}{12}{chapter.2}%
+\contentsline {section}{\numberline {2.1}总说：自然的"选择法则"}{12}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}核心图像：一个"挑剔"的宇宙}{12}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}为什么是作用量而不是别的量}{12}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}直观类比：光走"最省时"的路}{13}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}变量定义}{13}{section.2.2}%
+\contentsline {section}{\numberline {2.3}数学表达式}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}粒子力学}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}场论}{14}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}平稳作用量条件}{14}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}严谨推导}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}推导 1：Euler-Lagrange 方程}{14}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}推导 2：Noether 定理}{15}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}成立条件与失效边界}{16}{section.2.5}%
+\contentsline {section}{\numberline {2.6}必要性 (Necessity)}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}充分性 (Sufficiency)}{17}{section.2.7}%
+\contentsline {section}{\numberline {2.8}直接推论}{17}{section.2.8}%
+\contentsline {section}{\numberline {2.9}直觉理解：Fermat 的遗产}{17}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}一个具体例子：为什么球沿直线滚？}{18}{subsection.2.9.1}%
+\contentsline {chapter}{\numberline {3}R3 — 局域规范不变性}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}总说：对称性决定力}{19}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}核心图像：从全局相位到局域相位}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}一个机械类比}{19}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}"规范"这个奇怪的名字}{20}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}变量定义}{20}{section.3.2}%
+\contentsline {section}{\numberline {3.3}数学表达式}{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}局域规范变换（U(1) 为例）}{20}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}协变导数（最小耦合）}{20}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}场强张量}{21}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}规范不变拉格朗日量}{21}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}严谨推导}{21}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}推导 1：从全局对称性到局域对称性}{21}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}推导 2：从规范不变性到 Maxwell 方程组}{22}{subsection.3.4.2}%
+\contentsline {section}{\numberline {3.5}规范场动力学的确定}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}成立条件与失效边界}{23}{section.3.6}%
+\contentsline {section}{\numberline {3.7}必要性 (Necessity)}{24}{section.3.7}%
+\contentsline {section}{\numberline {3.8}充分性 (Sufficiency)}{24}{section.3.8}%
+\contentsline {section}{\numberline {3.9}直觉理解：为什么需要规范场？}{24}{section.3.9}%
+\contentsline {chapter}{\numberline {4}R4 — 量子力学公设}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}总说：世界的真正语言}{25}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}核心图像 1：叠加——一个粒子可以同时在两个地方}{25}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}核心图像 2：对易关系——位置和动量不能同时确定}{25}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}对易关系的物理图像}{26}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}幺正演化：量子世界的"时钟"}{26}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}为什么是最小统计诠释}{26}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}变量定义}{26}{section.4.2}%
+\contentsline {section}{\numberline {4.3}数学表达式}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}(4a) 叠加原理}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}(4b) 幺正演化}{27}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}(4c) 正则对易关系}{27}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}(4d) 算符-可观测量对应}{27}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}严谨推导}{27}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}推导 1：从幺正演化到 Schrödinger 方程}{27}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}推导 2：从正则对易关系到不确定性原理}{28}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}推导 3：能量-时间不确定性}{29}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}成立条件与失效边界}{30}{section.4.5}%
+\contentsline {section}{\numberline {4.6}必要性 (Necessity)}{30}{section.4.6}%
+\contentsline {section}{\numberline {4.7}充分性 (Sufficiency)}{30}{section.4.7}%
+\contentsline {chapter}{\numberline {5}R5 — Born 概率规则}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}总说：从可能性到概率}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}为什么必须是模方}{31}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}干涉：量子的"签名"}{31}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}概率幅 vs 概率：一个关键区别}{32}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}变量定义}{32}{section.5.2}%
+\contentsline {section}{\numberline {5.3}数学表达式}{32}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}离散谱（非简并）}{32}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}离散谱（$g_i$ 重简并）}{32}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}连续谱（例如位置 $x$）}{32}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}归一化条件}{33}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}期望值}{33}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}严谨推导}{33}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}推导 1：从概率幅到期望值}{33}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}推导 2：Gleason 定理——Born 规则的唯一性}{34}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}推导 3：密度矩阵的 Born 规则（混态推广）}{34}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}必要性 (Necessity)}{34}{section.5.5}%
+\contentsline {section}{\numberline {5.6}充分性 (Sufficiency)}{35}{section.5.6}%
+\contentsline {section}{\numberline {5.7}直觉理解：双缝实验}{35}{section.5.7}%
+\contentsline {chapter}{\numberline {6}R6 — 熵的统计定义}{36}{chapter.6}%
+\contentsline {section}{\numberline {6.1}总说：从微观到宏观的桥梁}{36}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}核心图像：硬币、骰子和微观状态}{36}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}熵增：为什么时间有方向}{36}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}等概率假设：统计力学的唯一假设}{37}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}温度：熵的"价格标签"}{37}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}变量定义}{37}{section.6.2}%
+\contentsline {section}{\numberline {6.3}数学表达式}{37}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Boltzmann 熵公式}{37}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}温度定义（由 $S = k_B \ln W$ 导出）}{37}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}热力学第二定律（统计形式）}{38}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Boltzmann 分布（正则系综）}{38}{subsection.6.3.4}%
+\contentsline {section}{\numberline {6.4}严谨推导}{38}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}推导 1：温度的定义与热平衡条件}{38}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}推导 2：Boltzmann 分布（正则系综）}{39}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}推导 3：理想气体状态方程}{40}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}推导 4：熵增的涨落与时间箭头}{40}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}成立条件与失效边界}{41}{section.6.5}%
+\contentsline {section}{\numberline {6.6}必要性 (Necessity)}{41}{section.6.6}%
+\contentsline {section}{\numberline {6.7}充分性 (Sufficiency)}{41}{section.6.7}%
+\contentsline {part}{II\hspace {1em}有效定律：四十三条推导}{42}{part.2}%
+\contentsline {chapter}{第二部分：推导导览}{43}{chapter*.25}%
+\contentsline {chapter}{\numberline {7}力学：从最小作用量到万有引力}{44}{chapter.7}%
+\contentsline {section}{\numberline {7.1}概述}{44}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Euler-Lagrange 方程}{44}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}变量定义}{44}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}推导}{45}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Noether 定理}{45}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}变量定义}{45}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}推导}{46}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Newton 运动定律}{46}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}第一定律（惯性定律）}{46}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}第二定律（运动方程）}{46}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}第三定律（作用-反作用）}{47}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}万有引力定律}{47}{subsection.7.4.4}%
+\contentsline {section}{\numberline {7.5}Kepler 第三定律（推论）}{47}{section.7.5}%
+\contentsline {chapter}{\numberline {8}电磁学：从规范不变性到 Maxwell 方程组}{49}{chapter.8}%
+\contentsline {section}{\numberline {8.1}概述}{49}{section.8.1}%
+\contentsline {section}{\numberline {8.2}变量定义}{49}{section.8.2}%
+\contentsline {section}{\numberline {8.3}推导：从 $U(1)$ 规范对称性到 Maxwell 方程}{50}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}度量符号的重要警告}{50}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Lorentz 力定律}{50}{section.8.4}%
+\contentsline {section}{\numberline {8.5}电磁波方程}{51}{section.8.5}%
+\contentsline {chapter}{\numberline {9}量子力学：从公设到预言}{52}{chapter.9}%
+\contentsline {section}{\numberline {9.1}概述}{52}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Schr\"{o}dinger 方程}{52}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Planck-Einstein 关系}{52}{section.9.3}%
+\contentsline {section}{\numberline {9.4}de Broglie 波长}{53}{section.9.4}%
+\contentsline {section}{\numberline {9.5}不确定性原理}{53}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Pauli 不相容原理：自旋-统计定理}{54}{section.9.6}%
+\contentsline {chapter}{\numberline {10}热力学：从统计到宏观}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}概述}{55}{section.10.1}%
+\contentsline {section}{\numberline {10.2}热力学第零定律}{55}{section.10.2}%
+\contentsline {section}{\numberline {10.3}热力学第一定律}{55}{section.10.3}%
+\contentsline {section}{\numberline {10.4}热力学第三定律}{56}{section.10.4}%
+\contentsline {section}{\numberline {10.5}理想气体状态方程}{56}{section.10.5}%
+\contentsline {section}{\numberline {10.6}Fermi-Dirac 分布（推论）}{56}{section.10.6}%
+\contentsline {section}{\numberline {10.7}Bose-Einstein 分布（推论）}{57}{section.10.7}%
+\contentsline {section}{\numberline {10.8}Nernst 不可达性原理：第三定律的强形式}{57}{section.10.8}%
+\contentsline {chapter}{\numberline {11}相对论：从光速不变到引力}{59}{chapter.11}%
+\contentsline {section}{\numberline {11.1}概述}{59}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Lorentz 变换}{59}{section.11.2}%
+\contentsline {section}{\numberline {11.3}质能等价}{60}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Einstein 场方程}{60}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Newton 万有引力（弱场极限）}{61}{section.11.5}%
+\contentsline {chapter}{\numberline {12}守恒律：Noether 的遗产}{62}{chapter.12}%
+\contentsline {section}{\numberline {12.1}概述}{62}{section.12.1}%
+\contentsline {section}{\numberline {12.2}能量守恒}{62}{section.12.2}%
+\contentsline {section}{\numberline {12.3}动量守恒}{62}{section.12.3}%
+\contentsline {section}{\numberline {12.4}角动量守恒}{63}{section.12.4}%
+\contentsline {section}{\numberline {12.5}电荷守恒}{63}{section.12.5}%
+\contentsline {section}{\numberline {12.6}守恒律总览}{64}{section.12.6}%
+\contentsline {chapter}{\numberline {13}维度结构推论：D=3+1 的七条后果}{65}{chapter.13}%
+\contentsline {section}{\numberline {13.1}平方反比律：为什么力是 $1/r^2$}{65}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}物理直觉}{65}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}严格推导}{66}{subsection.13.1.2}%
+\contentsline {section}{\numberline {13.2}SO(3) 旋转群：为什么角动量有三个分量}{66}{section.13.2}%
+\contentsline {section}{\numberline {13.3}稳定 Kepler 轨道：为什么行星不坠入太阳}{67}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Huygens 原理：为什么声音清晰、没有回响拖尾}{67}{section.13.4}%
+\contentsline {section}{\numberline {13.5}Minkowski 度规符号差}{68}{section.13.5}%
+\contentsline {section}{\numberline {13.6}引力波极化}{68}{section.13.6}%
+\contentsline {section}{\numberline {13.7}体积量纲与理想气体方程}{68}{section.13.7}%
+\contentsline {section}{\numberline {13.8}七条推论的整体意义}{68}{section.13.8}%
+\contentsline {chapter}{\numberline {14}标准模型有效场论：从规范群到物理预言}{70}{chapter.14}%
+\contentsline {section}{\numberline {14.1}渐近自由：为什么夸克在高能时自由、低能时禁闭}{70}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}物理直觉}{70}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}严格推导：从 SU(3) Yang-Mills 到 $\beta $-函数}{70}{subsection.14.1.2}%
+\contentsline {section}{\numberline {14.2}Higgs 机制：质量的起源}{71}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}物理直觉}{71}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}严格推导}{72}{subsection.14.2.2}%
+\contentsline {section}{\numberline {14.3}CKM 矩阵：味的混合与 CP 破坏的必然性}{72}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}物理直觉}{72}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}严格推导}{73}{subsection.14.3.2}%
+\contentsline {section}{\numberline {14.4}标准模型的三条推论：整体图景}{74}{section.14.4}%
+\contentsline {chapter}{\numberline {15}全局证明：体系的自洽性、完整性与充分必要性}{75}{chapter.15}%
+\contentsline {section}{\numberline {15.1}论证语言单位：我们用什么工具证明}{75}{section.15.1}%
+\contentsline {section}{\numberline {15.2}完整性证明：所有定律均可推导}{76}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}定理陈述}{76}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}证明方法}{76}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}结果}{76}{subsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.2.4}推导深度分布}{76}{subsection.15.2.4}%
+\contentsline {section}{\numberline {15.3}必要性证明：每条原则都是不可移除的}{77}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}定理陈述}{77}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}必要性矩阵}{77}{subsection.15.3.2}%
+\contentsline {subsection}{\numberline {15.3.3}必要性反事实分析}{77}{subsection.15.3.3}%
+\contentsline {section}{\numberline {15.4}自洽性证明：体系内部无矛盾}{78}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}定理陈述}{78}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}无环性}{78}{subsection.15.4.2}%
+\contentsline {subsection}{\numberline {15.4.3}无矛盾性}{78}{subsection.15.4.3}%
+\contentsline {subsection}{\numberline {15.4.4}最小化}{78}{subsection.15.4.4}%
+\contentsline {section}{\numberline {15.5}交叉印证网：四条独立的验证线路}{78}{section.15.5}%
+\contentsline {section}{\numberline {15.6}体系总图}{79}{section.15.6}%
+\contentsline {section}{\numberline {15.7}结论：一个自洽且完整的物理公理体系}{80}{section.15.7}%
+\contentsline {part}{III\hspace {1em}附录}{81}{part.3}%
+\contentsline {chapter}{\numberline {A}物理常数表}{82}{appendix.A}%
+\contentsline {chapter}{\numberline {B}四十三条推导依赖表}{83}{appendix.B}%
+\contentsline {chapter}{\numberline {C}推导依赖关系总图}{85}{appendix.C}%
