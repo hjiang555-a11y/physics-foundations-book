@@ -8,10 +8,23 @@
 
 力学是 R2（最小作用量原理）最直接的产物。给定系统的拉格朗日量 $L = T - V$，Euler-Lagrange 方程自动产生全部运动方程。本章展示从 $\delta S = 0$ 出发，依次推出 Euler-Lagrange 方程、Noether 定理、Newton 三大定律、万有引力定律和 Kepler 第三定律。
 
+\begin{insightbox}[本章的核心启示]
+  从一条原理（$\delta S = 0$）出发，通过严格的数学推导，你可以得到整个经典力学的全部运动方程。这不是巧合——这是因为"作用量取平稳值"\textbf{就是}物理世界选择演化路径的机制。本章的每一条推导都在验证：数学上的必然性如何转化为物理上的普适性。
+\end{insightbox}
+
 每条定律标注逻辑前提、推导步骤、必要条件 \texttt{[N]} 和充分条件 \texttt{[S]}。
 
 % ════════════════════════════════════════════════════════
 \section{Euler-Lagrange 方程}
+% ════════════════════════════════════════════════════════
+
+\subsection{物理直觉}
+
+一个球从斜坡上滚下，它走的是哪条路？经验告诉我们：不是最快的路，不是最短的路——而是"作用量"最小的路。作用量 $S = \int L\,dt$ 是拉格朗日量 $L = T - V$ 在时间上的累积。球必须在每个瞬间"平衡"两种倾向：动能喜欢大（球想滚得快），势能喜欢小（球想待在低处）。真实路径是这两种倾向在所有可能路径中的最优折中。
+
+\textbf{数学结构}：这就是一个\textbf{泛函极值问题}——在所有连接起点和终点的可能路径中，找一条使积分 $S = \int L(q,\dot{q},t)dt$ 取极值的路径。这完全类似于"在所有连接两点的曲线中找最短的那条"（那是测地线问题），只不过被积函数从弧长元 $\sqrt{1+(dy/dx)^2}$ 换成了拉格朗日量 $L$。
+
+Euler-Lagrange 方程就是这个泛函极值问题的解——它告诉你极值路径必须满足的微分方程。它之于变分问题，如同 $f'(x)=0$ 之于普通函数的极值问题。
 % ════════════════════════════════════════════════════════
 
 \begin{lawbox}[Euler-Lagrange 方程]
@@ -70,9 +83,47 @@
 
 \textbf{充分条件}：给定 $C^2$ 拉格朗日量和固定端点，$\delta S = 0 \iff$ Euler-Lagrange 方程。\texttt{reversible: true}
 
+\keypoint{Euler-Lagrange方程的核心：分部积分把对$\delta\dot{q}$的依赖转化为对$\delta q$的依赖——这本质上是把"速度的变分"转化为"位置的变分"，代价是引入一个时间导数$d/dt$作用在$\partial L/\partial\dot{q}$上。这个$d/dt(\partial L/\partial\dot{q})$就是"广义动量的变化率"——所以Euler-Lagrange方程说的是：广义力 = 广义动量的变化率。}
+
+\bridge{$\delta S = 0 \xrightarrow{\text{分部积分} + \text{变分引理}} \frac{d}{dt}\frac{\partial L}{\partial\dot{q}} - \frac{\partial L}{\partial q} = 0$ \\ 分部积分把边界"扔掉"（固定端点），导数从变分$\delta q$转移到$\partial L/\partial\dot{q}$上}{自然界选择作用量最小的路径 $\to$ 这条路径必须满足一个二阶微分方程 $\to$ 给定初位置和初速度，未来完全确定 \\ 物理因果（决定论）从变分原理中自动涌现}
+
+\begin{oombox}[数量级估计：经典作用量的大小]
+  对于一个宏观物体，作用量 $S$ 的典型值远大于 $\hbar \approx 10^{-34}$ J·s：
+  \begin{itemize}
+    \item 棒球（$m=0.15$ kg, $v=40$ m/s, 飞行1秒）：$S \sim \frac{1}{2}mv^2 \cdot \Delta t \sim 120$ J·s $\sim 10^{36}\,\hbar$
+    \item 电子在原子中（Bohr轨道）：$S \sim \hbar$（量子效应显著——不能用经典路径！）
+    \item 宏观摆锤（$m=1$ kg, $l=1$ m, 周期2s）：$S \sim$ 几 J·s $\sim 10^{34}\,\hbar$
+  \end{itemize}
+  这就是为什么经典力学在宏观世界精确成立：$S/\hbar \gg 1$ 时，路径积分 $\int e^{iS/\hbar}$ 中只有 $\delta S=0$ 附近的路径相干加强，其他路径的贡献因相位快速振荡而抵消——这正是量子力学退化为经典力学的机制。
+\end{oombox}
+
+\precisionbox[精度等级]
+  Euler-Lagrange 方程：\precexact ——它是变分法的数学恒等式，不是近似。\\
+  但其应用于具体物理系统时，精度取决于 $L$ 的近似程度——例如忽略相对论修正、量子修正或耗散力时，$L = T-V$ 本身就是近似的。
+\endprecisionbox
+
 % ════════════════════════════════════════════════════════
 \section{Noether 定理}
 % ════════════════════════════════════════════════════════
+
+\subsection{物理直觉}
+
+Emmy Noether 在 1918 年证明了一个被爱因斯坦称为"数学史上最深刻的定理之一"的结果。其物理含义极为简洁：
+
+\begin{center}
+\textbf{如果你在某个方向上看不出物理定律有任何区别，\\
+那么在那一方向上就一定有一个守恒量。}
+\end{center}
+
+具体来说：
+\begin{itemize}
+  \item 时间平移看不出区别（今天和昨天物理定律一样）$\to$ \textbf{能量守恒}
+  \item 空间平移看不出区别（这里和那里的物理定律一样）$\to$ \textbf{动量守恒}
+  \item 旋转看不出区别（朝这个方向和那个方向的物理定律一样）$\to$ \textbf{角动量守恒}
+  \item 量子相位平移看不出区别（波函数的整体相位不可观测）$\to$ \textbf{电荷守恒}
+\end{itemize}
+
+\textbf{数学结构}：Noether 定理是一个\textbf{数学恒等式}——只要你接受作用量原理和连续对称性，守恒流就自动出现。它不依赖于任何具体的力的形式、也不依赖于任何具体的物质组成。Hilbert 曾试图自己证明这个定理但没有成功；Noether 用群论和变分法结合的方式干净利落地完成——这需要同时精通抽象代数和分析力学，在当时的数学界几乎只有她能做到。
 
 \begin{lawbox}[Noether 定理]
   作用量 $S$ 的每个连续对称性变换对应一个守恒的 Noether 荷 $Q$：
@@ -128,11 +179,44 @@ Noether 荷 & $Q$ & $\mathbb{R}$ & 依赖变换 & $dQ/dt = 0$ & 守恒量 \\
 
 \textbf{充分条件}：连续对称性 + Euler-Lagrange $\Rightarrow$ 守恒流。\texttt{reversible: true}（逆 Noether 定理：每个守恒量对应一对称性）。
 
+\keypoint{Step 4 是 Noether 定理证明中最关键的技巧——用 Euler-Lagrange 方程消去 $\partial L/\partial q_i$。这意味着 Noether 定理只在"真实路径"上有意义：对称性告诉你，如果你走在正确的道路上（满足运动方程），那你在某个方向上的"Noether 荷"就不会变。}
+
+\bridge{对称性变换 $q \to q+\varepsilon Q$ 保持 $S$ 不变（至多差边界项）\\ $\xrightarrow{\text{Euler-Lagrange}}$ $d/dt(\sum p_i Q_i - F) = 0$}{物理定律在某个变换下不变 $\to$ 在这个变换的"方向"上存在一个守恒量 \\ 反过来：如果你发现一个守恒量，背后必定有一个对称性}
+
+\begin{oombox}[数量级与验证：能量守恒的精度]
+  Noether 定理本身是\precexact——它是数学定理。但能量守恒的\textbf{实验验证精度}极其惊人：
+  \begin{itemize}
+    \item \textbf{宏观机械能守恒}：精度 $\sim 10^{-5}$（受摩擦力等非保守力限制）
+    \item \textbf{电磁学中的 Poynting 定理}：精度 $\sim 10^{-8}$（光子计数实验）
+    \item \textbf{核反应中的质能守恒（$E=mc^2$ 结合）}：精度 $\sim 10^{-7}$（$\alpha$ 粒子能量测量）
+    \item \textbf{宇宙学中的总能量}：广义相对论中全局能量守恒并不严格成立（因为时空中没有全局时间平移对称性）——这恰恰验证了 Noether 定理的逻辑：对称性不存在 $\Rightarrow$ 守恒律不存在
+  \end{itemize}
+  最后一个例子是 Noether 定理最重要的反面教材：膨胀宇宙没有时间平移对称性，所以宇宙的总能量没有严格守恒的定义。
+\end{oombox}
+
+\precisionbox[精度等级]
+  Noether 定理本身：\precexact（纯数学定理，不需要实验验证）\\
+  推出的守恒律：\precexact 在对应对称性精确成立时；\precapprox 在对称性近似成立时（如有心力近似、弱外力微扰）
+\endprecisionbox
+
 % ════════════════════════════════════════════════════════
 \section{Newton 运动定律}
 % ════════════════════════════════════════════════════════
 
 \subsection{第一定律（惯性定律）}
+
+\subsubsection{物理直觉}
+
+Newton 第一定律说"不受力的物体保持静止或匀速直线运动"。这听起来像废话——但它不是。在 Newton 之前，Aristotle 的物理学认为物体的"自然状态"是静止——推它才动，不推就停。第一定律的革命性在于：它声明\textbf{匀速运动}和静止一样"自然"，\textbf{改变速度才需要理由（力）}。
+
+从 R2 的角度看，这更自然：自由粒子的 $L = \frac{1}{2}mv^2$（只有动能），Euler-Lagrange 方程给出 $d(m\mathbf{v})/dt = 0$——速度不变就是自由粒子的"自然选择"。
+
+\keypoint{惯性定律不是实验总结出来的——它是对"力"的定义。什么样的参考系里自由粒子匀速运动？这个参考系就叫惯性系。所以第一定律同时定义了"惯性系"和"不受力"——它是一把双刃剑。}
+
+\begin{oombox}[日常直觉与物理精确性]
+  在桌面上推一本书，手离开后它停下来——Aristotle 说"自然状态是静止"。Newton 说：不对，它停下来是因为摩擦力——如果桌面完全光滑（真空、无摩擦），书会永远滑下去。\\
+  \textbf{精度}：在地球表面，摩擦力 $f = \mu mg \approx 0.3 \times 1 \times 9.8 \approx 3$ N（对一本1kg的书）。在太空中（$f \ll 10^{-9}$ N），一个物体的速度可以保持在 $10^{-12}$ 精度以内。惯性定律在无外力时精确成立，偏差仅来自未被建模的微小外力。
+\end{oombox}
 
 \begin{lawbox}[Newton 第一定律]
   $F = 0 \implies d\mathbf{v}/dt = 0$（匀速直线运动）
@@ -165,6 +249,19 @@ Noether 荷 & $Q$ & $\mathbb{R}$ & 依赖变换 & $dQ/dt = 0$ & 守恒量 \\
   \quad\texttt{[S]} $L = T-V$ + Euler-Lagrange $\Rightarrow$ 第二定律。
 \end{derivationbox}
 
+\keypoint{$\mathbf{F} = m\mathbf{a}$ 不是 Newton 写的。他写的是 $\mathbf{F} = d\mathbf{p}/dt$——力的定义是"动量的变化率"。当质量不变时两者等价，但当质量可变（如火箭喷气、相对论效应），$\mathbf{F} = d\mathbf{p}/dt$ 才是正确形式。}
+
+\bridge{$d(m\mathbf{v})/dt = -\nabla V \xrightarrow{\text{定义}} \mathbf{F} \equiv -\nabla V$ \\ 力不是原始概念——它是由势能的梯度\textbf{定义}出来的}{$\mathbf{F} = d\mathbf{p}/dt$ 不是实验规律——它是对"力"这个概念的\textbf{定义} \\ 真正有物理内容的是 $\mathbf{p}$ 和 $V$ 的形式，以及 $V$ 的可微性}
+
+\begin{oombox}[第二定律的尺度范围]
+  \begin{itemize}
+    \item \textbf{原子尺度}（$r \sim 10^{-10}$ m）：Lorentz 力支配电子运动，$F \sim e^2/(4\pi\varepsilon_0 r^2) \approx 2.3 \times 10^{-8}$ N；量子效应显著（$S \sim \hbar$）
+    \item \textbf{人体尺度}（$m \sim 70$ kg，$a \sim 1$ m/s$^2$）：$F \sim 70$ N；经典力学精确成立
+    \item \textbf{太阳系尺度}（$M_\odot \sim 2\times10^{30}$ kg，$r \sim 1$ AU $\sim 1.5\times10^{11}$ m）：$F = GM_\odot M_\oplus/r^2 \approx 3.5\times10^{22}$ N；牛顿引力精确度 $\sim 10^{-8}$（仅水星近日点进动需 GR 修正，$\sim 43''$ / 世纪）
+    \item \textbf{速度极限}：$v \ll c$ 时第二定律（$F=ma$）成立；$v \to c$ 时需替换为 $F = d(\gamma mv)/dt$
+  \end{itemize}
+\end{oombox}
+
 \subsection{第三定律（作用-反作用）}
 
 \begin{lawbox}[Newton 第三定律]
@@ -179,6 +276,15 @@ Noether 荷 & $Q$ & $\mathbb{R}$ & 依赖变换 & $dQ/dt = 0$ & 守恒量 \\
   \textbf{Step 3} — $\mathbf{F}_{12} + \mathbf{F}_{21} = 0 \implies \mathbf{F}_{12} = -\mathbf{F}_{21}$
   \quad\texttt{[S]} 动量守恒 + 第二定律 $\Rightarrow$ 第三定律弱形式。
 \end{derivationbox}
+
+\keypoint{电磁学中，两个运动的点电荷之间的力并不严格满足 Newton 第三定律（强形式要求力沿连线），因为电磁场本身携带动量。系统的总动量（粒子 + 场）仍然守恒——这是 Noether 定理的又一个精妙之处：守恒的是总动量，不是粒子的机械动量。}
+
+\precisionbox[Newton 三定律：精度等级]
+  \textbf{第一定律}：\precexact（惯性系的定义性特征），但在 GR 中惯性系仅是局域概念\\
+  \textbf{第二定律}：\preceffective——$L = T-V$ 是有效描述，非相对论性（$v \ll c$），非量子性（$S \gg \hbar$）\\
+  \textbf{第三定律——弱形式}（$\mathbf{F}_{12} = -\mathbf{F}_{21}$）：\preceffective——在电磁动力学中，场携带的动量使瞬时作用的第三定律破缺\\
+  \textbf{第三定律——强形式}（力沿连线）：\precapprox——电磁力不沿连线（Biot-Savart 定律中运动电荷间的力有横向分量）
+\endprecisionbox
 
 \subsection{万有引力定律}
 
@@ -201,6 +307,27 @@ Noether 荷 & $Q$ & $\mathbb{R}$ & 依赖变换 & $dQ/dt = 0$ & 守恒量 \\
   \texttt{reversible: false}（Newton 理论是 GR 的低能有效理论）。
 \end{derivationbox}
 
+\keypoint{引力常数 $G$ 是所有物理常数中测量精度最低的——不确定性 $2.2 \times 10^{-5}$（CODATA 2022）。相比之下，精细结构常数 $\alpha$ 的精度是 $1.5 \times 10^{-10}$。引力太弱了——两个质子间的引力是电磁力的 $Gm_p^2/(e^2/4\pi\varepsilon_0) \approx 8 \times 10^{-37}$——这使得精确测量 $G$ 极其困难。}
+
+\bridge{Einstein 场方程 $G_{\mu\nu} = (8\pi G/c^4)T_{\mu\nu}$ \\ $\xrightarrow{\text{弱场} + \text{低速}}$ $\nabla^2\phi = 4\pi G\rho \xrightarrow{\text{球对称}}$ $\mathbf{F} = -GmM/r^2\,\hat{\mathbf{r}}$}{GR $\to$ Newton 引力的过程不是"近似"——它是 GR 在特定极限下的\textbf{精确约化} \\ 每步都是数学恒等式在特定条件下的退化，而非数值拟合}
+
+\begin{oombox}[引力的尺度——从量子到宇宙]
+  \begin{itemize}
+    \item \textbf{两个质子间}（$r=10^{-15}$ m）：$F_{\text{grav}} \approx 1.9 \times 10^{-34}$ N vs.\ $F_{\text{EM}} \approx 230$ N ——引力比电磁力弱 $10^{36}$ 倍
+    \item \textbf{两个1kg铅球间}（$r=0.1$ m）：$F_{\text{grav}} = G\cdot 1\cdot 1 / 0.01 \approx 6.7 \times 10^{-9}$ N ——约等于一粒沙子的重量（Cavendish 1798 年用扭秤测到了这个力！）
+    \item \textbf{地球表面}（$M_\oplus=5.97\times10^{24}$ kg, $R_\oplus=6.37\times10^6$ m）：$g = GM_\oplus/R_\oplus^2 \approx 9.81$ m/s$^2$ ——每个人每天感受到的引力
+    \item \textbf{太阳表面}：$g_\odot = GM_\odot/R_\odot^2 \approx 274$ m/s$^2$ ——约28倍地球重力
+    \item \textbf{中子星表面}（$M=1.4M_\odot$, $R=10$ km）：$g \approx 1.9 \times 10^{12}$ m/s$^2$ ——GR 修正必须考虑（$GM/Rc^2 \approx 0.2$）
+    \item \textbf{事件视界}（黑洞 $M=M_\odot$, $r_s=2GM/c^2 \approx 3$ km）：Newton 引力完全失效，GR 是唯一描述
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[精度等级]
+  Newton 万有引力：\precapprox——它是 GR 的弱场低速极限。\\
+  适用范围：$|\phi|/c^2 \ll 1$（在地球表面 $|\phi|/c^2 \approx 7\times 10^{-10}$），$v \ll c$。\\
+  超出范围时失效：水星近日点进动（第一个 GR 验证）、GPS 时间修正（每天 $\sim 38\,\mu$s）、黑洞、引力波。
+\endprecisionbox
+
 % ════════════════════════════════════════════════════════
 \section{Kepler 第三定律（推论）}
 % ════════════════════════════════════════════════════════
@@ -219,3 +346,34 @@ Noether 荷 & $Q$ & $\mathbb{R}$ & 依赖变换 & $dQ/dt = 0$ & 守恒量 \\
   \textbf{Step 3} — 轨道周期：$T = 2\pi r/v \implies T^2 = (4\pi^2/GM)\,r^3$
   \quad\texttt{[S]} Newton 力学 + 万有引力 $\Rightarrow$ Kepler 第三定律。
 \end{derivationbox}
+
+\keypoint{Kepler 用了十年分析 Tycho Brahe 的观测数据才发现 $T^2 \propto r^3$。而从 Newton 力学出发，推导只需要三行——这就是"从第一性原理出发"的力量。但注意：Newton 的推导假设了轨道是圆形的；Kepler 的原始版本适用于椭圆轨道（$T^2 \propto a^3$，其中 $a$ 是半长轴），这需要额外的角动量守恒论证才能从 Newton 力学推出。}
+
+\begin{oombox}[太阳系中的 Kepler 第三定律]
+  \begin{center}
+  \footnotesize
+  \begin{tabular}{p{2.5cm}p{2cm}p{2cm}p{2.5cm}p{3cm}}
+  \toprule
+  \textbf{行星} & \textbf{$a$ (AU)} & \textbf{$T$ (年)} & \textbf{$T^2/a^3$ (年$^2$/AU$^3$)} & \textbf{与1的偏差} \\
+  \midrule
+  水星 & 0.387 & 0.241 & 1.001 & $+0.1\%$（GR 进动修正）\\
+  金星 & 0.723 & 0.615 & 1.001 & $<0.01\%$\\
+  地球 & 1.000 & 1.000 & 1.000 & 定义基准\\
+  火星 & 1.524 & 1.881 & 1.000 & $<0.01\%$\\
+  木星 & 5.203 & 11.86  & 0.999 & $-0.1\%$（太阳非惯性系）\\
+  冥王星 & 39.48 & 248.1  & 1.001 & 精度 $<0.001\%$\\
+  \bottomrule
+  \end{tabular}
+  \end{center}
+  \textbf{关键数量级}：地球轨道速度 $v_\oplus \approx 29.8$ km/s（$v/c \approx 10^{-4}$——相对论修正极小）。太阳质量 $M_\odot = 2\times 10^{30}$ kg。由 $T^2 = 4\pi^2 r^3/(GM)$ 可反推 $GM_\odot$，精度取决于 $r$ 和 $T$ 的测量——这是天文学中测天体质量的基本方法。
+\end{oombox}
+
+\precisionbox[精度等级]
+  Kepler 第三定律（$T^2 \propto a^3$）：\precapprox——精确版本需考虑：\\
+  \begin{itemize}
+    \item 行星间相互引力微扰（木星对土星轨道的扰动 $\sim 10^{-4}$）
+    \item 太阳的非惯性运动（太阳绕太阳系质心摆动）
+    \item GR 修正（水星近日点进动 $\sim 43''$/世纪——是 Newton 理论预言值的两倍不足 $0.1\%$，但可精确测量）
+    \item 对于双星系统和系外行星，$T^2 = 4\pi^2 a^3/[G(M+m)]$ 是测量天体质量的黄金标准
+  \end{itemize}
+\endprecisionbox
