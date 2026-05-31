@@ -273,3 +273,23 @@ c_{\text{theory}} = \frac{1}{\sqrt{\varepsilon_0\mu_0}}
 物理学的这种"从数学一致性要求逼出物理理论"的特点，在电磁学中表现得最为干净利落。这也是为什么规范理论成为现代物理学核心框架的原因——它告诉你：\textbf{对称性决定相互作用。}
 
 \keypoint{从 R3 到 Maxwell 的 11 步推导中，每一步都是逻辑必然的。如果你接受 $U(1)$ 规范对称性 + Lorentz 不变性 + 最小作用量，Maxwell 方程就是你必然得到的电磁理论。没有任何其他选择——数学已经替你做了唯一的决定。}
+\section*{反事实分析}
+
+\begin{limitbox}[若无位移电流项]
+  电荷不守恒 $\nabla\cdot\mathbf{J} \neq 0$；无电磁波——Faraday+Amp\`ere 联立得不到波动方程；光速无法从 $\varepsilon_0,\mu_0$ 推导。
+\end{limitbox}
+
+\begin{limitbox}[若磁单极子存在]
+  Maxwell 方程完全对称。Dirac (1931) 证明即使一个磁单极子也解释电荷量子化（$eg = n\hbar/2$）。至今未发现——flux upper limit $< 10^{-16}$ cm$^{-2}$s$^{-1}$sr$^{-1}$。
+\end{limitbox}
+
+\section*{习题}
+
+\begin{enumerate}
+  \item \textbf{[简单]} 从 $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$ 验证 Bianchi 恒等式。写出 $(\lambda,\mu,\nu)=(0,1,2),(0,1,3)$ 对应的三维矢量方程。
+  \item \textbf{[简单]} 从 $B_\mu = \partial_\mu\alpha(x)$ 证明 $F_{\mu\nu} \equiv 0$——这对应什么物理情况？
+  \item \textbf{[中等]} 用 $\mathcal{L} = -\frac{1}{4\mu_0}F_{\mu\nu}F^{\mu\nu} - J^\mu A_\mu$ 对 $A_\mu$ 做 Euler-Lagrange 变分，导出 $\partial_\nu F^{\nu\mu} = \mu_0 J^\mu$。
+  \item \textbf{[中等]} 在 Coulomb 规范（$\nabla\cdot\mathbf{A}=0$）下化简 Maxwell 方程为 $\nabla^2\phi = -\rho_q/\varepsilon_0$ 和 $\Box\mathbf{A} = \mu_0\mathbf{J} - \nabla(\partial\phi/\partial t)/c^2$。
+  \item \textbf{[较难]} 从 Lorentz 力 Lagrangian 写出正则动量。证明均匀磁场中 $L_z + \frac{qB}{2}(x^2+y^2)$ 守恒。
+  \item \textbf{[挑战]} 两运动点电荷间电磁力：$v\ll c$ 时近似满足 Newton 第三定律；$v\sim c$ 时场携带动量使第三定律破缺。估算 $v=0.1c$ 时偏离大小。
+\end{enumerate}

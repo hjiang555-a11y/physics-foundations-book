@@ -305,3 +305,23 @@ Pauli 不相容原理是最"看得见"的量子力学效应。没有它，所有
 \]
 
 \textbf{每一步都是逻辑必然的。} 给定这些公设，量子力学的核心结果——Schr\"odinger 方程、不确定性、能量量子化、de Broglie 波、Pauli 不相容——都是数学推论。这不是一种物理理论的选择，而是 Hilbert 空间 + 对易关系 + Lorentz 不变性的必然产物。
+\section*{反事实分析}
+
+\begin{limitbox}[若无 $i$（退化为扩散方程）]
+  $\partial\psi/\partial t = -(H/\hbar)\psi \implies \psi(t)\propto e^{-Et/\hbar}$——波函数指数衰减。概率不守恒。无干涉、无叠加、无量子计算。
+\end{limitbox}
+
+\begin{limitbox}[若位置和动量对易（经典力学）]
+  可同时精确确定位置和动量——Heisenberg 不确定性消失。无零点能（基态 $E_0=0$）。无离散能谱——原子无稳定结构。无隧穿效应——$\alpha$ 衰变不可能。
+\end{limitbox}
+
+\section*{习题}
+
+\begin{enumerate}
+  \item \textbf{[简单]} 验证 $\psi = A e^{i(kx-\omega t)}$ 满足自由粒子 Schr\"odinger 方程。求色散关系 $\omega(k)$。
+  \item \textbf{[简单]} 计算一维无限深势阱（$V=0$ 对 $0<x<L$，$V=\infty$ 其他）的能级 $E_n$ 和归一化波函数 $\psi_n(x)$。
+  \item \textbf{[中等]} 从 $[\hat{x},\hat{p}]=i\hbar$ 定义升降算符。计算 $[a,a^\dagger]$，证明谐振子能谱 $E_n=\hbar\omega(n+1/2)$。
+  \item \textbf{[中等]} 用 Robertson 不等式推导 $\sigma_x\sigma_p \ge \hbar/2$。对高斯波包 $\psi=(\pi a^2)^{-1/4}e^{-x^2/(2a^2)}$ 验证等号成立。
+  \item \textbf{[较难]} 用 $\Delta x\sim a_0=0.529$\,\AA{} 和 $\Delta p \ge \hbar/(2\Delta x)$ 估算电子最小动能。证明不确定性动能恰好抵消 Coulomb 吸引势能，阻止电子坠入核。
+  \item \textbf{[挑战]} 白矮星 Chandrasekhar 极限：电子简并压 $P\sim n_e p_F^2/m_e$ 对抗引力 $GM^2/R^4$。消去 $R$ 后证明 $M_{\text{Ch}}\sim(\hbar c/G)^{3/2}/m_p^2$。代入数值。
+\end{enumerate}
