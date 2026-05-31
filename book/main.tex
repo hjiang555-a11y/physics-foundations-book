@@ -300,6 +300,37 @@ R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向
    如果你只有五分钟，只看关键洞察和桥梁——它们包含了最重要的思想。如果你要深入掌握一个领域，把推导步骤中的每一条[N]自己验证一遍。
 \end{insightbox}
 
+\section*{阅读路径：不同读者如何读这本书}
+
+\begin{center}
+\small
+\begin{tabular}{p{2.5cm}p{4cm}p{4cm}p{4cm}}
+\toprule
+\textbf{读者类型} & \textbf{推荐路径} & \textbf{重点章节} & \textbf{时间估计} \\
+\midrule
+\textbf{急先锋} & 序言 $\to$ 阅读导引 $\to$ 每章只看 \keypoint{} 和 \bridge{} & 序言、Ch7-12 的关键洞察 & 2-4 小时 \\
+\textbf{物理学生} & 序言 $\to$ Part I（通读）$\to$ Part II（完整推导 + 习题） & Ch7-Ch12 为主，Ch13-14 为辅 & 2-4 周 \\
+\textbf{数学转物理} & Hilbert 第六问题 $\to$ 阅读导引 $\to$ Part I $\to$ Ch11,15 $\to$ 其余 & Ch1,4,11,15, 附录 & 1-2 周 \\
+\textbf{理论研究者} & Ch15（全局证明）$\to$ 查特定推导 $\to$ [N] 标注 + 反事实 & 按需查阅 & 按需 \\
+\textbf{好奇者} & 序言 $\to$ Ch1 $\to$ Ch7 $\to$ Ch13 $\to$ 浏览其余 \keypoint{} & Ch1, Ch7, Ch13 & 4-6 小时 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{8pt}
+\textbf{各章的预备知识}：
+\begin{itemize}
+  \item Ch1-Ch6（公理）：仅需基本物理常识 + 微积分
+  \item Ch7（力学）：需变分法基础（书中有简要回顾）\\
+  \item Ch8（电磁学）：需矢量分析（$\nabla$, $\nabla\times$, $\nabla\cdot$）+ 张量初级概念\\
+  \item Ch9（量子力学）：需线性代数（Hilbert 空间、本征值）+ 复分析\\
+  \item Ch10（热力学）：统计概念 + 组合数学（Stirling 公式）\\
+  \item Ch11（相对论）：微分几何基础（度规、曲率、Christoffel 符号）\\
+  \item Ch12（守恒律）：Noether 定理（Ch7 已介绍）\\
+  \item Ch13：矢量分析 + 复分析\\
+  \item Ch14：群论（Lie 代数）、重整化群
+\end{itemize}
+
 \clearpage
 
 % ══════════════════════════════════════════════════════
@@ -446,6 +477,58 @@ G11 & 3 & SM 有效场论 & R3 + X(SM 输入) \\
 % ══════════════════════════════════════════════════════
 \appendix
 \part{附录}
+
+\chapter{Hilbert 第六问题：百年简史}
+\label{app:hilbert}
+
+\section*{1900：Hilbert 的挑战}
+
+David Hilbert 在 1900 年巴黎国际数学家大会上的第六问题原文：
+
+\begin{center}
+\itshape "几何基础的研究提示了这个问题：用同样的方法，通过公理，\\
+来处理那些数学已占有重要地位的物理科学；首先是概率论和力学。"
+\end{center}
+
+Hilbert 在随后的说明中进一步阐述：他希望看到类似 Boltzmann 的工作——从原子论观点出发，通过极限过程严格推导出连续介质的运动定律。他暗示了"用公理体系描述空间充满连续物质的不同状态，导出刚体运动定律"的可能性。
+
+\section*{1900-1930：早期探索}
+
+\begin{itemize}
+  \item \textbf{Hilbert 本人}（1900-1917）：不仅在数学上推进公理化，还深入物理学——他在 1915 年 11 月（与 Einstein 几乎同时）从变分原理导出了引力场方程。Hilbert 将 GR 视为物理学公理化的核心案例
+  \item \textbf{Kolmogorov (1933)}：概率论的公理化——用测度论定义概率空间 $(\Omega, \mathcal{F}, P)$。这被广泛认为是 Hilbert 第六问题中"概率论"部分的完成
+  \item \textbf{von Neumann (1932)}：量子力学的第一个公理化——Hilbert 空间的态向量、厄米算符的可观测量、幺正演化。von Neumann 曾是 Hilbert 的助手
+\end{itemize}
+
+\section*{1930-1970：量子场论的挑战}
+
+\begin{itemize}
+  \item \textbf{Carathéodory (1909-1930s)}：热力学的公理化尝试——从绝热不可达性导出熵的存在性
+  \item \textbf{Dirac (1930), Pauli (1940)}：自旋-统计定理的逐步形式化——将 Pauli 不相容原理确立为相对论量子场论的定理
+  \item \textbf{Wightman 公理 (1950s-1960s)}：试图为量子场论建立严格的数学基础——Gårding-Wightman 公理定义了场算符的公理体系。成功证明了 PCT 定理和自旋-统计定理，但缺乏非平凡的四维相互作用模型
+  \item \textbf{Haag-Kastler 公理 (1964)}：代数量子场论（AQFT）——用 $C^*$ 代数描述局域可观测量。为弯曲时空 QFT 提供了框架，但四维交互模型仍难以构造
+\end{itemize}
+
+\section*{1970-2000：新方向}
+
+\begin{itemize}
+  \item \textbf{Lovelock 定理 (1971)}：在 4D 中，唯一产生至多二阶运动方程的度规 Lagrangian 是 Einstein-Hilbert 项 + 宇宙学常数。这是 GR 的"唯一性公理化"——证明 Einstein 方程不是选择，而是必然
+  \item \textbf{Arnold (1978)}：经典力学的辛几何形式化——将 Hamilton 力学确立为辛流形上的数学结构
+  \item \textbf{Weinberg (1995)}：量子场论的有效场论视角——公理化不需要是"终极的"，在给定能标上有效就足够
+  \item \textbf{Sussman \& Wisdom (2001)}：经典力学的计算形式化——《Structure and Interpretation of Classical Mechanics》将变分原理转化为 Scheme 代码
+\end{itemize}
+
+\section*{2000-今：当代突破}
+
+\begin{itemize}
+  \item \textbf{Hardy (2001), Chiribella 等 (2011)}：量子力学的信息论重构——从 5-6 条信息论公理推导出量子力学的全部数学结构。证明量子概率是"允许连续可逆变换的最一般概率论"
+  \item \textbf{Deng, Hani, Ma 等 (2024)}：从 Newton 硬球粒子系统严格推导 Boltzmann 方程和 Navier-Stokes-Fourier 方程。这是 Hilbert 第六问题中"从原子论到连续介质"的\textbf{完整数学桥梁}——120 年后，Hilbert 最初设想的路线图终于被证明是可行的
+  \item \textbf{本书 (2025-2026)}：从 6 条核心物理公理（R1-R6）推导 43 条有效物理定律。覆盖从 Euler-Lagrange 到标准模型 EFT，附带可机验的自动验证器。这是 Hilbert 第六问题在"有效场论适用范围内"的一次最全面推进
+\end{itemize}
+
+\begin{insightbox}[未竟的事业]
+  Hilbert 第六问题的终极形式——量子引力的公理化——仍然开放。弦论、圈量子引力、因果动力学三角化各自提出了不同的公理体系，但无一被普遍接受。物理学公理化的百年梦想仍在继续。
+\end{insightbox}
 
 \chapter{物理常数表}
 \label{app:constants}

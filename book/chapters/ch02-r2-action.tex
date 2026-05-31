@@ -309,3 +309,40 @@ Maupertuis（1744）将这一思想推广到粒子运动。两个世纪后，Fey
 \end{center}
 
 弯曲路径更长 $\to$ 粒子必须走得更快 $\to$ 动能更大 $\to$ $S$ 更大。$S$ 最小的路径 = 最短路径 = 直线。Euler-Lagrange 将它形式化为 $d(m\mathbf{v})/dt = 0 \to \mathbf{v} = $ 常数——Newton 第一定律。
+
+\section*{实验验证精度}
+
+\begin{oombox}[R2 的实验基础——从量子到经典]
+  \begin{itemize}
+    \item \textbf{宏观作用量}：棒球飞行 1 秒（$m=0.15$ kg, $v=40$ m/s）：$S \sim 120$ J·s $\sim 10^{36}\,\hbar$。宏观世界的作用量远超 $\hbar$，经典路径（$\delta S=0$）是极好的近似
+    \item \textbf{量子-经典过渡}：作用量 $\sim \hbar$ 时量子涨落显著。电子在 Bohr 轨道上 $S \sim \hbar$——这正是经典轨道描述失效的边缘
+    \item \textbf{路径积分验证}：量子隧穿、Aharonov-Bohm 效应、Casimir 效应——全部依赖于路径积分中非经典路径的贡献
+    \item \textbf{变分原理的适用范围}：保守力系统（电磁 + 引力）无可争议地满足；耗散力需要扩展框架（Rayleigh 耗散函数）
+    \item \textbf{Noether 定理的验证}：四个守恒律（能量、动量、角动量、电荷）在 $<10^{-7}$ 精度内成立——间接验证了作用量原理的对称性结构
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[R2 精度等级]
+  最小作用量原理本身：\precexact ——它是变分法的数学定义，不是近似学说\\
+  $L$ 的\textbf{具体形式}：\preceffective ——$L = T-V$ 仅在非相对论、保守力、$S \gg \hbar$ 时有效\\
+  在 Planck 尺度：连续路径假设可能破缺——此时需量子引力的离散化表述（如因果动力学三角化）
+\endprecisionbox
+
+\section*{反事实分析}
+
+\begin{limitbox}[若无最小作用量原理]
+  \begin{itemize}
+    \item Euler-Lagrange 方程消失 $\to$ 所有动力学方程失去统一生成机制
+    \item Noether 定理失效 $\to$ 四大守恒律（能量、动量、角动量、电荷）全部消失
+    \item 量子力学路径积分 $Z \propto \int e^{iS/\hbar}$ 失去基础 $\to$ 量子场论不可能
+    \item 物理学会退化为碎片化的经验公式集合——像 Aristotle 物理学一样，每个系统需要独立的运动规则
+  \end{itemize}
+\end{limitbox}
+
+\begin{limitbox}[若 $L$ 不是 $T-V$ 形式（如含更高阶导数）]
+  \begin{itemize}
+    \item 更高阶 Euler-Lagrange 方程 $\to$ 需要多于初位置和初速度的初始数据
+    \item Ostrogradsky 不稳定性 $\to$ 能量可以从正无穷到负无穷——理论不稳定
+    \item 自然界确实选择了 $L(q,\dot{q})$（至多一阶导数）——这不是美学偏好，是\textbf{稳定性要求}
+  \end{itemize}
+\end{limitbox}

@@ -264,3 +264,42 @@ D_\mu\psi = (\partial_\mu - ieA_\mu)\psi, \quad A_\mu \to A_\mu + \frac{1}{e}\pa
 \textbf{这就是电磁力的起源}。要求局域相位不变性 $\Rightarrow$ 必须存在光子场 $A_\mu$ $\Rightarrow$ 光子与电子耦合 $\Rightarrow$ 电磁力。
 
 这条原理后来被推广到了更复杂的对称性：$SU(2)$ 产生了弱力（$W^\pm, Z^0$），$SU(3)$ 产生了强力（胶子）。
+
+\section*{实验验证精度}
+
+\begin{oombox}[R3 的实验基础——规范不变性的代价]
+  \begin{itemize}
+    \item \textbf{光子质量上限}：若光子有质量，Coulomb 定律变为 Yukawa 势 $V \propto e^{-r/\lambda}/r$。从地球磁场测量（$\lambda > 10^8$ m）：$m_\gamma < 10^{-18}$ eV/$c^2$，即 $< 10^{-51}$ kg。光子是无质量粒子的\textbf{最精确验证}之一
+    \item \textbf{$U(1)$ 规范不变性的直接检验}：量子 Hall 效应的精确量子化（$R_H = h/(n e^2)$ 精度 $10^{-9}$）依赖 $U(1)$ 规范结构
+    \item \textbf{非 Abel 规范对称性}：QCD 的渐近自由（$\alpha_s$ 从高能到低能的跑动）被深度非弹性散射、喷注物理、强子对撞精确验证
+    \item \textbf{弱力规范结构}：$W$ 和 $Z$ 的自相互作用（三规范玻色子顶点 $WWZ$, $WW\gamma$）在 LEP/LHC 中测到，与 $SU(2)_L\times U(1)_Y$ 的预言一致
+    \item \textbf{反常消除}：标准模型的夸克-轻子代数恰好消除所有规范反常——这是规范理论自洽性的深层检验
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[R3 精度等级]
+  规范不变性的数学结构：\precexact ——它是 Lie 群理论 + 微分几何的数学构造\\
+  物理实现（哪个规范群）：\preccontingent ——$U(1)\times SU(2)\times SU(3)$ 是这个宇宙的实验事实\\
+  耦合常数（$g_1, g_2, g_3, e$）：\preccontingent ——不由规范不变性决定，需实验测量\\
+  有效场论范围：\preceffective ——在 $E \ll E_P$ 时精确；Planck 尺度规范场可能 emergent
+\endprecisionbox}
+
+\section*{反事实分析}
+
+\begin{limitbox}[若只有全局对称性（非局域）]
+  \begin{itemize}
+    \item 无规范场 $\to$ 无光子、无胶子、无 $W/Z$ 玻色子
+    \item 全局 $U(1)$ 仍保证电荷守恒（通过 Noether），但无电磁力！
+    \item 量子场论不可重整——规范对称性是微扰可重整性的数学保证
+    \item \textbf{结论}：全局对称性给出守恒律，局域对称性给出力。两者缺一不可
+  \end{itemize}
+\end{limitbox}
+
+\begin{limitbox}[若规范群全是 Abel 群（无自相互作用）]
+  \begin{itemize}
+    \item 规范玻色子之间无直接耦合 $\to$ 无渐近自由（QCD 的 $\beta_0$ 变号）
+    \item 无 QCD 禁闭——夸克不形成强子，世界无质子和中子
+    \item 弱力玻色子无自耦合 $\to$ 弱力在高能时变得极弱而非渐近自由
+    \item \textbf{现实}：非 Abel 规范对称性（$SU(2), SU(3)$）对于"世界中存在稳定核子"是必要的
+  \end{itemize}
+\end{limitbox}

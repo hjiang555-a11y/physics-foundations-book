@@ -258,3 +258,41 @@ P(\Delta S) \propto e^{\Delta S/k_B}
   \item 化学平衡条件 $\mu_A = \mu_B$
   \item 相变理论
 \end{itemize}
+
+\section*{实验验证精度}
+
+\begin{oombox}[R6 的实验基础——统计力学的基石有多牢？]
+  \begin{itemize}
+    \item \textbf{$S = k_B\ln W$ 的直接检验}：用光镊测量胶体粒子在双阱势中的态分布——$W$ 可数，$S$ 可独立计算，验证精度 $\sim 1\%$
+    \item \textbf{Boltzmann 常数}：$k_B = 1.380649\times 10^{-23}$ J/K（SI 2019 exact）——通过声学气体温度计和约翰逊噪声温度计从第一原理测量
+    \item \textbf{等概率假设的验证}：分子动力学模拟显示——经典混沌系统在 $\sim 10^6$ 次碰撞后各微观态的访问频率趋向均等（遍历性）
+    \item \textbf{涨落定理}：Jarzynski 等式和 Crooks 涨落定理——将非平衡功与自由能差关联——在单分子拉伸实验中被验证。这些是 $S = k_B\ln W$ 的\textbf{非平衡推广}的直接证据
+    \item \textbf{温度的定义}：$1/T = \partial S/\partial E$ 从 $10^{-9}$ K（激光冷却原子）到 $10^{12}$ K（重离子碰撞）范围内自洽——跨越 21 个数量级
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[R6 精度等级]
+  Boltzmann 公式（6a）：\precexact ——它是熵的定义，不是经验公式\\
+  等概率先验（6b）：\precexact 对于遍历系统；\precqualitative 对于非遍历系统（自旋玻璃、玻璃态）\\
+  热力学第二定律：\preceffective ——在 $N \to \infty$ 极限中精确（统计涨落 $\sim 1/\sqrt{N}$）；有限系统中涨落定理给出更精确的修正\\
+  黑洞熵：R6 失效——$S_{\text{BH}} = k_B c^3 A/(4G\hbar)$ 正比于视界面\textbf{积}而非体积
+\endprecisionbox}
+
+\section*{反事实分析}
+
+\begin{limitbox}[若无等概率先验假设]
+  \begin{itemize}
+    \item $P_i$ 是任意的 $\to$ 所有统计力学预言（正则分布、巨正则分布、涨落耗散定理）失去基础
+    \item 热力学第二定律不再是定理——它变成经验规律，无法从微观物理推导
+    \item 统计力学退化为纯粹的组合数学（$W$ 可计但无概率权重）
+    \item \textbf{等概率是统计力学唯一无法从 R1-R5 推出的假设}——它是独立的公设
+  \end{itemize}
+\end{limitbox}
+
+\begin{limitbox}[若 $k_B$ 的值不同]
+  \begin{itemize}
+    \item $k_B$ 大 10 倍：同一温度对应的能量大 10 倍——化学反应速率改变，生命化学可能完全不同
+    \item $k_B = 0$：无热运动——绝对零度下所有系统静止——无统计涨落——但量子零点能仍存在（$E_0 = \hbar\omega/2$）
+    \item \textbf{注意}：$k_B$ 只是能量-温度转换标度——改变 $k_B$ 等价于重定义温度单位（开尔文）。物理上重要的是 $k_B T$ 这个能量标度相对于化学键能和量子能级的比值
+  \end{itemize}
+\end{limitbox}

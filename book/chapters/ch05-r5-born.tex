@@ -223,3 +223,39 @@ P = |\psi_1 + \psi_2|^2 = |\psi_1|^2 + |\psi_2|^2 + \underbrace{2\,\text{Re}(\ps
 \]
 
 正是这个干涉项产生了屏幕上明暗交替的图案——量子力学的标志性现象。
+
+\section*{实验验证精度}
+
+\begin{oombox}[R5 的实验基础——Born 规则有多"真"？]
+  \begin{itemize}
+    \item \textbf{Born 规则的直接检验}：量子态层析（quantum tomography）通过多次测量重建 $\rho = |\psi\rangle\langle\psi|$，与 Born 规则 $P = |\langle a|\psi\rangle|^2$ 的比较精度 $\sim 10^{-2}$--$10^{-4}$
+    \item \textbf{Gleason 定理}（1957）：在 $\dim\mathcal{H}\ge 3$ 时，任何满足可加性的概率测度必然形如 $P = \langle\psi|\hat{P}|\psi\rangle$。Born 规则在 $\ge 3$ 维 Hilbert 空间中是\textbf{唯一解}
+    \item \textbf{干涉项验证}：双缝实验中 $P_{12} \neq P_1 + P_2$ 证明了概率是振幅的模方而非直接相加——违反 Kolmogorov 概率公理的独立性
+    \item \textbf{复数振幅的必要性}：量子 tomography 需要 3 个互补测量基来重建完整的密度矩阵——实概率论只需要 1 个
+    \item \textbf{弱测量}：Aharonov 的弱值（weak value）可以超出本征值范围——这仍然与 Born 规则兼容，但对"概率就是模方"的简单直觉提出了挑战
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[R5 精度等级]
+  Born 规则：\precexact ——它是量子力学最小统计诠释的核心公设\\
+  在 $\dim\mathcal{H}\ge 3$：Gleason 定理证明它是唯一自洽的概率分配——\textbf{不是选出来的，是推出来的}\\
+  可能的修正：非线性量子力学（如 Weinberg 1989 试探）中 Born 规则可能微扰修改——但所有实验排除此类修正至 $<10^{-10}$
+\endprecisionbox}
+
+\section*{反事实分析}
+
+\begin{limitbox}[若概率是振幅的模而非模方（$P = |\langle a|\psi\rangle|$）]
+  \begin{itemize}
+    \item 归一化 $\int P dx \neq 1$ 对于一般的 $\psi$——需重新定义归一化
+    \item 干涉项不出现 $\to$ 双缝实验无经典干涉图样
+    \item Gleason 定理排除此可能性（对于 $\dim\mathcal{H} \ge 3$）
+  \end{itemize}
+\end{limitbox}
+
+\begin{limitbox}[若概率是振幅的四次方（$P = |\langle a|\psi\rangle|^4$）]
+  \begin{itemize}
+    \item 干涉项更复杂——不再是 $\cos$ 形式的简单干涉
+    \item 单粒子双缝实验会产生\textbf{不同的条纹间距}——但实验观测到的正是 $\cos$ 型干涉
+    \item 非线性 Born 规则会导致超光速信号（Gisin 1990 定理）——违反因果结构（R1）
+  \end{itemize}
+\end{limitbox}
