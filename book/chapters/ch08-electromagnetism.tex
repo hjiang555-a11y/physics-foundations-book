@@ -8,6 +8,17 @@
 
 R3（局域规范不变性）最辉煌的成就就是从 $U(1)$ 规范对称性出发，结合 R1（Lorentz 不变性）和 R2（最小作用量），严格导出全部 Maxwell 方程组。本章展示这一推导的完整过程。
 
+\begin{center}
+\small
+\begin{tabular}{p{4cm}p{4cm}p{3cm}}
+\toprule
+\multicolumn{3}{c}{\textbf{依赖的 R1-R6 组件}} \\
+\midrule
+R3 局域规范 & R1 Lorentz 不变性 & R2 最小作用量 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \begin{insightbox}[规范不变性如何逼出电磁力]
   考虑一个复标量场 $\psi(x)$ 的拉格朗日量 $\mathcal{L} = |\partial_\mu\psi|^2 - m^2|\psi|^2$。物理可观测的是 $|\psi|^2$（概率密度），不是 $\psi$ 本身的相位。因此，如果你在每个时空点 $x$ 上独立地旋转 $\psi$ 的相位——$\psi(x) \to e^{i\alpha(x)}\psi(x)$——物理预言不应改变。
 
@@ -197,6 +208,32 @@ c_{\text{theory}} = \frac{1}{\sqrt{\varepsilon_0\mu_0}}
 这不是巧合。Maxwell 随即宣布：\textbf{光就是电磁波。} 这是人类历史上第一次，一个全新的物理现象（电磁波）完全从理论推导中\textbf{预言}出来，然后才被实验证实（Hertz 1887）。Heinrich Hertz 后来评论："Maxwell 的理论就是他的方程组。"
 
 \keypoint{Maxwell 没有"发现"电磁波——他\textbf{推导}出了它。他从纯数学对称性（Amp\`ere 定律加上位移电流项）出发，得到了波的方程，发现波速恰为光速。这是理论物理最辉煌的时刻之一——数学一致性的要求预言了一个全新的物理现象。}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Axes
+  \draw[->,thick] (0,0) -- (9,0) node[right] {$z$ (传播方向)};
+  \draw[->,thick] (0,-2.2) -- (0,2.5) node[above] {场强};
+  
+  % E-field (red, in x-direction = out of page as vertical)
+  \draw[wred,thick,domain=0:8.5,samples=100] plot (\x,{2*sin(2*pi*\x/2 r)});
+  \node[wred,font=\small] at (4.5,2.3) {$\mathbf{E}$ (电场)};
+  
+  % B-field (blue, in y-direction = as sine with different phase... actually same phase)
+  \draw[pblue,thick,domain=0:8.5,samples=100] plot (\x,{1.5*sin(2*pi*\x/2 r)});
+  \node[pblue,font=\small] at (6.5,1.7) {$\mathbf{B}$ (磁场)};
+  
+  % k vector
+  \draw[dorange,->,>=Stealth,very thick] (3,1.8) -- (5.5,1.8) node[right,font=\small] {$\mathbf{k}$};
+  
+  % Labels
+  \node[font=\small] at (4.5,-1.0) {$\mathbf{E} \perp \mathbf{B} \perp \mathbf{k}$，真空波速 $c$};
+  
+  % Polarization indicators
+  \node[wred,font=\footnotesize] at (0.5,1.0) {$x$ 方向};
+  \node[pblue,font=\footnotesize] at (0.5,0.3) {$y$ 方向};
+\end{tikzpicture}
+\end{center}
 
 \begin{lawbox}[电磁波方程]
   $\nabla^2\mathbf{E} = \frac{1}{c^2}\frac{\partial^2\mathbf{E}}{\partial t^2}$，$\nabla^2\mathbf{B} = \frac{1}{c^2}\frac{\partial^2\mathbf{B}}{\partial t^2}$，$c = 1/\sqrt{\varepsilon_0\mu_0}$
