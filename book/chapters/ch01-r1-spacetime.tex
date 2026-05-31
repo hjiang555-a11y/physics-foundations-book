@@ -63,6 +63,40 @@
 
 用一个简单的比喻：想象一个绷紧的橡胶膜（代表时空）。放一个保龄球上去——橡胶膜凹陷。现在在凹陷处滚一个小球——小球不会沿直线走，而是绕着凹陷弯曲。\textbf{在 Newton 的语言里，我们说"保龄球的引力拉住了小球"。在 Einstein 的语言里，我们说"保龄球弯曲了时空，小球沿着弯曲时空的最直路径（测地线）运动"}。前者是力的语言，后者是几何的语言——等效原理允许我们在两者之间自由切换。
 
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Left: Elevator on Earth
+  \draw[thick] (0,0) rectangle (2.5,4);
+  \node at (1.25,3.8) {\small 电梯};
+  \filldraw[gray!30] (0,0) rectangle (2.5,0.3);
+  \node at (1.25,0.6) {\footnotesize 地球表面};
+  % Ball falling
+  \filldraw[wred] (1.25,3.5) circle (3pt);
+  \draw[wred,->,>=Stealth] (1.25,3.5) -- (1.25,2.0);
+  \node at (1.25,1.7) {\footnotesize 球下落};
+  \draw[->,>=Stealth,thick,pblue] (1.25,0.8) -- (1.25,0.2) node[below] {\footnotesize $\mathbf{g}$};
+  
+  % Equals sign
+  \node at (4,2) {\Huge $=$};
+  
+  % Right: Elevator accelerating in space
+  \draw[thick] (5.5,0) rectangle (8,4);
+  \node at (6.75,3.8) {\small 电梯};
+  % Stars
+  \filldraw (5.8,3.2) circle (0.5pt); \filldraw (7.5,3.5) circle (0.5pt);
+  \filldraw (6.3,2.8) circle (0.5pt); \filldraw (7.8,2.2) circle (0.5pt);
+  % Ball "falling" (actually floor accelerating up)
+  \filldraw[wred] (6.75,3.5) circle (3pt);
+  \draw[wred,->,>=Stealth] (6.75,3.5) -- (6.75,2.0);
+  \node at (6.75,1.7) {\footnotesize 球"下落"};
+  % Acceleration arrow on elevator
+  \draw[->,>=Stealth,thick,pblue] (8.3,2) -- (8.3,3.5) node[right] {\footnotesize $\mathbf{a}=g$};
+  
+  % Bottom caption
+  \node at (4,-1.0) {\small 电梯里的人无法区分：是引力在拉，还是电梯在加速？};
+\end{tikzpicture}
+\end{center}
+
 \subsection{为什么这条原则必不可少}
 
 试想一个没有光速上限的宇宙。在这样一个宇宙里：

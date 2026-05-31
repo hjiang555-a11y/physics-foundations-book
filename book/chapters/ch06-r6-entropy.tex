@@ -39,6 +39,52 @@ R6 包含一个关键的辅助假设：\textbf{孤立系统在平衡态时，所
 
 这个定义的直觉是：如果给系统加一点能量 $\Delta E$，熵增加 $\Delta S$。温度越低，单位能量带来的熵增越大——$T$ 可以理解为"用熵购买能量的价格"。绝对零度 $T = 0$ 意味着"能量是免费的"——这在量子力学中对应系统处于唯一基态（$W = 1$, $S = 0$），与热力学第三定律（Nernst 不可达性）一致。
 
+\subsection{微观态与熵的可视化}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  % Three boxes representing increasing entropy states
+  % Box 1: Low entropy (ordered)
+  \draw[thick] (0,0) rectangle (3,4);
+  \node at (1.5,3.7) {\small\textbf{低熵} $S = k_B\ln 1 = 0$};
+  % Ordered particles
+  \foreach \i in {0,1} \foreach \j in {0,1,2} \filldraw (0.6+1.2*\i,0.6+1.2*\j) circle (3pt);
+  \node at (1.5,-0.4) {$W=1$（唯一态）};
+  
+  % Arrow
+  \draw[->,>=Stealth,very thick] (3.5,2) -- (4.5,2);
+  \node at (4,2.4) {\small 加热};
+  
+  % Box 2: Medium entropy
+  \draw[thick] (5,0) rectangle (8,4);
+  \node at (6.5,3.7) {\small\textbf{中熵}};
+  % Semi-random particles
+  \filldraw (5.7,3.0) circle (3pt); \filldraw (7.0,2.5) circle (3pt);
+  \filldraw (6.2,1.8) circle (3pt); \filldraw (7.5,1.2) circle (3pt);
+  \filldraw (5.5,0.8) circle (3pt); \filldraw (6.8,0.5) circle (3pt);
+  \node at (6.5,-0.4) {$W=20$（多种排列）};
+  
+  % Arrow
+  \draw[->,>=Stealth,very thick] (8.5,2) -- (9.5,2);
+  \node at (9,2.4) {\small 再加热};
+  
+  % Box 3: High entropy (random)
+  \draw[thick] (10,0) rectangle (13,4);
+  \node at (11.5,3.7) {\small\textbf{高熵}};
+  % Very random particles
+  \filldraw (10.3,3.2) circle (3pt); \filldraw (12.5,3.1) circle (3pt); \filldraw (11.0,2.7) circle (3pt);
+  \filldraw (12.8,2.2) circle (3pt); \filldraw (10.5,1.5) circle (3pt); \filldraw (11.8,1.0) circle (3pt);
+  \node at (11.5,-0.4) {$W \gg 1$（极多态）};
+  
+  % Bottom formula
+  \node at (6.5,-1.2) {\small $S = k_B\ln W$：微观状态数越多，我们对微观态越"无知"，熵越大};
+  
+  % Arrow below showing probabilistic nature
+  \draw[->,>=Stealth,thick,wred] (1.5,-1.8) -- (11.5,-1.8);
+  \node[wred,font=\small] at (6.5,-2.2) {等概率先验：$P_i = 1/W$ $\to$ 系统自发趋向 $W$ 最大的宏观态 = 热力学第二定律};
+\end{tikzpicture}
+\end{center}
+
 \begin{principlebox}[R6 — 熵的统计定义]
   \[
   S = k_B \ln W

@@ -196,8 +196,41 @@ $S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
   Einstein 场方程：\preceffective——在 $E \ll E_P \approx 10^{19}$ GeV 时精确成立。\\
   Lovelock 唯一性：\precexact（在 4D 中，至多二阶场方程 + 度规描述 $\Rightarrow$ 唯一候选为 Einstein 张量）。\\
   宇宙学常数 $\Lambda$：\preccontingent——其数值不由 R1-R6 决定。\\
-  Planck 尺度修正：预期存在 $R^2$ 等高阶项，但被 $\sim (E/E_P)^2$ 压低。
+   Planck 尺度修正：预期存在 $R^2$ 等高阶项，但被 $\sim (E/E_P)^2$ 压低。
 \endprecisionbox}
+
+\subsection{引力 = 时空弯曲：从力到几何}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Grid representing spacetime (curved)
+  \draw[gray!30,step=0.5] (-4,-0.5) grid (4,0.5);
+  \draw[gray!30,step=0.5] (-3,-2.5) grid (3,-1.5);
+  
+  % Curved spacetime surface (parabolic)
+  \fill[gray!10] (-3.5,0.5) to[out=-20,in=200] (3.5,0.5) -- (3.5,2.5) to[out=200,in=-20] (-3.5,2.5) -- cycle;
+  \draw[pblue!30,thick] (-3.5,0.5) to[out=-20,in=200] (3.5,0.5);
+  
+  % Mass (sun/planet) causing curvature
+  \filldraw[orange!80!red] (0,-1.5) circle (12pt) node[white,font=\small] {M};
+  
+  % Light ray bending
+  \draw[yellow!80!black,->,>=Stealth,thick] (-3.2,-0.5) to[out=-10,in=190] (0,-1.9) to[out=10,in=200] (3.2,-0.5);
+  \node[font=\footnotesize] at (2.8,-0.2) {光线};
+  
+  % Geodesic (test particle orbit)
+  \draw[pblue,thick,->,>=Stealth] (-2.5,-1.2) to[out=-15,in=160] (0,-2.0) to[out=-20,in=180] (2.5,-1.2);
+  \node[pblue,font=\footnotesize] at (2.5,-1.8) {测地线};
+  
+  % Label
+  \node at (0,-3.2) {\small 物质告诉时空如何弯曲，时空告诉物质如何运动（Wheeler）};
+  
+  % Newton vs Einstein note
+  \node[font=\footnotesize,text width=10cm,align=center] at (0,-3.8) 
+    {Newton: $m\mathbf{a} = -GMm\hat{\mathbf{r}}/r^2$（力）\hspace{1cm}
+     Einstein: $\delta\int ds = 0$（弯曲时空中的"直线"= 测地线）};
+\end{tikzpicture}
+\end{center}
 
 % ════════════════════════════════════════════════════════
 \section{Newton 万有引力（弱场极限）}

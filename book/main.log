@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.1)  29 MAY 2026 13:07
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.1)  31 MAY 2026 09:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,7 +967,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip78
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 81.
+Package hyperref Info: Option `colorlinks' set `true' on input line 117.
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
@@ -1368,26 +1368,26 @@ Writing index file main.idx
 (./chapters/ch15-proof.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -1395,65 +1395,68 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 97.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 97.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 97.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 97.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 97.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 97.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 97.
-LaTeX Font Info:    Redeclaring math accent \check on input line 97.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 97.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 97.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 97.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 97.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 97.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 133.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 133.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 133.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 133.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 133.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 133.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 133.
+LaTeX Font Info:    Redeclaring math accent \check on input line 133.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 133.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 133.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 133.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 133.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 133.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 97.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/FandolSong(0)/m/n on input line 97.
-LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 97.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/FandolSong(0)/m/n on input line 97.
+(Font)              `operators' in the math version `normal' on input line 133.
 
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/FandolSong(0)/m/n on input line 133.
+
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 133.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/FandolSong(0)/m/n on input line 133
+.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/FandolSong(0)/m/n --> TU/FandolSong(0)/m/n on input 
-line 97.
+line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/FandolSong(0)/m/it on input line 97
-.
+(Font)                  OT1/cmr/m/it --> TU/FandolSong(0)/m/it on input line 13
+3.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/FandolSong(0)/b/n on input line 97.
-
+(Font)                  OT1/cmr/bx/n --> TU/FandolSong(0)/b/n on input line 133
+.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/FandolHei(0)/m/n on input line 97.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/FandolFang(0)/m/n on input line 97.
+(Font)                  OT1/cmss/m/n --> TU/FandolHei(0)/m/n on input line 133.
 
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/FandolFang(0)/m/n on input line 133
+.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/FandolSong(0)/m/n --> TU/FandolSong(0)/b/n on input 
-line 97.
+line 133.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/FandolSong(0)/b/it on input line 9
-7.
+(Font)                  OT1/cmr/bx/it --> TU/FandolSong(0)/b/it on input line 1
+33.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/FandolHei(0)/b/n on input line 97.
-
+(Font)                  OT1/cmss/bx/n --> TU/FandolHei(0)/b/n on input line 133
+.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/FandolFang(0)/b/n on input line 97.
-
+(Font)                  OT1/cmtt/m/n --> TU/FandolFang(0)/b/n on input line 133
+.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1489,7 +1492,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 133.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -1513,16 +1516,16 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 97.
-Package biblatex Info: Reference segment=0 on input line 97.
+Package biblatex Info: Reference section=0 on input line 133.
+Package biblatex Info: Reference segment=0 on input line 133.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+LaTeX Font Info:    Trying to load font information for U+msa on input line 136
 .
  (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+LaTeX Font Info:    Trying to load font information for U+msb on input line 136
 .
 
 (/opt/texlive/texdir/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1532,37 +1535,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ] [2]
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 129--129
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 165--165
 []|\TU/FandolSong(0)/m/n/10 R1| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 130--130
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 166--166
 []|\TU/FandolSong(0)/m/n/10 R2| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 131--131
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 167--167
 []|\TU/FandolSong(0)/m/n/10 R3| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 132--132
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 168--168
 []|\TU/FandolSong(0)/m/n/10 R4| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 133--133
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 169--169
 []|\TU/FandolSong(0)/m/n/10 R5| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 134--134
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 170--170
 []|\TU/FandolSong(0)/m/n/10 R6| 
  []
 
 
-Overfull \hbox (28.08266pt too wide) in paragraph at lines 125--137
+Overfull \hbox (28.08266pt too wide) in paragraph at lines 161--173
  [] 
  []
 
@@ -1579,7 +1582,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4] (./main.toc [5
+[4]
+
+LaTeX Font Warning: Font shape `TU/FandolSong(0)/m/it' undefined
+(Font)              using `TU/FandolSong(0)/m/n' instead on input line 246.
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Overfull \hbox (383.6243pt too wide) in paragraph at lines 274--274
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (383.6243pt too wide) in paragraph at lines 275--275
+ [][][][][][] 
+ []
+
+[5
 
 
 ]
@@ -1591,6 +1613,84 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
+Overfull \hbox (326.71878pt too wide) in paragraph at lines 311--311
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (326.71878pt too wide) in paragraph at lines 311--311
+ [][][][][][] 
+ []
+
+
+Overfull \hbox (326.71878pt too wide) in paragraph at lines 315--315
+ [][][][][][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8] [9
+
+
+] (./main.toc [10
+
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
@@ -1600,7 +1700,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7]
+[12]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1608,7 +1708,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[8]
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14]
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
@@ -1618,7 +1726,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[9]
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1626,15 +1734,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[11])
+[16])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
@@ -1646,37 +1746,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[12] [1
+[17]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18
+
+] [1
 
 ]
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 226--226
-[]|\TU/FandolSong(0)/m/n/10 R1| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 382--382
+[]|\TU/FandolSong(0)/m/it/10 R1| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 227--227
-[]|\TU/FandolSong(0)/m/n/10 R2| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 383--383
+[]|\TU/FandolSong(0)/m/it/10 R2| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 228--228
-[]|\TU/FandolSong(0)/m/n/10 R3| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 384--384
+[]|\TU/FandolSong(0)/m/it/10 R3| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 229--229
-[]|\TU/FandolSong(0)/m/n/10 R4| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 385--385
+[]|\TU/FandolSong(0)/m/it/10 R4| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 230--230
-[]|\TU/FandolSong(0)/m/n/10 R5| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 386--386
+[]|\TU/FandolSong(0)/m/it/10 R5| 
  []
 
 
-Overfull \hbox (0.97908pt too wide) in paragraph at lines 231--231
-[]|\TU/FandolSong(0)/m/n/10 R6| 
+Overfull \hbox (0.97908pt too wide) in paragraph at lines 387--387
+[]|\TU/FandolSong(0)/m/it/10 R6| 
  []
 
 Missing character: There is no ⁻ (U+207B) in font FandolSong/OT:language=dflt;m
@@ -1692,7 +1801,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--250
+Underfull \hbox (badness 10000) in paragraph at lines 406--406
 []|\TU/FandolSong(0)/m/n/9 Boltzmann 常
  []
 
@@ -1707,7 +1816,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (1.78236pt too wide) in paragraph at lines 250--250
+Overfull \hbox (1.78236pt too wide) in paragraph at lines 406--406
 []|\TU/FandolSong(0)/m/n/9 M·L²·T⁻²·Θ⁻¹| 
  []
 
@@ -1734,12 +1843,12 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (5.03136pt too wide) in paragraph at lines 252--252
+Overfull \hbox (5.03136pt too wide) in paragraph at lines 408--408
 []|\TU/FandolSong(0)/m/n/9 M⁻¹·L⁻³·T⁴·I²| 
  []
 
 
-Overfull \hbox (6.4545pt too wide) in paragraph at lines 252--252
+Overfull \hbox (6.4545pt too wide) in paragraph at lines 408--408
 \TU/FandolSong(0)/m/n/9 (←R3+R2+R1)| 
  []
 
@@ -1752,7 +1861,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (6.4545pt too wide) in paragraph at lines 253--253
+Overfull \hbox (6.4545pt too wide) in paragraph at lines 409--409
 \TU/FandolSong(0)/m/n/9 (←R3+R2+R1)| 
  []
 
@@ -1763,10 +1872,6 @@ Overfull \hbox (6.4545pt too wide) in paragraph at lines 253--253
 
  (./chapters/ch01-r1-spacetime.tex
 Chapter 1.
-
-LaTeX Font Warning: Font shape `TU/FandolSong(0)/m/it' undefined
-(Font)              using `TU/FandolSong(0)/m/n' instead on input line 42.
-
 [3
 
 
@@ -1776,8 +1881,6 @@ Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1786,12 +1889,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [4]
-Underfull \hbox (badness 1454) in paragraph at lines 140--140
+Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Underfull \hbox (badness 1454) in paragraph at lines 174--174
 []|$\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 = 3$\TU/FandolSong(0)/m/it/10 （本 宇 宙
  []
 
 
-Overfull \hbox (6.5585pt too wide) in paragraph at lines 129--144
+Overfull \hbox (6.5585pt too wide) in paragraph at lines 163--178
  [][] 
  []
 
@@ -1806,14 +1912,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 185--185
-[]|\TU/FandolSong(0)/m/n/10.95 类 光 (light-
+Underfull \hbox (badness 10000) in paragraph at lines 219--219
+[]|\TU/FandolSong(0)/m/it/10.95 类 光 (light-
  []
 
 
-Underfull \hbox (badness 7851) in paragraph at lines 186--186
-[]|\TU/FandolSong(0)/m/n/10.95 类 空 (space-
+Underfull \hbox (badness 7851) in paragraph at lines 220--220
+[]|\TU/FandolSong(0)/m/it/10.95 类 空 (space-
  []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1864,11 +1973,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10]
-Overfull \hbox (1.76622pt too wide) in paragraph at lines 392--392
+Overfull \hbox (1.76622pt too wide) in paragraph at lines 426--426
 []|\TU/FandolFang(0)/m/n/10 kernel.spacetime_dimensionality| 
  []
 
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1877,6 +1985,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
+Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
 \openout2 = `chapters/ch02-r2-action.aux'.
 
  (./chapters/ch02-r2-action.tex
@@ -1887,7 +2015,7 @@ Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-[12
+[14
 
 
 
@@ -1904,22 +2032,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[13]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[14]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1929,21 +2041,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [16]
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1951,7 +2048,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[17])
+[17]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1960,20 +2057,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18]
-\openout2 = `chapters/ch03-r3-gauge.aux'.
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
- (./chapters/ch03-r3-gauge.tex
-Chapter 3.
-[19
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-
-
-
-]
-Overfull \hbox (6.5585pt too wide) in paragraph at lines 53--67
- [][] 
- []
-
+[19]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1984,6 +2097,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [20]
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1992,6 +2106,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [21]
+\openout2 = `chapters/ch03-r3-gauge.aux'.
+
+ (./chapters/ch03-r3-gauge.tex
+Chapter 3.
+[22
+
+
+
+
+]
+Overfull \hbox (6.5585pt too wide) in paragraph at lines 89--103
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1999,15 +2127,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[23])
+[23]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2016,6 +2138,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
+! Too many }'s.
+l.321 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29]
 \openout2 = `chapters/ch04-r4-quantum.aux'.
 
  (./chapters/ch04-r4-quantum.tex
@@ -2024,7 +2192,7 @@ Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-[25
+[30
 
 
 
@@ -2057,7 +2225,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]
+[31]
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
@@ -2077,7 +2245,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[27]
+[32]
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
@@ -2123,7 +2291,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]
+[33]
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
@@ -2153,10 +2321,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[29]
+[34]
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-)
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2164,12 +2333,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[30]
+[35]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.277 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
 \openout2 = `chapters/ch05-r5-born.aux'.
 
  (./chapters/ch05-r5-born.tex
 Chapter 5.
-[31
+[38
 
 
 
@@ -2206,107 +2403,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[33]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[34])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[35]
-\openout2 = `chapters/ch06-r6-entropy.aux'.
-
- (./chapters/ch06-r6-entropy.tex
-Chapter 6.
-[36
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
-[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
-$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[] \OMS/cmsy/m/n/10 ^^A
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
-[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
-$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[] \OMS/cmsy/m/n/10 ^^A
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[]|$\OML/cmm/m/it/10 ^^V \OMS/cmsy/m/n/10 ^^Q
- []
-
-
-Overfull \hbox (12.24896pt too wide) in paragraph at lines 60--75
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 87.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 87.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ln' on input line 87.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 87.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[37]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[38]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [39]
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2315,10 +2412,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [40]
-Underfull \hbox (badness 5802) in paragraph at lines 243--243
-[]|\TU/FandolSong(0)/m/it/10 无 温 度 定 义 $\OT1/cmr/m/n/10 1/\OML/cmm/m/it/10 T \O
-MS/cmsy/m/n/10 ^^Q
- []
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42]
+! Too many }'s.
+l.243 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.247 ...是振幅的模而非模方（$P = |\langle a|\psi\rangle|$）]
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.255 ...是振幅的四次方（$P = |\langle a|\psi\rangle|^4$）]
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 )
 
@@ -2328,37 +2458,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[41] [42
+[43]
+\openout2 = `chapters/ch06-r6-entropy.aux'.
 
-
-
-] [43
-
-]
-\openout2 = `chapters/ch07-mechanics.aux'.
-
- (./chapters/ch07-mechanics.tex
-Chapter 7.
-
-Overfull \hbox (0.72873pt too wide) in paragraph at lines 32--32
-[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
-$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[]$| 
- []
-
-
-Overfull \hbox (0.72873pt too wide) in paragraph at lines 33--33
-[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
-$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[]$| 
- []
-
+ (./chapters/ch06-r6-entropy.tex
+Chapter 6.
 [44
 
 
 
+
 ]
-Underfull \hbox (badness 1681) in paragraph at lines 95--96
-[]|\TU/FandolSong(0)/m/it/10 边 界 项 $\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OML
-/cmm/m/it/10 L \OT1/cmr/m/n/10 +
+Underfull \hbox (badness 10000) in paragraph at lines 110--110
+[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
+$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[] \OMS/cmsy/m/n/10 ^^A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--111
+[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
+$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[] \OMS/cmsy/m/n/10 ^^A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--117
+[]|$\OML/cmm/m/it/10 ^^V \OMS/cmsy/m/n/10 ^^Q
+ []
+
+
+Overfull \hbox (12.24896pt too wide) in paragraph at lines 106--121
+ [][] 
  []
 
 
@@ -2369,6 +2498,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [45]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\ln' on input line 133.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 133.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2384,7 +2529,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[47])
+[47]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2393,18 +2538,202 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [48]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Underfull \hbox (badness 5802) in paragraph at lines 289--289
+[]|\TU/FandolSong(0)/m/it/10 无 温 度 定 义 $\OT1/cmr/m/n/10 1/\OML/cmm/m/it/10 T \O
+MS/cmsy/m/n/10 ^^Q
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[49]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.325 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[50]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[51] [52
+
+
+
+] [53
+
+]
+\openout2 = `chapters/ch07-mechanics.aux'.
+
+ (./chapters/ch07-mechanics.tex
+Chapter 7.
+
+Underfull \hbox (badness 1796) in paragraph at lines 17--17
+[]|\TU/FandolSong(0)/m/it/10 R2 作 用
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\TU/FandolSong(0)/m/it/10 Euler-
+ []
+
+[54
+
+
+
+]
+Overfull \hbox (0.72873pt too wide) in paragraph at lines 56--56
+[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
+$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[]$| 
+ []
+
+
+Overfull \hbox (0.72873pt too wide) in paragraph at lines 57--57
+[]|\TU/FandolSong(0)/m/it/10 M$\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 L
+$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[]$| 
+ []
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[55]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[56]
+Underfull \hbox (badness 1681) in paragraph at lines 157--158
+[]|\TU/FandolSong(0)/m/it/10 边 界 项 $\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OML
+/cmm/m/it/10 L \OT1/cmr/m/n/10 +
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[57]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[58]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[59]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[60]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[62]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[63]
 \openout2 = `chapters/ch08-electromagnetism.aux'.
 
  (./chapters/ch08-electromagnetism.tex
 Chapter 8.
+[64
 
-Underfull \hbox (badness 5847) in paragraph at lines 34--34
+
+
+
+]
+Underfull \hbox (badness 5847) in paragraph at lines 66--66
 []|$\OML/cmm/m/it/10 J[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 c^^Z[]$\TU/FandolSo
 ng(0)/m/it/10 ,
  []
 
 
-Overfull \hbox (2.42195pt too wide) in paragraph at lines 35--35
+Overfull \hbox (2.42195pt too wide) in paragraph at lines 67--67
 []|\TU/FandolSong(0)/m/it/10 M$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10
  L$[]\OMS/cmsy/m/n/10 ^^A$\TU/FandolSong(0)/m/it/10 T$[]\OMS/cmsy/m/n/10 ^^A$\T
 U/FandolSong(0)/m/it/10 I$[]$| 
@@ -2412,18 +2741,12 @@ U/FandolSong(0)/m/it/10 I$[]$|
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `math shift' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 43.
+(hyperref)                removing `math shift' on input line 75.
 
-[49
-
-
-
-
-]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2431,7 +2754,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[50])
+[65]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2439,55 +2764,252 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[51]
+[66]
+! Too many }'s.
+l.146 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[67]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.193 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[68]
+Overfull \hbox (17.32054pt too wide) in paragraph at lines 265--279
+ [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[69]
+! Too many }'s.
+l.288 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Overfull \hbox (439.08295pt too wide) detected at line 306
+[] [] [] [] [] [] [] [] [] [] []
+ []
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[70])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[71]
 \openout2 = `chapters/ch09-quantum.aux'.
 
  (./chapters/ch09-quantum.tex
 Chapter 9.
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-Missing character: There is no ̈ (U+0308) in font FandolSong Bold/OT:language=d
-flt;mapping=tex-text;!
-Missing character: There is no ̈ (U+0308) in font FandolSong Bold/OT:language=d
-flt;mapping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
-[52
+[72
 
 
 
 
 ]
+Missing character: There is no ̈ (U+0308) in font FandolSong Bold/OT:language=d
+flt;mapping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong Bold/OT:language=d
+flt;mapping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong Bold/OT:language=d
+flt;mapping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[73]
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.126 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[74]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.173 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[75]
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[76]
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
@@ -2501,7 +3023,7 @@ apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 3612) in paragraph at lines 90--92
+Underfull \hbox (badness 3612) in paragraph at lines 237--239
 []\TU/FandolSong(0)/b/it/10.95 Step 3 \TU/FandolSong(0)/m/it/10.95 — 能 量-时 间 （M
 andelstam-Tamm）： $\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 t \OMS/cmsy/m/n/10.
 95 ^^Q \OML/cmm/m/it/10.95 ^^[[]\OT1/cmr/m/n/10.95 /\OMS/cmsy/m/n/10.95 j\OML/c
@@ -2512,6 +3034,32 @@ OMS/cmsy/m/n/10.95 i\OT1/cmr/m/n/10.95 /\OML/cmm/m/it/10.95 dt \OT1/cmr/m/n/10.
 95 =
  []
 
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+! Too many }'s.
+l.258 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2519,8 +3067,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[53]
-Underfull \hbox (badness 1838) in paragraph at lines 105--106
+[77]
+Underfull \hbox (badness 1838) in paragraph at lines 277--278
 \TU/FandolSong(0)/b/it/10.95 变 量\TU/FandolSong(0)/m/it/10.95 ： 费 米 子 场 算 符 $\OM
 L/cmm/m/it/10.95  []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x\OT1/cmr/m/n/10.95
  )$\TU/FandolSong(0)/m/it/10.95 （半 整 数 自 旋 $\OML/cmm/m/it/10.95 j$\TU/FandolSon
@@ -2528,6 +3076,64 @@ g(0)/m/it/10.95 ）， Lorentz 表 示 $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 
 1/cmr/m/n/10.95 )$\TU/FandolSong(0)/m/it/10.95 ， 产 生/ 湮 灭 算 符
  []
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[78]
+! Too many }'s.
+l.334 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[79]
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ̊ (U+030A) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2536,17 +3142,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[54]
+[80]
 \openout2 = `chapters/ch10-thermodynamics.aux'.
 
  (./chapters/ch10-thermodynamics.tex
 Chapter 10.
-[55
+[81
 
 
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[82]
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
@@ -2558,8 +3172,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[56]
-Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+[83]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[84]
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2568,12 +3190,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[57]
+[85]
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.291 ...in{limitbox}[若无 $S = k_B\ln W$（无微观-宏观桥梁）]
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2581,12 +3212,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[58]
+[86])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[87]
 \openout2 = `chapters/ch11-relativity.aux'.
 
  (./chapters/ch11-relativity.tex
 Chapter 11.
-[59
+[88
 
 
 
@@ -2599,7 +3238,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[60])
+[89]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.115 \begin{oombox}[$E=mc^2$ 的实际转换效率]
+                                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2607,19 +3254,54 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[61]
+[90]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[91]
+Underfull \hbox (badness 1014) in paragraph at lines 190--191
+[]\TU/FandolSong(0)/b/it/10.95 自 引 力 系 统 临 界 值\TU/FandolSong(0)/m/it/10.95 ：$\O
+ML/cmm/m/it/10.95 GM\OT1/cmr/m/n/10.95 /(\OML/cmm/m/it/10.95 Rc[]\OT1/cmr/m/n/1
+0.95 ) \OMS/cmsy/m/n/10.95 ^^X \OT1/cmr/m/n/10.95 1$ \TU/FandolSong(0)/m/it/10.
+95 意 味 着 GR 效 应 不 可 忽 略 ——中 子 星
+ []
+
+! Too many }'s.
+l.200 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[92])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[93]
 \openout2 = `chapters/ch12-conservation.aux'.
 
  (./chapters/ch12-conservation.tex
 Chapter 12.
-[62
+[94
 
 
 
 
 ]
-Missing character: There is no ℂ (U+2102) in font FandolSong/OT:language=dflt;m
-apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2627,8 +3309,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[63])
-Underfull \hbox (badness 10000) in paragraph at lines 136--314
+[95]
+Missing character: There is no ℂ (U+2102) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 []\TU/FandolSong(0)/b/it/10.95 补 充 规 则\TU/FandolSong(0)/m/it/10.95 ： 连 续 性 方 程 
 $\OML/cmm/m/it/10.95 @[]J[] \OT1/cmr/m/n/10.95 = 0$ \TU/FandolSong(0)/m/it/10.9
 5 是 每 个 守 恒 律 的 局 部 微 分 形 式
@@ -2641,7 +3326,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[64]
+[96]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[97])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[98]
 \openout2 = `chapters/ch13-contingent.aux'.
 
  (./chapters/ch13-contingent.tex
@@ -2658,7 +3359,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 14.
 
-[65
+[99
 
 
 
@@ -2675,7 +3376,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[66]
+[100]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2683,9 +3384,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[67]
+[101]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[102]
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.236 \begin{limitbox}[若 $D=2+1$（两个空间维 + 一个时间维）]
+                                                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.247 \begin{limitbox}[若 $D=4+1$（四个空间维 + 一个时间维）]
+                                                
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2693,15 +3419,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[68])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[69]
+[103]
 \openout2 = `chapters/ch14-sm-eft.aux'.
 
  (./chapters/ch14-sm-eft.tex
@@ -2718,7 +3436,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 20.
 
-[70
+[104
 
 
 
@@ -2731,7 +3449,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[71]
+[105]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2739,7 +3457,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[72]
+[106]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2747,7 +3465,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[73])
+[107]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2755,12 +3473,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[74]
+[108]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[109]
+! Too many }'s.
+l.277 \endprecisionbox}
+                       
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[110]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.299 \begin{limitbox}[若只有 $n_g=2$ 代费米子（无 CP 破坏）]
+                                                 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[111]
 \openout2 = `chapters/ch15-proof.aux'.
 
  (./chapters/ch15-proof.tex
 Chapter 15.
-[75
+[112
 
 
 
@@ -2786,7 +3543,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[76]
+[113]
 Underfull \hbox (badness 1102) in paragraph at lines 98--98
 []|\TU/FandolSong(0)/b/n/9 受 影 响 定
  []
@@ -2860,7 +3617,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[77]
+[114]
 Underfull \hbox (badness 2564) in paragraph at lines 175--175
 []|\TU/FandolSong(0)/m/n/9 Lovelock （引 力 唯 一 性）$\OMS/cmsy/m/n/9 $$ \TU/FandolSo
 ng(0)/m/n/9 SM
@@ -2873,7 +3630,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[78]
+[115]
 Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
@@ -2883,14 +3640,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[79]
+[116]
 Underfull \hbox (badness 3375) in paragraph at lines 244--248
 \TU/FandolSong(0)/m/it/10.95 详 细 证 明 数 据 见 [][]$[][][][][] [] [] [] [][][][][][
 ] [] [][][] [] [][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][]
 [][][][][]$[][] 的 \TU/FandolFang(0)/m/n/10.95 layer1/
  []
 
-)
+Missing character: There is no ̈ (U+0308) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2898,12 +3656,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[80] [81
+[117]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[118])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[119] [120
 
 
 
 ]
 Appendix A.
+Missing character: There is no å (U+00E5) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+[121
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[122]
+Appendix B.
 Missing character: There is no ⁻ (U+207B) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
@@ -2923,7 +3711,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+Underfull \hbox (badness 10000) in paragraph at lines 545--545
 []|\TU/FandolSong(0)/m/n/9 Boltzmann 常
  []
 
@@ -2938,7 +3726,7 @@ apping=tex-text;!
 Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (1.78236pt too wide) in paragraph at lines 337--337
+Overfull \hbox (1.78236pt too wide) in paragraph at lines 545--545
 []|\TU/FandolSong(0)/m/n/9 M·L²·T⁻²·Θ⁻¹| 
  []
 
@@ -2961,7 +3749,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--339
+Underfull \hbox (badness 10000) in paragraph at lines 547--547
 []|$\OT1/cmr/m/n/9 6\OML/cmm/m/it/9 :\OT1/cmr/m/n/9 67430 \OMS/cmsy/m/n/9 ^^B \
 OT1/cmr/m/n/9 10[]$
  []
@@ -2989,7 +3777,7 @@ apping=tex-text;!
 Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (5.03136pt too wide) in paragraph at lines 341--341
+Overfull \hbox (5.03136pt too wide) in paragraph at lines 549--549
 []|\TU/FandolSong(0)/m/n/9 M⁻¹·L⁻³·T⁴·I²| 
  []
 
@@ -3011,132 +3799,132 @@ Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-[82
+[123
 
 ]
-Appendix B.
+Appendix C.
 
 LaTeX Font Warning: Font shape `TU/FandolFang(0)/b/n' undefined
-(Font)              using `TU/FandolFang(0)/m/n' instead on input line 359.
+(Font)              using `TU/FandolFang(0)/m/n' instead on input line 567.
 
 
-Overfull \hbox (3.91013pt too wide) in paragraph at lines 361--361
+Overfull \hbox (3.91013pt too wide) in paragraph at lines 569--569
 []|\TU/FandolFang(0)/m/n/9 law.euler_lagrange| 
  []
 
 
-Overfull \hbox (13.61212pt too wide) in paragraph at lines 362--362
+Overfull \hbox (13.61212pt too wide) in paragraph at lines 570--570
 []|\TU/FandolFang(0)/m/n/9 law.noether_theorem| 
  []
 
 
-Overfull \hbox (27.14812pt too wide) in paragraph at lines 363--363
+Overfull \hbox (27.14812pt too wide) in paragraph at lines 571--571
 []|\TU/FandolFang(0)/m/n/9 law.energy_conservation| 
  []
 
 
-Overfull \hbox (46.03012pt too wide) in paragraph at lines 364--364
+Overfull \hbox (46.03012pt too wide) in paragraph at lines 572--572
 []|\TU/FandolFang(0)/m/n/9 law.momentum_conservation| 
  []
 
 
-Overfull \hbox (82.50713pt too wide) in paragraph at lines 365--365
+Overfull \hbox (82.50713pt too wide) in paragraph at lines 573--573
 []|\TU/FandolFang(0)/m/n/9 law.angular_momentum_conservation| 
  []
 
 
-Overfull \hbox (26.75212pt too wide) in paragraph at lines 366--366
+Overfull \hbox (26.75212pt too wide) in paragraph at lines 574--574
 []|\TU/FandolFang(0)/m/n/9 law.charge_conservation| 
  []
 
 
-Overfull \hbox (6.65512pt too wide) in paragraph at lines 368--368
+Overfull \hbox (6.65512pt too wide) in paragraph at lines 576--576
 []|\TU/FandolFang(0)/m/n/9 law.newton_second| 
  []
 
 
-Overfull \hbox (1.02112pt too wide) in paragraph at lines 371--371
+Overfull \hbox (1.02112pt too wide) in paragraph at lines 579--579
 []|\TU/FandolFang(0)/m/n/9 law.gauss_electric| 
  []
 
 
-Overfull \hbox (8.45512pt too wide) in paragraph at lines 372--372
+Overfull \hbox (8.45512pt too wide) in paragraph at lines 580--580
 []|\TU/FandolFang(0)/m/n/9 law.gauss_magnetic| 
  []
 
 
-Overfull \hbox (18.49013pt too wide) in paragraph at lines 373--373
+Overfull \hbox (18.49013pt too wide) in paragraph at lines 581--581
 []|\TU/FandolFang(0)/m/n/9 law.faraday_induction| 
  []
 
 
-Overfull \hbox (12.78412pt too wide) in paragraph at lines 374--374
+Overfull \hbox (12.78412pt too wide) in paragraph at lines 582--582
 []|\TU/FandolFang(0)/m/n/9 law.ampere_maxwell| 
  []
 
 
-Overfull \hbox (24.00713pt too wide) in paragraph at lines 376--376
+Overfull \hbox (24.00713pt too wide) in paragraph at lines 584--584
 []|\TU/FandolFang(0)/m/n/9 law.em_wave_equation| 
  []
 
 
-Overfull \hbox (34.99612pt too wide) in paragraph at lines 378--378
+Overfull \hbox (34.99612pt too wide) in paragraph at lines 586--586
 []|\TU/FandolFang(0)/m/n/9 law.schroedinger_equation| 
  []
 
 Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
 
-Overfull \hbox (15.70012pt too wide) in paragraph at lines 379--379
+Overfull \hbox (15.70012pt too wide) in paragraph at lines 587--587
 []|\TU/FandolFang(0)/m/n/9 law.energy_frequency| 
  []
 
 
-Overfull \hbox (38.97412pt too wide) in paragraph at lines 380--380
+Overfull \hbox (38.97412pt too wide) in paragraph at lines 588--588
 []|\TU/FandolFang(0)/m/n/9 law.de_broglie_wavelength| 
  []
 
 
-Overfull \hbox (31.59412pt too wide) in paragraph at lines 381--381
+Overfull \hbox (31.59412pt too wide) in paragraph at lines 589--589
 []|\TU/FandolFang(0)/m/n/9 law.uncertainty_principle| 
  []
 
 
-Overfull \hbox (7.49213pt too wide) in paragraph at lines 382--382
+Overfull \hbox (7.49213pt too wide) in paragraph at lines 590--590
 []|\TU/FandolFang(0)/m/n/9 law.pauli_exclusion| 
  []
 
 
-Overfull \hbox (17.36513pt too wide) in paragraph at lines 384--384
+Overfull \hbox (17.36513pt too wide) in paragraph at lines 592--592
 []|\TU/FandolFang(0)/m/n/9 law.lorentz_transform| 
  []
 
 
-Overfull \hbox (23.79112pt too wide) in paragraph at lines 387--387
+Overfull \hbox (23.79112pt too wide) in paragraph at lines 595--595
 []|\TU/FandolFang(0)/m/n/9 law.newton_gravitation| 
  []
 
 
-Overfull \hbox (26.63512pt too wide) in paragraph at lines 390--390
+Overfull \hbox (26.63512pt too wide) in paragraph at lines 598--598
 []|\TU/FandolFang(0)/m/n/9 law.second_law_thermo| 
  []
 
 
-Overfull \hbox (16.37512pt too wide) in paragraph at lines 391--391
+Overfull \hbox (16.37512pt too wide) in paragraph at lines 599--599
 []|\TU/FandolFang(0)/m/n/9 law.first_law_thermo| 
  []
 
 
-Overfull \hbox (20.17313pt too wide) in paragraph at lines 392--392
+Overfull \hbox (20.17313pt too wide) in paragraph at lines 600--600
 []|\TU/FandolFang(0)/m/n/9 law.third_law_thermo| 
  []
 
 
-Overfull \hbox (2.47537pt too wide) in alignment at lines 357--400
+Overfull \hbox (2.47537pt too wide) in alignment at lines 565--608
  [] [] [] [] 
  []
 
-[83
+[124
 
 ]
 
@@ -3146,15 +3934,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[84]
-Appendix C.
-Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
+[125]
+Appendix D.
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
 apping=tex-text;!
-[85
+Missing character: There is no ² (U+00B2) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ⁻ (U+207B) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¹ (U+00B9) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+Missing character: There is no ¯ (U+00AF) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+
+ignored: Infinite glue shrinkage found in box being split [126
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 447.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[127]
+Appendix E.
+Missing character: There is no ö (U+00F6) in font FandolSong/OT:language=dflt;m
+apping=tex-text;!
+[128
+
+]
+
+LaTeX Warning: Empty bibliography on input line 708.
 
 runsystem(makeindex main.idx)...executed safely (allowed).
 
@@ -3174,19 +3985,28 @@ L3 programming layer <2026-03-20>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8E255CD7A58B16A83C291D587FF92568;31193.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 5219279D6E61718F7FB3B6C9ABAB83B4;34119
+(rerunfilecheck)             After:  E2460BB83B4CDC25D1F6026D00ABDB63;34841.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41613 strings out of 467992
- 891675 string characters out of 5431321
- 1861316 words of memory out of 5000000
- 69755 multiletter control sequences out of 15000+600000
- 647703 words of font info for 156 fonts, out of 8000000 for 9000
+ 42644 strings out of 467992
+ 911561 string characters out of 5431321
+ 1871966 words of memory out of 5000000
+ 70784 multiletter control sequences out of 15000+600000
+ 655109 words of font info for 184 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 116i,16n,121p,1875b,1054s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,16n,121p,1875b,1053s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (97 pages).
+Output written on main.pdf (146 pages).

@@ -44,6 +44,42 @@ R3 是对现代物理学影响最深远的原理之一。它说：\textbf{物理
 \textbf{注意}：R3 不指定规范群的具体选择（$U(1)$, $SU(2)$, $SU(3)$ 等）——那是 contingent 事实。
 R3 只规定：\textbf{若}存在规范对称性，则必然伴随着规范场和规范相互作用。
 
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Left: Global U(1) transformation
+  \node at (0,3.8) {\small\textbf{全局 $U(1)$ 变换}};
+  \draw[thick] (0,0) circle (1.5);
+  \filldraw (0,1.5) circle (2pt) node[right] {\footnotesize $\psi$};
+  % Rotation arrow around the circle
+  \draw[dorange,->,>=Stealth] (1.2,0.9) arc(37:323:1.5);
+  \node at (0,-2.2) {\footnotesize $\psi \to e^{i\alpha}\psi$（$\alpha$ 常数）};
+  \node at (0,-2.8) {\footnotesize 物理定律不变——Noether $\to$ 电荷守恒};
+  
+  % Arrow between
+  \draw[->,>=Stealth,very thick] (3.5,1.5) -- (6,1.5);
+  \node at (4.75,1.8) {\small 推广到\textbf{局域}};
+  
+  % Right: Local U(1) - each point has its own circle
+  \node at (8,3.8) {\small\textbf{局域 $U(1)$ 变换}};
+  % Three circles at different points
+  \draw[thick] (6.5,0) circle (0.8);
+  \draw[thick] (8,0) circle (0.8);
+  \draw[thick] (9.5,0) circle (0.8);
+  % Phase angles at each point
+  \draw[pblue,->,>=Stealth] (6.5,0) -- (6.9,0.56) node[right] {\tiny $\alpha(x_1)$};
+  \draw[pblue,->,>=Stealth] (8,0) -- (7.4,0.56) node[left] {\tiny $\alpha(x_2)$};
+  \draw[pblue,->,>=Stealth] (9.5,0) -- (10.1,0.56) node[right] {\tiny $\alpha(x_3)$};
+  % Connecting gauge field
+  \draw[wred,thick,decorate,decoration={snake,amplitude=0.5mm,segment length=3mm}] (7.3,0) -- (8.8,0);
+  \node[wred] at (8.05,0.4) {\footnotesize $A_\mu$};
+  \node at (8,-1.5) {\footnotesize $\partial_\mu \to D_\mu = \partial_\mu - igA_\mu$};
+  \node at (8,-2.2) {\footnotesize 补偿场 $\to$ 规范玻色子 $\to$ \textbf{力}};
+  
+  % Bottom label
+  \node at (4.75,-3.0) {\small 每个时空点可以独立旋转相位——需要"联络"来比较不同点的相位};
+\end{tikzpicture}
+\end{center}
+
 % ── 变量定义表 ──
 \section{变量定义}
 

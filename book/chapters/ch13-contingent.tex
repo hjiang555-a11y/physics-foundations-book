@@ -109,6 +109,53 @@ V_{\text{eff}}(r) = -\frac{k}{r^{D-2}} + \frac{L^2}{2mr^2}
 
 \fbox{[N]} $D=3$ 空间维数。\fbox{[N]} 保守力。\fbox{[S]} $D=3$ + 保守有心力 $\Rightarrow$ 稳定椭圆轨道。
 
+\subsection{不同维度的世界}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Title
+  \node at (2,3.5) {\small\textbf{2D 世界（平国）}};
+  \node at (8,3.5) {\small\textbf{3D 世界（我们的宇宙）}};
+  
+  % 2D world
+  \draw[thick] (0,0) -- (4,0) -- (4,3) -- (0,3) -- cycle;
+  \filldraw (2,2) circle (2pt) node[above] {\tiny 源};
+  \draw[gray,dashed] (2,2) circle (0.5);
+  \draw[gray,dashed] (2,2) circle (1.0);
+  \draw[gray,dashed] (2,2) circle (1.5);
+  \draw[wred,->,>=Stealth] (2,2) -- (3.3,2.8);
+  \node[font=\footnotesize] at (2,0.5) {$F\propto 1/r$};
+  \node[font=\footnotesize] at (2,0.1) {波有拖尾};
+  % Flatlander
+  \filldraw (1.0,0.8) circle (1.5pt) node[below] {\tiny 居民};
+  
+  % Arrow
+  \draw[->,>=Stealth,very thick] (4.8,1.5) -- (5.8,1.5);
+  \node at (5.3,1.8) {$D=3$};
+  
+  % 3D world
+  \draw[thick] (6,0) -- (10,0) -- (10,3) -- (6,3) -- cycle;
+  % Show perspective (3D cube-like feel)
+  \draw[thick] (6.5,0.5) -- (6.5,3.5) -- (10.5,3.5) -- (10.5,0.5) -- cycle;
+  \draw[gray,dashed] (6,0) -- (6.5,0.5);
+  \draw[gray,dashed] (10,0) -- (10.5,0.5);
+  \draw[gray,dashed] (10,3) -- (10.5,3.5);
+  \filldraw (8,2) circle (2pt) node[above] {\tiny 源};
+  \draw[gray,dashed] (8,2) circle (0.5);
+  \draw[gray,dashed] (8,2) circle (1.0);
+  \node[font=\footnotesize] at (8,0.2) {$F\propto 1/r^2$，波无拖尾};
+  
+  % Right side: consequences
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,3.2) {\textbf{$D=3$ 的特殊性}};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,2.6) {$\bullet$ 稳定行星轨道};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,2.2) {$\bullet$ 平方反比力律};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,1.8) {$\bullet$ Huygens 原理（无拖尾）};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,1.4) {$\bullet$ SO(3) 角动量 3 分量};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,1.0) {$\bullet$ 引力波 2 个极化};
+  \node[font=\footnotesize,text width=5cm,align=left] at (13,0.6) {$\bullet$ 2 个引力波极化模式};
+\end{tikzpicture}
+\end{center}
+
 \section{Huygens 原理：为什么声音清晰、没有回响拖尾}
 
 波动方程 $\Box \phi \equiv (\nabla^2 - c^{-2}\partial^2/\partial t^2)\phi = 0$ 的 Green 函数在奇数和偶数空间维数中有根本不同的行为：

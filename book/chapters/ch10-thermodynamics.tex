@@ -92,6 +92,37 @@ R6 Boltzmann 熵 & R6 等概率先验 & 能量守恒(Noether) \\
 
 \keypoint{热力学第一定律 $dU = T dS - P dV + \mu dN$ 中的每一项对应一种"做功"方式：$TdS$ = 热（熵的流动），$-PdV$ = 机械功（体积变化），$\mu dN$ = 化学功（粒子数变化）。这三项恰好是热力学中能量的三种传递方式。}
 
+\subsection{热机与 Carnot 循环}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9]
+  % Axes
+  \draw[->,thick] (0,0) -- (8,0) node[right] {$V$};
+  \draw[->,thick] (0,0) -- (0,5) node[above] {$P$};
+  
+  % Carnot cycle (two isotherms + two adiabats)
+  \draw[wred,very thick,->,>=Stealth] (1.5,3.8) -- (5.5,1.2) node[midway,below right,font=\footnotesize] {等温膨胀 $T_H$};
+  \draw[pblue,very thick,->,>=Stealth] (5.5,1.2) -- (4.0,0.5) node[midway,below,font=\footnotesize] {绝热膨胀};
+  \draw[wred,very thick,->,>=Stealth] (4.0,0.5) -- (1.2,1.6) node[midway,above left,font=\footnotesize] {等温压缩 $T_C$};
+  \draw[pblue,very thick,->,>=Stealth] (1.2,1.6) -- (1.5,3.8) node[midway,left,font=\footnotesize] {绝热压缩};
+  
+  % Heat reservoirs
+  \node[font=\small] at (4,4.5) {\textbf{高温热库} $T_H$};
+  \draw[wred,->,>=Stealth,thick] (3,4.2) -- (2,3.5);
+  \node at (2.5,4.0) {\footnotesize $Q_H$};
+  
+  \node[font=\small] at (7,4.5) {\textbf{低温热库} $T_C$};
+  \draw[wred,->,>=Stealth,thick] (5.5,0.3) -- (7,0.8);
+  \node at (6.3,0.3) {\footnotesize $Q_C$};
+  
+  % Work
+  \draw[pblue,->,>=Stealth,thick] (6.5,2.5) -- (6.5,1.5) node[midway,right] {\footnotesize $W=Q_H-Q_C$};
+  
+  % Efficiency
+  \node at (4,-0.8) {\small $\eta = \dfrac{W}{Q_H} = 1 - \dfrac{T_C}{T_H}$（Carnot 效率）};
+\end{tikzpicture}
+\end{center}
+
 \bridge{$dU = \delta Q - \delta W$ （经验能量守恒）\\ $+$ R6: $\delta Q_{\text{rev}} = T dS$, $\delta W = P dV$ \\ $=$ $dU = T dS - P dV + \mu dN$}{Noether（能量守恒）+ R6（熵的统计定义）$\to$ 热力学第一定律 \\ 这个方程统一了能量、热、功、化学势——是热力学的"Euler-Lagrange方程"}
 
 % ════════════════════════════════════════════════════════
