@@ -46,6 +46,11 @@
 \definecolor{lo}{RGB}{255,245,230}
 \definecolor{lr}{RGB}{255,235,235}
 \definecolor{graybg}{RGB}{248,248,248}
+\definecolor{darkpurple}{RGB}{85,26,139}
+\definecolor{lp}{RGB}{245,235,255}
+\definecolor{darkteal}{RGB}{0,105,105}
+\definecolor{lt}{RGB}{230,250,250}
+\definecolor{gold}{RGB}{180,140,20}
 
 \usepackage{tcolorbox}
 \tcbuselibrary{skins,breakable}
@@ -65,6 +70,37 @@
 \newtcolorbox{notebox}[1][]{
   colback=graybg, colframe=gray!50, fonttitle=\bfseries, title=#1,
   breakable, enhanced, before skip=10pt, after skip=10pt}
+
+% ── Enhanced boxes for math-physics bridging (Round 14) ──
+\newtcolorbox{insightbox}[1][]{
+  colback=lp, colframe=darkpurple!70!black, fonttitle=\bfseries\color{darkpurple}, title=#1,
+  breakable, enhanced, drop shadow=black!10, before skip=14pt, after skip=14pt,
+  borderline west={3pt}{0pt}{darkpurple!50}}
+
+\newtcolorbox{oombox}[1][]{
+  colback=lt, colframe=darkteal!70!black, fonttitle=\bfseries\color{darkteal}, title=#1,
+  breakable, enhanced, before skip=12pt, after skip=12pt,
+  borderline west={3pt}{0pt}{darkteal!50}}
+
+\newtcolorbox{precisionbox}[1][]{
+  colback=graybg, colframe=gold!70!black, fonttitle=\bfseries, title=#1,
+  breakable, enhanced, before skip=10pt, after skip=10pt}
+
+\newcommand{\precexact}{\textcolor{lgreen}{\textbf{[精确]}}}
+\newcommand{\preceffective}{\textcolor{pblue}{\textbf{[有效]}}}
+\newcommand{\precapprox}{\textcolor{dorange}{\textbf{[近似]}}}
+\newcommand{\precqualitative}{\textcolor{wred}{\textbf{[定性]}}}
+\newcommand{\preccontingent}{\textcolor{gold}{\textbf{[偶然]}}}
+
+\newcommand{\keypoint}[1]{%
+  \begin{center}
+  \colorbox{darkpurple!8}{\parbox{0.92\textwidth}{\small\color{darkpurple!90!black}\textbf{关键洞察：}#1}}
+  \end{center}}
+
+\newcommand{\bridge}[2]{%
+  \begin{center}
+  \colorbox{lg!30}{\parbox{0.92\textwidth}{\small\textbf{数学$\to$物理桥梁：}#1 \\[3pt] \textit{物理$\to$数学桥梁：}#2}}
+  \end{center}}
 
 % ── Graphics ──
 \usepackage{graphicx}
@@ -196,6 +232,73 @@ R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向
   \textbf{元验证}: 完整性 100\% (43/43), 自洽性 0 矛盾, 必要性全部成立。\\
   来源仓库：\url{https://github.com/hjiang555-a11y/physics-foundations} (Round 13)
 \end{notebox}
+
+\clearpage
+
+% ══════════════════════════════════════════════════════
+%  阅读导引：数学与物理的桥梁
+% ══════════════════════════════════════════════════════
+\chapter*{阅读导引：数学与物理的桥梁}
+\addcontentsline{toc}{chapter}{阅读导引}
+
+\section*{本书的预设读者}
+
+本书假设你具备\textbf{高等数学基础}——微积分、线性代数、复分析的基本概念、变分法原理——和\textbf{基本物理常识}——知道Newton力学、光的波粒二象性、原子的大致结构。我们不会教你什么是偏导数或什么是电场。但我们会告诉你：\textit{为什么}偏导数出现在Euler-Lagrange方程里，而这个方程的物理含义是什么；\textit{为什么}规范不变性逼出了电场和磁场的存在。
+
+\section*{三个层次的理解}
+
+本书希望帮助你在三个层次上获得理解：
+
+\begin{enumerate}
+  \item \textbf{逻辑关系层}：每条定理可以从哪些前提推出（\fbox{[N]}），哪些前提组合保证了结论必然成立（\fbox{[S]}）。你可以像验算一道数学证明一样，逐行检查推导的每一步。
+  \item \textbf{物理直觉层}：每个数学步骤对应的物理图像是什么。分部积分不是无聊的技巧——它是"把边界上的东西去掉"；Noether定理的核心是"对称性意味着你在某个方向上看不出区别，所以在那个方向上守恒"。
+  \item \textbf{数量级与精确度层}：每条结果在什么精确程度上成立。是严格等号还是近似？在什么条件下近似成立？偏离的数量级有多大？当你用日常经验验证时，预期的精度是多少？
+\end{enumerate}
+
+\section*{本书使用的标注体系}
+
+\begin{center}
+\small
+\begin{tabular}{p{2cm}p{3cm}p{8cm}}
+\toprule
+\textbf{标注} & \textbf{含义} & \textbf{如何使用} \\
+\midrule
+\fbox{[N]} & 必要性条件 & 若移除，推导在此处断裂。检查"这条假设是否真的必不可少" \\
+\fbox{[S]} & 充分性条件 & 给定这些前提，结论必然成立。检查"前提是否已经全部满足" \\
+\precexact & 精确成立 & 严格数学等式或定义性关系（如 $[\hat{x},\hat{p}]=i\hbar$、$S=k_B\ln W$） \\
+\preceffective & 有效理论 & 在指定能标/尺度范围内精确，但有失效边界（如Einstein场方程、Schr\"odinger方程） \\
+\precapprox & 近似成立 & 在指定近似条件下的结果（如Newton引力为GR的弱场低速极限） \\
+\precqualitative & 定性推论 & 指示趋势和结构，不给出精确数值（如Huygens原理的拖尾/无拖尾二分） \\
+\preccontingent & 偶然事实 & 本宇宙的实验测定数值，不由R1-R6唯一决定（如规范群选择、费米子代数） \\
+\midrule
+\keypoint{...} & 关键洞察 & 此处是逻辑链条中最关键的一步——停下来想一想"为什么这步成立" \\
+\bridge{...}{...} & 数学$\leftrightarrow$物理桥梁 & 上半行：数学操作$\to$物理含义；下半行：物理直觉$\to$数学表达 \\
+\midrule
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{本章新增（Round 14）}
+
+本轮迭代新增以下元素，贯穿全书：
+
+\begin{itemize}
+  \item \textbf{数学$\leftrightarrow$物理桥梁}（\bridge{}{}）：在关键推导步骤后插入，把抽象的数学操作翻译成物理语言，再把物理直觉翻译回数学的精确表述。
+  \item \textbf{数量级估计}（\texttt{oombox}）：在每次推导后提供实际的数值估计，帮助读者建立"这个效应有多大"的直觉。例如：地球公转速度的Lorentz因子是 $1-(\gamma-1) \approx 1-5\times10^{-9}$——相对论修正只在你需要纳秒级时间精度时才显著。
+  \item \textbf{精确程度标记}（\precexact/\preceffective/\precapprox/\precqualitative/\preccontingent）：每条定律和关系标注精度等级，避免"所有公式都同等精确"的误解。
+  \item \textbf{关键洞察框}（\keypoint{...}）：在逻辑链条最关键处突出显示——这里就是"aha moment"。
+\end{itemize}
+
+\vspace{12pt}
+\begin{insightbox}[如何最大化收获]
+  \begin{enumerate}
+    \item 先读\keypoint{关键洞察}和\bridge{数学$\leftrightarrow$物理桥梁}——理解方向。
+    \item 再读推导步骤——验证每步的逻辑必然性。
+    \item 最后读数量级估计——建立物理直觉的尺度感。
+    \item 返回\fbox{[N]}和\fbox{[S]}标注——问自己：如果移除这个条件，会发生什么？
+  \end{enumerate}
+  如果你只有五分钟，只看关键洞察和桥梁——它们包含了最重要的思想。如果你要深入掌握一个领域，把推导步骤中的每一条[N]自己验证一遍。
+\end{insightbox}
 
 \clearpage
 
