@@ -8,6 +8,27 @@
 
 R1（因果时空结构）的直接推论涵盖狭义相对论的运动学（Lorentz 变换、质能等价）和广义相对论（Einstein 场方程）。本章从 R1 的子组件出发，严格推导这些结果。
 
+\begin{insightbox}[从光速不变到时空弯曲——R1的两条腿]
+  R1 包含两个独立但互补的原则：
+  \begin{enumerate}
+    \item \textbf{因果结构}（1a+1b）：光速在任何惯性系中相同，且是因果传播的速度上限。这直接导出 Lorentz 变换、时间膨胀、长度收缩、同时性的相对性——以及 $E=mc^2$。
+    \item \textbf{等效原理}（1c）：引力质量 = 惯性质量。这意味着引力不是"力"，而是时空弯曲的几何表现。
+  \end{enumerate}
+  前者是\textbf{运动学}（时空的背景结构）；后者是\textbf{动力学}（物质如何弯曲时空，时空中物质如何运动）。两者结合 + R2（最小作用量）$\to$ Einstein 场方程 $\to$ 全部引力现象。
+\end{insightbox}
+
+% ════════════════════════════════════════════════════════
+\section{Lorentz 变换}
+% ════════════════════════════════════════════════════════
+
+\subsection{物理直觉：光速不变如何扭曲时空}
+
+想象你在以接近光速飞行的飞船里。根据 Newton 的直觉，你测到的光速应该等于 $c$ 加上或减去飞船的速度。但实验（Michelson-Morley 1887）说：不对，你测到的光速永远是 $c$。
+
+这意味着什么？如果你向前方射出一束光，光以 $c$ 离你而去；地面上的观测者也看到那束光以 $c$ 前进——但你的飞船在动！唯一的解释是：\textbf{你的时间流逝得比地面上的人慢}（时间膨胀），\textbf{你的飞船在运动方向上被压缩了}（长度收缩）。Lorentz 变换正是这两者效应的精确数学表达。
+
+\keypoint{若光速在所有参考系中相同，则时间和空间不再是独立不相关的。它们混合在一起——时空是一个统一的四维实体。Lorentz 变换是"时空旋转"的数学表达——就像三维旋转保持长度不变一样，Lorentz 变换保持时空间隔不变。}
+
 % ════════════════════════════════════════════════════════
 \section{Lorentz 变换}
 % ════════════════════════════════════════════════════════
@@ -43,6 +64,17 @@ R1（因果时空结构）的直接推论涵盖狭义相对论的运动学（Lor
 
 \texttt{reversible: true}，\texttt{[N]} $|v| < c$（$v=c$ 时 $\gamma$ 发散，$v>c$ 时 $\gamma$ 虚数——不物理）。
 
+\begin{oombox}[Lorentz 因子的实际大小]
+  \begin{itemize}
+    \item \textbf{步行}（$v=1.4$ m/s）：$\gamma-1 \approx v^2/(2c^2) \approx 1.1\times 10^{-17}$——时间膨胀效应仅为 $10^{-17}$
+    \item \textbf{客机}（$v=250$ m/s, $\approx 900$ km/h）：$\gamma-1 \approx 3.5\times 10^{-13}$——从北京飞纽约（13 小时），时间差 $\sim 16$ ns
+    \item \textbf{GPS 卫星}（$v=3.9$ km/s）：$\gamma-1 \approx 8.4\times 10^{-11}$——每天相对论时间修正 $\sim 7\,\mu$s（加上 GR 效应后，总计 $\sim 38\,\mu$s/天，若不修正，GPS 定位误差每天累积 $\sim 11$ km！）
+    \item \textbf{电子}（$v=0.99c$）：$\gamma \approx 7.1$——寿命延长 7 倍
+    \item \textbf{LHC 质子}（$E=7$ TeV, $m_p=0.938$ GeV）：$\gamma = E/m_pc^2 \approx 7460$——每个质子每秒绕 LHC 11245 圈
+  \end{itemize}
+  \textbf{经验规则}：当 $v < 0.1c$ 时，$\gamma-1 < 0.5\%$——日常生活中相对论效应完全可以忽略。但 \textbf{GPS 的 $38\,\mu$s/天 不是可忽略的}——因为 $38\,\mu$s $\times c \approx 11.4$ km。
+\end{oombox}
+
 % ════════════════════════════════════════════════════════
 \section{质能等价}
 % ════════════════════════════════════════════════════════
@@ -66,6 +98,23 @@ R1（因果时空结构）的直接推论涵盖狭义相对论的运动学（Lor
 
   \textbf{Step 4} — $E^2 = \mathbf{p}^2c^2 + m^2c^4$。静止系（$\mathbf{p}=0$）：$E_{\text{rest}} = mc^2$
 \end{derivationbox}
+
+\keypoint{$E = mc^2$ 不是"质量可以转化为能量"——质量\textbf{就是}能量的一种形式。静止的物体有 $mc^2$ 的能量。化学反应中，化学键重组释放的能量来自质量亏损——氢燃烧成水，1 kg 氢的质量亏损 $\sim 10^{-10}$ kg。核反应中，$^{235}$U 裂变的质量亏损 $\sim 0.1\%$。在粒子物理中，正负电子对湮灭的质量亏损是 $100\%$——全部质量转化为光子能量。}
+
+\begin{oombox}[$E=mc^2$ 的实际转换效率]
+  \begin{itemize}
+    \item \textbf{化学燃烧}（$H_2 + \frac{1}{2}O_2 \to H_2O$）：释放 $286$ kJ/mol。质量亏损 $\Delta m = \Delta E/c^2 \approx 3.2\times 10^{-12}$ kg/mol——$\Delta m/m \sim 10^{-10}$
+    \item \textbf{核裂变}（$^{235}$U）：释放 $\sim 200$ MeV/核。$\Delta m/m \sim 0.09\%$——化学能的百万倍
+    \item \textbf{核聚变}（DT 反应）：释放 $17.6$ MeV/反应。$\Delta m/m \sim 0.4\%$
+    \item \textbf{正负电子湮灭}：$\Delta m/m = 100\%$——全部静能转化为光子
+    \item \textbf{太阳}：每秒将 $4.26\times 10^9$ kg 质量转化为能量（太阳总质量 $2\times 10^{30}$ kg——还能燃烧 $\sim 10^{10}$ 年）
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[精度等级]
+  质能等价：\precexact（Lorentz 不变性的数学推论）。\\
+  实验验证：$E = \gamma mc^2$ 在粒子加速器中以 $>10^{-5}$ 精度成立（限定于 $m$ 的精度）。
+\endprecisionbox
 
 % ════════════════════════════════════════════════════════
 \section{Einstein 场方程}
@@ -119,6 +168,25 @@ $S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
 \textbf{必要条件}：R1（等效原理 [N] + 广义协变性 [N]），R2（$\delta S=0$ [N]），4 维时空 [N]（Lovelock 定理的核心——仅 $D=4$ 时唯一候选为 $\Lambda+R$），二阶场方程约束 [N]（排除 $R^2$ 等高阶鬼场项）。
 
 \textbf{充分条件}：R1+R2+4D+二阶方程约束 $\Rightarrow$ Einstein 场方程（Lovelock 定理保证唯一性）。\texttt{reversible: true}
+
+\keypoint{Lovelock 定理（1971）是 GR 的"唯一性证明"。在 4D 时空中，如果你要求引力由度规张量描述且场方程最多二阶导数，Einstein-Hilbert 作用量是\textbf{唯一}的选择。这意味着：Einstein 不是"猜中"了正确方程——在给定合理假设下，没有其他数学上可能的方程。GR 不是众多引力理论之一——它是在给定约束下唯一自洽的理论。}
+
+\begin{oombox}[GR 效应的量级与 GR 的必要性]
+  \begin{itemize}
+    \item \textbf{太阳表面}：$|\phi|/c^2 = GM_\odot/(R_\odot c^2) \approx 2.1\times 10^{-6}$。光线偏折（Eddington 1919）：$\Delta\theta = 4GM/(Rc^2) \approx 1.75''$——首次 GR 验证
+    \item \textbf{水星近日点进动}：GR 修正 $43''$/世纪——Newton 预言值 $5557''$/世纪，观测值 $5600''$/世纪。差值 $43''$ 恰好由 GR 解释
+    \item \textbf{地球表面}：$|\phi|/c^2 \approx 7\times 10^{-10}$。GPS 卫星（$h=20200$ km）的 GR 时间修正：引力红移 $\sim +45\,\mu$s/天（钟在弱引力场中走得快）+ 运动时间膨胀 $\sim -7\,\mu$s/天 = 净效应 $\sim +38\,\mu$s/天
+    \item \textbf{自引力系统临界值}：$GM/(Rc^2) \sim 1$ 意味着 GR 效应不可忽略——中子星（$GM/Rc^2 \sim 0.1$--$0.3$）和黑洞（$GM/Rc^2 = 0.5$ 在视界处）必须用 GR
+    \item \textbf{宇宙学}：$\Lambda \sim 10^{-52}$ m$^{-2}$——宇宙学常数极其微小但非零（暗能量）。为什么 $\Lambda$ 不是 Planck 尺度的 $10^{69}$ m$^{-2}$？这是"宇宙学常数问题"——物理学最大的未解之谜之一
+  \end{itemize}
+\end{oombox}
+
+\precisionbox[GR 精度等级]
+  Einstein 场方程：\preceffective——在 $E \ll E_P \approx 10^{19}$ GeV 时精确成立。\\
+  Lovelock 唯一性：\precexact（在 4D 中，至多二阶场方程 + 度规描述 $\Rightarrow$ 唯一候选为 Einstein 张量）。\\
+  宇宙学常数 $\Lambda$：\preccontingent——其数值不由 R1-R6 决定。\\
+  Planck 尺度修正：预期存在 $R^2$ 等高阶项，但被 $\sim (E/E_P)^2$ 压低。
+\endprecisionbox}
 
 % ════════════════════════════════════════════════════════
 \section{Newton 万有引力（弱场极限）}
