@@ -88,7 +88,7 @@
 
 \newcommand{\precexact}{\textcolor{lgreen}{\textbf{[精确]}}}
 \newcommand{\preceffective}{\textcolor{pblue}{\textbf{[有效]}}}
-\newcommand{\precapprox}{\textcolor{dorange}{\textbf{[近似]}}}
+\newcommand{\precisionapprox}{\textcolor{dorange}{\textbf{[近似]}}}
 \newcommand{\precqualitative}{\textcolor{wred}{\textbf{[定性]}}}
 \newcommand{\preccontingent}{\textcolor{gold}{\textbf{[偶然]}}}
 
@@ -267,7 +267,7 @@ R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向
 \fbox{[S]} & 充分性条件 & 给定这些前提，结论必然成立。检查"前提是否已经全部满足" \\
 \precexact & 精确成立 & 严格数学等式或定义性关系（如 $[\hat{x},\hat{p}]=i\hbar$、$S=k_B\ln W$） \\
 \preceffective & 有效理论 & 在指定能标/尺度范围内精确，但有失效边界（如Einstein场方程、Schr\"odinger方程） \\
-\precapprox & 近似成立 & 在指定近似条件下的结果（如Newton引力为GR的弱场低速极限） \\
+\precisionapprox & 近似成立 & 在指定近似条件下的结果（如Newton引力为GR的弱场低速极限） \\
 \precqualitative & 定性推论 & 指示趋势和结构，不给出精确数值（如Huygens原理的拖尾/无拖尾二分） \\
 \preccontingent & 偶然事实 & 本宇宙的实验测定数值，不由R1-R6唯一决定（如规范群选择、费米子代数） \\
 \midrule
@@ -285,7 +285,7 @@ R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向
 \begin{itemize}
   \item \textbf{数学$\leftrightarrow$物理桥梁}（\bridge{}{}）：在关键推导步骤后插入，把抽象的数学操作翻译成物理语言，再把物理直觉翻译回数学的精确表述。
   \item \textbf{数量级估计}（\texttt{oombox}）：在每次推导后提供实际的数值估计，帮助读者建立"这个效应有多大"的直觉。例如：地球公转速度的Lorentz因子是 $1-(\gamma-1) \approx 1-5\times10^{-9}$——相对论修正只在你需要纳秒级时间精度时才显著。
-  \item \textbf{精确程度标记}（\precexact/\preceffective/\precapprox/\precqualitative/\preccontingent）：每条定律和关系标注精度等级，避免"所有公式都同等精确"的误解。
+  \item \textbf{精确程度标记}（\precexact/\preceffective/\precisionapprox/\precqualitative/\preccontingent）：每条定律和关系标注精度等级，避免"所有公式都同等精确"的误解。
   \item \textbf{关键洞察框}（\keypoint{...}）：在逻辑链条最关键处突出显示——这里就是"aha moment"。
 \end{itemize}
 
