@@ -36,6 +36,30 @@ R4 是整个物理学中最具革命性的原理。它说：\textbf{物理世界
 
 为什么 $[\hat{x}, \hat{p}] = i\hbar$？一个简洁的直觉来自 de Broglie 关系 $p = \hbar k$：动量是波数。一个位置高度局域的波包需要\textbf{很多不同波数（动量）的波叠加}才能实现——位置越精确，需要的动量种类就越多，动量就越不确定。反之，一个动量非常确定的平面波（单一 $k$）在空间中\textbf{无限延展}——位置完全不确定。这对"互补变量"的关系深植于波的数学本身。
 
+\begin{center}
+\begin{tikzpicture}[scale=0.85]
+  % Left: Position-localized wave packet (uncertain momentum)
+  \node at (0,3.3) {\small\textbf{位置确定} $\Delta x$ 小};
+  \draw[->,thick] (-3.5,0) -- (3.5,0) node[right] {$x$};
+  \draw[->,thick] (-3.5,0) -- (-3.5,2.8) node[above] {$|\psi|^2$};
+  \draw[wred,very thick,domain=-3.3:3.3,samples=100] plot (\x,{2.2*exp(-(\x*\x))});
+  \draw[gray,dashed] (-0.5,0) -- (-0.5,{2.2*exp(-0.25)});
+  \draw[gray,dashed] (0.5,0) -- (0.5,{2.2*exp(-0.25)});
+  \draw[gray,<->] (-0.5,2.5) -- (0.5,2.5) node[midway,above] {\footnotesize $\Delta x$};
+  \node[font=\footnotesize,wred] at (0,-0.6) {窄波包 $\to$ 多种波数叠加};
+  
+  % Right: Momentum-certain plane wave (uncertain position)
+  \node at (7,3.3) {\small\textbf{动量确定} $\Delta p$ 小};
+  \draw[->,thick] (3.5,0) -- (10.5,0) node[right] {$x$};
+  \draw[pblue,very thick,domain=3.5:10.5,samples=200] plot (\x,{1.2+0.3*sin(3*pi*(\x-3.5)/3 r)});
+  \node[font=\footnotesize,pblue] at (7,-0.6) {平面波 $\to$ 位置完全不确定};
+  
+  % Central formula
+  \node at (3.5,-1.5) {$\boxed{\sigma_x \cdot \sigma_p \ge \frac{\hbar}{2}}$};
+  \node[font=\footnotesize] at (3.5,-2.2) {Fourier 变换的数学本质：位置空间窄 $\Leftrightarrow$ 动量空间宽};
+\end{tikzpicture}
+\end{center}
+
 \subsection{幺正演化：量子世界的"时钟"}
 
 R4b 说未测量的系统按照 $|\psi(t)\rangle = e^{-i\hat{H}t/\hbar}|\psi(0)\rangle$ 演化。这个演化算符是\textbf{幺正}的——它保持态向量的长度（$\||\psi\rangle\| = 1$），从而保持总概率守恒。这就像旋转一个单位向量——向量的方向改变了，但长度始终为 1。

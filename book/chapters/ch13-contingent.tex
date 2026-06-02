@@ -49,6 +49,10 @@ D=3 \;\Rightarrow\; F(r) \propto \frac{1}{r^2}
 
 \textbf{结果}：平方反比律。适用于引力和静电学。\fbox{[S]} $D=3$ + Gauss 定律 + 球对称 $\Rightarrow$ $F\propto 1/r^2$。
 
+\keypoint{平方反比律不是"自然界选择了 $1/r^2$"——它是 $D=3$ 空间的几何必然。Gauss 定律说通量 = 常数 $\times$ 源强；$D$ 维球面面积 $\propto r^{D-1}$；两者相除 $\Rightarrow F \propto 1/r^{D-1}$。对 $D=3$，$r^{2}$。力律的指数就是空间维数减 1。}
+
+\bridge{$\oint \mathbf{F}\cdot d\mathbf{A} = \text{const}\cdot Q$ \\ $S^{D-1} \propto r^{D-1}$ \\ $\Rightarrow F(r) \propto 1/r^{D-1} \xrightarrow{D=3} 1/r^2$}{几何（球面积随 $r$ 增长）$\to$ 物理（力随距离衰减）\\ 空间维数直接决定了力的衰减速率——这就是 R1(D=3) 的力量}
+
 \end{derivationbox}
 
 \begin{limitbox}[反事实：若 $D\neq3$]
@@ -73,6 +77,8 @@ D=3 \;\Rightarrow\; F(r) \propto \frac{1}{r^2}
 [L_i, L_j] = i\hbar\,\varepsilon_{ijk} L_k
 \end{equation}
 其中 $\varepsilon_{ijk}$ 是三维全反对称 Levi-Civita 符号——它仅在 $D=3$ 时有与生成元个数相同的指标。
+
+\keypoint{SO(3) 的 Lie 代数维数 $\dim = D(D-1)/2$。$D=3 \Rightarrow 3$ 个生成元 $(L_x, L_y, L_z)$。$D=2 \Rightarrow 1$ 个（只有 $L_z$）。$D=4 \Rightarrow 6$ 个（角动量有 6 个分量！）。角动量的量子结构——包括原子轨道的 $2\ell+1$ 简并度——由 SO(3) 的表示论完全确定。}$$
 
 \begin{notebox}[为何这很重要]
   \begin{itemize}
@@ -171,6 +177,8 @@ G(\mathbf{r},t) \propto
 
 \fbox{[N]} $D=3$（奇数维）。\fbox{[S]} $D=3$ 奇数 + 自由空间 $\Rightarrow$ Huygens 原理成立。
 
+\keypoint{奇数维空间中波传播是"干净"的——信号到达后立即消失（$\delta$ 函数波前）。偶数维空间中波有"拖尾"——主信号到达后有无限长的余波。$D=3$ 是奇数 $\Rightarrow$ 我们可以清晰地听到声音、看到光脉冲。这不是巧合——听觉和视觉的可能性直接依赖于空间维数是奇数。}
+
 \begin{notebox}[生活经验与物理学]
   在 $D=3$ 的房间里，你说一句话，听众听到的是一个清晰的声音——主波前过后立刻安静。这背后是 Huygens 原理：次波仅在波前包络上干涉相长。在 $D=2$ 的"平国"里，任何声音都会拖着无限长的余响——交流将是不可能的。
 \end{notebox}
@@ -183,6 +191,8 @@ ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2
 \end{equation}
 符号差决定了因果结构——区分过去、现在与未来。\fbox{[N]} Lorentz 不变性 + $D=3+1$。\fbox{[S]} 两者组合 $\Rightarrow$ Minkowski 度规。
 
+\keypoint{度规符号差 $(1,3)$ 是 Lorentz 不变性 + $D=3+1$ 的直接推论。改变任何一个——例如 $(2,2)$（两个时间维）或 $(0,4)$（纯空间）——因果结构完全不同。$(2,2)$ 中有"封闭类时曲线"（时间旅行）——因果性（R1 的核心）崩塌。}
+
 \section{引力波极化}
 
 线性化广义相对论中，度规扰动 $h_{\mu\nu}$ 在横向无迹（TT）规范下：
@@ -190,6 +200,8 @@ ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2
 N_{\text{polarizations}} = \frac{D(D-3)}{2}
 \end{equation}
 对 $D=4$：$N = 2$——恰好 $h_+$ 和 $h_\times$ 两种极化模式。这对应无质量自旋-2 引力子的两个螺旋度态（$\pm2$）。
+
+\keypoint{$N_{\text{pol}} = D(D-3)/2$。$D=4 \Rightarrow 2$ 个极化模式——LIGO 探测到的正是 $h_+$ 和 $h_\times$。若 $D=5 \Rightarrow 5$ 个极化——引力波天线模式完全不同。$D=3 \Rightarrow 0$ 个极化——GR 无局域自由度，根本不存在引力波。}
 
 \section{体积量纲与理想气体方程}
 
