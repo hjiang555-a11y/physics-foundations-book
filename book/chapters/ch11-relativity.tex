@@ -28,6 +28,39 @@ R1 因果结构(1a+1b) & R1 等效原理(1c) & R2 最小作用量 \\
   前者是\textbf{运动学}（时空的背景结构）；后者是\textbf{动力学}（物质如何弯曲时空，时空中物质如何运动）。两者结合 + R2（最小作用量）$\to$ Einstein 场方程 $\to$ 全部引力现象。
 \end{insightbox}
 
+\section{科普层：从直觉到相对论}
+
+相对论可能是物理学中最被误解的理论。"一切都是相对的"——这是对相对论最大的误解。Einstein 本人曾说他更愿意称之为"不变论"（Invariantentheorie），因为理论的核心不是"一切都是相对的"，而是\textbf{某些东西在所有参考系中都是绝对不变的}：光速、时空间隔、物理定律的形式。
+
+\subsection{一个思想实验：火车、闪电和同时性}
+
+想象你站在站台上。一列火车以速度 $v$ 通过。恰好在你面前，两道闪电同时击中火车的车头和车尾。你看到的是：两道闪电\textbf{同时}发生。
+
+但火车正中间的一名乘客看到什么？车尾的闪光向他运动，车头的闪光远离他运动。因为光速在\textbf{所有}参考系中相同（这是 R1 的核心），车尾的闪光先到达乘客——在他看来，车尾的闪电\textbf{先}发生。
+
+谁的"同时"是对的？\textbf{都是。} 不存在一个"上帝视角"的钟表来裁定"真正的"同时性。同时性是相对的——这正是 Lorentz 变换的物理本质。这个看似简单的思想实验是爱因斯坦 1905 年狭义相对论的逻辑起点。
+
+\subsection{GPS：相对论不是学术游戏——它每天拯救你的手机}
+
+你的手机 GPS 能告诉你位置，精度在几米之内。但 GPS 卫星在 20,200 km 高的轨道上以 3.9 km/s 的速度飞行。相对论告诉我们，这些卫星的钟相对于地面的钟有时间偏差——原因有二：
+
+\begin{enumerate}
+\item \textbf{狭义相对论——速度使钟变慢}：卫星高速运动 $\to$ 钟每天慢 7 $\mu$s
+\item \textbf{广义相对论——引力使钟变快}：卫星在弱引力场中 $\to$ 钟每天快 45 $\mu$s
+\end{enumerate}
+
+\textbf{净效应：时钟每天快 38 $\mu$s。} 38 微秒听起来很少——但光在这段时间里走了 $c \times 38\,\mu\text{s} \approx 11.4$ km。如果 GPS 不修正相对论效应，你的定位误差每天累积 $\sim 11$ km——在一天之内，GPS 会从"导航"变成"误导"。
+
+\textbf{相对论不仅是物理学家在黑板上的游戏——它被编码在每一部智能手机的 GPS 芯片里。}
+
+\subsection{双生子悖论：为什么旅行者更年轻}
+
+双生子悖论是最著名的相对论"悖论"之一。一个双胞胎留在地球上，另一个以接近光速去太空旅行。当旅行者返回时，她比她留在地球的双胞胎姐妹年轻。但这不是悖论——在狭义相对论框架下，这个结果完全自洽。
+
+关键是：\textbf{两个参考系不对称。} 旅行者经历了加速度（离开地球、掉头、返回），而留在地球的双胞胎始终在惯性系中。狭义相对论的时间膨胀公式适用于惯性系——加速度打破了对称性。在旅行者的非惯性系中计算，同样得出她更年轻的结论。两者的计算一致——没有悖论。
+
+\textbf{实验验证}：Hafele-Keating 实验（1971）用商用客机携带原子钟环球飞行。飞行方向的钟比地面钟慢（东向 $-59\pm10$ ns）或快（西向 $+273\pm7$ ns）——精确符合狭义和广义相对论的联合预言。2010 年，Chou 等人用光学原子钟在 0.33 m 的高度差上测量引力红移——GR 在厘米尺度上被验证。
+
 % ════════════════════════════════════════════════════════
 \section{Lorentz 变换}
 % ════════════════════════════════════════════════════════
@@ -231,6 +264,44 @@ $S = \frac{1}{2\kappa}\int R\sqrt{-g}\,d^4x + S_{\text{matter}}$
      Einstein: $\delta\int ds = 0$（弯曲时空中的"直线"= 测地线）};
 \end{tikzpicture}
 \end{center}
+
+\subsection{Schwarzschild 解——从场方程到天体的时空}
+
+Einstein 场方程是一个高度非线性的二阶偏微分方程组——一般来说极难解。但在\textbf{真空球对称}（$T_{\mu\nu}=0$，且所有物理量仅依赖于 $r$）的情况下，Karl Schwarzschild 在 1916 年（Einstein 发表场方程后仅几个月！）找到了精确解：
+
+\begin{equation}
+ds^2 = \left(1 - \frac{r_s}{r}\right)c^2 dt^2 - \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 - r^2(d\theta^2 + \sin^2\theta\,d\phi^2)
+\end{equation}
+
+其中 $r_s \equiv 2GM/c^2$ 是\textbf{Schwarzschild 半径}。这个度规描述的是任何球对称质量外部（$r > R$）的时空几何。几个关键极限：
+
+\begin{itemize}
+\item \textbf{$r \gg r_s$}：$g_{00} \approx 1 - r_s/r = 1 + 2\phi/c^2$（$\phi = -GM/r$ 是 Newton 引力势）。\textbf{Newton 引力作为弱场极限自动涌现}
+\item \textbf{$r = r_s$}：$g_{00} = 0$，$g_{rr} \to \infty$——这是\textbf{事件视界}。视界处的奇异性是坐标奇点（在 Kruskal 坐标中消除），不是物理奇点
+\item \textbf{$r < r_s$}：$g_{00}$ 和 $g_{rr}$ 交换符号——时间坐标变为类空，径向坐标变为类时。任何在视界内的粒子\textbf{必然}向 $r=0$ 运动——这正是"黑洞"的本质
+\end{itemize}
+
+\textbf{Schwarzschild 半径的量级}：太阳 $r_s \approx 3$ km（但太阳半径 $R_\odot \approx 7\times10^5$ km，远超视界）。地球 $r_s \approx 9$ mm。一个 70 kg 的人 $r_s \approx 10^{-25}$ m——比 Planck 长度还小 10 个数量级。
+
+\subsection{引力波——时空的涟漪}
+
+Einstein 场方程的第二大预言（在 Schwarzschild 解之后）是引力波：时空度规本身的波动，以光速传播。在线性化近似（$g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$，$|h_{\mu\nu}| \ll 1$）下，Einstein 方程退化为一组波动方程：
+
+\begin{equation}
+\Box \bar{h}_{\mu\nu} = -\frac{16\pi G}{c^4}T_{\mu\nu}, \quad \bar{h}_{\mu\nu} \equiv h_{\mu\nu} - \frac{1}{2}\eta_{\mu\nu}h
+\end{equation}
+
+在真空中（$T_{\mu\nu}=0$），$\Box \bar{h}_{\mu\nu} = 0$——标准的波动方程，波速为 $c$。\textbf{引力波有两个独立的极化态}（$h_+$ 和 $h_\times$）——这与引力子自旋为 2 一致。D=4 时空允许两个引力波极化——若 D≠4，极化数不同。这再次印证了 Lovelock 定理中维度的关键作用。
+
+\begin{oombox}[引力波——从 Hulse-Taylor 到 LIGO]
+  \begin{itemize}
+    \item \textbf{Hulse-Taylor 双星（PSR B1913+16, 1974）}：两个中子星互绕，轨道周期每年衰减 $\sim 76\,\mu$s——恰好等于 GR 预言的引力辐射导致的能量损失。1993 年 Nobel 奖
+    \item \textbf{LIGO GW150914（2015）}：两个黑洞（$36+29 M_\odot$）合并为一个 $62 M_\odot$ 黑洞——$3 M_\odot c^2 \approx 5\times 10^{47}$ J 的能量以引力波释放。在峰值时，引力波功率超过了\textbf{可观测宇宙中所有恒星的总光度}
+    \item \textbf{应变灵敏度}：LIGO 测量的是镜面间距离的相对变化 $\Delta L/L \sim 10^{-21}$——相当于测量地球到太阳距离（$1.5\times10^{11}$ m）上一个原子直径的变化
+    \item \textbf{GW170817（2017）}：双中子星合并——引力波 + 伽马射线暴 + 光学对应体同时观测。引力波速度与光速差 $\Delta v/c < 10^{-15}$——200 年来对引力最精确的检验
+    \item \textbf{Pulsar Timing Array（2023）}：NANOGrav 等通过毫秒脉冲星计时阵列探测到纳赫兹引力波背景——可能是超大质量黑洞双星合并的叠加信号
+  \end{itemize}
+\end{oombox}
 
 % ════════════════════════════════════════════════════════
 \section{Newton 万有引力（弱场极限）}

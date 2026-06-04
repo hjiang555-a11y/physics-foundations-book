@@ -8,6 +8,26 @@
 
 R3（局域规范不变性）最辉煌的成就就是从 $U(1)$ 规范对称性出发，结合 R1（Lorentz 不变性）和 R2（最小作用量），严格导出全部 Maxwell 方程组。本章展示这一推导的完整过程。
 
+\subsection{科普层：从琥珀到 Maxwell——电磁学的两千年}
+
+公元前 600 年，Thales 注意到摩擦琥珀会吸引羽毛。两千三百年后，Franklin 用风筝证明了闪电是电。再一百年，Faraday 发现变化的磁场产生电流（1831），Maxwell 意识到这个发现的不对称性——如果变化的磁场产生电场，那么变化的电场也应该产生磁场——并加上了那个使整个系统自洽的"位移电流"项。1865 年，Maxwell 用二十个方程描述电磁学。Heaviside 和 Gibbs 后来将它们压缩为现在使用的四个矢量方程。
+
+但 Maxwell 真正震惊世界的是他方程的一个预言。在真空中，他的方程退化为波动方程，波速恰好是 $c = 1/\sqrt{\varepsilon_0\mu_0} \approx 3\times 10^8$ m/s——与当时已知的光速精确吻合。\textbf{光是电磁波。} 这是物理学史上最伟大的统一之一——两个看似无关的现象（电/磁和光）是同一物理的不同表现。
+
+而且 Maxwell 的方程揭示了更深的东西：$c$ 不依赖于参考系——它是真空本身的属性。这直接导致了 1905 年 Einstein 的特殊相对论。\textbf{Maxwell 方程组是狭义相对论的"母理论"。}
+
+\subsection{为什么光是电磁波？——从 Maxwell 方程到波动方程}
+
+在真空中（$\rho=0$, $\mathbf{J}=0$），对 Faraday 定律取旋度：
+\[
+\nabla\times(\nabla\times\mathbf{E}) = -\frac{\partial}{\partial t}(\nabla\times\mathbf{B}) = -\mu_0\varepsilon_0\frac{\partial^2\mathbf{E}}{\partial t^2}
+\]
+使用矢量恒等式 $\nabla\times(\nabla\times\mathbf{E}) = \nabla(\nabla\cdot\mathbf{E}) - \nabla^2\mathbf{E} = -\nabla^2\mathbf{E}$（真空 Gauss 定律 $\nabla\cdot\mathbf{E}=0$），得到：
+\[
+\boxed{\nabla^2\mathbf{E} - \frac{1}{c^2}\frac{\partial^2\mathbf{E}}{\partial t^2} = 0, \quad c = \frac{1}{\sqrt{\mu_0\varepsilon_0}}}
+\]
+这就是标准的波动方程——波速恰好是光速。同样的方程对 $\mathbf{B}$ 也成立。\textbf{Maxwell 没有"假设"光速是 $c$——他从纯电学的量（$\varepsilon_0$、$\mu_0$）算出了它，发现它恰好等于已知的光速。这种数值巧合是物理学史上最令人震惊的发现之一。}
+
 \begin{center}
 \small
 \begin{tabular}{p{4cm}p{4cm}p{3cm}}
