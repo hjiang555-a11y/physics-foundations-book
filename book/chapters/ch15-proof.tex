@@ -7,6 +7,41 @@
 
 本章给出严格的元层次证明。
 
+\subsection{科普层：为什么我们能"证明"物理学}
+
+数学有公理化体系——欧几里得 5 条公理推出全部欧几里得几何。物理学可以做同样的事吗？
+
+1900 年，Hilbert 在巴黎数学家大会上提出了 23 个问题。\textbf{第六个问题}是："物理学的公理化（Axiomatization of physics）"——能否像处理几何那样，把物理学的全部内容从少数公理推出？这个问题至今仍是开放的，但本书提供了一个具体的部分回答：\textbf{已知物理学的核心可以从 R1-R6 这 6 条原则演绎出 43 条有效定律}。
+
+20 世纪有三个对照尝试值得提及：
+\begin{itemize}
+\item \textbf{Russell-Whitehead}（1910-1913）《数学原理》：试图把全部数学从逻辑公理推出。Gödel 1931 证明任何足够强的形式系统必有不可判定命题——但这并不阻止物理学的部分公理化。
+\item \textbf{Bourbaki}（1935 起）：法国数学家集体笔名，系统性地把数学从集合论公理重写。极大影响了 20 世纪数学教育的"公理化倾向"。
+\item \textbf{Wigner 1960}：发表《数学在自然科学中不合理的有效性》。物理为何如此适合数学？至今无哲学共识。
+\end{itemize}
+
+本书的 R1-R6 → 43 定律演绎不是对 Hilbert 第六问题的完整回答（量子引力、宇宙学初始条件、规范选择等仍未公理化），但它\textbf{把已确立的物理学的核心 60\% 形式化为可机验的推导链}。这是公理化方法在 21 世纪物理学的一次具体实践。
+
+\subsection{核心图像：公理金字塔}
+
+把 R1-R6 想象成 6 块基石：
+\begin{center}
+\textbf{R1} 时空因果 \quad \textbf{R2} 最少作用量 \quad \textbf{R3} 局域规范 \quad \textbf{R4} 量子公设 \quad \textbf{R5} Born 规则 \quad \textbf{R6} 熵
+\end{center}
+
+从这 6 块基石出发，43 条定律分布在 11 个推导组（G1-G11）：
+\begin{itemize}
+\item G1-G4：经典力学与电磁学（Euler-Lagrange, Noether, Newton 三定律, Kepler, Maxwell, Lorentz, EM 波）
+\item G5-G6：量子与相对论（Schrödinger, $E=h\nu$, de Broglie, 不确定性, Pauli, Lorentz 变换, $E=mc^2$, Einstein 场方程）
+\item G7：热力学（第零/一/三定律, 理想气体, FD/BE）
+\item G8-G9：推论与维度结构（Kepler 第三, 平方反比, SO(3), Minkowski 度规, GW, Huygens 原理）
+\item G10-G11：极限定律与标准模型（Nernst 不可达性, 渐近自由, Higgs, CKM）
+\end{itemize}
+
+\textbf{推导深度}最深为 4 层（如 cor.kepler\_third 经 law.newton\_second 经 deriv.euler\_lagrange 回到 R2）。\textbf{每条推导都标注必要性 [N] 和充分性 [S]}：移除 [N] 条件，推导在该步断裂；保留 [S] 条件，结论必然成立。这正是 Round 13 元验证 100\% 完整性的内涵。
+
+\paragraph{形式化的代价} 公理化让物理学可机验，但也限制了它表达"未公理化领域"的能力。Ch16 反事实物理学正是从反方向印证 R1-R6 的必要性——若改动任一公理，推导链如何崩溃。这两章共同构成 R1-R6 体系的"必要且充分"双向论证。
+
 \section{论证语言单位：我们用什么工具证明}
 
 在进入证明之前，需要先定义本书使用的论证工具——这是一套\textbf{形式化的论证语言单位}，每一条推导、每一个论断都按照这套语言的规则来构造和检验。
