@@ -25,6 +25,44 @@ R1 时空 & R2 作用量 & 等效原理 & Noether & Euler-Lagr. & 引力 \\
 
 每条定律标注逻辑前提、推导步骤、必要条件 \texttt{[N]} 和充分条件 \texttt{[S]}。
 
+\subsection{科普层：三百年后 $F = ma$ 仍未被推翻}
+
+苹果落在 Newton 头上的故事是后人的浪漫化（实际是他在乡下避瘟疫时观察到的）。但 Newton 1687 年的真正成就远比"发现重力"深刻：他证明了\textbf{使苹果落地的力，与维持月球绕地的力，是同一种力}——并以 $F = G m_1 m_2 / r^2$ 量化了它。
+
+\textbf{Newton 把 Kepler 的三定律从经验规律提升为推论}。Kepler (1609-1619) 通过 Tycho Brahe 的火星观测归纳出三条经验定律：椭圆轨道、面积速度恒定、周期与半长轴 3/2 次方成正比。Newton 证明：只要假设引力是 $1/r^2$ 的中心力，所有三条 Kepler 定律就是数学推论。这是物理学第一次成功地把"现象学规律"还原为"基础动力学定律"。
+
+但 Newton 的 $F = ma$ 形式在数学上并非最优雅。1788 年，Lagrange 在《分析力学》中提出：用广义坐标 $q_i$ 和拉氏量 $L = T - V$，运动方程是 $\partial L/\partial q_i = d(\partial L/\partial \dot{q}_i)/dt$。这个形式有三大优势：
+\begin{enumerate}
+\item \textbf{坐标无关}：不必区分笛卡尔/极/球坐标，自动处理约束。
+\item \textbf{对称性显式}：Noether 定理直接从 $L$ 的对称性得到守恒量。
+\item \textbf{推广无碍}：场论、相对论、量子力学都使用同一框架。
+\end{enumerate}
+
+\textbf{现代物理教学普遍以 Lagrange 形式为主}，正是因为它把 R2（最少作用量）作为根基，而 $F = ma$ 退化为它的特殊推论。Newton 形式仍在工程和入门课程中广泛使用，因为它直接、直观；但在深层物理研究中，几乎所有先进理论都从拉氏量出发。
+
+\subsection{核心图像：单摆的两副语言}
+
+考虑长度 $\ell$、质量 $m$ 的单摆，重力 $g$。设摆角 $\theta$ 为广义坐标。
+
+\textbf{Newton 视角}：在切向方向，重力分量 $-mg\sin\theta$ 提供加速度 $\ell\ddot\theta$，得：
+\[
+\ell\ddot\theta = -g\sin\theta \quad \Rightarrow \quad \ddot\theta + (g/\ell)\sin\theta = 0
+\]
+
+\textbf{Lagrange 视角}：动能 $T = \tfrac{1}{2}m\ell^2\dot\theta^2$，势能 $V = mg\ell(1-\cos\theta)$。
+\[
+L = T - V = \tfrac{1}{2}m\ell^2\dot\theta^2 - mg\ell(1-\cos\theta)
+\]
+Euler-Lagrange 方程：
+\[
+\frac{d}{dt}\frac{\partial L}{\partial \dot\theta} - \frac{\partial L}{\partial \theta} = m\ell^2\ddot\theta + mg\ell\sin\theta = 0
+\]
+即 $\ddot\theta + (g/\ell)\sin\theta = 0$。
+
+两种语言得到相同方程。但 Lagrange 视角的优势在于：如果加上约束（双摆、绳长变化等），Newton 视角需要小心处理张力等内力，Lagrange 视角自动消去内力——这就是它在复杂系统中胜出的原因。
+
+\paragraph{小角近似量级估算} 当 $\theta \ll 1$，$\sin\theta \approx \theta$，方程退化为 $\ddot\theta = -(g/\ell)\theta$，简谐运动周期 $T = 2\pi\sqrt{\ell/g}$。1 米单摆 $T \approx 2$ 秒，与日常经验一致。
+
 % ════════════════════════════════════════════════════════
 \section{Euler-Lagrange 方程}
 % ════════════════════════════════════════════════════════
