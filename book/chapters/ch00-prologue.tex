@@ -1,0 +1,526 @@
+% ============================================================
+%  Chapter 0: 科普总说 — 从六条公理到四十三条物理定律
+%  Round 14: Full 43-derivation roadmap with dependency graph
+% ============================================================
+\setcounter{chapter}{-1}
+\chapter{科普总说：六条原则如何撑起整个物理学大厦}
+\label{ch:prologue}
+
+\section{宇宙的六条规则}
+
+\subsection{一个疯狂的想法：物理学也可以有公理}
+
+数学有公理——欧几里得只用五条公理就推演出全部平面几何。那么物理学呢？是否也有一组最小、不可约简的核心原则，从它们出发，可以推导出我们已知的所有物理定律？
+
+答案并非显而易见。但经过 20 世纪物理学的三次革命——相对论、量子力学、规范场论——这个答案逐渐清晰。现代物理学的全部核心方程——从 Newton 三定律到 Maxwell 电磁场、从 Schr\"odinger 方程到 Einstein 场方程、从热力学四定律到标准模型——都可以追溯至仅仅\textbf{六条核心原则}。
+
+这六条原则被记为 R1-R6，它们是：
+
+\begin{center}
+\small
+\begin{tabular}{p{0.4cm}p{3.2cm}p{5cm}p{6cm}}
+\toprule
+  & \textbf{原则} & \textbf{核心图像} & \textbf{管什么} \\
+\midrule
+R1 & 因果时空结构 & 没有任何影响能比光跑得更快。时空本身可以弯曲——引力就是弯曲时空的表现。等效原理：惯性质量 = 引力质量 & 舞台本身：时空、因果、引力 \\
+R2 & 最小作用量原理 & 自然界选择的运动路径，是"作用量"取平稳值的那条路。所有运动方程统一来源于此 & 动力学：所有运动方程的统一来源 \\
+R3 & 局域规范不变性 & "对称性决定相互作用"——数学上的对称要求逼出力（电磁力、弱力、强力）的存在 & 基本力：光子、W/Z、胶子 \\
+R4 & 量子力学公设 & 世界在最底层是概率的，不是确定的。态向量、幺正演化、正则对易关系、算符-可观测量对应 & 微观世界的逻辑 \\
+R5 & Born 概率规则 & $P = |\psi|^2$——量子力学的计算结果如何转化为我们可以测量的概率 & 连接理论与实验 \\
+R6 & 统计力学基础 & $S = k_B \ln W$——熵是无序度的对数。等概率先验假设——孤立系统的所有微观态等概率 & 从微观到宏观的桥梁 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{insightbox}[为什么恰好是六条？]
+  这六条原则不是随意挑选的。它们经过了\textbf{必要性审计}：试图移除任何一条，至少有一条已知的物理定律会丧失推导基础（见第 16 章全局证明中的必要性矩阵）。它们也经过了\textbf{充分性审计}：这六条合在一起，加上我们这个宇宙的偶然事实（时空维数为 3+1、规范群为 $SU(3)\times SU(2)\times U(1)$ 等），足以推导出 Standard Model 以下的所有已知物理定律。
+
+  两者的交集——必要且充分——正是 R1-R6 这六条原则。\textbf{它们构成了目前已知物理学的最小公理集。}
+\end{insightbox}
+
+\subsection{六条原则的依赖关系——谁先谁后？}
+
+R1-R6 并非六条彼此独立的公理。它们之间存在明确的逻辑依赖关系：
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=2.2cm and 3.5cm,
+  rbox/.style={rectangle,draw,rounded corners,fill=pblue!12,text width=3.2cm,align=center,font=\small\bfseries,minimum height=1.5cm},
+  arrow/.style={->,>=Stealth,thick,dorange!70},
+  deparrow/.style={->,>=Stealth,thick,draw=darkpurple!70,dashed}
+]
+  % Kernel nodes
+  \node[rbox] (r1) at (0,0) {R1\\因果时空结构\\(基础公理)};
+  \node[rbox] (r2) at (5.5,0) {R2\\最小作用量\\(独立公理)};
+  \node[rbox] (r3) at (11,0) {R3\\局域规范不变性};
+  \node[rbox] (r4) at (0,-4) {R4\\量子力学公设\\(独立公理)};
+  \node[rbox] (r5) at (5.5,-4) {R5\\Born 概率规则};
+  \node[rbox] (r6) at (11,-4) {R6\\统计力学基础};
+
+  % Dependency arrows
+  \draw[deparrow] (r1) -- (r3) node[midway,above,font=\footnotesize] {定义时空点};
+  \draw[deparrow] (r2) -- (r3) node[midway,above right,font=\footnotesize,pos=0.35] {变分};
+  \draw[deparrow] (r1) -- (r4) node[midway,left,font=\footnotesize,pos=0.5] {演化舞台};
+  \draw[deparrow] (r4) -- (r5) node[midway,right,font=\footnotesize] {态空间};
+  \draw[deparrow] (r4) -- (r6) node[midway,left,font=\footnotesize,pos=0.4] {量子微观态};
+
+  % Legend
+  \node[font=\footnotesize,anchor=west] at (-5, -6.5) {\textbf{图例}};
+  \draw[arrow] (-4.5,-7) -- (-3.5,-7) node[right,font=\footnotesize] {提供推导基础};
+  \draw[deparrow] (-1.5,-7) -- (-0.5,-7) node[right,font=\footnotesize] {逻辑依赖（但不提供动力学）};
+\end{tikzpicture}
+\end{center}
+
+\textbf{关键观察}：
+\begin{itemize}
+  \item R1 和 R2 是两条\textbf{独立的基础公理}——它们不从任何其他原则推导，也不需要彼此
+  \item R4 是第三条独立公理——量子力学的结构独立于时空和动力学
+  \item R3（规范不变性）依赖 R1（定义时空点）和 R2（变分方法），但提供全新的物理内容——相互作用力的存在
+  \item R5（Born 规则）依赖 R4（态空间）但逻辑独立——Gleason 定理证明 Born 规则是唯一能在 Hilbert 空间中定义自洽概率测度的规则
+  \item R6（统计力学）依赖 R4（量子微观态），但等概率先验是独立假设——它不能从 R1-R5 推导出来
+\end{itemize}
+
+\subsection{R1-R6 的子原则展开}
+
+六条核心原则在严格的形式化系统中展开为 \textbf{13 个独立的 kernel 节点}：
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{1cm}p{2.5cm}p{5cm}p{5.5cm}}
+\toprule
+\textbf{规则} & \textbf{Kernel 节点} & \textbf{内容} & \textbf{逻辑地位} \\
+\midrule
+R1 & \texttt{spacetime\_dim} & 时空维数为 3+1（空间 3，时间 1）& 偶然事实 \\
+R1 & \texttt{light\_speed\_invariance} & 光速恒定 → Lorentz 不变性(1a) & 核心公设 \\
+R1 & \texttt{lorentz\_invariance} & 因果分类：类时/类光/类空 (1b) & 与 1a 等价 \\
+R1 & \texttt{equivalence\_principle} & $m_i = m_g$；引力 = 时空弯曲 (1c) & 独立公设 \\
+R1 & \texttt{general\_covariance} & 物理定律在所有坐标系中形式相同 & 结构原则 \\
+\midrule
+R2 & \texttt{least\_action} & $\delta S = 0$；作用量取平稳值 & 核心公设 \\
+\midrule
+R3 & \texttt{gauge\_interactions} & 局域规范不变性 → 规范场 → 基本力 & 核心公设 \\
+\midrule
+R4 & \texttt{superposition} & 态向量在 Hilbert 空间中 & 公设 1 \\
+R4 & \texttt{unitary\_evolution} & 时间演化是幺正的：$\hat{U}(t) = e^{-i\hat{H}t/\hbar}$ & 公设 2 \\
+R4 & \texttt{canonical\_commutation} & $[\hat{x}_i,\hat{p}_j] = i\hbar\delta_{ij}$ & 公设 3 \\
+R4 & \texttt{operator\_observable} & 可观测量 = 厄米算符 & 公设 4 \\
+\midrule
+R5 & \texttt{born\_rule} & $P(a_n) = |\langle a_n|\psi\rangle|^2$ & 核心公设 \\
+\midrule
+R6 & \texttt{boltzmann\_entropy} & $S = k_B\ln W$ (6a) & 核心公设 \\
+R6 & \texttt{equal\_prior\_probability} & 孤立系统的所有可及微观态等概率 (6b) & 独立公设 \\
+\bottomrule
+\caption{R1-R6 的 13 个 kernel 节点展开}
+\end{longtable}
+\end{center}
+
+\section{从六条到四十三：推导路径全景}
+
+\subsection{推导分组总览}
+
+四十三条推导链按物理领域分为十一组（G1-G11），每组对应不同的核心原则组合：
+
+\begin{center}
+\small
+\begin{longtable}{p{1.5cm}p{1.2cm}p{4.5cm}p{7cm}}
+\toprule
+\textbf{组} & \textbf{数量} & \textbf{内容} & \textbf{主要前提（kernel 层）} \\
+\midrule
+G1 & 1 & Euler-Lagrange 方程 & R2 \\
+G2 & 5 & Noether 定理 + 四大守恒律 & R2 + R1（时空对称性）\\
+G3 & 3 & Newton 三定律 & R2 + R1 + Euler-Lagrange \\
+G4 & 6 & Maxwell 电磁学 & R3 + R2 + R1 \\
+G5 & 5 & 量子力学基础 & R4 + R5 + R1 \\
+G6 & 4 & 相对论 & R1 + R2 \\
+G7 & 5 & 热力学四定律 + 理想气体 & R6 + R4 \\
+G8 & 3 & 标准推论 & G3-G7 已证定律 \\
+G9 & 7 & 维度结构推论 & R1 ($D=3+1$) \\
+G10 & 1 & Nernst 不可达性 & R6 + 第三定律 \\
+G11 & 3 & 标准模型有效场论 & R3 + SM 经验输入 \\
+\midrule
+\textbf{合计} & \textbf{43} & & \\
+\bottomrule
+\caption{四十三条推导链分组}
+\end{longtable}
+\end{center}
+
+\subsection{完整推导路径图}
+
+\subsubsection{G1-G4：经典力学与电磁学}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.3cm and 2.2cm,
+  kbox/.style={rectangle,draw,rounded corners,fill=pblue!15,text width=2.4cm,align=center,font=\footnotesize\bfseries},
+  lbox/.style={rectangle,draw,rounded corners,fill=lgreen!12,text width=3.0cm,align=center,font=\footnotesize},
+  cbox/.style={rectangle,draw,rounded corners,fill=dorange!12,text width=2.8cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thin,dorange!70}
+]
+  % Kernel
+  \node[kbox] (r2) {R2: 最小作用量};
+  \node[kbox,right=of r2] (r1) {R1: 时空结构};
+  \node[kbox,right=of r1] (r3) {R3: 规范不变性};
+
+  % G1
+  \node[lbox,below=of r2] (g1) {G1: Euler-Lagrange\\$\delta S=0 \to \frac{d}{dt}\frac{\partial L}{\partial\dot{q}} = \frac{\partial L}{\partial q}$};
+
+  % G2
+  \node[lbox,below=of g1] (g2) {G2: Noether 定理\\对称性 $\to$ 守恒流};
+
+  % Conservation laws
+  \node[cbox,below=0.8cm of g2,xshift=-3cm] (cons_e) {能量守恒};
+  \node[cbox,below=0.8cm of g2,xshift=-1cm] (cons_p) {动量守恒};
+  \node[cbox,below=0.8cm of g2,xshift=1cm] (cons_l) {角动量守恒};
+  \node[cbox,below=0.8cm of g2,xshift=3cm] (cons_q) {电荷守恒};
+
+  % G3
+  \node[lbox,right=5cm of g1] (g3) {G3: Newton 三定律\\$F=ma$, 惯性, 反作用};
+
+  % G4
+  \node[lbox,right=2.5cm of g3] (g4) {G4: Maxwell 电磁学\\Gauss $\times$2, Faraday,\\Amp\`ere-Maxwell, Lorentz};
+
+  % Arrows
+  \draw[arrow] (r2) -- (g1);
+  \draw[arrow] (r2) -- (g2);
+  \draw[arrow] (r1) -- (g2);
+  \draw[arrow] (r2) -- (g3);
+  \draw[arrow] (r1) -- (g3);
+  \draw[arrow] (g1) -- (g3);
+  \draw[arrow] (r1) -- (g4);
+  \draw[arrow] (r2) -- (g4);
+  \draw[arrow] (r3) -- (g4);
+  \draw[arrow] (g2) -- (cons_e);
+  \draw[arrow] (g2) -- (cons_p);
+  \draw[arrow] (g2) -- (cons_l);
+  \draw[arrow] (g2) -- (cons_q);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{G5-G8：量子、相对论与热力学}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.3cm and 2.5cm,
+  kbox/.style={rectangle,draw,rounded corners,fill=pblue!15,text width=2.4cm,align=center,font=\footnotesize\bfseries},
+  lbox/.style={rectangle,draw,rounded corners,fill=lgreen!12,text width=3.0cm,align=center,font=\footnotesize},
+  cbox/.style={rectangle,draw,rounded corners,fill=dorange!12,text width=2.8cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thin,dorange!70}
+]
+  % Kernels
+  \node[kbox] (r4) {R4: 量子公设};
+  \node[kbox,right=of r4] (r5) {R5: Born 规则};
+  \node[kbox,right=of r5] (r1) {R1: 时空结构};
+  \node[kbox,right=3.5cm of r1] (r6) {R6: 统计力学};
+
+  % G5
+  \node[lbox,below=of r4] (g5) {G5: 量子力学\\Schr\"odinger, $E=h\nu$,\\de Broglie, 不确定性,\\Pauli 不相容};
+
+  % G6
+  \node[lbox,below=of r1] (g6) {G6: 相对论\\Lorentz 变换,\\质能等价 $E=mc^2$,\\Einstein 场方程};
+
+  % G7
+  \node[lbox,below=of r6] (g7) {G7: 热力学\\第零/一/二/三定律,\\理想气体 $PV=Nk_BT$};
+
+  % G8
+  \node[cbox,below=1.5cm of g5,xshift=-2cm] (g8a) {Kepler 第三定律};
+  \node[cbox,below=1.5cm of g5,xshift=1.5cm] (g8b) {Fermi-Dirac};
+  \node[cbox,below=1.5cm of g5,xshift=5cm] (g8c) {Bose-Einstein};
+
+  % Arrows
+  \draw[arrow] (r4) -- (g5);
+  \draw[arrow] (r5) -- (g5);
+  \draw[arrow] (r1) -- (g5);
+  \draw[arrow] (r1) -- (g6);
+  \draw[arrow] (r6) -- (g7);
+  \draw[arrow] (r4) -- (g7);
+  \draw[arrow] (g5) -- (g8b);
+  \draw[arrow] (g6) -- (g8a);
+  \draw[arrow] (g7) -- (g8c);
+\end{tikzpicture}
+\end{center}
+
+\subsubsection{G9-G11：维度推论、极限定律与标准模型}
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=1.3cm and 2.2cm,
+  kbox/.style={rectangle,draw,rounded corners,fill=pblue!15,text width=2.4cm,align=center,font=\footnotesize\bfseries},
+  cbox/.style={rectangle,draw,rounded corners,fill=darkpurple!12,text width=3.2cm,align=center,font=\footnotesize},
+  xbox/.style={rectangle,draw,rounded corners,fill=gold!15,text width=3.2cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thin,dorange!70}
+]
+  % Kernel
+  \node[kbox] (r1) {R1: $D=3+1$\\时空维度};
+
+  % G9: contingent consequences
+  \node[cbox,below=0.5cm of r1,xshift=-4cm] (c1) {平方反比律\\$F\propto 1/r^2$};
+  \node[cbox,below=0.5cm of r1,xshift=-0.5cm] (c2) {SO(3) 旋转群};
+  \node[cbox,below=0.5cm of r1,xshift=3cm] (c3) {Huygens 原理};
+
+  \node[cbox,below=0.8cm of c2,xshift=-2.5cm] (c4) {Minkowski 符号差\\$(+,-,-,-)$};
+  \node[cbox,below=0.8cm of c2,xshift=0.5cm] (c5) {体积量纲\\$V \propto L^3$};
+  \node[cbox,below=0.8cm of c2,xshift=3.5cm] (c6) {GW 极化\\$D(D-3)/2=2$};
+
+  \node[cbox,below=0.8cm of c5] (c7) {稳定 Kepler 轨道\\$D=3$ 唯一};
+
+  % G10-G11
+  \node[kbox,right=8.5cm of r1] (r3) {R3: 规范不变性};
+  \node[xbox,below=0.5cm of r3,xshift=-1.5cm] (g10) {G10: Nernst 不可达性\\$T\to 0$ 非有限步可达};
+  \node[xbox,below=0.5cm of r3,xshift=2.5cm] (g11a) {G11: 渐近自由\\$\beta(g)<0$};
+  \node[xbox,below=0.8cm of g11a,xshift=-0.5cm] (g11b) {G11: Higgs 机制\\SSB $\to$ $m_W,m_Z$};
+  \node[xbox,below=0.8cm of g11b] (g11c) {G11: CKM 矩阵\\CP 破坏必要条件};
+
+  % Arrows
+  \draw[arrow] (r1) -- (c1);
+  \draw[arrow] (r1) -- (c2);
+  \draw[arrow] (r1) -- (c3);
+  \draw[arrow] (r1) -- (c4);
+  \draw[arrow] (r1) -- (c5);
+  \draw[arrow] (r1) -- (c6);
+  \draw[arrow] (r1) -- (c7);
+  \draw[arrow] (r3) -- (g11a);
+  \draw[arrow] (r3) -- (g11b);
+  \draw[arrow] (r3) -- (g11c);
+
+  % R6 for G10
+  \draw[arrow] (r1.south east) -- (g10);
+
+  % G9 label
+  \node[font=\footnotesize\bfseries,darkpurple,anchor=west] at (-4.5, -2.2) {G9: 维度结构推论（7条）};
+  \node[font=\footnotesize\bfseries,gold!80!black,anchor=west] at (5.5, 0.5) {G10-G11};
+\end{tikzpicture}
+\end{center}
+
+\subsection{推导深度：最远推四层}
+
+R1-R6 的推导链最多延伸四层：
+
+\begin{center}
+\begin{tikzpicture}[
+  node distance=0.9cm and 3cm,
+  kbox/.style={rectangle,draw,rounded corners,fill=pblue!15,text width=2.5cm,align=center,font=\footnotesize\bfseries},
+  lbox/.style={rectangle,draw,rounded corners,fill=lgreen!12,text width=2.8cm,align=center,font=\footnotesize},
+  cbox/.style={rectangle,draw,rounded corners,fill=dorange!12,text width=2.8cm,align=center,font=\footnotesize},
+  arrow/.style={->,>=Stealth,thin,dorange!70}
+]
+  \node[kbox] (r2) {R2\\最小作用量};
+  \node[lbox,below=of r2] (g1) {G1: Euler-Lagrange};
+  \node[lbox,below=of g1] (g3) {G3: Newton 第二定律\\$F=ma$};
+  \node[cbox,below=of g3] (g8) {G8: Kepler 第三定律\\$T^2\propto a^3$};
+
+  \draw[arrow] (r2) -- (g1);
+  \draw[arrow] (g1) -- (g3);
+  \draw[arrow] (g3) -- (g8);
+
+  \node[font=\footnotesize,anchor=west] at (3.5,-1) {第 0 层 (kernel)};
+  \node[font=\footnotesize,anchor=west] at (3.5,-2.5) {第 1 层 (law)};
+  \node[font=\footnotesize,anchor=west] at (3.5,-4) {第 2 层 (law)};
+  \node[font=\footnotesize,anchor=west] at (3.5,-5.5) {第 3 层 (corollary)};
+\end{tikzpicture}
+\end{center}
+
+\textbf{R2 → Euler-Lagrange → Newton 第二定律 → Kepler 第三定律}：从最小作用量原理出发，先得到所有力学系统的通用运动方程（Euler-Lagrange），然后在笛卡尔坐标中取特定 Lagrangian $L = \frac{1}{2}m\mathbf{v}^2 - V(\mathbf{x})$ 得到 Newton 第二定律，最后在平方反比引力场中积分得到 Kepler 轨道方程。每一步的逻辑都是可追溯的——这就是公理化的力量。
+
+\subsection{偶然事实：宇宙的"可选参数"}
+
+并非所有物理定律都可以从 R1-R6 推导出来。某些事实是本宇宙的"初始设定"——在 R1-R6 的框架内逻辑可能，但不是唯一可能：
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{3.5cm}p{5cm}p{5.5cm}}
+\toprule
+\textbf{偶然事实} & \textbf{本宇宙选择} & \textbf{反事实：若不同？} \\
+\midrule
+时空维数 & $D=3$（空间）+ 1（时间）& $D\neq3$：无稳定原子和轨道；$D$ 为偶数：声波拖尾 \\
+规范群 & $SU(3)\times SU(2)\times U(1)$ & 其他 Lie 群：不同的基本力和粒子谱系 \\
+费米子代数 & 三代夸克 + 三代轻子 & 少于三代：无 CP 破坏（$n_g\ge 3$ 是必要条件）；多于三代：更多粒子 \\
+Higgs 扇区 & 一个复二重态 & 更多 Higgs 多重态：更复杂的对称性破缺 \\
+自由参数 & 约 26 个（Yukawa 耦合、CKM 相位、$\theta_{\text{QCD}}$ 等）& 不同的参数值：完全不同的粒子质量谱和混合角 \\
+\bottomrule
+\caption{本宇宙的偶然事实（contingent facts）}
+\end{longtable}
+\end{center}
+
+这些偶然事实在推导系统中标记为 $\preccontingent$，在第 14 章（Ch14）中有更详细的讨论。
+
+\begin{insightbox}[公理化不等于决定论]
+  物理学公理化并不声称"宇宙只有一种可能的方式"。R1-R6 加上 13 个 kernel 节点定义了一个广阔的"可能物理理论空间"。我们这个宇宙的具体选择（$D=3+1$, $SU(3)\times SU(2)\times U(1)$, 三代费米子）在这个空间内是诸多可能之一。公理化的工作是：给定这些选择，唯一地推导出有效物理定律。
+\end{insightbox}
+
+\section{Hilbert 第六问题：物理学公理化的百年梦想}
+
+1900 年，David Hilbert 在巴黎国际数学家大会上提出 23 个问题。\textbf{第六个}是：
+
+\begin{center}
+\itshape
+``几何基础的研究提示了这个问题：用同样的方法，通过公理，来处理那些\\
+数学已占有重要地位的物理科学；首先是概率论和力学。''
+\end{center}
+
+120 多年过去了。Hilbert 第六问题的终极形式——量子引力的公理化——仍然开放。但在 \textbf{Planck 尺度以下}（所有已确认实验物理的适用范围），这个梦想已经可以实现。
+
+\begin{insightbox}[本书对 Hilbert 第六问题的回应]
+  \textbf{已知物理学的核心可以从 R1-R6 这六条原则（展开为 13 个 kernel 节点）严格推导出 43 条有效定律。}
+
+  \begin{itemize}
+    \item 每条推导标注必要性条件 \fbox{[N]} 和充分性条件 \fbox{[S]}
+    \item YAML 源码可被计算机自动审计（`validate\_derivations.py` V1-V5: 0 errors, 0 warnings）
+    \item 元验证确认：完整性 100\% (43/43)，自洽性 0 矛盾，所有 13 个 kernel 节点均为必要
+  \end{itemize}
+
+  这不是 Hilbert 第六问题的完整解答——量子引力、宇宙学初始条件、规范选择等问题仍未公理化。但这是朝着 Hilbert 梦想迈出的、可验证的、具体的一步。
+\end{insightbox}
+
+\subsection{公理化简史：从 Kolmogorov 到 Lovelock}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{1.8cm}p{2.5cm}p{9.5cm}}
+\toprule
+\textbf{时间} & \textbf{人物} & \textbf{贡献} \\
+\midrule
+1900 & Hilbert & 提出第六问题：物理学的公理化 \\
+1933 & Kolmogorov & 概率论公理化（测度论）——Hilbert 第六问题"概率论"部分的完成 \\
+1932 & von Neumann & 量子力学公理化（Hilbert 空间、厄米算符、幺正演化） \\
+1950s-60s & Wightman & 量子场论公理化尝试（Gårding-Wightman 公理）——证明了 PCT 定理和自旋-统计定理 \\
+1971 & Lovelock & 4D 中 Einstein-Hilbert 是唯一至多二阶的度规 Lagrangian——GR 的"唯一性公理化" \\
+2001 & Hardy & 量子力学的信息论重构——从 5 条信息论公理推导出全部量子力学结构 \\
+2024 & Deng, Hani, Ma 等 & 从 Newton 硬球粒子严格推导 Navier-Stokes-Fourier 方程——"从原子论到连续介质"的完整数学桥梁 \\
+2025-26 & 本书 & 从 6 条核心物理公理推导 43 条有效定律，附带可机验的自动验证器 \\
+\bottomrule
+\caption{Hilbert 第六问题的百年进展}
+\end{longtable}
+\end{center}
+
+\section{怎么读这本书：三个层次}
+
+本书希望帮助你在三个层次上获得理解：
+
+\begin{enumerate}
+  \item \textbf{逻辑关系层}：每条定理可以从哪些前提推出（\fbox{[N]}），哪些前提组合保证了结论必然成立（\fbox{[S]}）。你可以像验算一道数学证明一样，逐行检查推导的每一步。
+
+  \item \textbf{物理直觉层}：每个数学步骤对应的物理图像是什么。分部积分不是无聊的技巧——它是"把边界上的东西去掉"；Noether 定理的核心是"对称性意味着你在某个方向上看不出区别，所以在那个方向上守恒"。
+
+  \item \textbf{数量级与精确度层}：每条结果在什么精确程度上成立。是严格等号还是近似？在什么条件下近似成立？偏离的数量级有多大？
+\end{enumerate}
+
+\subsection{标注体系}
+
+\begin{center}
+\small
+\begin{longtable}{p{2cm}p{3cm}p{8cm}}
+\toprule
+\textbf{标注} & \textbf{含义} & \textbf{如何使用} \\
+\midrule
+\fbox{[N]} & 必要性条件 & 若移除，推导在此处断裂。检查"这条假设是否真的必不可少" \\
+\fbox{[S]} & 充分性条件 & 给定这些前提，结论必然成立。检查"前提是否已经全部满足" \\
+\precexact & 精确成立 & 严格数学等式或定义性关系 \\
+\preceffective & 有效理论 & 在指定能标/尺度范围内精确，但有失效边界 \\
+\precisionapprox & 近似成立 & 在指定近似条件下的结果 \\
+\precqualitative & 定性推论 & 指示趋势和结构，不给出精确数值 \\
+\preccontingent & 偶然事实 & 本宇宙的实验测定数值，不由 R1-R6 唯一决定 \\
+\midrule
+\keypoint{...} & 关键洞察 & 逻辑链条中最关键的一步——停下来想一想 \\
+\bridge{...}{...} & 数学$\leftrightarrow$物理桥梁 & 上半行：数学操作$\to$物理含义；下半行：物理直觉$\to$数学表达 \\
+\bottomrule
+\caption{本书使用的标注体系}
+\end{longtable}
+\end{center}
+
+\subsection{阅读路径}
+
+\begin{center}
+\small
+\begin{longtable}{p{2.5cm}p{4cm}p{4cm}p{3.5cm}}
+\toprule
+\textbf{读者类型} & \textbf{推荐路径} & \textbf{重点章节} & \textbf{时间估计} \\
+\midrule
+\textbf{急先锋} & 序言 $\to$ 每章只看 \keypoint{} 和 \bridge{} & 序言、Ch7-Ch12 的关键洞察 & 2-4 小时 \\
+\textbf{物理学生} & 序言 $\to$ Part I（通读）$\to$ Part II（完整推导） & Ch7-Ch12 为主，Ch13-Ch14 为辅 & 2-4 周 \\
+\textbf{数学转物理} & Hilbert 第六问题 $\to$ Part I $\to$ Ch11, Ch16 $\to$ 其余 & Ch1, Ch4, Ch11, Ch16 & 1-2 周 \\
+\textbf{理论研究者} & Ch16（全局证明）$\to$ 查特定推导 $\to$ [N] 标注 + 反事实 & 按需 & 按需 \\
+\textbf{好奇者} & 序言 $\to$ Ch1 $\to$ Ch7 $\to$ Ch13 $\to$ 浏览其余 \keypoint{} & Ch1, Ch7, Ch13 & 4-6 小时 \\
+\bottomrule
+\caption{不同读者的推荐阅读路径}
+\end{longtable}
+\end{center}
+
+\subsection{预备知识}
+
+\begin{itemize}
+  \item \textbf{Ch1-Ch6（公理）}：仅需基本物理常识 + 微积分
+  \item \textbf{Ch7（力学）}：需变分法基础（书中有简要回顾）
+  \item \textbf{Ch8（电磁学）}：需矢量分析 + 张量初级概念
+  \item \textbf{Ch9（量子力学）}：需线性代数（Hilbert 空间、本征值）+ 复分析
+  \item \textbf{Ch10（热力学）}：统计概念 + 组合数学（Stirling 公式）
+  \item \textbf{Ch11（相对论）}：微分几何基础（度规、曲率、Christoffel 符号）
+  \item \textbf{Ch12（守恒律）}：Noether 定理（Ch7 已介绍）
+  \item \textbf{Ch13（维度推论）}：矢量分析 + 复分析
+  \item \textbf{Ch14（标准模型）}：群论（Lie 代数）、重整化群
+  \item \textbf{Ch15-Ch16（全局证明）}：形式逻辑 + 图论
+\end{itemize}
+
+\begin{insightbox}[如何最大化收获]
+  \begin{enumerate}
+    \item 先读\keypoint{关键洞察}和\bridge{数学$\leftrightarrow$物理桥梁}——理解方向。
+    \item 再读推导步骤——验证每步的逻辑必然性。
+    \item 最后读数量级估计——建立物理直觉的尺度感。
+    \item 返回\fbox{[N]}和\fbox{[S]}标注——问自己：如果移除这个条件，会发生什么？
+  \end{enumerate}
+  如果你只有五分钟，只看关键洞察和桥梁——它们包含了最重要的思想。
+\end{insightbox}
+
+\section{关键数字}
+
+\begin{notebox}[本书核心统计]
+  \begin{center}
+  \textbf{6} 条核心原则 $\to$ \textbf{13} 个 kernel 节点 $\to$ \textbf{43} 条推导链 $\to$ \textbf{150+} 条必要性条件 [N] 标注。
+
+  所有推导链可追溯至 \textbf{13} 个 kernel 层根节点。
+
+  自动验证器 V1-V5 全部通过（0 errors, 0 warnings）。
+
+  \textbf{元验证}: 完整性 100\% (43/43)，自洽性 0 矛盾，所有 13 个 kernel 节点均为必要。
+
+  \textbf{推导深度}: 最深 \textbf{4 层}（R2 $\to$ Euler-Lagrange $\to$ Newton 第二定律 $\to$ Kepler 第三定律）。
+
+  \textbf{交叉印证网}: 63 nodes / 119 edges（dependency graph DOT 可视化）。
+  \end{center}
+\end{notebox}
+
+\section{本书结构一览}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{1.5cm}p{3.5cm}p{2cm}p{6.5cm}}
+\toprule
+\textbf{部分} & \textbf{章节} & \textbf{页数目标} & \textbf{核心内容} \\
+\midrule
+序章 & Ch 0（本章）& — & 科普总说、推导路径全景、阅读指南 \\
+\midrule
+Part I & Ch 1-6 & $\ge 30$/章 & R1-R6 六条核心原则：科普 $\to$ 严谨 $\to$ 边界 \\
+& Ch 1: R1 因果时空结构 & $\ge 30$ & 光速不变(1a)、因果结构(1b)、等效原理(1c) \\
+& Ch 2: R2 最小作用量 & $\ge 30$ & $\delta S=0$、变分原理、Lagrangian 形式 \\
+& Ch 3: R3 局域规范不变性 & $\ge 30$ & 规范场、$U(1)$/$SU(2)$/$SU(3)$ \\
+& Ch 4: R4 量子力学公设 & $\ge 30$ & Hilbert 空间、幺正演化、CCR、算符 \\
+& Ch 5: R5 Born 概率规则 & $\ge 30$ & $P=|\psi|^2$、测量公设、Gleason 定理 \\
+& Ch 6: R6 统计力学基础 & $\ge 30$ & $S=k_B\ln W$(6a)、等概率先验(6b) \\
+\midrule
+Part II & Ch 7-16 & $\ge 20$/章 & 43 条推导链的严格演绎 \\
+& Ch 7: 力学 & $\ge 20$ & Euler-Lagrange, Noether, Newton 三定律, Kepler \\
+& Ch 8: 电磁学 & $\ge 20$ & Maxwell 四方程, Lorentz 力, 电磁波 \\
+& Ch 9: 量子力学 & $\ge 20$ & Schr\"odinger, $E=h\nu$, de Broglie, 不确定性, Pauli \\
+& Ch 10: 热力学 & $\ge 20$ & 第零/一/二/三定律, 理想气体, FD/BE \\
+& Ch 11: 相对论 & $\ge 20$ & Lorentz 变换, $E=mc^2$, Einstein 场方程, Lovelock \\
+& Ch 12: 守恒律 & $\ge 20$ & Noether 四大守恒: 能量/动量/角动量/电荷 \\
+& Ch 13: 维度结构推论 & $\ge 20$ & 平方反比, SO(3), Kepler, Huygens, Minkowski, GW, 体积 \\
+& Ch 14: 标准模型 EFT & $\ge 20$ & 渐近自由, Higgs 机制, CKM 矩阵 \\
+& Ch 15: 全局证明 & $\ge 20$ & 语言单位/完整性 100\%/必要性矩阵/自洽性/交叉印证网 \\
+\midrule
+附录 & A-E & — & 物理常数表、43 条推导依赖表、符号表、依赖关系总图、Hilbert 简史 \\
+\bottomrule
+\caption{本书结构一览}
+\end{longtable}
+\end{center}
+
+

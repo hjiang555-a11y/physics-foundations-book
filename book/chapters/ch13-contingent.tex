@@ -280,3 +280,64 @@ $D=3$ 时体积 $V$ 的量纲为 $[L^3]$。这保证了理想气体状态方程 
     \item 额外维度在弦论中被紧化——但如果它不是紧化的，我们的世界根本不同
   \end{itemize}
 \end{limitbox}
+
+\section{七条推论的交叉印证}
+
+上述七条推论并非彼此独立——它们构成了一个交叉印证网：
+
+\begin{center}
+\small
+\begin{longtable}{p{3cm}p{3.5cm}p{7.5cm}}
+\toprule
+\textbf{推论} & \textbf{依赖的 D=3+1 性质} & \textbf{与其他推论的交叉印证} \\
+\midrule
+平方反比律 & 球面积 $\propto r^{D-1}$ & 若 $F\propto 1/r^{D-1}\neq 1/r^2$，Kepler 轨道不稳定 \\
+SO(3) & 旋转群的生成元数 = 3 & 与角动量守恒（Ch12）一致——角动量的量子化 $\ell(\ell+1)\hbar^2$ 仅在 SO(3) 下有效 \\
+稳定 Kepler 轨道 & 离心势 $\propto 1/r^2$ + 引力势 $\propto -1/r$ & 若 $D\neq3$，太阳系不存在——没有行星，没有"年"的概念 \\
+Minkowski 符号差 & 1 个时间 $+$ 3 个空间 $=$ Lorentz 符号差 & 与 R1（因果结构）一致——符号差决定了光锥的存在 \\
+Huygens 原理 & D 为奇数 $\to$ 强 Huygens 原理 & 若为偶数维——无线电信号有拖尾——现在的通信系统全都不可用 \\
+引力波极化 & $D(D-3)/2 = 2$ 个偏振 & LIGO 探测到的两个偏振模式验证了 $D=3+1$ \\
+体积量纲 & $[V] = L^3$ & 与平方反比律一致——通量 $\propto r^{D-1} = r^2$  $\Rightarrow$ 力 $\propto 1/r^2$\\
+\bottomrule
+\caption{七条维度结构推论的交叉印证网}
+\end{longtable}
+\end{center}
+
+\keypoint{七条推论不是独立的——它们是从 R1($D=3+1$) 这个单一 contingent 事实推导出的七个不同侧面。每条推论在与其他推论的交叉印证中增加了自身的可信度。}
+
+\section{人择原理的物理学版本}
+
+上述分析引出一个无法回避的问题：为什么 $D=3+1$？物理学给出两种可能的回答：
+
+\begin{enumerate}
+  \item \textbf{弱人择原理}：$D=3+1$ 是唯一允许观察者（我们）存在的维数。如果 $D\neq3+1$，就没有稳定原子，没有生命，没有人提出"为什么是 $D=3+1$"这个问题。这不是解释——这是选择效应。
+  \item \textbf{弦论/量子引力的解答}：10 或 11 维时空中的 6 或 7 个空间维在 Planck 尺度被紧化——$D=3+1$ 是紧化后剩余的低能有效维数。但为什么\textbf{恰好}3 个非紧化空间维？目前不知道。
+\end{enumerate}
+
+\begin{insightbox}[Ehrenfest (1917) 的当代意义]
+  1917 年 Ehrenfest 提出的问题——"为什么空间是三维的"——至今仍然没有一个被普遍接受的物理学答案。人择原理给出了一个逻辑自洽的回答，但许多物理学家认为这不够"scientific"。
+
+  本书的立场：$D=3+1$ 是 contingent 事实——不由 R1-R6 推导，但在 R1-R6 的公理体系中它是一个必须被声明的输入参数。一旦输入，43 条推导链中的至少 7 条（G9）可以得到严格推导。\textbf{物理学告诉你给定 D=3+1 后的全部推论——但不告诉你"为什么"是 D=3+1。}
+\end{insightbox}
+
+\section*{实验验证}
+
+\begin{oombox}[D=3+1 的实验验证——我们怎么知道空间正好是三维？]
+  \begin{itemize}
+    \item \textbf{平方反比律的检验}：Coulomb 定律在 $10^{-16}$ m 到 $10^7$ m 的尺度上精确满足 $F\propto 1/r^2$——任何偏离都意味着 $D\neq3$ 或光子有质量
+    \item \textbf{引力平方反比律的检验}：扭摆实验在亚毫米尺度检验 $F\propto 1/r^2$——若 $D>3$，在小尺度（额外维度尺度）应有偏离。当前实验排除 $>44$ $\mu$m 的额外维度
+    \item \textbf{引力波极化}：LIGO/Virgo 只探测到两个极化模式——与 $D=3+1$ 的预言一致。三个探测器（LIGO Hanford, LIGO Livingston, Virgo）可分辨极化模式
+    \item \textbf{Huygens 原理的验证}：声波和电磁波在 $D=3$ 空间中传播后立即恢复寂静——任何"拖尾"信号都会被雷达和声纳探测到
+    \item \textbf{更高维度的可能性}：弦论允许额外维度被紧化在 Planck 长度。但任何 $> 10^{-19}$ m 的额外维度在当前的 LHC 能标（$\sim 10^{-19}$ m）下都应产生可观测信号——至今零结果
+  \end{itemize}
+\end{oombox}
+
+\section*{习题}
+
+\begin{enumerate}
+  \item \textbf{[简单]} 从 Gauss 定律 $\oint \mathbf{F}\cdot d\mathbf{A} = \text{const}\cdot Q$ 出发，证明在 $D$ 维空间中 $F(r) \propto 1/r^{D-1}$。对 $D=2,3,4$ 分别如何？
+  \item \textbf{[中等]} 用有效势 $V_{\text{eff}}(r) = -k/r + L^2/(2mr^2)$ 分析 $D=4$ 空间的 Kepler 问题：向心势变为 $-k/r^2$，离心势为 $L^2/(2mr^2)$，两者都以 $1/r^2$ 衰减——是否存在稳定圆轨道？
+  \item \textbf{[中等]} 推导在 $D$ 维时空中引力波的独立极化模式数为 $D(D-3)/2$。解释为什么在 $D=4$ 时恰好为 2。
+  \item \textbf{[较难]} 对三维波动方程 $\Box\phi=0$，用 Kirchhoff 积分公式证明强 Huygens 原理（波前通过后场恢复为零）。对比 $D=2$ 空间二维波方程的解——为什么有"拖尾"？
+  \item \textbf{[挑战]} 若存在一个大额外维度（半径 $R$），在 $r\ll R$ 时引力为 $F\propto 1/r^{D-1}$（$D>3$），在 $r\gg R$ 时恢复 $1/r^2$。用扭摆实验约束估算 $R$ 的上限。
+\end{enumerate}

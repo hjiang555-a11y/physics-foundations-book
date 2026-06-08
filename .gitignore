@@ -1,4 +1,17 @@
-*.aux *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.idx
+*.ilg
+*.ind
 book/build/
-*.bbl *.blg *.run.xml *.bcf
 .DS_Store
+

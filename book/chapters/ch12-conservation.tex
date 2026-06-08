@@ -32,6 +32,48 @@ R2 Noether 定理 & R1 时间/空间/旋转对称 & R3 U(1) 规范 \\
   如果你发现了一个守恒量，你可以反推它背后的对称性。如果你发现一个对称性，你可以预言它必然伴随的守恒量。这个双向等价性使得 Noether 定理成为物理学中最重要的结构定理之一。
 \end{insightbox}
 
+% ── 变量定义表 ──
+\section{变量定义}
+
+四大守恒律涉及的核心物理量：
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{p{2.5cm}p{2cm}p{2.5cm}p{1.8cm}p{2.5cm}p{3.5cm}}
+\toprule
+\textbf{变量} & \textbf{符号} & \textbf{类型} & \textbf{量纲} & \textbf{定义域} & \textbf{物理含义} \\
+\midrule
+能量 & $E = H$ & $\mathbb{R}$ & M$\cdot$L$^2\cdot$T$^{-2}$ & $E \ge E_0$（基态能）& 时间平移对称性的守恒荷 \\
+动量 & $\mathbf{P}$ & $\mathbb{R}^3$ & M$\cdot$L$\cdot$T$^{-1}$ & $\mathbf{P} \in \mathbb{R}^3$ & 空间平移对称性的守恒荷 \\
+角动量 & $\mathbf{L}$ & $\mathbb{R}^3$ & M$\cdot$L$^2\cdot$T$^{-1}$ & $\mathbf{L} \in \mathbb{R}^3$ & 旋转对称性的守恒荷 \\
+电荷 & $Q$ & $\mathbb{R}$ & T$\cdot$I & $Q \in \mathbb{Z}e$（量子化）& $U(1)$ 规范对称性的守恒荷 \\
+Lagrangian & $L(q,\dot{q})$ & $\mathbb{R}$ & M$\cdot$L$^2\cdot$T$^{-2}$ & $L = T-V$ & 动力学系统的特征函数 \\
+Noether 流 & $J^\mu$ & $\mathbb{R}^4$ & 依赖对称性 & $\partial_\mu J^\mu = 0$ & 守恒量的四维流密度 \\
+Noether 荷 & $Q_N$ & $\mathbb{R}$ & 依赖对称性 & $dQ_N/dt = 0$ & $Q_N = \int J^0 d^3x$ \\
+应力-能量张量 & $T^{\mu\nu}$ & $\mathbb{R}^{4\times4}$ 对称 & M$\cdot$L$^{-1}\cdot$T$^{-2}$ & $\partial_\mu T^{\mu\nu}=0$ & 能量-动量-应力的统一载体 \\
+\bottomrule
+\end{tabular}
+\caption{守恒律核心变量定义}
+\end{table}
+
+\section{Noether 定理的数学提炼}
+
+第 7 章给出了 Noether 定理的完整证明。此处提炼其数学本质，作为四大守恒律推导的共同基础：
+
+\textbf{Noether 第一定理（力学形式）}：$\fbox{[S]}$ 若作用量 $S = \int L(q,\dot{q})\,dt$ 在连续变换 $q_i \to q_i + \varepsilon Q_i(q,\dot{q})$ 下不变（$\delta S = 0$ 对任何时间区间），则：
+\begin{equation}
+\boxed{\frac{d}{dt}\!\left(\sum_i \frac{\partial L}{\partial\dot{q}_i}Q_i - F\right) = 0}
+\end{equation}
+其中 $F$ 满足 $L' = L + \varepsilon\,dF/dt$。括号中的量 $= dQ_N/dt = 0$——即 Noether 荷守恒。
+
+\textbf{场论形式}：$\fbox{[S]}$ $\mathcal{L}(\phi,\partial_\mu\phi)$ 在 $\phi \to \phi + \varepsilon\Delta\phi$ 下不变 $\Rightarrow$：
+\begin{equation}
+\partial_\mu J^\mu = 0, \quad J^\mu \equiv \frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\Delta\phi - \mathcal{F}^\mu
+\end{equation}
+
+\keypoint{Noether 定理的惊人之处在于它不需要知道运动方程的具体形式——它只需要对称性。\textbf{不需要解运动方程就能知道什么量守恒}。这是物理学中最接近"免费午餐"的东西。}
+
 \section{科普层：守恒律——宇宙的"记账系统"}
 
 守恒律是物理学最接近"会计"的部分。它们不告诉你\textit{什么}会发生——它们告诉你\textit{什么不能}发生。能量不能无中生有。电荷不能凭空消失。就像银行不会允许钱凭空出现或消失——宇宙也有自己严格的"账本"。
@@ -214,6 +256,72 @@ R2 Noether 定理 & R1 时间/空间/旋转对称 & R3 U(1) 规范 \\
 \textbf{孤子守恒}：Sine-Gordon 方程的解中存在不随时间改变的拓扑孤子——其守恒来自场的边界条件（缠绕数），而非 Lagrangian 的对称性。
 
 \textbf{结论}：Noether 定理捕获了守恒律的"主要来源"——但拓扑和量子反常可以产生（或破坏！）额外的守恒结构。
+
+\section{自发对称性破缺与 Goldstone 定理}
+
+Noether 定理告诉我们对称性 $\to$ 守恒量。但对称性可以被\textbf{自发破缺}——Lagrangian 有对称性，但基态（真空）破坏了这个对称性。这导致两种后果：
+
+\subsection{全局对称性自发破缺：Goldstone 定理}
+
+\textbf{定理（Goldstone 1961）}：$\fbox{[S]}$ 若连续全局对称性自发破缺，则存在零质量、零自旋的玻色子——Goldstone 玻色子。每个破缺的连续对称性生成元$\to$一个无质量模式。
+
+\textbf{实例}：
+\begin{itemize}
+  \item \textbf{手征对称性自发破缺}：QCD 中 $SU(2)_L\times SU(2)_R \to SU(2)_V$——产生三个 $\pi$ 介子（$\pi^\pm, \pi^0$）作为赝 Goldstone 玻色子。$\pi$ 介子的质量（$\sim 140$ MeV）远小于核子质量（$\sim 940$ MeV）——因为手征对称性是近似的（夸克质量不为零）。
+  \item \textbf{铁磁体}：自旋旋转对称性在 Curie 温度以下自发破缺——产生自旋波（magnon）作为 Goldstone 模式。
+\end{itemize}
+
+\subsection{局域对称性自发破缺：Higgs 机制}
+
+\textbf{关键区别}：$\fbox{[S]}$ 局域规范对称性自发破缺\textbf{不}产生无质量 Goldstone 玻色子。破缺的规范对称性的"Goldstone 模式"被规范场"吃"掉了——规范场获得质量。这是第 14 章 Higgs 机制的核心，此处仅点明其与 Noether 定理的关系：
+
+\keypoint{Noether 定理 + 自发对称性破缺 = 物理学最深刻的组合之一。Noether 告诉你对称性$\to$守恒律；Goldstone 告诉你破缺的对称性$\to$无质量粒子；Higgs 告诉你局域对称性破缺$\to$有质量的规范玻色子。三者合在一起，构成了从对称性到粒子谱系的完整链条。}
+
+\begin{insightbox}[为什么 Goldstone 定理不矛盾于 Noether 定理？]
+  Noether 定理说：对称性 $\to$ 守恒流 $\to$ 守恒荷。Goldstone 定理说：破缺的连续对称性 $\to$ 无质量玻色子。两者不矛盾——Noether 定理仍然保证存在守恒荷（即使对称性自发破缺，Lagrangian 的对称性不变），Goldstone 定理进一步告诉你这个破缺的动力学后果（基态上有无质量激发）。
+\end{insightbox}
+
+\section{守恒律作为物理学的"选择机制"}
+
+守恒律不仅仅是"某些量不变"——它们还约束物理过程\textbf{能不能发生}。这是物理学最强大的工具之一：
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{3.5cm}p{5cm}p{5.5cm}}
+\toprule
+\textbf{守恒律} & \textbf{允许的过程} & \textbf{禁止的过程} \\
+\midrule
+能量守恒 & $n \to p + e^- + \bar{\nu}_e$（中子衰变）& 能量凭空产生 \\
+动量守恒 & Compton 散射 $\gamma + e^- \to \gamma + e^-$ & 单个粒子自发分裂（动量不匹配）\\
+角动量守恒 & $\pi^0 \to 2\gamma$（两光子角动量 = 0）& $\pi^0 \to 1\gamma$（单光子必有非零角动量）\\
+电荷守恒 & $e^+ + e^- \to 2\gamma$（正负电子湮灭）& $e^- \to \nu_e + \gamma$（电荷 $1\to0+0$）\\
+重子数守恒（SM 中近似）& $p + \bar{p} \to \pi^+ + \pi^- + \pi^0$ & $p \to e^+ + \pi^0$（重子数 $1\to0+0$）\\
+\bottomrule
+\caption{守恒律作为过程选择机制}
+\end{longtable}
+\end{center}
+
+\section{从 Noether 到标准模型：对称性决定一切}
+
+标准模型的全部结构——粒子的存在、力的类型、守恒律——几乎完全由其\textbf{对称性}决定：
+
+\begin{center}
+\footnotesize
+\begin{tabular}{p{3.5cm}p{4.5cm}p{6cm}}
+\toprule
+\textbf{对称性} & \textbf{产生的结构} & \textbf{Noether/物理后果} \\
+\midrule
+时空平移（R1）& 四维动量 & 能量守恒 $+$ 动量守恒 \\
+Lorentz 不变性（R1）& 自旋分类 & 角动量守恒（轨道 + 自旋）\\
+$U(1)_Y$ 超荷（R3）& $B$ 规范场 & 超荷守恒 \\
+$SU(2)_L$ 弱同位旋（R3）& $W^\pm, W^0$ 规范场 & 弱同位旋守恒（自发破缺后仍有 Higgs 残余）\\
+$SU(3)_C$ 色（R3）& 8 个胶子 & 色守恒——夸克禁闭的最终来源 \\
+$U(1)_{EM}$（破缺后剩余）& 光子 & 电荷守恒（$\leftarrow$ SSB 之后的有效 $U(1)$）\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\keypoint{标准模型 = $SU(3)_C \times SU(2)_L \times U(1)_Y$ 的规范理论 + 自发对称性破缺。这个简单的代数结构——加上夸克和轻子的表示——决定了所有基本粒子的存在和所有基本力的类型。Noether 定理是理解这个结构的逻辑钥匙。}
 
 \section{反常：当对称性在量子层面破缺}
 

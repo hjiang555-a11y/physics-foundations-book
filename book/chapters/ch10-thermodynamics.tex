@@ -314,3 +314,72 @@ $\Delta S(T_i \to T_f) = \int_{T_i}^{T_f} C(T)/T\,dT$。因 $C(T) \sim T^n$ ($n\
     \item 遍历假说的核心就是"等概率"——没有它，统计力学只剩下组合数学
   \end{itemize}
 \end{limitbox}
+
+\section{涨落定理：有限系统的熵增修正}
+
+热力学第二定律 $\Delta S \ge 0$ 是 $N \to \infty$ 极限下的严格结果。对于有限系统（$N \sim 10^2$--$10^3$），熵减少的涨落不再可以忽略。\textbf{涨落定理}（fluctuation theorems）给出了有限系统中熵增的精确修正。
+
+\subsection{Jarzynski 等式}
+
+\textbf{定理（Jarzynski 1997）}：$\fbox{[S]}$ 对任意非平衡过程，自由能差 $\Delta F$ 与外界做功 $W$ 的关系为：
+\begin{equation}
+\boxed{\langle e^{-W/k_BT} \rangle = e^{-\Delta F/k_BT}}
+\end{equation}
+其中平均是对所有可能的非平衡路径取的。
+
+\keypoint{Jarzynski 等式的强大之处：它允许你从\textbf{非平衡}功的分布中提取\textbf{平衡}态的自由能差。这意味着第二定律 $\langle W \rangle \ge \Delta F$ 是 Jarzynski 等式 + Jensen 不等式的推论：$e^{-\langle W \rangle/k_BT} \le \langle e^{-W/k_BT} \rangle = e^{-\Delta F/k_BT} \Rightarrow \langle W \rangle \ge \Delta F$。第二定律不是被推翻——而是在非平衡过程中被推广了。}
+
+\subsection{Crooks 涨落定理}
+
+\textbf{定理（Crooks 1999）}：$\fbox{[S]}$ 正向过程做功 $W$ 的概率 $P_F(W)$ 与逆向过程做功 $-W$ 的概率 $P_R(-W)$ 满足：
+\begin{equation}
+\frac{P_F(W)}{P_R(-W)} = e^{(W - \Delta F)/k_BT}
+\end{equation}
+
+\textbf{物理含义}：违反第二定律的路径（$W < \Delta F$）的概率以指数被压低——但对于小系统，这个概率是可观测的。单分子拉伸实验（RNA 发夹结构、光镊）已经直接验证了 Crooks 涨落定理。
+
+\bridge{Jarzynski: $\langle e^{-W/k_BT}\rangle = e^{-\Delta F/k_BT}$ \\ Crooks: $P_F(W)/P_R(-W) = e^{(W-\Delta F)/k_BT}$}{非平衡功的分布 $\leftarrow$ 平衡自由能差 \\ 第二定律是这些等式在 $N\to\infty$ 时的极限——有限系统的熵可以暂时减少，但减少的概率被指数压低}
+
+\subsection{涨落耗散定理}
+
+\textbf{涨落耗散定理}（Fluctuation-Dissipation Theorem）是统计力学第二重要的定理（仅次于 $S = k_B\ln W$）。它说：系统的\textbf{涨落}（热噪声）和\textbf{耗散}（摩擦/电阻）由同一物理机制控制——两者都来自系统与热库的耦合。
+
+\textbf{经典形式}：$\fbox{[S]}$ 布朗运动粒子的扩散系数 $D$ 和摩擦系数 $\gamma$ 的关系：
+\begin{equation}
+\boxed{D = \frac{k_B T}{\gamma}}
+\end{equation}
+这就是 Einstein 1905 年的关系——他由此独立测定了 Boltzmann 常数和 Avogadro 数。
+
+\textbf{量子形式}：Nyquist 定理（1928）——电阻器中的 Johnson 热噪声电压 $\langle V^2 \rangle = 4k_B T R \Delta f$。量子推广在 $k_BT \ll \hbar\omega$ 时修正为 $\langle V^2 \rangle = 4R\Delta f(\hbar\omega/2)\coth(\hbar\omega/2k_BT)$——包含了零点涨落。
+
+\begin{oombox}[涨落在日常生活中的数量级]
+  \begin{itemize}
+    \item \textbf{Johnson 噪声}：室温下 $1\text{k}\Omega$ 电阻在 $1$ MHz 带宽中的热噪声电压 $\sim 4$ $\mu$V——在你的收音机里产生可听的"嘶嘶"声
+    \item \textbf{细胞内的布朗运动}：直径 $1$ $\mu$m 的粒子在水中每秒因热涨落位移 $\sim 0.5$ $\mu$m——这正是细胞内物质运输的"被动扩散"机制
+    \item \textbf{涨落定理验证}：单分子拉伸实验（RNA 发夹）——做功 $W \sim 100$ $k_BT$ 的分布直接测量，与 Crooks 定理的预言吻合至 $\sim 5\%$
+{$  }
+  \end{itemize}
+\end{oombox}
+
+\section{非平衡统计力学：从平衡到非平衡的桥梁}
+
+R6 主要处理平衡态系统。但真实世界中的大多数系统都远离平衡。非平衡统计力学是当前物理学最活跃的领域之一：
+
+\begin{itemize}
+  \item \textbf{线性响应理论}（Kubo 公式）：当系统仅\textbf{弱}偏离平衡时（线性区），系统对外界扰动的响应由平衡态的涨落完全决定。这是涨落耗散定理的推广
+  \item \textbf{Onsager 倒易关系}：线性输运系数矩阵是对称的——热流通量对化学势梯度的响应 = 粒子流对温度梯度的响应。这是微观可逆性的宏观表达
+  \item \textbf{非平衡稳态}：系统在外界驱动下可维持在非平衡稳态——此时有恒定的熵产生率 $\dot{S} > 0$。Prigogine 的最小熵产生原理对近平衡稳态适用
+\end{itemize}
+
+\keypoint{平衡态统计力学是 R6 的核心贡献——它从 $S=k_B\ln W$ 推导出全部热力学定律。非平衡统计力学是 R6 的当代前沿——涨落定理、线性响应、非平衡稳态。两者都是 R6 的推论，但后者仍在活跃发展。}
+
+\section*{习题}
+
+\begin{enumerate}
+  \item \textbf{[简单]} 用 $S = k_B\ln W$ 和等概率假设，推导两系统热接触后的热平衡条件 $T_A = T_B$。哪一步需要 $N\to\infty$ 极限？
+  \item \textbf{[简单]} 用 Stirling 公式 $\ln N! \approx N\ln N - N$，从 $S = k_B\ln W$ 推导理想气体的 Sackur-Tetrode 方程 $S = Nk_B[\ln(V/N\lambda^3) + 5/2]$。
+  \item \textbf{[中等]} 证明：Jarzynski 等式 $\langle e^{-W/k_BT}\rangle = e^{-\Delta F/k_BT}$ 蕴含 Jensen 不等式 $\langle W \rangle \ge \Delta F$（即热力学第二定律的非平衡形式）。
+  \item \textbf{[中等]} 对无相互作用的量子气体，推导 Fermi-Dirac 和 Bose-Einstein 分布的配分函数。$\mu$ 的符号在 FD 和 BE 中有何不同？
+  \item \textbf{[较难]} 从涨落耗散定理出发，推导一维布朗粒子的均方位移 $\langle x^2(t) \rangle = 2Dt$，并验证 Einstein 关系 $D = k_BT/\gamma$。
+  \item \textbf{[挑战]} 证明 Nernst 不可达性原理（第三定律强形式）：$T=0$ 不能在有限步骤内达到。提示：用 $S(T) = \int_0^T (C_V/T')\,dT'$ 和 Nernst 条件 $C_V(T)\to 0$ 当 $T\to 0$。
+\end{enumerate}

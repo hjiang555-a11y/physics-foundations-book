@@ -1,7 +1,7 @@
 % ============================================================
 %  物理学基本定律与逻辑关系
 %  Fundamental Physics Laws and Their Logical Relations
-%  从六条核心原则推导三十二条物理定律
+%  从六条核心原则推导四十三条物理定律
 % ============================================================
 \documentclass[11pt,a4paper,openany]{book}
 
@@ -34,6 +34,7 @@
 \fancyhead[RE,LO]{\rightmark}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
 
 % ── Colors & Boxes ──
 \usepackage{xcolor}
@@ -145,214 +146,26 @@
 \clearpage
 
 % ══════════════════════════════════════════════════════
-%  Prologue
+%  Quick Start: redirects to Chapter 0 for full overview
 % ══════════════════════════════════════════════════════
-\chapter*{序言：宇宙的六条规则}
-\addcontentsline{toc}{chapter}{序言}
+\chapter*{快速开始}
+\addcontentsline{toc}{chapter}{快速开始}
 
-\section*{为什么是六条}
+\textbf{新读者}：请直接跳到第~\ref{ch:prologue}章（本章的下一页），阅读完整的\textbf{科普总说}——包括六条原则的直觉理解、43 条推导路径全景、以及详细的阅读指南。
 
-物理学家的终极梦想是找到宇宙最底层的几条规则，然后用它们解释一切物理现象——从苹果落地到星系旋转，从电闪雷鸣到原子核内的强相互作用。
-
-这个梦想已经基本实现。现代物理学的所有重要定律——\textbf{43 条}推导链支配着从基本粒子到宇宙演化的核心方程——都可以追溯至仅仅\textbf{六条核心原则}（记为 R1-R6）。这六条规则构成了当今物理学的"公理体系"，且已被严格证明是\textbf{充分且必要的}：每一条均不可移除（移除则至少一条定律失效），合在一起可推出全部已知定律。
-
-\begin{center}
-\small
-\begin{tabular}{p{0.4cm}p{3.5cm}p{6.5cm}p{5.5cm}}
-\toprule
- & \textbf{原则} & \textbf{核心图像} & \textbf{管什么} \\
-\midrule
-R1 & 因果时空结构 & 没有任何影响能比光跑得更快；时空本身可以弯曲——引力就是弯曲时空的表现 & 舞台本身：时空、因果、引力 \\
-R2 & 最小作用量原理 & 自然界选择的运动路径，是"作用量"取平稳值的那条路 & 动力学：所有运动方程的统一来源 \\
-R3 & 局域规范不变性 & "对称性决定相互作用"——数学上的对称要求，逼出力（电磁力、弱力、强力）的存在 & 基本力：光子、W/Z、胶子 \\
-R4 & 量子力学公设 & 世界在最底层是概率的，不是确定的；粒子可以同时处于多个状态 & 微观世界的逻辑 \\
-R5 & Born 概率规则 & 量子力学的计算结果如何转化为我们可以测量的概率 & 连接理论与实验 \\
-R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向是熵增 & 从微观到宏观的桥梁 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\vspace{12pt}
-
-\section*{怎么从六条推出四十三条}
-
-本书的结构分三部分。
-
-\textbf{第一部分：基本公理}（第1-7章）逐一展开 R1-R6。每章以科普叙述开始，建立直觉理解，然后给出完整的变量定义表（符号、量纲、定义域、物理含义），严格的数学表达式，成立条件与失效边界。新增第7章：\textbf{论证语言单位与证明方法}——定义本书使用的形式化论证体系（kernel, law, derivation, [N] 必要性条件, [S] 充分性条件, $\leftrightarrow$ 交叉印证）。
-
-\textbf{第二部分：有效定律}（第8-16章）展示如何从 R1-R6 加上我们这个宇宙的偶然事实（contingent facts），严格推导出 43 条推导链。每条推导标注必要性条件\fbox{[N]}和充分性条件\fbox{[S]}，变量全部可追溯至 R1-R6。新增第13章（维度结构推论）、第14章（标准模型有效场论）、第15章（Nernst 不可达性）、第16章（全局自洽性证明）。
-
-\textbf{第三部分：附录}——物理常数表、四十三条推导依赖表、依赖关系总图、交叉印证网。
-
-\vspace{8pt}
-
-\begin{center}
-\resizebox{\textwidth}{!}{%
-\begin{tikzpicture}[
-  node distance=1.6cm and 2.2cm,
-  rbox/.style={rectangle,draw,rounded corners,fill=lb,text width=2.8cm,align=center,font=\small\bfseries,minimum height=1.4cm},
-  lawbox/.style={rectangle,draw,rounded corners,fill=lg,text width=3.2cm,align=center,font=\footnotesize,minimum height=0.8cm},
-  arrow/.style={->,>=Stealth,thick,dorange!70}
-]
-  \node[rbox] (r1) {R1\\因果时空结构};
-  \node[rbox,right=of r1] (r2) {R2\\最小作用量};
-  \node[rbox,right=of r2] (r3) {R3\\规范不变性};
-  \node[rbox,below=1.5cm of r1] (r4) {R4\\量子公设};
-  \node[rbox,below=1.5cm of r2] (r5) {R5\\Born 规则};
-  \node[rbox,below=1.5cm of r3] (r6) {R6\\统计力学基础};
-
-  \node[lawbox,below=1cm of r4] (l1) {Schrödinger 方程\\不确定性原理};
-  \node[lawbox,right=of l1] (l2) {Maxwell 方程组\\Lorentz 力};
-  \node[lawbox,below=1cm of r6] (l3) {Newton 定律\\Einstein 场方程};
-  \node[lawbox,right=of l3,text width=3.5cm] (l4) {热力学定律\\Fermi-Dirac/Bose-Einstein};
-
-  \draw[arrow] (r1) -- (r2);
-  \draw[arrow] (r1) -- (r4);
-  \draw[arrow] (r2) -- (r3);
-  \draw[arrow] (r4) -- (r5);
-  \draw[arrow] (r4) -- (r6);
-  \draw[arrow] (r1) -- (l1);
-  \draw[arrow] (r2) -- (l1);
-  \draw[arrow] (r2) -- (l3);
-  \draw[arrow] (r3) -- (l2);
-  \draw[arrow] (r4) -- (l1);
-  \draw[arrow] (r5) -- (l1);
-  \draw[arrow] (r6) -- (l3);
-  \draw[arrow] (r6) -- (l4);
-\end{tikzpicture}%
-}
-\end{center}
-
-\vspace{8pt}
+\textbf{回访读者}：以下是你需要快速参照的关键页码：
+\begin{itemize}
+  \item 第~\ref{ch:prologue}章：推导路径全图（G1-G11 完整展开）、标注体系说明、阅读路径推荐
+  \item 第~\pageref{ch:r1}--\pageref{ch:r6}章：R1-R6 公理的完整陈述（科普 + 严谨 + 边界）
+  \item 第~\pageref{app:laws}章（附录~\ref{app:laws}）：四十三条推导依赖表的完整索引
+  \item 第~\ref{ch:proof}章：全局自洽性和完整性证明（必要性矩阵 + 交叉印证网）
+\end{itemize}
 
 \begin{notebox}[关键数字]
-\textbf{6} 条核心原则 $\to$ \textbf{43} 条推导链 $\to$ \textbf{150+} 条必要性条件 [N] 标注。\\
-   所有推导链可追溯至 \textbf{13} 个 kernel 层根节点。\\
-   自动验证器 V1-V5 全部通过（0 errors, 0 warnings）。\\
-   \textbf{元验证}: 完整性 100\% (43/43), 自洽性 0 矛盾, 必要性全部成立。
+  \textbf{6} 条核心原则 $\to$ \textbf{13} 个 kernel 节点 $\to$ \textbf{43} 条推导链 $\to$ \textbf{150+} 条必要性条件 [N] 标注。\\
+  自动验证器 V1-V5 全部通过（0 errors, 0 warnings）。\\
+  \textbf{元验证}: 完整性 100\% (43/43)，自洽性 0 矛盾，所有 13 个 kernel 节点均为必要。
 \end{notebox}
-
-\clearpage
-
-% ══════════════════════════════════════════════════════
-%  阅读导引：数学与物理的桥梁
-% ══════════════════════════════════════════════════════
-\chapter*{阅读导引：数学与物理的桥梁}
-\addcontentsline{toc}{chapter}{阅读导引}
-
-\section*{本书的预设读者}
-
-本书假设你具备\textbf{高等数学基础}——微积分、线性代数、复分析的基本概念、变分法原理——和\textbf{基本物理常识}——知道Newton力学、光的波粒二象性、原子的大致结构。我们不会教你什么是偏导数或什么是电场。但我们会告诉你：\textit{为什么}偏导数出现在Euler-Lagrange方程里，而这个方程的物理含义是什么；\textit{为什么}规范不变性逼出了电场和磁场的存在。
-
-\section*{三个层次的理解}
-
-本书希望帮助你在三个层次上获得理解：
-
-\begin{enumerate}
-  \item \textbf{逻辑关系层}：每条定理可以从哪些前提推出（\fbox{[N]}），哪些前提组合保证了结论必然成立（\fbox{[S]}）。你可以像验算一道数学证明一样，逐行检查推导的每一步。
-  \item \textbf{物理直觉层}：每个数学步骤对应的物理图像是什么。分部积分不是无聊的技巧——它是"把边界上的东西去掉"；Noether定理的核心是"对称性意味着你在某个方向上看不出区别，所以在那个方向上守恒"。
-  \item \textbf{数量级与精确度层}：每条结果在什么精确程度上成立。是严格等号还是近似？在什么条件下近似成立？偏离的数量级有多大？当你用日常经验验证时，预期的精度是多少？
-\end{enumerate}
-
-\section*{本书使用的标注体系}
-
-\begin{center}
-\small
-\begin{tabular}{p{2cm}p{3cm}p{8cm}}
-\toprule
-\textbf{标注} & \textbf{含义} & \textbf{如何使用} \\
-\midrule
-\fbox{[N]} & 必要性条件 & 若移除，推导在此处断裂。检查"这条假设是否真的必不可少" \\
-\fbox{[S]} & 充分性条件 & 给定这些前提，结论必然成立。检查"前提是否已经全部满足" \\
-\precexact & 精确成立 & 严格数学等式或定义性关系（如 $[\hat{x},\hat{p}]=i\hbar$、$S=k_B\ln W$） \\
-\preceffective & 有效理论 & 在指定能标/尺度范围内精确，但有失效边界（如Einstein场方程、Schr\"odinger方程） \\
-\precisionapprox & 近似成立 & 在指定近似条件下的结果（如Newton引力为GR的弱场低速极限） \\
-\precqualitative & 定性推论 & 指示趋势和结构，不给出精确数值（如Huygens原理的拖尾/无拖尾二分） \\
-\preccontingent & 偶然事实 & 本宇宙的实验测定数值，不由R1-R6唯一决定（如规范群选择、费米子代数） \\
-\midrule
-\keypoint{...} & 关键洞察 & 此处是逻辑链条中最关键的一步——停下来想一想"为什么这步成立" \\
-\bridge{...}{...} & 数学$\leftrightarrow$物理桥梁 & 上半行：数学操作$\to$物理含义；下半行：物理直觉$\to$数学表达 \\
-\midrule
-\bottomrule
-\end{tabular}
-\end{center}
-
-\section*{本章新增（Round 14）}
-
-本轮迭代新增以下元素，贯穿全书：
-
-\begin{itemize}
-  \item \textbf{数学$\leftrightarrow$物理桥梁}（\bridge{}{}）：在关键推导步骤后插入，把抽象的数学操作翻译成物理语言，再把物理直觉翻译回数学的精确表述。
-  \item \textbf{数量级估计}（\texttt{oombox}）：在每次推导后提供实际的数值估计，帮助读者建立"这个效应有多大"的直觉。例如：地球公转速度的Lorentz因子是 $1-(\gamma-1) \approx 1-5\times10^{-9}$——相对论修正只在你需要纳秒级时间精度时才显著。
-  \item \textbf{精确程度标记}（\precexact/\preceffective/\precisionapprox/\precqualitative/\preccontingent）：每条定律和关系标注精度等级，避免"所有公式都同等精确"的误解。
-  \item \textbf{关键洞察框}（\keypoint{...}）：在逻辑链条最关键处突出显示——这里就是"aha moment"。
-\end{itemize}
-
-\vspace{12pt}
-\begin{insightbox}[如何最大化收获]
-  \begin{enumerate}
-    \item 先读\keypoint{关键洞察}和\bridge{数学$\leftrightarrow$物理桥梁}——理解方向。
-    \item 再读推导步骤——验证每步的逻辑必然性。
-    \item 最后读数量级估计——建立物理直觉的尺度感。
-    \item 返回\fbox{[N]}和\fbox{[S]}标注——问自己：如果移除这个条件，会发生什么？
-  \end{enumerate}
-   如果你只有五分钟，只看关键洞察和桥梁——它们包含了最重要的思想。如果你要深入掌握一个领域，把推导步骤中的每一条[N]自己验证一遍。
-\end{insightbox}
-
-\section*{阅读路径：不同读者如何读这本书}
-
-\begin{center}
-\small
-\begin{tabular}{p{2.5cm}p{4cm}p{4cm}p{4cm}}
-\toprule
-\textbf{读者类型} & \textbf{推荐路径} & \textbf{重点章节} & \textbf{时间估计} \\
-\midrule
-\textbf{急先锋} & 序言 $\to$ 阅读导引 $\to$ 每章只看 \keypoint{} 和 \bridge{} & 序言、Ch7-12 的关键洞察 & 2-4 小时 \\
-\textbf{物理学生} & 序言 $\to$ Part I（通读）$\to$ Part II（完整推导 + 习题） & Ch7-Ch12 为主，Ch13-14 为辅 & 2-4 周 \\
-\textbf{数学转物理} & Hilbert 第六问题 $\to$ 阅读导引 $\to$ Part I $\to$ Ch11,15 $\to$ 其余 & Ch1,4,11,15, 附录 & 1-2 周 \\
-\textbf{理论研究者} & Ch15（全局证明）$\to$ 查特定推导 $\to$ [N] 标注 + 反事实 & 按需查阅 & 按需 \\
-\textbf{好奇者} & 序言 $\to$ Ch1 $\to$ Ch7 $\to$ Ch13 $\to$ 浏览其余 \keypoint{} & Ch1, Ch7, Ch13 & 4-6 小时 \\
-\bottomrule
-\end{tabular}
-\end{center}
-
-\vspace{8pt}
-\textbf{各章的预备知识}：
-\begin{itemize}
-  \item Ch1-Ch6（公理）：仅需基本物理常识 + 微积分
-  \item Ch7（力学）：需变分法基础（书中有简要回顾）\\
-  \item Ch8（电磁学）：需矢量分析（$\nabla$, $\nabla\times$, $\nabla\cdot$）+ 张量初级概念\\
-  \item Ch9（量子力学）：需线性代数（Hilbert 空间、本征值）+ 复分析\\
-  \item Ch10（热力学）：统计概念 + 组合数学（Stirling 公式）\\
-  \item Ch11（相对论）：微分几何基础（度规、曲率、Christoffel 符号）\\
-  \item Ch12（守恒律）：Noether 定理（Ch7 已介绍）\\
-  \item Ch13：矢量分析 + 复分析\\
-  \item Ch14：群论（Lie 代数）、重整化群
-\end{itemize}
-
-\clearpage
-
-% ══════════════════════════════════════════════════════
-%  Hilbert 第六问题：本书的历史定位
-% ══════════════════════════════════════════════════════
-\chapter*{Hilbert 第六问题：物理学公理化的百年梦想}
-\addcontentsline{toc}{chapter}{Hilbert 第六问题}
-
-1900 年，David Hilbert 在巴黎国际数学家大会上提出 23 个问题。第六个是：
-
-\begin{center}
-\itshape
-``几何基础的研究提示了这个问题：用同样的方法，通过公理，来处理那些\\
-数学已占有重要地位的物理科学；首先是概率论和力学。''
-\end{center}
-
-120 多年过去了，这个问题仍然开放。本书是对这个百年梦想的一次推进：R1-R6 是 6 条（展开为 13 个 kernel 节点）物理公理，43 条推导链覆盖已知物理定律的主要方程，每条标注必要性 \fbox{[N]} 和充分性 \fbox{[S]}，YAML 源码 + Python 验证器可被计算机审计。
-
-\begin{insightbox}[Hilbert 与物理学的未来]
-  Hilbert 第六问题至今未完全解决——量子引力仍是开放问题。但本书展示：\textbf{在 Planck 尺度以下（所有已知实验物理的适用范围），六条原则已经足够推导出全部已知物理定律。} 这是朝着 Hilbert 梦想迈出的、可验证的一步。
-\end{insightbox}
-
-\clearpage
 
 % ══════════════════════════════════════════════════════
 %  TOC
@@ -360,9 +173,14 @@ R6 & 统计力学基础 & 熵 = 无序度的对数；系统的自然演化方向
 \tableofcontents
 
 % ══════════════════════════════════════════════════════
-%  PART I: R1-R6
+%  Chapter 0: Prologue (科普总说)
 % ══════════════════════════════════════════════════════
 \mainmatter
+\include{chapters/ch00-prologue}
+
+% ══════════════════════════════════════════════════════
+%  PART I: R1-R6
+% ══════════════════════════════════════════════════════
 \part{基本公理：六条核心原则}
 
 \chapter*{R1-R6 体系导览}
@@ -602,8 +420,22 @@ law.ideal\_gas & 理想气体状态方程 & R6, 热力学第一定律 & G7 \\
 cor.kepler\_third & Kepler 第三定律 & Newton 第二 + 万有引力 & G8 \\
 cor.fermi\_dirac & Fermi-Dirac 分布 & Pauli 不相容, R6 & G8 \\
 cor.bose\_einstein & Bose-Einstein 分布 & R4a, R6 & G8 \\
+\midrule
+contingent.inverse\_square\_law & 平方反比律 & R1 ($D=3$), Gauss 定律 & G9 \\
+contingent.so3\_rotation\_group & SO(3) 旋转群 & R1 ($D=3$) & G9 \\
+contingent.volume\_dimension & 体积量纲 & R1 ($D=3$) & G9 \\
+contingent.minkowski\_signature & Minkowski 符号差 & R1, Lorentz 不变性 & G9 \\
+contingent.gw\_polarizations & 引力波极化模式 & R1 ($D=3+1$), 广义协变性 & G9 \\
+contingent.stable\_kepler\_orbits & 稳定 Kepler 轨道 & R1 ($D=3$) & G9 \\
+contingent.huygens\_principle & Huygens 原理 & R1 ($D=3$ 奇维) & G9 \\
+\midrule
+cor.nernst\_unattainability & Nernst 不可达性 & R6, 第三定律 & G10 \\
+\midrule
+cor.asymptotic\_freedom & 渐近自由 & R3, SM 规范群 & G11 \\
+cor.higgs\_mechanism & Higgs 机制 & R3, SM Higgs 扇区 & G11 \\
+cor.ckm\_matrix & CKM 矩阵必要性 & R3, SM 费米子, SM Higgs & G11 \\
 \bottomrule
-\caption{三十二条有效定律完整列表（G1-G8 推导分组）}
+\caption{四十三条有效定律完整列表（G1-G11 推导分组）}
 \end{longtable}
 \end{center}
 
@@ -681,7 +513,7 @@ $g^{\mu\nu}$ & 度规的逆 & Ch1,11 & $g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\n
   % Derived laws (clusters)
   \node[lbox,below=1.2cm of r4] (g1g3) {G1-G3: 力学\\Euler-Lagrange,\\Noether, Newton};
   \node[lbox,right=of g1g3] (g4) {G4: 电磁学\\Maxwell, Lorentz};
-  \node[lbox,below=1.2cm of g1g3] (g5) {G5: 量子力学\\Schrödinger, Pauli};
+  \node[lbox,below=1.2cm of g1g3] (g5) {G5: 量子力学\\Schr\"odinger, Pauli};
   \node[lbox,right=of g5] (g6g8) {G6-G8: 相对论+热力学\\Einstein, 热力学定律};
 
   \draw[arrow] (r1) -- (r2);
@@ -702,6 +534,8 @@ $g^{\mu\nu}$ & 度规的逆 & Ch1,11 & $g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\n
   \draw[arrow] (r6) -- (g6g8);
 \end{tikzpicture}
 \end{center}
+
+\include{chapters/appendix-counterfactual}
 
 \backmatter
 \printbibliography[heading=bibintoc,title={参考文献}]

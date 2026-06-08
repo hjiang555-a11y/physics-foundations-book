@@ -143,7 +143,46 @@ dP(x) = |\psi(x)|^2\, dx, \quad \psi(x) \equiv \langle x | \psi \rangle
 \end{equation}
 \fbox{[N]} 严格处理连续谱需要 rigged Hilbert space（Gelfand 三元组）——位置本征态 $|x\rangle$ 不是正规 Hilbert 空间中的向量，而是广义本征矢。但在此处理论物理层面，上述公式工作的很好。
 
-\subsection{推导 2：Gleason 定理——Born 规则的唯一性}
+\subsection{推导 1b：测量后的态——von Neumann-Lüders 投影公设}
+
+Born 规则给出了概率。但测量后系统处于什么态？经典的测量不会改变被测物——你用尺子量桌子长度，桌子不变。量子测量\textbf{会}改变系统——这是 R4+R5 结合的必然推论。
+
+\textbf{前提}：\fbox{[N]} R5 — Born 规则。\fbox{[N]} R4a — 态在 Hilbert 空间中。\fbox{[N]} 测量的可重复性（若立即重测同一可观测量，应得到相同结果）。
+
+\textbf{步骤 1 — 投影公设的动机}：\fbox{[S]} 测量 $\hat{A}$ 得到 $a_i$ 后，若立即再测 $\hat{A}$，系统必须仍然给出 $a_i$（概率 = 1）。Born 规则要求 $P(a_i) = |\langle a_i|\psi'\rangle|^2 = 1$，其中 $|\psi'\rangle$ 是测量后的态。唯一的归一化解是 $|\psi'\rangle \propto |a_i\rangle$。
+
+\textbf{步骤 2 — 投影算符形式}：\fbox{[S]} 定义投影算符 $\hat{P}_i \equiv |a_i\rangle\langle a_i|$。测量后的态为：
+\begin{equation}
+\boxed{|\psi\rangle \xrightarrow{\text{测得 }a_i} |\psi'\rangle = \frac{\hat{P}_i|\psi\rangle}{\|\hat{P}_i|\psi\rangle\|}}
+\end{equation}
+\fbox{[S]} 分母 $\|\hat{P}_i|\psi\rangle\| = \sqrt{P(a_i)}$ 保证归一化。\fbox{[N]} 简并情况：若 $a_i$ 有 $g_i$ 重简并，$\hat{P}_i = \sum_{k=1}^{g_i} |a_i^{(k)}\rangle\langle a_i^{(k)}|$——投影到本征子空间而非单个本征态。
+
+\textbf{步骤 3 — 坍缩 vs 幺正演化}：\fbox{[S]} R4b 给出的幺正演化 $|\psi(t)\rangle = e^{-i\hat{H}t/\hbar}|\psi(0)\rangle$ 是\textbf{连续的、确定性的、可逆的}。测量投影 $\hat{P}_i|\psi\rangle/\|\hat{P}_i|\psi\rangle\|$ 是\textbf{突变的、概率性的、不可逆的}。这两者之间存在不可调和的张力——\textbf{这正是量子力学测量问题的核心}。
+
+\keypoint{测量投影公设和幺正演化之间的矛盾不是 Born 规则的"缺陷"——它恰恰是量子力学区别于经典物理学的本质特征。经典物理中"测量"是一个可忽略的扰动；量子物理中"测量"改变了系统的本体状态。}
+
+\subsection{推导 1c：POVM——最一般的量子测量框架}
+
+投影测量是理想化的。实际实验中的测量往往更复杂——探测器有噪声、效率低于 100\%、测量基不完备。\textbf{POVM}（正算子值测度，Positive Operator-Valued Measure）提供了最一般的量子测量数学框架。
+
+\textbf{前提}：\fbox{[N]} R5 — Born 规则。\fbox{[N]} R4 — Hilbert 空间。
+
+\textbf{定义（POVM）}：一组正算符 $\{\hat{E}_m\}$ 满足：
+\begin{equation}
+\hat{E}_m \ge 0 \quad \text{（正定性：保证概率非负）}, \qquad \sum_m \hat{E}_m = I \quad \text{（完备性：保证概率归一化）}
+\end{equation}
+
+\textbf{步骤 1 — POVM 的 Born 规则}：\fbox{[S]} 对 POVM $\{\hat{E}_m\}$，测量结果 $m$ 的概率为：
+\begin{equation}
+\boxed{P(m) = \text{Tr}(\hat{\rho}\hat{E}_m)}
+\end{equation}
+\fbox{[S]} 当 $\hat{E}_m = |a_m\rangle\langle a_m|$ 时（投影算符），退化为标准 Born 规则。POVM 允许 $\hat{E}_m$ 是\textbf{非投影}的正算符——信息上不完备的测量。
+
+\textbf{步骤 2 — 为什么需要 POVM？——一个具体例子}：\fbox{[S]} 考虑区分两个非正交态 $|\psi_1\rangle = |0\rangle$ 和 $|\psi_2\rangle = |+\rangle = \frac{|0\rangle+|1\rangle}{\sqrt{2}}$。标准投影测量无法完美区分（因为 $\langle\psi_1|\psi_2\rangle \neq 0$）。但\textbf{最优 POVM} 能以最小错误概率 $\frac{1}{2}(1-\sqrt{1-|\langle\psi_1|\psi_2\rangle|^2})$ 做出最优猜测——这就是量子信息科学中\textbf{Helstrom 界限}的基础。
+
+\textbf{步骤 3 — 投影测量是 POVM 的特例}：\fbox{[S]} 当 $\hat{E}_m = \hat{P}_m$（投影算符）且 $\hat{P}_m\hat{P}_n = \delta_{mn}\hat{P}_m$（正交性）时，POVM 退化为 von Neumann 投影测量。但一般 POVM 的 $\hat{E}_m$ 可以是非正交的、非投影的——这允许\textbf{弱测量}、\textbf{非破坏测量}、\textbf{连续测量}等现代量子技术。
+
+\bridge{投影测量 $\subset$ POVM \\ $\hat{E}_m = \hat{P}_m$ $\Rightarrow$ 可重复、信息完备 \\ 一般 POVM $\hat{E}_m \neq \hat{P}_m$ $\Rightarrow$ 不可重复、信息不完备}{实验中的测量几乎从来不是理想的投影\\ POVM 不是"近似"——它是 Born 规则的\textbf{最一般形式}，投影测量只是理想极限}
 
 \textbf{定理（Gleason 1957）}：\fbox{[S]} 设 $\mathcal{H}$ 是维数 $\ge 3$ 的可分 Hilbert 空间。若函数 $\mu$ 将 $\mathcal{H}$ 的每个闭子空间映到 $[0,1]$，满足：
 \begin{enumerate}
@@ -291,6 +330,95 @@ P = |\psi_1 + \psi_2|^2 = |\psi_1|^2 + |\psi_2|^2 + \underbrace{2\,\text{Re}(\ps
 
 正是这个干涉项产生了屏幕上明暗交替的图案——量子力学的标志性现象。
 
+\section{从量子到经典：退相干与 Born 规则的涌现}
+
+\subsection{为什么我们看不到宏观叠加态？}
+
+Schr\"odinger 的猫同时处于 $|\text{活}\rangle$ 和 $|\text{死}\rangle$ 的叠加——但没有人见过这样的猫。为什么宏观世界看起来是经典的？答案在于\textbf{退相干}（decoherence）——系统与环境的不可避免的量子纠缠。
+
+\subsection{退相干的形式理论}
+
+\textbf{前提}：\fbox{[N]} R4 + R5。考虑系统 $S$（如一个量子比特）与环境 $E$ 的联合演化。
+
+\textbf{步骤 1 — 初始可分离态}：$\fbox{[S]}
+|\Psi(0)\rangle_{SE} = (c_1|1\rangle_S + c_2|2\rangle_S) \otimes |E_0\rangle_E
+$。测量在基 $\{|1\rangle,|2\rangle\}$ 上进行。
+
+\textbf{步骤 2 — 相互作用演化}：\fbox{[S]} 幺正演化（R4b）导致系统和环境纠缠：
+\begin{equation}
+|\Psi(t)\rangle_{SE} = c_1|1\rangle_S|E_1\rangle_E + c_2|2\rangle_S|E_2\rangle_E
+\end{equation}
+其中 $|E_1\rangle_E$ 和 $|E_2\rangle_E$ 是环境对系统不同态的"记录"态。\fbox{[N]} 关键是环境必须能区分 $|1\rangle$ 和 $|2\rangle$——即 $\langle E_1|E_2\rangle \approx 0$（环境态几乎正交）。
+
+\textbf{步骤 3 — 系统的约化密度矩阵}：\fbox{[S]} 对环境求迹：
+\begin{equation}
+\hat{\rho}_S = \text{Tr}_E|\Psi\rangle\langle\Psi|_{SE}
+= |c_1|^2|1\rangle\langle 1| + |c_2|^2|2\rangle\langle 2| + \underbrace{c_1c_2^*\langle E_2|E_1\rangle|1\rangle\langle 2| + \text{h.c.}}_{\text{干涉项（被环境抑制）}}
+\end{equation}
+
+\textbf{步骤 4 — 退相干速率}：\fbox{[S]} 干涉项被 $\langle E_2|E_1\rangle$ 抑制。对于典型宏观物体（$\sim 10^{23}$ 个粒子），$\langle E_2|E_1\rangle \sim e^{-t/\tau_D}$，其中\textbf{退相干时间} $\tau_D$ 为：
+\begin{equation}
+\tau_D \sim \frac{\tau_R}{(\Delta x/\lambda_{\text{dB}})^2}
+\end{equation}
+$\tau_R$ 是环境粒子的平均碰撞时间，$\Delta x$ 是叠加态的空间分离，$\lambda_{\text{dB}}$ 是热 de Broglie 波长。对于宏观物体（$m \sim 1$g, $T \sim 300$K），$\tau_D \sim 10^{-40}$ s——退相干\textbf{瞬间}完成。
+
+\keypoint{退相干解释了为什么宏观世界看起来是经典的——不是因为量子力学在某个尺度上"失效"，而是因为大物体与环境的纠缠以指数速度消灭了量子相干。Born 规则仍然有效——但现在 $\hat{\rho}_S$ 的非对角元为零，概率退化为经典概率的加权和。}
+
+\subsection{Born 规则 + 退相干 = 经典世界}
+
+\begin{insightbox}[量子→经典的桥梁]
+  退相干不\emph{替代} Born 规则——它\emph{与} Born 规则协作。在退相干之后：
+  \begin{itemize}
+    \item 系统的约化密度矩阵是对角化的 $\hat{\rho}_S = \sum_i p_i|i\rangle\langle i|$
+    \item Born 规则给出 $P(i) = \langle i|\hat{\rho}_S|i\rangle = p_i$——正是经典概率
+    \item 量子相干（叠加→干涉）消失——系统"有效地"成为经典概率混合
+    \item \textbf{但注意}：退相干选择的是"哪个基"变对角（本征基选择问题），Born 规则决定的是"每个结果的概率"
+  \end{itemize}
+  这两个过程合在一起，解释了为什么我们生活在一个"看起来经典"的宇宙中。
+\end{insightbox}
+
+\begin{oombox}[退相干时间的数量级比较]
+  \begin{itemize}
+    \item \textbf{介观系统}（$10^3$ 个粒子）：$\tau_D \sim 10^{-6}$ s——在精密实验中可观测到退相干过程
+    \item \textbf{微观系统}（单个电子）：$\tau_D$ 可达 $\sim 1$ s 或更长——量子比特的相干时间。超导量子比特的最佳纪录 $T_2 \sim 500$ $\mu$s（2024 年）
+    \item \textbf{宏观物体}（$10^{23}$ 个粒子）：$\tau_D \sim 10^{-40}$ s——\textbf{比宇宙年龄短 24 个数量级}
+    \item \textbf{Schr\"odinger 猫悖论}的解决：不是"猫不可能处于叠加态"，而是"任何宏观叠加态在 $10^{-40}$ 秒内退相干"——你来不及看，它已经"坍缩"了
+  \end{itemize}
+\end{oombox}
+
+\section{测量问题：我们真的理解 Born 规则吗？}
+
+Born 规则给出了"测量得到某结果的概率是 $|c_i|^2$"，但它\textbf{没有}回答以下深层问题：
+
+\begin{enumerate}
+  \item \textbf{什么算"测量"？} 何时幺正演化停止、投影公设开始？谁或什么算"观察者"？
+  \item \textbf{为什么正好是这个结果？} Born 规则给出概率分布——但单次测量为什么得到\textit{这一个}结果而非另一个？
+  \item \textbf{波函数真的坍缩吗？} 还是坍缩只是我们对退相干后世界的有效描述？
+\end{enumerate}
+
+\subsection{四种主流立场}
+
+\begin{center}
+\footnotesize
+\begin{longtable}{p{3cm}p{5.5cm}p{5cm}}
+\toprule
+\textbf{解释} & \textbf{核心主张} & \textbf{Born 规则的地位} \\
+\midrule
+\textbf{哥本哈根} & 量子力学描述的不是客观实在，而是我们对系统的"知识"。测量使我们的知识更新 & Born 规则是关于知识的概率更新规则——不是关于实在的规则 \\
+\textbf{多世界 (Everett)} & 幺正演化是唯一真实的。世界不断"分支"——每个可能结果都在某个分支中实现 & Born 规则需要从分支权重中\emph{导出}（而非公设）。目前是一个活跃的研究方向 \\
+\textbf{客观坍缩 (GRW)} & 波函数随机地、自发地坍缩——坍缩速率随系统增大而加快。引入非线性随机项修改 R4b & Born 规则来自坍缩过程的随机动力学——概率 = 坍缩率 \\
+\textbf{QBism} & 量子态是单个使用者的个人信念度（主观贝叶斯概率）。不同使用者可以有不同的态分配 & Born 规则是信念更新的量子版本——概率不是客观的，是"你的" \\
+\bottomrule
+\caption{测量问题的四种主要解决方案}
+\end{longtable}
+\end{center}
+
+\begin{insightbox}[本书的立场]
+  本书采用\textbf{最小统计诠释}（minimal statistical interpretation）：R4+R5 构成关于测量结果的完整概率预言理论。我们不承诺任何特定的本体论（坍缩是真实的？还是有效描述？），也不承诺任何特定解释。
+
+  这一"闭嘴计算"（shut up and calculate）的态度常被批评为回避深层问题——但它有一个巨大的优势：\textbf{它使得 R1-R6 的推导链成为对解释选择中立的}。无论你相信多世界、哥本哈根还是 QBism，从 Born 规则到不确定性原理、从 Born 规则到 Fermi-Dirac 分布的推导步骤不变。
+\end{insightbox}
+
 \section*{实验验证精度}
 
 \begin{oombox}[R5 的实验基础——Born 规则有多"真"？]
@@ -307,7 +435,7 @@ P = |\psi_1 + \psi_2|^2 = |\psi_1|^2 + |\psi_2|^2 + \underbrace{2\,\text{Re}(\ps
   Born 规则：\precexact ——它是量子力学最小统计诠释的核心公设\\
   在 $\dim\mathcal{H}\ge 3$：Gleason 定理证明它是唯一自洽的概率分配——\textbf{不是选出来的，是推出来的}\\
   可能的修正：非线性量子力学（如 Weinberg 1989 试探）中 Born 规则可能微扰修改——但所有实验排除此类修正至 $<10^{-10}$
-\endprecisionbox}
+\endprecisionbox
 
 \section*{反事实分析}
 
